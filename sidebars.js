@@ -4,7 +4,7 @@ module.exports = {
       "introduction/overview",
       "introduction/usecase",
     ],
-    QuickStart: [
+    "Quick Start": [
       "quickstart/sdk",
       "quickstart/developer-application",
     ],
