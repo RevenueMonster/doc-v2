@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'revenuemonster', // Usually your GitHub org/user name.
-  projectName: 'developer', // Usually your repo name.
+  projectName: 'doc-v2', // Usually your repo name.
   themeConfig: {
     disableDarkMode: true,
     navbar: {
