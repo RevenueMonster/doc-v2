@@ -31,3 +31,7 @@
 .button:hover {
   color: black !important;
 }
+
+.menu.menu--responsive .menu__button {
+  color: black !important;
+}
