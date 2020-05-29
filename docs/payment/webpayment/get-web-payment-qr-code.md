@@ -21,7 +21,7 @@ Generate a QR code to display on your web or mobile for user to scan
   </summary>
   Using <b>qrCodeImageBase64</b> URL to generate a QR Code
   <Card width="100%">
-    <Image src="/static/img/IndividualQRcode.png" />
+    <Image src="/img/payment-image/individual-qr-code.png" />
   </Card>
 </details>
 
@@ -31,7 +31,7 @@ Generate a QR code to display on your web or mobile for user to scan
   </summary>
   Once user scan the QR Code it will display 
   <Card width="100%">
-    <Image src="/static/img/CheckOutPayment.png" />
+    <Image src="/img/payment-image/check-out-payment.png" />
   </Card>
 </details>
 <br/>
