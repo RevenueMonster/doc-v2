@@ -1,0 +1,205 @@
+---
+id: overview
+title: Overview
+sidebar_label: Overview
+---
+
+import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
+export const Highlight = ({ children, color }) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: "2px",
+      color: "#fff",
+      padding: "0.2rem",
+    }}
+  >
+    {children}
+  </span>
+);
+
+Revenue Monster (hereafter mentioned as RM) Open APIs allow developers to manage payments, users, stores, loyalty, and social media through RESTful API or SDK. All RM products have API for most of its core functionalities. Start with our comprehensive API to reimagine your business.
+
+**API Environment Summary** <br />
+
+There are two services for our API (OAuth and Open API),both for sandbox and production environment. OAuth server is for authentication, Open API server is for core functions. You may test with sandbox endpoints before going production. You could self-signup for sandbox access and contact <sandbox@revenuemonster.my> to activate your sandbox account.
+
+##### Sandbox Environment
+
+API Server -> https://sb-oauth.revenuemonster.my  
+Authetication Server -> https://sb-open.revenuemonster.my
+
+##### Production Environment
+
+API Server -> https://oauth.revenuemonster.my  
+Authetication Server -> https://open.revenuemonster.my
+
+**Before You Start**
+
+Go to our merchant portal in Production [Merchant Portal](https://merchant.revenuemonster.my/) or [Sandbox Merchant Portal](https://sb-merchant.revenuemonster.my/) to sign up as merchant.
+
+Submit all required documents as shown in our merchant portal and get approval from our admin. Should you need more assistance, please contact us at <bd@revenuemonster.my>.
+
+Kindly go through `Signature Algorithm` to see our signing mechanism before proceed to call payment API endpoint(s). Payment API have higher security requirements than the rest.
+
+<Flex mx={30}>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+    onClick={() => {
+      window.location.href = "../payment/rm-payment";
+    }}
+  >
+    <Text
+      p={1}
+      color="background"
+      bg="primary"
+      textAlign="center"
+      paddingTop="15px"
+    >
+      Payment
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center">
+      Loyalty /Chop Stamp / Voucher / Gourmet Card
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center">
+      Merchant Detail / Store Detail
+    </Text>
+  </Box>
+</Flex>
+
+<Flex mx={30}  marginTop="20px">
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center">
+      Software development kit (SDK)
+    </Text>
+  </Box>
+
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
+      WeChat OA
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
+      Other Info
+    </Text>
+  </Box>
+</Flex>
+
+<!-- <Box width={256}>
+  <Card
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Image src="/static/img/loyalty.png" />
+    <Box px={2}>
+      <Heading as="h3">Card Demo</Heading>
+      <Text fontSize={0}>You can edit this code</Text>
+    </Box>
+  </Card>
+</Box> -->
+
+<!-- <Button
+  sx={{
+    ":hover": {
+      backgroundColor: "green",
+    },
+    backgroundColor: "blue",
+  }}
+>
+  Beep
+</Button>
+
+<Box>
+  <Heading>Here's a JSX block</Heading>
+  <Text>It's pretty neat</Text>
+</Box>
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">
+  Facebook blue
+</Highlight> are my favorite colors.
+
+I can write **Markdown** alongside my _JSX_! -->
