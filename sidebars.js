@@ -14,7 +14,16 @@ module.exports = {
           "payment/quickpay/reverse",
         ],
       },
-      "payment/transactionQR",
+      {
+        type: "category",
+        label: "Transaction QR",
+        items: [
+          "payment/transactionQR/transaction-qr",
+          "payment/transactionQR/get-transaction-qr-code-url",
+          "payment/transactionQR/get-transaction-qr-code-url-by-code",
+          "payment/transactionQR/get-transaction-by-code",
+        ],
+      },
     ],
   },
 };
