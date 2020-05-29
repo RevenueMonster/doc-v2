@@ -1,0 +1,201 @@
+---
+id: web-payment
+title: Web/Mobile Payment Transaction
+sidebar_label: Web/Mobile Payment Transaction
+---
+
+import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
+
+:::note
+Used by e-commerce and SaaS businesses for one-time purchases.
+:::
+
+Demo Web Payment (Version 2): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
+
+<details open>
+  <summary>
+    <b> Example of Web Payment</b>
+  </summary>
+  <Card width="100%">
+    <Image src="/static/img/Webpayment.png" />
+  </Card>
+  <br />
+  <Card width="100%">
+    <Image src="/static/img/displayQR.png" />
+  </Card>
+</details>
+<br />
+
+<details>
+  <summary>
+    <b> Example of Mobile Web Payment</b>
+  </summary>
+  <Card width="100%">
+    <Image src="/static/img/MobileWeb.png" />
+  </Card>
+</details>
+<br />
+
+<hr />
+
+**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
+Url : `https://sb-open.revenuemonster.my/v3/payment/online`
+
+:::note
+To create a unified payment checkout page for your website and Mobile.
+:::
+
+<strong>Request Parameters:</strong>
+
+| Parameter       | Type     | Required | Description                                                                                     | Example                                                                                                               |
+| --------------- | -------- | -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `order`         | Object   | Yes      | Object of order                                                                                 | (Refer to explanation below)                                                                                          |
+| `method`        | []String | Yes      | [RM currently supported method](#web-payment-amp-mobile-payement-amp-mobile-web-payment)        | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
+| `type`          | String   | Yes      | Obejct of type                                                                                  | (Refer to explanation below)                                                                                          |
+| `storeId`       | String   | Yes      | ID of the store to create QR code                                                               | "10946114768247530"                                                                                                   |
+| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                           | "https://google.com"                                                                                                  |
+| `notifyUrl`     | String   | Yes      | This is a notify URL or callback URL to inform server on transaction status after payment made. | "https://google.com"                                                                                                  |
+| `layoutVersion` | String   | Optional | Select layout for Web payment                                                                   | V1 / **V2 (Supported Credit Card)**                                                                                   |
+
+<br />
+
+<strong>Order object (order):</strong>
+
+| Parameter        | Type   | Required | Description                                                                                       | Example                        |
+| ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `title`          | String | Yes      | Order title, max: 32                                                                              | "Sales"                        |
+| `detail`         | String | Yes      | Order detail, max: 600                                                                            | "1 x iPhone X; 2 x SAMSUNG S8" |
+| `additionalData` | String | Yes      | Order description                                                                                 | "Sales"                        |
+| `amount`         | Uint   | Yes      | Amount of order in cent. Only required when "isPrefillAmount" = true. (min RM 0.10 or amount: 10) | 100                            |
+| `currencyType`   | String | Yes      | Currency notation (currently only support `MYR`)                                                  | "MYR"                          |
+| `id`             | String | Order ID | "6170506694335521334"                                                                             |
+
+<br />
+
+<strong>Type Object (type):</strong> <br />
+
+| Parameter | Type   | Required | Example          |
+| --------- | ------ | -------- | ---------------- |
+| `type`    | String | Yes      | "WEB_PAYMENT"    |
+| `type`    | String | Yes      | "MOBILE_PAYMENT" |
+
+<hr />
+
+For **MOBILE_PAYMENT** only apply at application.
+
+<strong>SDK for MOBILE_PAYMENT</strong> :-
+
+- [RM-IOS](https://github.com/RevenueMonster/RM-IOS)
+- [RM-Android](https://github.com/RevenueMonster/RM-Android) <br/><br />
+
+<hr />
+
+> Example Request
+
+```json
+curl --location --request POST "{{open_base_path}}/v3/payment/online" \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Bearer {{clientToken}}" \
+  --header "X-Nonce-Str: XAYZRZNLGCKSTURRFKBIGYALUKLCLJOG" \
+  --header "X-Signature: sha256 YTTV0p1XJUllLNwAC/m430ZbteZhdBmUm3aVnKH4XEZU2yfl7liCPzEI40VqTwFcmMLByJ0mRyzc97gzVn1XZVIr1DaPpW3LUv/on82hIDhLue4uJzKg+vS8/CKJC4+SJ1NpL4rDQEg/hdq4mrNIckTN5+UCFbM4tLCDN8FanSoI3SxcfmvfBwuOc5ro4WWStJlr/LxLJWHRdI8ZpTc1gmNkzRKA9YXJI6iACrkg4cUtMkQ0nii9dHu+brKtK2gCtZ6kdPxgiykDlJuPcpHBGsG+wjNGXLxNeeZjbIl6m40dtdwwyiDbdsk/ZelN0J8Xw1rti7a7dHY/vNnN4W+tUA==" \
+  --header "X-Timestamp: 1547643342" \
+  --data "{
+    \"order\": {
+    	\"title\": \"hello\",
+    	\"detail\": \"hello\",
+    	\"additionalData\": \"world\",
+	    \"amount\": 100,
+	    \"currencyType\": \"MYR\",
+	    \"id\": \"13234353336\"
+    },
+    \"method\": [],
+    \"type\": \"WEB_PAYMENT\",
+    \"storeId\": \"977596145540933417\",
+    \"redirectUrl\": \"https://google.com\",
+    \"notifyUrl\": \"https://google.com\",
+    \"layoutVersion\": \"v1\"
+}"
+```
+
+<strong>Response Parameters:</strong>
+
+| Parameter    | Type   | Description                                                                                               | Example                      |
+| ------------ | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `item`       | Object | item object                                                                                               | (Refer to explanation below) |
+| `checkoutId` | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
+
+<br />
+<strong>item Object (item):</strong>
+
+| Parameter | Type   | Description                                                            | Example                                                   |
+| --------- | ------ | ---------------------------------------------------------------------- | --------------------------------------------------------- |
+| `code`    | String | Code to identify web payment url                                       | "1547775958720585401"                                     |
+| `url`     | String | Example to form checkout URL. Note: to change base URL to desired URL. | "http://localhost:8081/checkout?code=1547775958720585401" |
+
+> Example Respond
+
+```json
+{
+  "item": {
+    "checkoutId": "1548316308361173347",
+    "url": "https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347"
+  },
+  "code": "SUCCESS"
+}
+```
+
+:::tip Example of Notify URL Response
+
+```json
+{
+  "data": {
+    "balanceAmount": 100,
+    "createdAt": "2019-03-01T05:51:20Z",
+    "currencyType": "MYR",
+    "method": "WECHATPAY",
+    "order": {
+      "additionalData": "Payment to 11street",
+      "amount": 100,
+      "detail": "Payment to 11street",
+      "id": "P000000660800",
+      "title": "Payment to 11street"
+    },
+    "payee": {
+      "userId": "oKz050cwbEJwKAnKZgbD24UYibHQ"
+    },
+    "platform": "OPEN_API",
+    "referenceId": "1010014200000026201903016100904600",
+    "region": "MALAYSIA",
+    "status": "SUCCESS",
+    "store": {
+      "addressLine1": "",
+      "addressLine2": "",
+      "city": "",
+      "country": "",
+      "countryCode": "",
+      "createdAt": "2018-10-02T10:52:03Z",
+      "geoLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "id": "2551293210619662240",
+      "imageUrl": "https://storage.googleapis.com/rm-prod-asset/img/store.png",
+      "name": "11Street",
+      "phoneNumber": "",
+      "postCode": "",
+      "state": "",
+      "status": "ACTIVE",
+      "updatedAt": "2018-10-02T10:52:03Z"
+    },
+    "terminalId": "",
+    "transactionAt": "2019-03-01T05:51:59Z",
+    "transactionId": "190301055133300427675601",
+    "type": "WEB_PAYMENT",
+    "updatedAt": "2019-03-01T05:52:00.897920132Z",
+    "voucher": null
+  },
+  "eventType": "PAYMENT_WEB_ONLINE"
+}
+```
+
+:::
