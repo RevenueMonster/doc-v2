@@ -1,7 +1,19 @@
 module.exports = {
   someSidebar: {
     Introduction: ["introduction/overview", "introduction/usecase"],
-    "Quick Start": ["quickstart/sdk", "quickstart/developer-application"],
+    "Quick Start": [
+      "quickstart/sdk",
+      "quickstart/signature-algorithm",
+      {
+        type: "category",
+        label: "Access Token",
+        items: [
+          "quickstart/accesstoken/client-credentials",
+          "quickstart/accesstoken/authorization-code",
+          "quickstart/accesstoken/refresh-token",
+        ],
+      },
+    ],
     Payment: [
       "payment/rm-payment",
 
@@ -59,5 +71,7 @@ module.exports = {
         ],
       },
     ],
+    "WeChat OA": ["wechat-oa/merchant-template"],
+    "Social Media": ["social-media/get-follower-by-user-id"],
   },
 };

@@ -38,171 +38,25 @@ Authetication Server -> https://open.revenuemonster.my
 
 Go to our merchant portal in Production [Merchant Portal](https://merchant.revenuemonster.my/) or [Sandbox Merchant Portal](https://sb-merchant.revenuemonster.my/) to sign up as merchant.
 
-Submit all required documents as shown in our merchant portal and get approval from our admin. Should you need more assistance, please contact us at <bd@revenuemonster.my>.
+Submit all required documents as shown in our merchant portal and get approval from our admin. If you need more assistance, please contact us at <bd@revenuemonster.my>.
 
-Kindly go through `Signature Algorithm` to see our signing mechanism before proceed to call payment API endpoint(s). Payment API have higher security requirements than the rest.
-
-<Flex mx={30}>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
+<Flex justifyContent="center">
+  <Button
+    width="100%"
     sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
       ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        backgroundColor: "blue",
       },
-    }}
-    onClick={() => {
-      window.location.href = "../payment/rm-payment";
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
     }}
   >
-    <Text
-      p={1}
-      color="background"
-      bg="primary"
-      textAlign="center"
-      paddingTop="15px"
-    >
-      Payment
-    </Text>
-  </Box>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-  >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Loyalty /Chop Stamp / Voucher / Gourmet Card
-    </Text>
-  </Box>
-  <Box
-    width={1 / 3}
-    px={3}
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-    onClick={() => {
-      window.location.href = "./../detail/user-profile";
-    }}
-  >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Merchant Detail / Store Detail / User Detail
-    </Text>
-  </Box>
+    Let's Start !
+  </Button>
 </Flex>
+<br />
 
-<Flex mx={30}  marginTop="20px">
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-  >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Software development kit (SDK)
-    </Text>
-  </Box>
-
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-  >
-    <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
-      WeChat OA
-    </Text>
-  </Box>
-  <Box
-    width={1 / 3}
-    px={3}
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-  >
-    <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
-      Other Info
-    </Text>
-  </Box>
-</Flex>
-
-<!-- <Box width={256}>
-  <Card
-    sx={{
-      p: 1,
-      borderRadius: 2,
-      ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-      },
-    }}
-  >
-    <Image src="/static/img/loyalty.png" />
-    <Box px={2}>
-      <Heading as="h3">Card Demo</Heading>
-      <Text fontSize={0}>You can edit this code</Text>
-    </Box>
-  </Card>
-</Box> -->
-
-<!-- <Button
-  sx={{
-    ":hover": {
-      backgroundColor: "green",
-    },
-    backgroundColor: "blue",
-  }}
->
-  Beep
-</Button>
-
-<Box>
-  <Heading>Here's a JSX block</Heading>
-  <Text>It's pretty neat</Text>
-</Box>
-
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">
-  Facebook blue
-</Highlight> are my favorite colors.
-
-I can write **Markdown** alongside my _JSX_! -->
+:::note
+The following steps document the RESTful API. For language specific
+SDK(s), please refer to the [SDK section](../quickstart/sdk). need to change URL
+:::

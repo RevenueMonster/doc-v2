@@ -13,13 +13,13 @@ Url :`https://sb-open.revenuemonster.my/v3/payment/transaction/18052605520600116
 Get Payment Transaction ID
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

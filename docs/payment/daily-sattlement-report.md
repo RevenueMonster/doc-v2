@@ -13,7 +13,7 @@ Url : `https://sb-open.revenuemonster.my/v3/payment/reconciliation`
 To Get Daily Payment report
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
 | Parameter         | Type   | Required | Description                                | Example      |
 | ----------------- | ------ | -------- | ------------------------------------------ | ------------ |
@@ -41,7 +41,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 }"
 ```
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

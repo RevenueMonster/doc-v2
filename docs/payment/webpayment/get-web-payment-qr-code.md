@@ -35,7 +35,8 @@ Generate a QR code to display on your web or mobile for user to scan
   </Card>
 </details>
 <br/>
-<strong>Request Parameters:</strong>
+
+### Request Parameters
 
 | Parameter    | Type   | Description                                                                              | Example               |
 | ------------ | ------ | ---------------------------------------------------------------------------------------- | --------------------- |
@@ -44,7 +45,7 @@ Generate a QR code to display on your web or mobile for user to scan
 
 <br/>
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter           | Type   | Description                           | Example                       |
 | ------------------- | ------ | ------------------------------------- | ----------------------------- |

@@ -102,7 +102,7 @@ Url : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode`
 
 To create static/dynamic QR code for user scanning merchant's displayed QR.
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
 | Parameter         | Type     | Required | Description                                                                                                                        |                                             Example                                              |
 | ----------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------: |
@@ -147,7 +147,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/tra
   --data "{\"amount\":100,\"currencyType\":\"MYR\",\"expiry\":{\"type\":\"PERMANENT\"},\"isPreFillAmount\":true,\"method\": [\"WECHATPAY\"],\"order\":{\"detail\":\"detail\",\"title\":\"title\"},\"redirectUrl\":\"https://www.baidu.com/\",\"storeId\":\"10946114768247530\",\"type\":\"DYNAMIC\"}"
 ```
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

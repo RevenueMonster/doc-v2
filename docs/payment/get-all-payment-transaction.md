@@ -14,13 +14,13 @@ Url with limit : `https://sb-open.revenuemonster.my/v3/payment/transactions?limi
 Get All Payment Transaction
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

@@ -4,12 +4,98 @@ title: SDK
 sidebar_label: SDK
 ---
 
-The following language SDK(s) and documentations are available. 
+import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
-*Note: Not all SDK(s) fully implement non-payment functions. Pull requests are welcome.
+The following language SDK(s) and documentations are available.
 
-- C# [SDK & doc](https://github.com/RevenueMonster/RM-API-SDK-Csharp)
-- JAVA [SDK & doc](https://github.com/RevenueMonster/RM-API-SDK-JAVA)
-- NodeJS [SDK & doc](https://github.com/RevenueMonster/RM-API-SDK-Nodejs)
-- PHP [SDK & doc](https://github.com/RevenueMonster/RM-API-SDK-PHP)
-- Python [SDK & doc](https://github.com/RevenueMonster/RM-API-SDK-Python)
+:::note
+Not all SDK(s) fully implement non-payment functions. Pull requests are welcome.
+:::
+
+<Button
+width="100%"
+sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+onClick={() => {
+window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Csharp";
+}}>
+C#
+
+</Button>
+
+<br/>
+<br/>
+
+<Button
+width="100%"
+sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+onClick={() => {
+window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-JAVA";
+}}>
+JAVA
+</Button>
+
+<br/>
+<br/>
+
+<Button
+width="100%"
+sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+onClick={() => {
+window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Nodejs";
+}}>
+NodeJS
+</Button>
+
+<br/>
+<br/>
+
+<Button
+width="100%"
+sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+onClick={() => {
+window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-PHP";
+}}>
+PHP
+</Button>
+
+<br/>
+<br/>
+
+<Button
+width="100%"
+sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+onClick={() => {
+window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Python";
+}}>
+Python
+</Button>
