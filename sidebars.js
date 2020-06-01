@@ -15,17 +15,10 @@ module.exports = {
       },
     ],
     Payment: [
-      "payment/rm-payment",
-
-      {
-        type: "category",
-        label: "Quick Pay",
-        items: [
-          "payment/quickpay/quick-pay",
-          "payment/quickpay/refund",
-          "payment/quickpay/reverse",
-        ],
-      },
+      "payment/overview",
+      "payment/quick-pay",
+      "payment/refund",
+      "payment/reverse",
       {
         type: "category",
         label: "Transaction QR",
@@ -44,7 +37,7 @@ module.exports = {
           "payment/webpayment/get-web-payment-qr-code",
         ],
       },
-      "payment/daily-sattlement-report",
+      "payment/daily-settlement-report",
       "payment/get-all-payment-transaction",
       "payment/get-payment-transaction-id",
       "payment/get-payment-transaction-by-order-id",
@@ -71,7 +64,28 @@ module.exports = {
         ],
       },
     ],
-    "WeChat OA": ["wechat-oa/merchant-template"],
-    "Social Media": ["social-media/get-follower-by-user-id"],
+    Campaign: [
+      "campaign/loyalty/chop-stamp",
+      {
+        type: "category",
+        label: "Loyalty Point",
+        items: [
+          "campaign/loyalty/loyalty-point/give-loyalty-point",
+          "campaign/loyalty/loyalty-point/spending-loyalty-point",
+          "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
+          "campaign/loyalty/loyalty-point/calculate-spending-reward",
+        ],
+      },
+      {
+        type: "category",
+        label: "Loyalty Members",
+        items: [
+          "campaign/loyalty/loyalty-members/loyalty-members",
+          "campaign/loyalty/loyalty-members/loyalty-member",
+          "campaign/loyalty/loyalty-members/loyalty-member-history",
+          "campaign/loyalty/loyalty-members/bulk-create-members",
+        ],
+      },
+    ],
   },
 };

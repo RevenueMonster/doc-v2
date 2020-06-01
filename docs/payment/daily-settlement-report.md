@@ -1,7 +1,7 @@
 ---
-id: daily-sattlement-report
-title: Daily Sattlement Report
-sidebar_label: Daily Sattlement Report
+id: daily-settlement-report
+title: Daily Settlement Report
+sidebar_label: Daily Settlement Report
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

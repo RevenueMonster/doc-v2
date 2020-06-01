@@ -30,13 +30,7 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
       window.location.href = "../payment/rm-payment";
     }}
   >
-    <Text
-      p={1}
-      color="background"
-      bg="primary"
-      textAlign="center"
-      paddingTop="15px"
-    >
+    <Text p={1} color="background" bg="primary" textAlign="center">
       Payment
     </Text>
   </Box>
@@ -55,7 +49,7 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
     }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center">
-      Loyalty /Chop Stamp / Voucher / Gourmet Card
+      Loyalty
     </Text>
   </Box>
   <Box
@@ -70,12 +64,9 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
-    onClick={() => {
-      window.location.href = "./../detail/user-profile";
-    }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center">
-      Merchant Detail / Store Detail / User Detail
+      Voucher
     </Text>
   </Box>
 </Flex>
@@ -95,8 +86,8 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
       },
     }}
   >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Software development kit (SDK)
+    <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="20px">
+      Gourmet Card
     </Text>
   </Box>
 
@@ -113,9 +104,12 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
+     onClick={() => {
+      window.location.href = "./../detail/user-profile";
+    }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
-      WeChat OA
+      Merchant Detail / Store Detail / User Detail
     </Text>
   </Box>
   <Box
@@ -132,6 +126,27 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
     }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
+       Software development kit (SDK)
+    </Text>
+  </Box>
+</Flex>
+
+<Flex marginTop="20px">
+  <Box
+    width="258px"
+    marginRight="20px"
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center">
       Other Info
     </Text>
   </Box>
