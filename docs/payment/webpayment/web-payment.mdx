@@ -47,7 +47,6 @@ To create a unified payment checkout page for your website and Mobile.
 
 ### Request Parameters
 
-
 | Parameter       | Type     | Required | Description                                                                                     | Example                                                                                                               |
 | --------------- | -------- | -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | `order`         | Object   | Yes      | Object of order                                                                                 | (Refer to explanation below)                                                                                          |
@@ -145,7 +144,21 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
 }
 ```
 
-:::tip Example of Notify URL Response
+<hr />
+
+### Create a unified payment checkout
+
+After you get the **url** from **response API**, you can append a query String<br/>
+:::note
+Example: `https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347&method=TNG_MY`
+:::
+
+<br />
+<hr />
+
+### Example of Notify URL Response
+
+:::tip
 
 ```json
 {

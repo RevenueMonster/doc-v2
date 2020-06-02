@@ -34,7 +34,9 @@ module.exports = {
         label: "Web/Mobile Payment",
         items: [
           "payment/webpayment/web-payment",
-          "payment/webpayment/get-web-payment-qr-code",
+          // "payment/webpayment/get-web-payment-qr-code",
+          "payment/webpayment/qr-code&url-by-checkout-id",
+          "payment/webpayment/get-online-transaction",
         ],
       },
       "payment/daily-settlement-report",
@@ -66,6 +68,7 @@ module.exports = {
     ],
     Campaign: [
       "campaign/loyalty/chop-stamp",
+      "campaign/gourmet-card",
       {
         type: "category",
         label: "Loyalty Point",
@@ -86,6 +89,19 @@ module.exports = {
           "campaign/loyalty/loyalty-members/bulk-create-members",
         ],
       },
+      {
+        type: "category",
+        label: "Voucher",
+        items: [
+          "campaign/voucher/get-voucher-batches",
+          "campaign/voucher/voucher-by-code",
+          "campaign/voucher/voucher-batch-by-key",
+          "campaign/voucher/issue-voucher",
+          "campaign/voucher/void-voucher",
+        ],
+      },
     ],
+    "Pos Integration": ["pos-integration"],
+    "Payment Method Detail": ["method"],
   },
 };
