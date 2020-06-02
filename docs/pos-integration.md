@@ -64,21 +64,21 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/ter
 
 ### Response Parameters
 
-| Parameter       | Type     | Description                                      | Example                               |
-| --------------- | -------- | ------------------------------------------------ | ------------------------------------- |
-| `balanceAmount` | Uint     | Amount of order in cent                          | 10                                    |
-| `createdAt`     | DateTime | Creation date time of store                      | "2020-02-13T07:08:56Z"                |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`) | "MYR"                                 |
-| `method`        | String   | [RM currently supported method](#quickpay)       | "CARD"                                |
-| `order`         | String   | (Refer `order` )                                 | {}                                    |
-| `platform`      | String   | Only "TERMINAL"                                  | "TERMINAL"                            |
-| `referenceId`   | String   | Transaction ID (from server)                     | "00000000000791320002737201919250001" |
-| `region`        | String   | Region of wallet                                 | "MALAYSIA"                            |
-| `status`        | String   | Status returned from WeChat server               | "SUCCESS"                             |
-| `transactionAt` | DateTime | Transaction date time of store                   | "2020-10-25T04:35:22Z"                |
-| `transactionId` | DateTime | Transaction ID generated from Revenue Monster.   | "200213070856100322408442"            |
-| `type`          | String   | "QUICKPAY" or "BANK_CARD"                        | "BANK_CARD"                           |
-| `updatedAt`     | DateTime | Last update date time of store                   | "2020-02-13T07:08:56Z"                |
+| Parameter       | Type     | Description                                        | Example                               |
+| --------------- | -------- | -------------------------------------------------- | ------------------------------------- |
+| `balanceAmount` | Uint     | Amount of order in cent                            | 10                                    |
+| `createdAt`     | DateTime | Creation date time of store                        | "2020-02-13T07:08:56Z"                |
+| `currencyType`  | String   | Currency notation (currently only support `MYR`)   | "MYR"                                 |
+| `method`        | String   | [RM currently supported method](./method#quickpay) | "CARD"                                |
+| `order`         | String   | (Refer `order` )                                   | {}                                    |
+| `platform`      | String   | Only "TERMINAL"                                    | "TERMINAL"                            |
+| `referenceId`   | String   | Transaction ID (from server)                       | "00000000000791320002737201919250001" |
+| `region`        | String   | Region of wallet                                   | "MALAYSIA"                            |
+| `status`        | String   | Status returned from WeChat server                 | "SUCCESS"                             |
+| `transactionAt` | DateTime | Transaction date time of store                     | "2020-10-25T04:35:22Z"                |
+| `transactionId` | DateTime | Transaction ID generated from Revenue Monster.     | "200213070856100322408442"            |
+| `type`          | String   | "QUICKPAY" or "BANK_CARD"                          | "BANK_CARD"                           |
+| `updatedAt`     | DateTime | Last update date time of store                     | "2020-02-13T07:08:56Z"                |
 
 <br/>
 <strong>Order object (order):</strong>

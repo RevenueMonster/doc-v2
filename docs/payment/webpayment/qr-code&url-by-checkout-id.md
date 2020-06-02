@@ -39,11 +39,11 @@ To create a unified payment checkout page for your website.
 
 ### Request Parameters
 
-| Parameter    | Type   | Description                                                                              | Example               |
-| ------------ | ------ | ---------------------------------------------------------------------------------------- | --------------------- |
-| `checkoutId` | String | Code to identify web payment url                                                         | "1547775958720585401" |
-| `method`     | String | [RM currently supported method](#web-payment-amp-mobile-payement-amp-mobile-web-payment) | "WECHATPAY_MY"        |
-| `type`       | String | `URL` or `QRCODE`                                                                        | "URL"                 |
+| Parameter    | Type   | Description                                                                                      | Example               |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------ | --------------------- |
+| `checkoutId` | String | Code to identify web payment url                                                                 | "1547775958720585401" |
+| `method`     | String | [RM currently supported method](../.././method#web-payment--mobile-payement--mobile-web-payment) | "WECHATPAY_MY"        |
+| `type`       | String | `URL` or `QRCODE`                                                                                | "URL"                 |
 
 ```json
 curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \

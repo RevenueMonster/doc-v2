@@ -27,7 +27,7 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
       },
     }}
     onClick={() => {
-      window.location.href = "../payment/rm-payment";
+      window.location.href = "../payment/overview";
     }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center">
@@ -47,11 +47,15 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
+    onClick={() => {
+      window.location.href = "../campaign/loyalty/loyalty-point/give-loyalty-point";
+    }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center">
       Loyalty
     </Text>
   </Box>
+
   <Box
     width={1 / 3}
     px={3}
@@ -63,6 +67,9 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
       ":hover": {
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
+    }}
+     onClick={() => {
+      window.location.href = "../campaign/voucher/get-voucher-batches";
     }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center">
@@ -84,6 +91,9 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
       ":hover": {
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
+    }}
+      onClick={() => {
+      window.location.href = "../campaign/gourmet-card";
     }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="20px">
@@ -124,6 +134,9 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
+      onClick={() => {
+      window.location.href = "../quickstart/sdk";
+    }}
   >
     <Text p={1} color="background" bg="primary" textAlign="center" paddingTop="15px">
        Software development kit (SDK)
@@ -133,7 +146,7 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
 
 <Flex marginTop="20px">
   <Box
-    width="258px"
+    width={1 / 3}
     marginRight="20px"
     px={3}
     sx={{
@@ -145,14 +158,17 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
+      onClick={() => {
+      window.location.href = "../pos-integration";
+    }}
   >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Pos Integration
+    <Text p={1} color="background" bg="primary" textAlign="center" >
+     Pos Integration
     </Text>
   </Box>
 
-   <Box
-    width="258px"
+  <Box
+    width={1 / 3}
     marginRight="20px"
     px={3}
     sx={{
@@ -164,9 +180,32 @@ Kindly go through [Signature Algorithm](../quickstart/signature-algorithm) to se
         boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
       },
     }}
+       onClick={() => {
+      window.location.href = "../error-codes";
+    }}
   >
-    <Text p={1} color="background" bg="primary" textAlign="center">
-      Other Info
+    <Text p={1} color="background" bg="primary" textAlign="center" >
+      Error Codes
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    px={3}
+    sx={{
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+      },
+    }}
+     onClick={() => {
+      window.location.href = "../push-notification/push-to-merchant";
+    }}
+  >
+    <Text p={1} color="background" bg="primary" textAlign="center" >
+       Push Notification
     </Text>
   </Box>
 </Flex>

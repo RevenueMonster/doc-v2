@@ -15,13 +15,13 @@ To Get Daily Payment report
 
 ### Request Parameters
 
-| Parameter         | Type   | Required | Description                                | Example      |
-| ----------------- | ------ | -------- | ------------------------------------------ | ------------ |
-| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                      | "PAYMENT"    |
-| `date`            | String | Yes      | Date of the report                         | "2019-12-31" |
-| `method`          | String | Yes      | [RM currently supported method](#quickpay) | []           |
-| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"    | []           |
-| `cursor`          | String | Yes      | Optional, if pagination exists             | ""           |
+| Parameter         | Type   | Required | Description                                         | Example      |
+| ----------------- | ------ | -------- | --------------------------------------------------- | ------------ |
+| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                               | "PAYMENT"    |
+| `date`            | String | Yes      | Date of the report                                  | "2019-12-31" |
+| `method`          | String | Yes      | [RM currently supported method](../method#quickpay) | []           |
+| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"             | []           |
+| `cursor`          | String | Yes      | Optional, if pagination exists                      | ""           |
 
 > Example Request
 

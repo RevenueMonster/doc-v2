@@ -103,5 +103,11 @@ module.exports = {
     ],
     "Pos Integration": ["pos-integration"],
     "Payment Method Detail": ["method"],
+    "Error Codes": ["error-codes"],
+    "Push Notification": [
+      "push-notification/push-to-merchant",
+      "push-notification/push-to-store",
+      "push-notification/push-to-user",
+    ],
   },
 };
