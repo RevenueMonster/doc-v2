@@ -1,6 +1,6 @@
 ---
 id: pos-integration
-title: Pos Integration
+title: Integration
 sidebar_label: Pos Integration
 ---
 
