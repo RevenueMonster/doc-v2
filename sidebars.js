@@ -1,19 +1,24 @@
 module.exports = {
   someSidebar: {
     Introduction: ["introduction/overview", "introduction/usecase"],
-    "Quick Start": ["quickstart/sdk", "quickstart/developer-application"],
-    Payment: [
-      "payment/rm-payment",
-
+    "Quick Start": [
+      "quickstart/sdk",
+      "quickstart/signature-algorithm",
       {
         type: "category",
-        label: "Quick Pay",
+        label: "Access Token",
         items: [
-          "payment/quickpay/quick-pay",
-          "payment/quickpay/refund",
-          "payment/quickpay/reverse",
+          "quickstart/accesstoken/client-credentials",
+          "quickstart/accesstoken/authorization-code",
+          "quickstart/accesstoken/refresh-token",
         ],
       },
+    ],
+    Payment: [
+      "payment/overview",
+      "payment/quick-pay",
+      "payment/refund",
+      "payment/reverse",
       {
         type: "category",
         label: "Transaction QR",
@@ -29,10 +34,12 @@ module.exports = {
         label: "Web/Mobile Payment",
         items: [
           "payment/webpayment/web-payment",
-          "payment/webpayment/get-web-payment-qr-code",
+          // "payment/webpayment/get-web-payment-qr-code",
+          "payment/webpayment/qr-code&url-by-checkout-id",
+          "payment/webpayment/get-online-transaction",
         ],
       },
-      "payment/daily-sattlement-report",
+      "payment/daily-settlement-report",
       "payment/get-all-payment-transaction",
       "payment/get-payment-transaction-id",
       "payment/get-payment-transaction-by-order-id",
@@ -59,5 +66,44 @@ module.exports = {
         ],
       },
     ],
+    Campaign: [
+      "campaign/loyalty/chop-stamp",
+      "campaign/gourmet-card",
+      {
+        type: "category",
+        label: "Loyalty Point",
+        items: [
+          "campaign/loyalty/loyalty-point/give-loyalty-point",
+          "campaign/loyalty/loyalty-point/spending-loyalty-point",
+          "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
+          "campaign/loyalty/loyalty-point/calculate-spending-reward",
+        ],
+      },
+      {
+        type: "category",
+        label: "Loyalty Members",
+        items: [
+          "campaign/loyalty/loyalty-members/loyalty-members",
+          "campaign/loyalty/loyalty-members/loyalty-member",
+          "campaign/loyalty/loyalty-members/loyalty-member-history",
+          "campaign/loyalty/loyalty-members/bulk-create-members",
+        ],
+      },
+      {
+        type: "category",
+        label: "Voucher",
+        items: [
+          "campaign/voucher/get-voucher-batches",
+          "campaign/voucher/voucher-by-code",
+          "campaign/voucher/voucher-batch-by-key",
+          "campaign/voucher/issue-voucher",
+          "campaign/voucher/void-voucher",
+        ],
+      },
+    ],
+    "Pos Integration": ["pos-integration"],
+    "Payment Method Detail": ["method"],
+    "Error Codes": ["error-codes"],
+    "Push Notification": ["push-notification/push-to-merchant"],
   },
 };

@@ -35,16 +35,17 @@ Generate a QR code to display on your web or mobile for user to scan
   </Card>
 </details>
 <br/>
-<strong>Request Parameters:</strong>
 
-| Parameter    | Type   | Description                                                                              | Example               |
-| ------------ | ------ | ---------------------------------------------------------------------------------------- | --------------------- |
-| `checkoutId` | String | Code to identify web payment url                                                         | "1547775958720585401" |
-| `method`     | String | [RM currently supported method](#web-payment-amp-mobile-payement-amp-mobile-web-payment) | ["WECHATPAY_MY"]      |
+### Request Parameters
+
+| Parameter    | Type   | Description                                                                                      | Example               |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------ | --------------------- |
+| `checkoutId` | String | Code to identify web payment url                                                                 | "1547775958720585401" |
+| `method`     | String | [RM currently supported method](../.././method#web-payment--mobile-payement--mobile-web-payment) | ["WECHATPAY_MY"]      |
 
 <br/>
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter           | Type   | Description                           | Example                       |
 | ------------------- | ------ | ------------------------------------- | ----------------------------- |

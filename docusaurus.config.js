@@ -1,68 +1,69 @@
 module.exports = {
-  title: 'Revenue Monster',
-  tagline: 'Empowering businesses by seamlessly integrating Mobile Payments, Loyalty Programs and Social Media',
-  url: 'https://revenuemonster.my',
-  baseUrl: '/',
-  favicon: 'img/favicon.ico',
-  organizationName: 'revenuemonster', // Usually your GitHub org/user name.
-  projectName: 'doc-v2', // Usually your repo name.
+  title: "Revenue Monster",
+  tagline:
+    "Empowering businesses by seamlessly integrating Mobile Payments, Loyalty Programs and Social Media",
+  url: "https://revenuemonster.my",
+  baseUrl: "/",
+  favicon: "img/favicon.ico",
+  organizationName: "revenuemonster", // Usually your GitHub org/user name.
+  projectName: "doc-v2", // Usually your repo name.
   themeConfig: {
     disableDarkMode: true,
     navbar: {
-      title: 'Revenue Monster',
+      title: "Revenue Monster",
       logo: {
-        alt: 'My Site Logo',
-        src: '/img/logo.png',
+        alt: "My Site Logo",
+        src: "/img/logo.png",
       },
       links: [
         {
-          to: 'docs/introduction/overview',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "docs/introduction/overview",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: "blog", label: "Blog", position: "left" },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Introduction',
-              to: 'docs/introduction/overview',
+              label: "Introduction",
+              to: "docs/introduction/overview",
             },
             {
-              label: 'SDK',
-              to: 'docs/quickstart/sdk',
+              label: "SDK",
+              to: "docs/quickstart/sdk",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Facebook',
-              href: 'https://www.facebook.com/RevenueMonster/',
+              label: "Facebook",
+              href: "https://www.facebook.com/RevenueMonster/",
             },
             {
-              label: 'Linkedln',
-              href: 'https://www.linkedin.com/company/revenuemonster/',
+              label: "Linkedln",
+              href: "https://www.linkedin.com/company/revenuemonster/",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: "Blog",
+              to: "blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/RevenueMonster',
+              label: "GitHub",
+              href: "https://github.com/RevenueMonster",
             },
           ],
         },
@@ -72,22 +73,22 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/revenuemonster/doc-v2/edit/master/website/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/doc-v2/edit/master/website/blog/',
+            "https://github.com/facebook/doc-v2/edit/master/website/blog/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],

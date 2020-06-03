@@ -1,39 +1,80 @@
 ---
-id: reverse
-title: Reverse
-sidebar_label: Reverse
+id: quick-pay
+title: Quick Pay
+sidebar_label: Quick Pay
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/reverse`
+Url : `https://sb-open.revenuemonster.my/v3/payment/quickpay`
 
-:::note
-If transaction is timed out, should perform reverse order before creating new transaction. This is to make sure no double charge.
-:::
+### Request Parameters
 
-<strong>Request Parameters:</strong>
+| Parameter    | Type   | Required | Description                                            | Example                      |
+| ------------ | ------ | -------- | ------------------------------------------------------ | ---------------------------- |
+| `authCode`   | String | Yes      | Auth code of QR code/barcode being scanned. Length: 18 | "134850717797247290"         |
+| `order`      | Object | Yes      | Object of order                                        | (Refer to explanation below) |
+| `extraInfo`  | Object | No       | Object of extra Info                                   | (Refer to explanation below) |
+| `ipAddress`  | String | Yes      | IP address of terminal/application for payment         | "8.8.8.8"                    |
+| `terminalId` | String | No       | ID of terminal for payment                             | "19382734937293"             |
+| `storeId`    | String | Yes      | ID of the store                                        | "6170506694335521334"        |
 
-| Parameter | Type   | Required | Description                       | Example              |
-| --------- | ------ | -------- | --------------------------------- | -------------------- |
-| `orderId` | String | Yes      | Order ID (from Merchant), max: 24 | "134850717797247290" |
+<br />
+
+<strong>Order object (order):</strong>
+
+| Parameter        | Type   | Required | Description                                         | Example                        |
+| ---------------- | ------ | -------- | --------------------------------------------------- | ------------------------------ |
+| `id`             | String | Yes      | Order ID (from Merchant), max: 24                   | "134850717797247290"           |
+| `title`          | String | Yes      | Order title, max: 32                                | "Sales"                        |
+| `details`        | String | Yes      | Order details, max: 600                             | "1 x iPhone X; 2 x SAMSUNG S8" |
+| `additionalData` | String | Yes      | For merchant's remark, max 128                      | ""                             |
+| `currencyType`   | String | Yes      | Currency notation (currently only support MYR)      | "MYR"                          |
+| `amount`         | Uint   | Yes      | Amount of order in cent (min RM 0.10 or amount: 10) | 100                            |
+
+<br />
+<strong>ExtraInfo object (extraInfo)</strong>
+<br />
+<br />
+
+<p>Only for Gourmet Card Merchant</p>
+
+| Parameter   | Type   | Required | Description    | Example                |
+| ----------- | ------ | -------- | -------------- | ---------------------- |
+| `type`      | String | Yes      | Membership     | "MEMBERSHIP"           |
+| `reference` | String | Yes      | Member Card ID | "28158443195878043074" |
 
 > Example Request
 
 ```json
-curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/reverse" \
+
+curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/quickpay" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjIwMTgtMDMtMTMiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsiKiJdLCJleHAiOjE1MjE2MjkyNTYsImlhdCI6MTUyMTYyMjA1NywiaXNzIjoiaHR0cHM6Ly9zYi1vYXV0aC5yZXZlbnVlbW9uc3Rlci5teSIsImp0aSI6IkVod0tFRTlCZFhSb1FXTmpaWE56Vkc5clpXNFF5cmYza3EzTDY4QnoiLCJuYmYiOjE1MjE2MjIwNTcsInN1YiI6IkVoUUtDRTFsY21Ob1lXNTBFSlhWemQzd3JhcVRPUklRQ2dSVmMyVnlFSXlKcUl6dnlNUFZjUSJ9.dJknY9MZHLNrKx1p7gZxS0_oA3uXLWplDU1r1dpwxIbmdB6yw4tQBTXKlWArDfKLlBDn6v22_gT5Px7sdCMj7e5M9eRoJoMnoPnslgYpmJJ5kjqAbKU7dUxKb1OzFLrvmtSK9r-FRLVtMFHioWYpwgSvSPBgZ6lAYkUyDzH7aKadFYtQcBuJR0hlq2CXtP0mzbHOeu2q6giONf3E5-XqS8lLRtuHPAbJ7_YFwo0Oe2zc6h05IOocmx_NvBVPfDBnuygTU063h70Q987MYeGDV_Os4N6N_I4b-GoHprEPtmntB1RJPrFrY28hvvoUfDHXHZVXT1GlrsozrkWV4EjbTw" \
-  --header "X-Signature: sha256 ZtQhyfkgMLY2FCxQeVQPljczzijPoC7zWH087erdAm1h2x2A0B+GQ9Fk89VbvMB9400m8SFBDRz5XgEVaqPh7Q==" \
+  --header "X-Signature: sha256 Sty3LNcKA8+WlMHtAgIY+y1xbwnzKsN0UdyKaW+yYIgcTkBAtF7G5Lx251qQITURJ4wiXPDODxhs1nFVmBBing==" \
   --header "X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN" \
-  --header "X-Timestamp: 1527407052" \
+  --header "X-Timestamp: 1528450585" \
   --data "{
-  \"orderId\": \"12344333233404\"
+   \"authCode\":\"151261311797136005\",
+   \"order\":{
+      \"amount\":100,
+      \"currencyType\":\"MYR\",
+      \"id\":\"12344333233404\",
+      \"title\":\"title\",
+      \"detail\":\"desc\",
+      \"additonalData\":\"API Test\"
+   },
+  \"extraInfo\": {
+    \"type\": \"MEMBERSHIP\",
+    \"reference\": \"28158443195878043074\"
+      },
+   \"ipAddress\":\"175.143.101.229\",
+   \"storeId\":\"10946114768247530\"
 }"
 ```
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -41,6 +82,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 
 <br />
+
 <strong>Transaction object (item):</strong>
 
 | Parameter       | Type     | Description                                      | Example                                    |
@@ -50,18 +92,17 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 | `transactionId` | String   | Transaction ID (from RM server)                  | "152161448229438994"                       |
 | `order`         | Object   | Order object                                     | (Refer to explanation below)               |
 | `payee`         | Object   | Object of userID made payment (payment sender)   | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
+| `currencyType`  | String   | Currency notation (currently only support `MYR`) | "MYR"                                      |
 | `platform`      | String   | Currently only support "OPEN_API"                | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](#quickpay)       | ALL                                        |
+| `method`        | String   | [RM currently supported method](../method#quickpay)       | ALL                                        |
 | `type`          | String   | Currently only support "QUICKPAY"                | "QUICKPAY"                                 |
 | `status`        | String   | Status returned from WeChat server               | "SUCCESS"                                  |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"          | "MALAYSIA"                                 |
 | `error`         | String   | (Refer `Appendix: Error Codes`)                  | {}                                         |
 | `createdAt`     | DateTime | Creation date time of transaction                | "2018-03-21T06:41:22Z"                     |
 | `updatedAt`     | DateTime | Last update date time of transaction             | "2018-03-21T06:41:22Z"                     |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`) | "MYR"                                      |
 
 <br />
-
 <strong>Store object (store):</strong>
 
 | Parameter      | Type              | Description                                     | Example                                             |
@@ -82,22 +123,39 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 | `updatedAt`    | DateTime          | Last update date time of store                  | "2018-02-12T08:53:13Z"                              |
 
 <br />
-
 <strong>Order object (order):</strong>
 
-| Parameter        | Type   | Description                       | Example                        |
-| ---------------- | ------ | --------------------------------- | ------------------------------ |
-| `id`             | String | Order ID (from Merchant), max: 24 | "134850717797247290"           |
-| `title`          | String | Order title, max: 32              | "Sales"                        |
-| `details`        | String | Order details, max: 600           | "1 x iPhone X; 2 x SAMSUNG S8" |
-| `additionalData` | String | For merchant's remark, max 128    | ""                             |
-| `amount`         | Uint   | Amount of order in cent           | 100                            |
+| Parameter | Type   | Description                                         | Example                        |
+| --------- | ------ | --------------------------------------------------- | ------------------------------ |
+| `id`      | String | Order ID (from Merchant), max: 24                   | "134850717797247290"           |
+| `title`   | String | Order title, max: 32                                | "Sales"                        |
+| `details` | String | Order details, max: 600                             | "1 x iPhone X; 2 x SAMSUNG S8" |
+| `amount`  | Uint   | Amount of order in cent (min RM 0.10 or amount: 10) | 100                            |
 
 > Example Respond
 
 ```json
 {
   "item": {
+    "store": {
+      "id": "10946114768247530",
+      "name": "One Utama",
+      "addressLine1": "200, ABCD",
+      "addressLine2": "",
+      "postCode": "48482",
+      "city": "AMPANG",
+      "state": "W.P. KUALA LUMPUR",
+      "country": "MALAYSIA",
+      "countryCode": "60",
+      "phoneNumber": "12312341234",
+      "geoLocation": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "status": "ACTIVE",
+      "createdAt": "2018-06-28T03:24:52Z",
+      "updatedAt": "2018-06-28T03:24:52Z"
+    },
     "referenceId": "1010014200000026201807306110047699",
     "transactionId": "180730103559010434619271",
     "order": {
@@ -111,15 +169,15 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
       "userId": "o74f0wsssZBWis4rJWyDCWmEF-ig"
     },
     "currencyType": "MYR",
-    "balanceAmount": 0,
+    "balanceAmount": 100,
     "platform": "OPEN_API",
     "method": "WECHATPAY",
-    "transactionAt": "2018-07-30T10:36:01Z",
+    "transactionAt": "2018-07-30T10:36:01.515328338Z",
     "type": "QUICK_PAY",
-    "status": "REVERSED",
+    "status": "SUCCESS",
     "region": "MALAYSIA",
-    "createdAt": "2018-07-30T10:35:59Z",
-    "updatedAt": "2018-07-30T10:37:24.376379089Z"
+    "createdAt": "2018-07-30T10:35:59.233482384Z",
+    "updatedAt": "2018-07-30T10:36:01.515328459Z"
   },
   "code": "SUCCESS"
 }

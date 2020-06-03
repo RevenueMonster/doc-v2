@@ -1,7 +1,7 @@
 ---
-id: daily-sattlement-report
-title: Daily Sattlement Report
-sidebar_label: Daily Sattlement Report
+id: daily-settlement-report
+title: Daily Settlement Report
+sidebar_label: Daily Settlement Report
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -13,15 +13,15 @@ Url : `https://sb-open.revenuemonster.my/v3/payment/reconciliation`
 To Get Daily Payment report
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
-| Parameter         | Type   | Required | Description                                | Example      |
-| ----------------- | ------ | -------- | ------------------------------------------ | ------------ |
-| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                      | "PAYMENT"    |
-| `date`            | String | Yes      | Date of the report                         | "2019-12-31" |
-| `method`          | String | Yes      | [RM currently supported method](#quickpay) | []           |
-| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"    | []           |
-| `cursor`          | String | Yes      | Optional, if pagination exists             | ""           |
+| Parameter         | Type   | Required | Description                                         | Example      |
+| ----------------- | ------ | -------- | --------------------------------------------------- | ------------ |
+| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                               | "PAYMENT"    |
+| `date`            | String | Yes      | Date of the report                                  | "2019-12-31" |
+| `method`          | String | Yes      | [RM currently supported method](../method#quickpay) | []           |
+| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"             | []           |
+| `cursor`          | String | Yes      | Optional, if pagination exists                      | ""           |
 
 > Example Request
 
@@ -41,7 +41,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 }"
 ```
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

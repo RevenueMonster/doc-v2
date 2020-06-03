@@ -14,13 +14,13 @@ Url with limit : `https://sb-open.revenuemonster.my/v3/payment/transactions?limi
 Get All Payment Transaction
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -39,7 +39,7 @@ No request parameter is required for this endpoint.
 | `order`         | Object   | Order object                                                                                                                   | (Refer to explanation below)               |
 | `payee`         | Object   | Object of userID made payment (payment sender)                                                                                 | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
 | `platform`      | String   | Currently only support "OPEN_API"                                                                                              | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](#quickpay)                                                                                     | "ALL"                                      |
+| `method`        | String   | [RM currently supported method](../method#quickpay)                                                                             | "ALL"                                      |
 | `type`          | String   | Currently only support "QUICKPAY"                                                                                              | "QUICKPAY"                                 |
 | `status`        | String   | Status returned from WeChat server, "SUCCESS" or "IN_PROCESS" or "FAILED". "IN_PROCESS" means user scanned and making payment. | "FAILED"                                   |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                        | "MALAYSIA"                                 |
