@@ -1,6 +1,7 @@
 module.exports = {
   someSidebar: {
     Introduction: ["introduction/overview", "introduction/usecase"],
+
     "Quick Start": [
       {
         type: "category",
@@ -18,6 +19,7 @@ module.exports = {
         ],
       },
     ],
+
     Payment: [
       "payment/overview",
       "payment/quick-pay",
@@ -61,22 +63,28 @@ module.exports = {
     "Loyalty & Voucher": [
       {
         type: "category",
-        label: "Loyalty Point",
+        label: "Loyalty",
         items: [
-          "campaign/loyalty/loyalty-point/give-loyalty-point",
-          "campaign/loyalty/loyalty-point/spending-loyalty-point",
-          "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
-          "campaign/loyalty/loyalty-point/calculate-spending-reward",
-        ],
-      },
-      {
-        type: "category",
-        label: "Loyalty Members",
-        items: [
-          "campaign/loyalty/loyalty-members/loyalty-members",
-          "campaign/loyalty/loyalty-members/loyalty-member",
-          "campaign/loyalty/loyalty-members/loyalty-member-history",
-          "campaign/loyalty/loyalty-members/bulk-create-members",
+          {
+            type: "category",
+            label: "Loyalty Point",
+            items: [
+              "campaign/loyalty/loyalty-point/give-loyalty-point",
+              "campaign/loyalty/loyalty-point/spending-loyalty-point",
+              "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
+              "campaign/loyalty/loyalty-point/calculate-spending-reward",
+            ],
+          },
+          {
+            type: "category",
+            label: "Loyalty Members",
+            items: [
+              "campaign/loyalty/loyalty-members/loyalty-members",
+              "campaign/loyalty/loyalty-members/loyalty-member",
+              "campaign/loyalty/loyalty-members/loyalty-member-history",
+              "campaign/loyalty/loyalty-members/bulk-create-members",
+            ],
+          },
         ],
       },
       {
@@ -90,8 +98,12 @@ module.exports = {
           "campaign/voucher/void-voucher",
         ],
       },
-      "campaign/loyalty/chop-stamp",
-      "campaign/gourmet-card",
+
+      {
+        type: "category",
+        label: "Campaign",
+        items: ["campaign/chop-stamp", "campaign/gourmet-card"],
+      },
     ],
 
     Settings: [
@@ -118,9 +130,9 @@ module.exports = {
     ],
 
     "Push Notification": ["push-notification/push-to-merchant"],
-    Downloads: ["introduction/overview"],
-    FAQ: ["introduction/overview"],
-    Appendix: ["introduction/overview"],
+    // Downloads: ["introduction/overview"],
+    // FAQ: ["introduction/overview"],
+    // Appendix: ["introduction/overview"],
     "Error Codes": ["error-codes"],
   },
 };

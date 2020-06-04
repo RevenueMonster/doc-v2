@@ -12,7 +12,6 @@ Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/reward`
 
 :::note
 To give loyalty points to customers using phone number or member ID.
-By (Point) giving the point
 :::
 
 ### Request Parameters
