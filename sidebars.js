@@ -48,7 +48,7 @@ module.exports = {
       },
       "payment/query-status-by-order-id",
       "payment/query-status-by-transaction-id",
-      "payment/get-all-payment-transaction",
+      "payment/get-all-transaction",
       "payment/daily-settlement-report",
     ],
 
@@ -107,25 +107,29 @@ module.exports = {
     ],
 
     Settings: [
-      "detail/user-profile",
-      {
-        type: "category",
-        label: "Merchant",
-        items: [
-          "detail/mercahantDetail/merchant-profile",
-          "detail/mercahantDetail/merchant-subscriptions",
-        ],
-      },
       {
         type: "category",
         label: "Store",
         items: [
-          "detail/storeDetail/store-detail",
-          "detail/storeDetail/get-store-by-id",
-          "detail/storeDetail/create-store",
-          "detail/storeDetail/update-store",
-          "detail/storeDetail/delete-store",
+          "settings/store-detail/store-details",
+          "settings/store-detail/get-store-by-id",
+          "settings/store-detail/create-store",
+          "settings/store-detail/update-store",
+          "settings/store-detail/delete-store",
         ],
+      },
+      {
+        type: "category",
+        label: "Merchant",
+        items: [
+          "settings/merchant-detail/merchant-profile",
+          "settings/merchant-detail/merchant-subscriptions",
+        ],
+      },
+      {
+        type: "category",
+        label: "User",
+        items: ["settings/user-profile"],
       },
     ],
 

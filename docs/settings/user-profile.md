@@ -7,19 +7,20 @@ sidebar_label: Get User Profile
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url :`https://sb-open.revenuemonster.my/v3/user`
+URL :`https://open.revenuemonster.my/v3/user`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/user`
 
 :::note
 To query for ALL users under this merchant.
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters:
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

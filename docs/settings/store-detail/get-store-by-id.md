@@ -7,19 +7,24 @@ sidebar_label: Get Store By ID
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/store/10946114768247530`
+URL : `https://open.revenuemonster.my/v3/store/10946114768247530`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/store/10946114768247530`
 
 :::note
-Get store detail by ID.
+Use `Store ID` to check a particular store details.
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters:
 
 :::note
-No request parameter is required for this endpoint.
+
+- The URL is consist of `[base_URL]`/v3/store/`[store_id]`
+
+- Pass in `Store ID` in your query
+
 :::
 
-<strong>Respond Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

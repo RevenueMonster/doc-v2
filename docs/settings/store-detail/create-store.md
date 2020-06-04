@@ -7,13 +7,14 @@ sidebar_label: Create Store
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/store`
+URL : `https://open.revenuemonster.my/v3/store`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/store`
 
 :::note
 To create a store under one merchant.
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters:
 
 | Parameter      | Type              | Required | Description                                     | Example                                            |
 | -------------- | ----------------- | -------- | ----------------------------------------------- | -------------------------------------------------- |
@@ -49,7 +50,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/store" \
 }"
 ```
 
-<strong>Request Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

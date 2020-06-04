@@ -11,7 +11,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 (Currently not all Method supported in Production)
 :::
 
-### Web Payment / Mobile Payement / Mobile Web Payment
+### Web Payment / Mobile Payment / Mobile Web Payment
 
 <table>
   <tr>

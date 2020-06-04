@@ -7,17 +7,21 @@ sidebar_label: Get Loyalty Member Hisotry
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/member/2940921291529816182/history`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/member/2940921291529816182/history`
+URL: `https://open.revenuemonster.my/v3/loyalty/member/2940921291529816182/history`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/member/2940921291529816182/history`
 
 :::note
-Get Loyalty Memeber Point History By `Member ID`
+Get Loyalty Member Point History By `Member ID`
 :::
 
 ### Request Parameters
 
 :::note
-No request parameter is required for this endpoint.
+
+- The URL is consist of `[base_URL]`/v3/loyalty/member/`[member_id]`/history
+
+- Pass an empty JSON object Example: `{}`
+
 :::
 
 ### Respond Parameters

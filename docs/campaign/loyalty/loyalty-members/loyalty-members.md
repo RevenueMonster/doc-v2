@@ -7,8 +7,8 @@ sidebar_label: Get Loyalty Members
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/members`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/members`
+URL : `https://open.revenuemonster.my/v3/loyalty/members`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/members`
 
 :::note
 Get All Loyalty Members

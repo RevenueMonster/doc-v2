@@ -1,25 +1,26 @@
 ---
-id: merchant-subscriptions
-title: Get Mercahant Subscriptions
-sidebar_label: Get Mercahant Subscriptions
+id: merchant-profile
+title: Get Mercahant Profile
+sidebar_label: Get Mercahant Profile
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url :`https://sb-open.revenuemonster.my/v3/merchant/subscriptions`
+URL :`https://open.revenuemonster.my/v3/merchant`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/merchant`
 
 :::note
-To query for merchant product subscription details.
+To query for merchant details.
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters:
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type   | Description                                                                                   | Example                    |
 | --------- | ------ | --------------------------------------------------------------------------------------------- | -------------------------- |
@@ -28,7 +29,7 @@ No request parameter is required for this endpoint.
 
 <br/>
 
-<strong>Item Object:</strong>
+<strong>Item Object (item):</strong>
 
 | Parameter            | Type     | Description                             | Example                                                        |
 | -------------------- | -------- | --------------------------------------- | -------------------------------------------------------------- |
@@ -59,6 +60,7 @@ No request parameter is required for this endpoint.
 | `updatedAt`          | DateTime | Last update date time of merchant       | "2018-02-12T08:53:13Z"                                         |
 
 <br/>
+
 <strong>Invoice Address Object:</strong>
 
 | Parameter      | Type   | Description           | Example                                 |
@@ -74,29 +76,40 @@ No request parameter is required for this endpoint.
 
 ```json
 {
-  "item": [
-    {
-      "id": 1001,
-      "gracePeriod": 90,
-      "expiryAt": "2018-04-28T06:36:08Z",
-      "terminateAt": "2018-07-27T23:59:59Z",
-      "status": "ACTIVE"
+  "item": {
+    "id": "5611759774758429587",
+    "companyName": "YUSSUF TEST",
+    "companyType": "SOLE PROPRIETORSHIP",
+    "companyLogoUrl": "https://storage.googleapis.com/rm-dev-merchant/5611759774758429587/logo/merchant.jpeg",
+    "registrationNumber": "12343",
+    "businessCategory": "INSURANCE SERVICES",
+    "establishedAt": "2018-05-12T16:00:00Z",
+    "countryCode": "60",
+    "phoneNumber": "167367171",
+    "addressLine1": "20, JALAN JASA 38, TAMAN MUTIARA RINI",
+    "addressLine2": "",
+    "postcode": "81300",
+    "city": "AYER HITAM",
+    "state": "JOHOR",
+    "country": "MALAYSIA",
+    "invoiceAddress": {
+      "addressLine1": "20, JALAN JASA 38, TAMAN MUTIARA RINI",
+      "addressLine2": "",
+      "postcode": "81300",
+      "city": "AYER HITAM",
+      "state": "JOHOR",
+      "country": "MALAYSIA"
     },
-    {
-      "id": 1000,
-      "gracePeriod": 90,
-      "expiryAt": "2018-04-25T02:51:10Z",
-      "terminateAt": "2018-07-24T23:59:59Z",
-      "status": "ACTIVE"
-    },
-    {
-      "id": 1003,
-      "gracePeriod": 90,
-      "expiryAt": "2018-04-29T05:04:30Z",
-      "terminateAt": "2018-07-28T23:59:59Z",
-      "status": "ACTIVE"
-    }
-  ],
+    "isActive": true,
+    "status": "VERIFIED",
+    "isMasterMerchant": false,
+    "masterMerchantId": "2301663653361832803",
+    "isPartner": false,
+    "partnerId": "2301663653361832803",
+    "gstNo": "",
+    "createdAt": "2018-05-14T09:26:22Z",
+    "updatedAt": "2018-05-22T05:23:02Z"
+  },
   "code": "SUCCESS"
 }
 ```
