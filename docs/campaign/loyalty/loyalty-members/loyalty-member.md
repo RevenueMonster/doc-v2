@@ -7,17 +7,21 @@ sidebar_label: Get Loyalty Member By ID
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/member/2940921291529816182`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/member/2940921291529816182`
+URL : `https://open.revenuemonster.my/v3/loyalty/member/2940921291529816182`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/member/2940921291529816182`
 
 :::note
-Get loyalty member by memberId
+Get loyalty member by `Member ID`
 :::
 
 ### Request Parameters
 
 :::note
-No request parameter is required for this endpoint.
+
+- The URL is consist of `[base_URL]`/v3/loyalty/member/`[member_id]`
+
+- Pass an empty JSON object Example: `{}`
+
 :::
 
 ### Respond Parameters

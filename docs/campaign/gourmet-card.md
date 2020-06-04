@@ -7,12 +7,12 @@ sidebar_label: Gourmet Card
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url :`https://open.revenuemonster.my/v3/membership/verify`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/membership/verify`
+URL :`https://open.revenuemonster.my/v3/membership/verify`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/membership/verify`
 
 :::note
 (**For Alipay Merchant** )
-Collect information using memeber card ID
+Collect information using member card ID
 :::
 
 ### Request Parameters

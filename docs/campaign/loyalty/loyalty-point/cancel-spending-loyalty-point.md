@@ -7,8 +7,8 @@ sidebar_label: Cancel Spending Loyalty Point
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/spending-reward/cancel`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/cancel`
+URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward/cancel`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/cancel`
 
 :::note
 Cancel the Spending Loyalty Point by ID

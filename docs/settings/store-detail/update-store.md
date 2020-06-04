@@ -7,13 +7,22 @@ sidebar_label: Update Store
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "gray", fontWeight: "bold" }}>PATCH</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/store/1662168764176583360`
+URL : `https://open.revenuemonster.my/v3/store/1662168764176583360`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/store/1662168764176583360`
 
 :::note
-To update specific store under this merchant. Specify `store_id` in query parameter.
+To update specific store under this merchant. Specify `store_id` in your query.
 :::
 
-<strong>Request Parameters:</strong>
+### Request Parameters
+
+:::note
+
+- The URL is consist of `[base_URL]`/v3/store/`[store_id]`
+
+- Pass in `Store ID` in your query
+
+:::
 
 | Parameter      | Type              | Required | Description                                     | Example                                             |
 | -------------- | ----------------- | -------- | ----------------------------------------------- | --------------------------------------------------- |
@@ -49,7 +58,7 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/store/1662
 }"
 ```
 
-<strong>Request Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

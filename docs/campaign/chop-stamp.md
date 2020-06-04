@@ -7,10 +7,11 @@ sidebar_label: Give Chop Stamp
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/loyalty/chop-stamp/card/scan`<br/>
+URL : `https://open.revenuemonster.my/v3/loyalty/chop-stamp/card/scan`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/chop-stamp/card/scan`<br/>
 
 :::note
-To redeem a Chop Stamp
+Give a stamp to customer
 :::
 
 ### Request Parameters
@@ -44,7 +45,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/cho
 
 <br/>
 
-<strong>Transaction object ('item'):</strong>
+<strong>Transaction object (item):</strong>
 
 | Parameter          | Type     | Description           | Example                                                                       |
 | ------------------ | -------- | --------------------- | ----------------------------------------------------------------------------- |

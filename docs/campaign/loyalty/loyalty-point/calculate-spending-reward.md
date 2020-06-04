@@ -7,8 +7,8 @@ sidebar_label: Calculate Spending Reward
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/spending-reward/calculate`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/calculate`
+URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward/calculate`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/calculate`
 
 :::note
 Using amount to Calculate Spending Reward point

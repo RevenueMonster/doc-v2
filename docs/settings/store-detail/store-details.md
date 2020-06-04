@@ -1,29 +1,30 @@
 ---
-id: store-detail
-title: Get Store
-sidebar_label: Get Store
+id: store-details
+title: Get All Stores
+sidebar_label: Get All Stores
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/stores`
+URL : `https://open.revenuemonster.my/v3/stores`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/stores`
 
 :::note
-To query for ALL stores under a merchant.
+
+- To query for ALL stores under a merchant.
+
+- To pass in pagination cursor, you may use query string: ~/?cursor= < cursor >\_
+
 :::
 
-:::note
-To pass in pagination cursor, you may use query string: ~/?cursor= < cursor >\_
-:::
-
-<strong>Request Parameters:</strong>
+### Request Parameters:
 
 :::note
 No request parameter is required for this endpoint.
 :::
 
-<strong>Response Parameters:</strong>
+### Response Parameters:
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |

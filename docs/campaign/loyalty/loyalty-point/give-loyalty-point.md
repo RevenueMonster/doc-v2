@@ -7,22 +7,22 @@ sidebar_label: Give Loyalty Point
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://open.revenuemonster.my/v3/loyalty/reward`<br/>
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/reward`
+URL : `https://open.revenuemonster.my/v3/loyalty/reward`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/reward`
 
 :::note
-To give loyalty points to customers using phone number or member ID.
+To give loyalty point(s) to customer's using phone number or member ID.
 :::
 
 ### Request Parameters
 
-| Parameter     | Type    | Required | Description                                        | Example                                                  |
-| ------------- | ------- | -------- | -------------------------------------------------- | -------------------------------------------------------- |
-| `point`       | Integer | Yes      | Loyalty point given to customers.                  | 100                                                      |
-| `type`        | String  | Yes      | "ID", "PHONENUMBER" or "QRCODE"                    | Use phone number , ID or QR Code to give loyalty points. |
-| `memberId`    | String  | No       | Member ID if type "ID" being provided.             | "2777058682717858418"                                    |
-| `countryCode` | String  | No       | Country code if type "PHONENUMBER" being provided. | "60"                                                     |
-| `phoneNumber` | String  | No       | Phone number if type "PHONENUMBER" being provided. | "172826990"                                              |
+| Parameter     | Type    | Required | Description                                        | Example                                                    |
+| ------------- | ------- | -------- | -------------------------------------------------- | ---------------------------------------------------------- |
+| `point`       | Integer | Yes      | Loyalty point given to customers.                  | 100                                                        |
+| `type`        | String  | Yes      | "ID", "PHONENUMBER" or "QRCODE"                    | Use phone number , ID or QR Code to give loyalty point(s). |
+| `memberId`    | String  | No       | Member ID if type "ID" being provided.             | "2777058682717858418"                                      |
+| `countryCode` | String  | No       | Country code if type "PHONENUMBER" being provided. | "60"                                                       |
+| `phoneNumber` | String  | No       | Phone number if type "PHONENUMBER" being provided. | "172826990"                                                |
 
 > Example Request Phone Number
 
@@ -92,7 +92,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 }
 ```
 
-> Example Respond (QRCDOE)
+> Example Respond (QR Code)
 
 ```json
 {
