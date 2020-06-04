@@ -7,23 +7,21 @@ sidebar_label: Refresh Token
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
+URL : `https://oauth.revenuemonster.my/v1/token`<br/>
+Sandbox URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 
 :::note Refresh token is used to get new access token
 
 - When Access token is expired (29 day)
 - Access token is compromised/hacked/stolen/destroyed
 
-In case you lost refresh token or do not want to deal with refresh token, you may opt to get new access token/refresh token using client credentials again. But this is not a suggested practice. (You don't want your clientid/clientscrect always exposed in network traffic. That is why you shall use refresh token.)
+In case you lost refresh token or do not want to deal with refresh token, you may opt to get new access token/refresh token using client credentials again. But this is not a suggested practice. (You don't want your clientid/clientsecret always exposed in network traffic. That is why you shall use refresh token.)
 
-Recommended practice is to run a scheduled task to get the refresh token refreshed before 24 years expiry. And store it using singleton design pattern for all subsequent requests to get access token. (For example, static variable in most OOP languages like C# or JAVA). Another fail-safe mechanism is that if a invalid access token error has occur, use clientid/clientsecrect again to get new access token and refresh token and store the access token/refresh token for future use.
-
-Access token will be expired as mentioned in response parameter (currently default expiry is set to 2 hours). Developers can regenerate new access token by using refresh token rather than using clientid/clientserect.
 :::
 
 ### Step 1 : Get Client ID and Client Secret
 
-To get your **Client ID** and **Client Secret** , Kindly go to [RM Merchant Portal](https://merchant.revenuemonster.my/) > **Developer** > **Application**
+To get your **Client ID** and **Client Secret** , go to [RM Merchant Portal](https://merchant.revenuemonster.my/) > **Developer** > **Application**
 
 | Parameter      |  Type  | Required | Description                                                                                            |             Example              |
 | :------------- | :----: | :------: | :----------------------------------------------------------------------------------------------------- | :------------------------------: |
@@ -33,7 +31,7 @@ To get your **Client ID** and **Client Secret** , Kindly go to [RM Merchant Port
 ### Step 2 : Encode the parameters from Step 1 in Base 64 format
 
 Structure: <br />
-`clientId`:`clientSecret`
+`clientID`:`clientSecret`
 
 Example: <br />
 Before Base64 encoding: <br />
@@ -47,7 +45,7 @@ After Base64 encoding: <br />
 **Content-Type** : application/json <br />
 **Authorization** : Basic MzY3NTkzMDk0MTQxMjQyNDMxNjp3bW43RlVhdVhIZGtvWWE5MTgya0NNa2pHbk5KVmdpbg==
 
-More info refer: [Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
+More info: [Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
 
 **In Body Request** :
 

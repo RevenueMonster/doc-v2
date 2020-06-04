@@ -38,10 +38,10 @@ Generate a QR code to display on your web or mobile for user to scan
 
 ### Request Parameters
 
-| Parameter    | Type   | Description                                                                                      | Example               |
-| ------------ | ------ | ------------------------------------------------------------------------------------------------ | --------------------- |
-| `checkoutId` | String | Code to identify web payment url                                                                 | "1547775958720585401" |
-| `method`     | String | [RM currently supported method](../.././method#web-payment--mobile-payement--mobile-web-payment) | ["WECHATPAY_MY"]      |
+| Parameter    | Type   | Description                                                 | Example               |
+| ------------ | ------ | ----------------------------------------------------------- | --------------------- |
+| `checkoutId` | String | Code to identify web payment url                            | "1547775958720585401" |
+| `method`     | String | [RM currently supported method](../.././method/web-payment) | ["WECHATPAY_MY"]      |
 
 <br/>
 

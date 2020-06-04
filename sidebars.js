@@ -2,7 +2,11 @@ module.exports = {
   someSidebar: {
     Introduction: ["introduction/overview", "introduction/usecase"],
     "Quick Start": [
-      "quickstart/sdk",
+      {
+        type: "category",
+        label: "SDK",
+        items: ["quickstart/sdk", "quickstart/mobile-sdk"],
+      },
       "quickstart/signature-algorithm",
       {
         type: "category",
@@ -34,41 +38,27 @@ module.exports = {
         label: "Web/Mobile Payment",
         items: [
           "payment/webpayment/web-payment",
+          "payment/webpayment/notify-url",
           // "payment/webpayment/get-web-payment-qr-code",
           "payment/webpayment/qr-code&url-by-checkout-id",
           "payment/webpayment/get-online-transaction",
         ],
       },
-      "payment/daily-settlement-report",
+      "payment/query-status-by-order-id",
+      "payment/query-status-by-transaction-id",
       "payment/get-all-payment-transaction",
-      "payment/get-payment-transaction-id",
-      "payment/get-payment-transaction-by-order-id",
+      "payment/daily-settlement-report",
     ],
-    Details: [
-      "detail/user-profile",
-      {
-        type: "category",
-        label: "Merchant",
-        items: [
-          "detail/mercahantDetail/merchant-profile",
-          "detail/mercahantDetail/merchant-subscriptions",
-        ],
-      },
-      {
-        type: "category",
-        label: "Store",
-        items: [
-          "detail/storeDetail/store-detail",
-          "detail/storeDetail/get-store-by-id",
-          "detail/storeDetail/create-store",
-          "detail/storeDetail/update-store",
-          "detail/storeDetail/delete-store",
-        ],
-      },
+
+    "POS Integration": ["pos-integration"],
+
+    "Support Payment Method": [
+      "method/quick-pay",
+      "method/transaction-qr",
+      "method/web-payment",
     ],
-    Campaign: [
-      "campaign/loyalty/chop-stamp",
-      "campaign/gourmet-card",
+
+    "Loyalty & Voucher": [
       {
         type: "category",
         label: "Loyalty Point",
@@ -100,10 +90,37 @@ module.exports = {
           "campaign/voucher/void-voucher",
         ],
       },
+      "campaign/loyalty/chop-stamp",
+      "campaign/gourmet-card",
     ],
-    "Pos Integration": ["pos-integration"],
-    "Payment Method Detail": ["method"],
-    "Error Codes": ["error-codes"],
+
+    Settings: [
+      "detail/user-profile",
+      {
+        type: "category",
+        label: "Merchant",
+        items: [
+          "detail/mercahantDetail/merchant-profile",
+          "detail/mercahantDetail/merchant-subscriptions",
+        ],
+      },
+      {
+        type: "category",
+        label: "Store",
+        items: [
+          "detail/storeDetail/store-detail",
+          "detail/storeDetail/get-store-by-id",
+          "detail/storeDetail/create-store",
+          "detail/storeDetail/update-store",
+          "detail/storeDetail/delete-store",
+        ],
+      },
+    ],
+
     "Push Notification": ["push-notification/push-to-merchant"],
+    Downloads: ["introduction/overview"],
+    FAQ: ["introduction/overview"],
+    Appendix: ["introduction/overview"],
+    "Error Codes": ["error-codes"],
   },
 };

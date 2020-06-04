@@ -6,13 +6,18 @@ sidebar_label: Authorization Code
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
+:::note
+<span style={{ color: "red", fontWeight: "bold" }}>This page is for plug-in developer only</span><br/><br/>
+:::
+
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
+URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
+Sandbox URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 
 **Process flow for Grant Type:** `auth_code` <br/>
 This is for the scenario which a partner wants to request permission to develop an application of a merchant.
 
-For authorization code, only `client_id` is needed. You are required to pass in following request parameters as Query String. Kindly go to [RM Merchant Portal](https://merchant.revenuemonster.my/) to get your **Client ID**
+For authorization code, only `client_id` is needed. You are required to pass in following request parameters as Query String. Go to [RM Merchant Portal](https://merchant.revenuemonster.my/) to get your **Client ID**
 
 ### Request Parameters
 

@@ -7,8 +7,9 @@ sidebar_label: Get All Payment Transaction
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url :`https://sb-open.revenuemonster.my/v3/payment/transactions`<br/>
-Url with limit : `https://sb-open.revenuemonster.my/v3/payment/transactions?limit=1`
+URL :`https://open.revenuemonster.my/v3/payment/transactions`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/payment/transactions`<br/>
+URL with limit : `https://sb-open.revenuemonster.my/v3/payment/transactions?limit=1`
 
 :::note
 Get All Payment Transaction
@@ -39,7 +40,7 @@ No request parameter is required for this endpoint.
 | `order`         | Object   | Order object                                                                                                                   | (Refer to explanation below)               |
 | `payee`         | Object   | Object of userID made payment (payment sender)                                                                                 | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
 | `platform`      | String   | Currently only support "OPEN_API"                                                                                              | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](../method#quickpay)                                                                             | "ALL"                                      |
+| `method`        | String   | [RM currently supported method](../method/quick-pay)                                                                           | "ALL"                                      |
 | `type`          | String   | Currently only support "QUICKPAY"                                                                                              | "QUICKPAY"                                 |
 | `status`        | String   | Status returned from WeChat server, "SUCCESS" or "IN_PROCESS" or "FAILED". "IN_PROCESS" means user scanned and making payment. | "FAILED"                                   |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                        | "MALAYSIA"                                 |
