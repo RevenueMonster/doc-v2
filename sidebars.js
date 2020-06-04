@@ -1,8 +1,13 @@
 module.exports = {
   someSidebar: {
     Introduction: ["introduction/overview", "introduction/usecase"],
+
     "Quick Start": [
-      "quickstart/sdk",
+      {
+        type: "category",
+        label: "SDK",
+        items: ["quickstart/sdk", "quickstart/mobile-sdk"],
+      },
       "quickstart/signature-algorithm",
       {
         type: "category",
@@ -14,6 +19,7 @@ module.exports = {
         ],
       },
     ],
+
     Payment: [
       "payment/overview",
       "payment/quick-pay",
@@ -34,17 +40,73 @@ module.exports = {
         label: "Web/Mobile Payment",
         items: [
           "payment/webpayment/web-payment",
+          "payment/webpayment/notify-url",
           // "payment/webpayment/get-web-payment-qr-code",
           "payment/webpayment/qr-code&url-by-checkout-id",
           "payment/webpayment/get-online-transaction",
         ],
       },
-      "payment/daily-settlement-report",
+      "payment/query-status-by-order-id",
+      "payment/query-status-by-transaction-id",
       "payment/get-all-payment-transaction",
-      "payment/get-payment-transaction-id",
-      "payment/get-payment-transaction-by-order-id",
+      "payment/daily-settlement-report",
     ],
-    Details: [
+
+    "POS Integration": ["pos-integration"],
+
+    "Support Payment Method": [
+      "method/quick-pay",
+      "method/transaction-qr",
+      "method/web-payment",
+    ],
+
+    "Loyalty & Voucher": [
+      {
+        type: "category",
+        label: "Loyalty",
+        items: [
+          {
+            type: "category",
+            label: "Loyalty Point",
+            items: [
+              "campaign/loyalty/loyalty-point/give-loyalty-point",
+              "campaign/loyalty/loyalty-point/spending-loyalty-point",
+              "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
+              "campaign/loyalty/loyalty-point/calculate-spending-reward",
+            ],
+          },
+          {
+            type: "category",
+            label: "Loyalty Members",
+            items: [
+              "campaign/loyalty/loyalty-members/loyalty-members",
+              "campaign/loyalty/loyalty-members/loyalty-member",
+              "campaign/loyalty/loyalty-members/loyalty-member-history",
+              "campaign/loyalty/loyalty-members/bulk-create-members",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        label: "Voucher",
+        items: [
+          "campaign/voucher/get-voucher-batches",
+          "campaign/voucher/voucher-by-code",
+          "campaign/voucher/voucher-batch-by-key",
+          "campaign/voucher/issue-voucher",
+          "campaign/voucher/void-voucher",
+        ],
+      },
+
+      {
+        type: "category",
+        label: "Campaign",
+        items: ["campaign/chop-stamp", "campaign/gourmet-card"],
+      },
+    ],
+
+    Settings: [
       "detail/user-profile",
       {
         type: "category",
@@ -66,44 +128,11 @@ module.exports = {
         ],
       },
     ],
-    Campaign: [
-      "campaign/loyalty/chop-stamp",
-      "campaign/gourmet-card",
-      {
-        type: "category",
-        label: "Loyalty Point",
-        items: [
-          "campaign/loyalty/loyalty-point/give-loyalty-point",
-          "campaign/loyalty/loyalty-point/spending-loyalty-point",
-          "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
-          "campaign/loyalty/loyalty-point/calculate-spending-reward",
-        ],
-      },
-      {
-        type: "category",
-        label: "Loyalty Members",
-        items: [
-          "campaign/loyalty/loyalty-members/loyalty-members",
-          "campaign/loyalty/loyalty-members/loyalty-member",
-          "campaign/loyalty/loyalty-members/loyalty-member-history",
-          "campaign/loyalty/loyalty-members/bulk-create-members",
-        ],
-      },
-      {
-        type: "category",
-        label: "Voucher",
-        items: [
-          "campaign/voucher/get-voucher-batches",
-          "campaign/voucher/voucher-by-code",
-          "campaign/voucher/voucher-batch-by-key",
-          "campaign/voucher/issue-voucher",
-          "campaign/voucher/void-voucher",
-        ],
-      },
-    ],
-    "Pos Integration": ["pos-integration"],
-    "Payment Method Detail": ["method"],
-    "Error Codes": ["error-codes"],
+
     "Push Notification": ["push-notification/push-to-merchant"],
+    // Downloads: ["introduction/overview"],
+    // FAQ: ["introduction/overview"],
+    // Appendix: ["introduction/overview"],
+    "Error Codes": ["error-codes"],
   },
 };

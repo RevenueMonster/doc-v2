@@ -7,8 +7,8 @@ sidebar_label: Client Credentials
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Sandbox Url : `https://oauth.revenuemonster.my/v1/token`<br/>
-Production Url : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
+URL : `https://oauth.revenuemonster.my/v1/token`<br/>
+Sandbox URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 
 **Process flow for Grant Type: `client_credentials`**
 
@@ -24,7 +24,7 @@ After get an **Access Token** from RM Authorization Server , **Access token** is
 
 ### Step 1 : Get Client ID and Client Secret
 
-To get your **Client ID** and **Client Secret** , Kindly go to [RM Merchant Portal](https://merchant.revenuemonster.my/) > **Developer** > **Application**
+To get your **Client ID** and **Client Secret** , go to [RM Merchant Portal](https://merchant.revenuemonster.my/) > **Developer** > **Application**
 
 | Parameter      |  Type  | Required | Description                                                                                            |             Example              |
 | :------------- | :----: | :------: | :----------------------------------------------------------------------------------------------------- | :------------------------------: |
@@ -34,7 +34,7 @@ To get your **Client ID** and **Client Secret** , Kindly go to [RM Merchant Port
 ### Step 2 : Encode the parameters from Step 1 in Base 64 format
 
 Structure: <br />
-`clientId`:`clientSecret`
+`clientID`:`clientSecret`
 
 Example: <br />
 Before Base64 encoding: <br />
@@ -48,7 +48,7 @@ After Base64 encoding: <br />
 **Content-Type** : application/json <br />
 **Authorization** : Basic MzY3NTkzMDk0MTQxMjQyNDMxNjp3bW43RlVhdVhIZGtvWWE5MTgya0NNa2pHbk5KVmdpbg==
 
-More info refer: [Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
+More info: [Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
 
 **In Body Request** :
 

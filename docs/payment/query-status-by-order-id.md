@@ -1,16 +1,17 @@
 ---
-id: get-payment-transaction-id
-title: Get Payment Transaction ID
-sidebar_label: Get Payment Transaction ID
+id: query-status-by-order-id
+title: Query Status By Order ID
+sidebar_label: Query Status By Order ID
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url :`https://sb-open.revenuemonster.my/v3/payment/transaction/1805260552060011600267`
+URL :`https://open.revenuemonster.my/v3/payment/transaction/order/190423044930300434571311`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/payment/transaction/order/190423044930300434571311`
 
 :::note
-Get Payment Transaction ID
+Get Payment Transaction By Order ID
 :::
 
 ### Request Parameters
@@ -27,7 +28,6 @@ No request parameter is required for this endpoint.
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 
 <br/>
-
 <strong>Transaction object (item):</strong>
 
 | Parameter       | Type     | Description                                                                                                                    | Example                                    |
@@ -38,7 +38,7 @@ No request parameter is required for this endpoint.
 | `order`         | Object   | Order object                                                                                                                   | (Refer to explanation below)               |
 | `payee`         | Object   | Object of userID made payment (payment sender)                                                                                 | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
 | `platform`      | String   | Currently only support "OPEN_API"                                                                                              | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](../method#quickpay)                                                                            | "ALL"                                      |
+| `method`        | String   | [RM currently supported method](../method/quick-pay)                                                                           | "ALL"                                      |
 | `type`          | String   | Currently only support "QUICKPAY"                                                                                              | "QUICKPAY"                                 |
 | `status`        | String   | Status returned from WeChat server, "SUCCESS" or "IN_PROCESS" or "FAILED". "IN_PROCESS" means user scanned and making payment. | "FAILED"                                   |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                        | "MALAYSIA"                                 |
@@ -77,52 +77,52 @@ No request parameter is required for this endpoint.
 | `currencyType`   | String | Currency notation (currently only support MYR) | "MYR"                          |
 | `amount`         | Uint   | Amount of order                                | 100                            |
 
-> Example Respond
+> Example Repsond
 
 ```json
 {
   "item": {
     "store": {
-      "id": "6883264812332703106",
-      "name": "XXX",
-      "addressLine1": "",
+      "id": "5980004217354859450",
+      "name": "yussuf",
+      "addressLine1": "GUGUSAN MELUR",
       "addressLine2": "",
-      "postCode": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "countryCode": "",
-      "phoneNumber": "",
+      "postCode": "47810",
+      "city": "PETALING JAYA",
+      "state": "SELANGOR",
+      "country": "MALAYSIA.",
+      "countryCode": "60",
+      "phoneNumber": "176473298",
       "geoLocation": {
         "latitude": 0,
         "longitude": 0
       },
       "status": "ACTIVE",
-      "createdAt": "2018-05-14T09:26:23Z",
-      "updatedAt": "2018-05-14T09:26:23Z"
+      "createdAt": "2018-05-28T02:05:50Z",
+      "updatedAt": "2018-05-28T02:05:50Z"
     },
-    "transactionId": "1805260552060011600267",
+    "transactionId": "1806151242300013190769",
     "order": {
-      "id": "3333333333",
+      "id": "9809099398273542333339",
       "title": "title",
       "detail": "desc",
       "additionalData": "In-store payment",
       "amount": 100
     },
+    "payee": {},
     "currencyType": "MYR",
-    "balanceAmount": 0,
-    "platform": "TERMINAL",
+    "balanceAmount": 100,
+    "platform": "MOBILE_APP",
     "method": "WECHATPAY",
     "error": {
-      "code": "AUTH_CODE_INVALID",
       "message": "Invalid Auth Code"
     },
-    "transactionAt": "2018-05-26T05:52:07Z",
+    "transactionAt": "2018-06-15T12:42:30Z",
     "type": "QUICK_PAY",
     "status": "FAILED",
-    "region": "",
-    "createdAt": "2018-05-26T05:52:06Z",
-    "updatedAt": "2018-05-26T05:52:07Z"
+    "region": "CHINA",
+    "createdAt": "2018-06-15T12:42:30Z",
+    "updatedAt": "2018-06-15T12:42:30Z"
   },
   "code": "SUCCESS"
 }

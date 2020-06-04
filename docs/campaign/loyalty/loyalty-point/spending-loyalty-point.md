@@ -12,19 +12,24 @@ Sandbox Url : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward`
 
 :::note
 To give loyalty points to customers using phone number or member ID.
-By (Amount) giving the point
+:::
+
+:::caution
+
+**Only WeChat Pay + WeChat OA loyalty** program can support auto give point during payment. All other wallets **DO NOT** support auto give point. You should use merchant app/terminal app or this endpoint to give point manually on each payment.
+
 :::
 
 ### Request Parameters
 
-| Parameter                 | Type    | Required | Description                                        | Example                                                  |
-| ------------------------- | ------- | -------- | -------------------------------------------------- | -------------------------------------------------------- |
-| <code>currencyType</code> | String  | Yes      | Currently `MYR` only                               | MYR                                                      |
-| <code>amount</code>       | Integer | Yes      | Loyalty point given to customers.                  | 100                                                      |
-| <code>type</code>         | String  | Yes      | "ID" ,"PHONENUMBER" or "QRCODE"                    | Use phone number , ID or QR Code to give loyalty points. |
-| <code>memberId</code>     | String  | No       | Member ID if type "ID" being provided.             | "2777058682717858418"                                    |
-| <code>countryCode</code>  | String  | No       | Country code if type "PHONENUMBER" being provided. | "60"                                                     |
-| <code>phoneNumber</code>  | String  | No       | Phone number if type "PHONENUMBER" being provided. | "172826990"                                              |
+| Parameter      | Type   | Required | Description                                        | Example                                                  |
+| -------------- | ------ | -------- | -------------------------------------------------- | -------------------------------------------------------- |
+| `currencyType` | String | Yes      | Currently `MYR` only                               | MYR                                                      |
+| `amount`       | Uint   | Yes      | Loyalty point given to customers.                  | 100                                                      |
+| `type`         | String | Yes      | "ID" ,"PHONENUMBER" or "QRCODE"                    | Use phone number , ID or QR Code to give loyalty points. |
+| `memberId`     | String | No       | Member ID if type "ID" being provided.             | "2777058682717858418"                                    |
+| `countryCode`  | String | No       | Country code if type "PHONENUMBER" being provided. | "60"                                                     |
+| `phoneNumber`  | String | No       | Phone number if type "PHONENUMBER" being provided. | "172826990"                                              |
 
 > Example Request Phone Number
 
@@ -81,9 +86,9 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 
 ### Response Parameters
 
-| Parameter         | Type   |                                                                           Description                                                                            | Example   |
-| ----------------- | ------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------- |
-| <code>code</code> | String | Successfully call this endpoint. If fail, will return error code object (Refer [Appendix 1: Error Codes](https://doc.revenuemonster.my/#appendix-1-error-codes)) | "SUCCESS" |
+| Parameter | Type   |                                                                           Description                                                                            | Example   |
+| --------- | ------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------- |
+| `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer [Appendix 1: Error Codes](https://doc.revenuemonster.my/#appendix-1-error-codes)) | "SUCCESS" |
 
 > Example Respond (PhoneNumber & Memebr ID)
 

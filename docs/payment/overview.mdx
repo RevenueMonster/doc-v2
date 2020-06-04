@@ -6,13 +6,13 @@ sidebar_label: Overview
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
-Integrate online payments using the RM APIs.
+Integrate payments using RM APIs.
 
 - #### Step 1 : Generate Access Token
 
-Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
+Go to [Use Case](../introduction/usecase) to get `Access Token`
 
-- #### Step 2 : Star with a guide
+- #### Step 2 : Start with a guide
 
 <Flex mx={10} width="100%">
   <Box
@@ -20,6 +20,7 @@ Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
     marginRight="20px"
     px={3}
     sx={{
+      cursor:"pointer",
       p: 1,
       borderRadius: 2,
       border: "0.5px solid",
@@ -43,10 +44,10 @@ Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
       Quick Pay
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      <b> Merchant Scan User</b>
+      <b> Merchant Scans User</b>
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      using Terminal / RM Application to scan user QR code
+      Scan user eWallet QR code with RM terminal or RM Application.
     </Text>
   </Box>
 
@@ -55,6 +56,7 @@ Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
     marginRight="20px"
     px={3}
     sx={{
+      cursor:"pointer",
       p: 1,
       borderRadius: 2,
       border: "0.5px solid",
@@ -79,16 +81,17 @@ Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
       Transaction QR
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      <b> User Scan Merchant </b>
+      <b> User Scans Merchant </b>
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      Merchant will display a QR code for user to scan and pay
+      Merchant displays QR code for user to scan and pay.
     </Text>
   </Box>
   <Box
     width={1 / 3}
     px={3}
     sx={{
+      cursor:"pointer",
       p: 1,
       borderRadius: 2,
       border: "0.5px solid",
@@ -113,10 +116,10 @@ Kindly go to [Use Case](../introduction/usecase) to get `Access Token`
       Web Payment
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      <b> Accepted eWallet and Credit Card Payment </b>
+      <b> Online acceptance eWallet and Credit card payment </b>
     </Text>
     <Text p={1} fontSize="12px" color="black" textAlign="left">
-      Used by e-commerce and SaaS businesses for one-time purchases.
+      Used by e-commerce and SaaS business platform.
     </Text>
   </Box>
 </Flex>

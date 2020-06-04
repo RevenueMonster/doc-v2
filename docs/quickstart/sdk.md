@@ -12,90 +12,146 @@ The following language SDK(s) and documentations are available.
 Not all SDK(s) fully implement non-payment functions. Pull requests are welcome.
 :::
 
-<Button
-width="100%"
-sx={{
+<Flex marginTop="20px">
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
       ":hover": {
-        backgroundColor: "blue",
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
       },
-      backgroundColor: "#528ef7",
-      borderRadius: 15,
     }}
-onClick={() => {
-window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Csharp";
-}}>
-C#
-
-</Button>
-
-<br/>
-<br/>
-
-<Button
-width="100%"
-sx={{
+      onClick={() => {
+      window.location.href = "https://github.com/RevenueMonster/rm-sdk-go";
+    }}
+    >
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+     Go
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
       ":hover": {
-        backgroundColor: "blue",
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
       },
-      backgroundColor: "#528ef7",
-      borderRadius: 15,
     }}
-onClick={() => {
-window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-JAVA";
-}}>
-JAVA
-</Button>
-
-<br/>
-<br/>
-
-<Button
-width="100%"
-sx={{
+   onClick={() => {
+    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-PHP";
+    }}>
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+     Php
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
       ":hover": {
-        backgroundColor: "blue",
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
       },
-      backgroundColor: "#528ef7",
-      borderRadius: 15,
     }}
-onClick={() => {
-window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Nodejs";
-}}>
-NodeJS
-</Button>
-
-<br/>
-<br/>
-
-<Button
-width="100%"
-sx={{
+    onClick={() => {
+    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Nodejs";
+    }}>
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+     NodeJS
+    </Text>
+  </Box>
+</Flex>
+<Flex marginTop="20px">
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
       ":hover": {
-        backgroundColor: "blue",
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
       },
-      backgroundColor: "#528ef7",
-      borderRadius: 15,
     }}
-onClick={() => {
-window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-PHP";
-}}>
-PHP
-</Button>
-
-<br/>
-<br/>
-
-<Button
-width="100%"
-sx={{
+    onClick={() => {
+    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-JAVA";
+    }}>
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    Java
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
       ":hover": {
-        backgroundColor: "blue",
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
       },
-      backgroundColor: "#528ef7",
-      borderRadius: 15,
     }}
-onClick={() => {
-window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Python";
-}}>
-Python
-</Button>
+    onClick={() => {
+    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Python";
+    }}>
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+     Python
+    </Text>
+  </Box>
+  <Box
+    width={1 / 3}
+    marginRight="20px"
+    px={3}
+    sx={{
+      cursor:"pointer",
+      p: 1,
+      borderRadius: 2,
+      border: "0.5px solid",
+      borderColor: "#e3e8ee",
+      transition: "width 0.1s",
+      ":hover": {
+        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+        width:"300px",
+      },
+    }}
+    onClick={() => {
+    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Csharp";
+    }}>
+    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    C# (Deprecated)
+    </Text>
+  </Box>
+</Flex>

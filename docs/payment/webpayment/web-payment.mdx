@@ -50,7 +50,7 @@ To create a unified payment checkout page for your website and Mobile.
 | Parameter       | Type     | Required | Description                                                                                     | Example                                                                                                               |
 | --------------- | -------- | -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | `order`         | Object   | Yes      | Object of order                                                                                 | (Refer to explanation below)                                                                                          |
-| `method`        | []String | Yes      | [RM currently supported method](../.././method#web-payment--mobile-payement--mobile-web-payment)        | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
+| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment)                                     | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
 | `type`          | String   | Yes      | Obejct of type                                                                                  | (Refer to explanation below)                                                                                          |
 | `storeId`       | String   | Yes      | ID of the store to create QR code                                                               | "10946114768247530"                                                                                                   |
 | `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                           | "https://google.com"                                                                                                  |
@@ -146,70 +146,20 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
 
 <hr />
 
-### Create a unified payment checkout
+### Advance Options
 
-After you get the **url** from **response API**, you can append a query String<br/>
-:::note
-Example: `https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347&method=TNG_MY`
-:::
-
-<br />
-<hr />
-
-### Example of Notify URL Response
-
-:::tip
-
-```json
-{
-  "data": {
-    "balanceAmount": 100,
-    "createdAt": "2019-03-01T05:51:20Z",
-    "currencyType": "MYR",
-    "method": "WECHATPAY",
-    "order": {
-      "additionalData": "Payment to 11street",
-      "amount": 100,
-      "detail": "Payment to 11street",
-      "id": "P000000660800",
-      "title": "Payment to 11street"
-    },
-    "payee": {
-      "userId": "oKz050cwbEJwKAnKZgbD24UYibHQ"
-    },
-    "platform": "OPEN_API",
-    "referenceId": "1010014200000026201903016100904600",
-    "region": "MALAYSIA",
-    "status": "SUCCESS",
-    "store": {
-      "addressLine1": "",
-      "addressLine2": "",
-      "city": "",
-      "country": "",
-      "countryCode": "",
-      "createdAt": "2018-10-02T10:52:03Z",
-      "geoLocation": {
-        "latitude": 0,
-        "longitude": 0
-      },
-      "id": "2551293210619662240",
-      "imageUrl": "https://storage.googleapis.com/rm-prod-asset/img/store.png",
-      "name": "11Street",
-      "phoneNumber": "",
-      "postCode": "",
-      "state": "",
-      "status": "ACTIVE",
-      "updatedAt": "2018-10-02T10:52:03Z"
-    },
-    "terminalId": "",
-    "transactionAt": "2019-03-01T05:51:59Z",
-    "transactionId": "190301055133300427675601",
-    "type": "WEB_PAYMENT",
-    "updatedAt": "2019-03-01T05:52:00.897920132Z",
-    "voucher": null
-  },
-  "eventType": "PAYMENT_WEB_ONLINE"
-}
-```
-
-:::
+<details>
+  <summary>
+    <b>Create individual payment checkout</b>
+  </summary>
+  <br />
+  After you get the <b>url</b> from <b>response API</b>, you can append a query
+  String
+  <br />
+  <br />
+  Example:
+  <br />
+  <b>
+    https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347&method=TNG_MY
+  </b>
+</details>

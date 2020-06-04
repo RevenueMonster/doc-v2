@@ -7,7 +7,8 @@ sidebar_label: Daily Settlement Report
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/reconciliation`
+URL :`https://open.revenuemonster.my/v3/payment/reconciliation`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/reconciliation`
 
 :::note
 To Get Daily Payment report
@@ -15,13 +16,13 @@ To Get Daily Payment report
 
 ### Request Parameters
 
-| Parameter         | Type   | Required | Description                                         | Example      |
-| ----------------- | ------ | -------- | --------------------------------------------------- | ------------ |
-| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                               | "PAYMENT"    |
-| `date`            | String | Yes      | Date of the report                                  | "2019-12-31" |
-| `method`          | String | Yes      | [RM currently supported method](../method#quickpay) | []           |
-| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"             | []           |
-| `cursor`          | String | Yes      | Optional, if pagination exists                      | ""           |
+| Parameter         | Type   | Required | Description                                          | Example      |
+| ----------------- | ------ | -------- | ---------------------------------------------------- | ------------ |
+| `transactionType` | String | Yes      | "PAYMENT" or "REFUND"                                | "PAYMENT"    |
+| `date`            | String | Yes      | Date of the report                                   | "2019-12-31" |
+| `method`          | String | Yes      | [RM currently supported method](../method/quick-pay) | []           |
+| `region`          | String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"              | []           |
+| `cursor`          | String | Yes      | Optional, if pagination exists                       | ""           |
 
 > Example Request
 

@@ -59,7 +59,7 @@ On **Payment** feature , besides **wehbook URL**, system will show you `Server P
     <b>Generate RSA KEYS</b>
   </summary>
 
-If you need help to generate key, kindly go to **Merchant portal > Developer > Application > Generator RSA Key** Suggested key size: 2048 Bit. Keep your private keys in safe place! Or use our **Generate RSA key** tool.
+If you need help to generate key, go to **Merchant portal > Developer > Application > Generator RSA Key** Suggested key size: 2048 Bit. Keep your private keys in safe place! Or use our **Generate RSA key** tool.
 
 `Private Keys` are required to sign API request(s) contents. `Public Keys` are used to verify content received.
 
