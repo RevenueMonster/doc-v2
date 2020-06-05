@@ -7,39 +7,96 @@ sidebar_label: Web/Mobile Payment Transaction
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
-Used by e-commerce and SaaS businesses for one-time purchases.
+
+- Used by e-commerce and SaaS businesses for one-time purchases.
+
+- Demo Web Payment (Version 2): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
+
+- Web Payment Sequence Diagram
+
+<Flex justifyContent="center">
+  <Button
+    width="100%"
+    sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+    onClick={() => {
+      window.location.href =
+        "https://drive.google.com/drive/folders/1MOJBWY6aw6KiUUMRMbHo-hXMuxjI3Z0Q?usp=sharing";
+    }}
+  >
+    Click Here
+  </Button>
+</Flex>
 :::
 
-Demo Web Payment (Version 2): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
+### Example of Web Payment
 
-<details open>
-  <summary>
-    <b> Example of Web Payment</b>
-  </summary>
-  <Card width="100%">
-    <Image src="/img/payment-image/web-payment.png" />
-  </Card>
-  <br />
-  <Card width="100%">
-    <Image src="/img/payment-image/display-qr.png" />
-  </Card>
-</details>
-<br />
+<Box
+  sx={{
+    width: "100%",
+    height: 0,
+    paddingBottom: 600 / 16 + "%",
+    position: "relative",
+    overflow: "hidden",
+    "& > iframe": {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: 0,
+      bottom: 0,
+      left: 110,
+      border: 0,
+    },
+  }}
+>
+  <iframe
+    width="100%"
+    height="315"
+    src="/static/img/gif/web-payment.gif"
+    frameBorder="0"
+    allowFullScreen
+  />
+</Box>
 
-<details>
-  <summary>
-    <b> Example of Mobile Web Payment</b>
-  </summary>
-  <Card width="100%">
-    <Image src="/img/payment-image/mobile-web.png" />
-  </Card>
-</details>
-<br />
+### Example of Mobile Web Payment
+
+<Box
+  sx={{
+    width: "100%",
+    height: 0,
+    paddingBottom: 900 / 16 + "%",
+    position: "relative",
+    overflow: "hidden",
+    "& > iframe": {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: 0,
+      bottom: 0,
+      left: 110,
+      border: 0,
+    },
+  }}
+>
+  <iframe
+    width="100%"
+    height="315"
+    src="/static/img/gif/mobile-web-payment.gif"
+    frameBorder="0"
+    allowFullScreen
+  />
+</Box>
 
 <hr />
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/online`
+URL : `https://open.revenuemonster.my/v3/payment/online`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 :::note
 To create a unified payment checkout page for your website and Mobile.

@@ -7,7 +7,8 @@ sidebar_label: Get Individual QR Code
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/online/qrcode?checkoutId=1561390635417535731&method=WECHATPAY_MY`
+URL : `https://open.revenuemonster.my/v3/payment/online/qrcode?checkoutId=1561390635417535731&method=WECHATPAY_MY`<br/><br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/qrcode?checkoutId=1561390635417535731&method=WECHATPAY_MY`
 
 :::note
 Generate a QR code to display on your web or mobile for user to scan

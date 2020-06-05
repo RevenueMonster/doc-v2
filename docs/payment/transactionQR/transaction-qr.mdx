@@ -8,27 +8,73 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
 
-Display a QR code for user to scan and pay
+- Display a QR code for user to scan and pay
+
+- Transaction QR Sequence Diagram
+
+<Flex justifyContent="center">
+  <Button
+    width="100%"
+    sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+    onClick={() => {
+      window.location.href =
+        "https://drive.google.com/drive/folders/1J_f91aO7pzNrP_PXlHYozIa_ZaqKzNk6?usp=sharing";
+    }}
+  >
+    Click Here
+  </Button>
+</Flex>
 
 :::
 
-**Illustration of transaction QR Code**
+<!-- https://video-to-markdown.netlify.app/  create markdown video -->
 
-<details open>
-  <summary>
-    <b>Step 1 : Create a QR Code</b>
-  </summary>
-  Get the QR Code URL <b>qrCodeUrl</b> from repsond endpoint <br/><br/> Example
-  of QR Code URL: https://dev-rm-api.ap.ngrok.io/payment/unified?code=a669adc3b06fe5cef977cc762f40ce8c
-</details>
+### Example of Create Transaction QR
+
+<Box
+  sx={{
+    width: "100%",
+    height: 0,
+    paddingBottom: 900 / 16 + "%",
+    position: "relative",
+    overflow: "hidden",
+    "& > iframe": {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      border: 0,
+    },
+  }}
+>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/eD1TjnTzfwM"
+    frameBorder="0"
+    allowFullScreen
+  />
+</Box>
 <br />
 
-<details>
-  <summary>
-    <b>Step 2 : User Fill Amount / PreFill Amount</b>
-  </summary>
-  <br/>
-  If <b>"isPreFillAmount": false</b>, user will be prompted to key-in amount for payment.
+### Step 1 : Create a QR Code
+
+Get the QR Code URL <b>qrCodeUrl</b> from repsond endpoint <br />
+
+Example of QR Code URL:
+https://dev-rm-api.ap.ngrok.io/payment/unified?code=a669adc3b06fe5cef977cc762f40ce8c
+
+### Step 2 : User Fill Amount / PreFill Amount
+
+If <b>"isPreFillAmount": false</b>, user will be prompted to key-in amount for payment.
 
 <Card width={256}>
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/1.jpeg" />
@@ -40,67 +86,44 @@ If <b>"isPreFillAmount": true</b>, user will be directly prompted for payment.
 <Card width={256}>
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/2.jpeg" />
 </Card>
-  <br />
-</details>
-<br/>
 
-<details>
-  <summary>
-    <b>Step 3 : Insert Pin</b>
-  </summary>
-  <Card width={256}>
-    <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/3.jpeg" />
-  </Card>
-</details>
-<br />
+### Step 3 : Insert Pin
 
-<details>
-  <summary>
-    <b>Step 4 : User will received a payment status notification</b>
-  </summary>
-  <Card width={258}>
-    <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/4.jpeg" />
-  </Card>
-</details>
-<br />
+<Card width={256}>
+  <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/3.jpeg" />
+</Card>
 
-<details>
-  <summary>
-    <b>Step 5: Redirect to Merchant Page</b>
-  </summary>
-  <br />
-  After payment done user will redirect to a Url link that set at{" "}
-  <b>redirectUrl</b>.
-</details>
-<br />
+### Step 4 : User will received a payment status notification
 
-<details>
-  <summary>
-    <b>Step 6 : Payment History</b>
-  </summary>
-  <br />
-  User can view they transaction history in they own wallet application
-</details>
-<br />
+<Card width={258}>
+  <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/4.jpeg" />
+</Card>
 
-<details>
-  <summary>
-    <b>Step 7 :  Merchant can view their transaction record in Merchant Portal.</b>
-  </summary>
-  <br/>
+### Step 5 : Redirect to Merchant Page
+
+After payment done user will redirect to a Url link that set at <b>redirectUrl</b>.
+
+### Step 6 : Payment History
+
+User can view they transaction history in they own wallet application
+
+### Step 7 : Merchant can view their transaction record in Merchant Portal
+
 After payment done merchant can view their transaction in Merchant Portal.
 
 <Card width={258}>
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/6.png" />
 </Card>
-</details>
-<br/>
-<hr/>
+
+<hr />
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode`
+URL : `https://open.revenuemonster.my/v3/payment/transaction/qrcode`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode`
 
-To create static/dynamic QR code for user scanning merchant's displayed QR.
+:::note
+To create **Static/Dynamic** QR code for user scanning merchant's display QR.
+:::
 
 ### Request Parameters
 
@@ -108,7 +131,7 @@ To create static/dynamic QR code for user scanning merchant's displayed QR.
 | ----------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------: |
 | `amount`          | Uint     | Yes      | Amount of order in cent. Only required when "isPrefillAmount" = true. (min RM 0.10 or amount: 10)                                  |                                               100                                                |
 | `currencyType`    | String   | Yes      | Currency notation (currently only support `MYR`)                                                                                   |                                              "MYR"                                               |
-| `method`          | []String | No       | [RM currently supported method](../.././method/transaction-qr)                                                                                   | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN" ] |
+| `method`          | []String | No       | [RM currently supported method](../.././method/transaction-qr)                                                                     | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN" ] |
 | `expiry`          | Object   | No       | Object of expiry                                                                                                                   |                                   (Refer to explanation below)                                   |
 | `order`           | Object   | Yes      | Object of order                                                                                                                    |                                   (Refer to explanation below)                                   |
 | `redirectUrl`     | String   | No       | URL to redirect after payment is made. Default is "".                                                                              |                                "https://www.apple.com/my/iphone/"                                |
@@ -166,7 +189,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/tra
 | `currencyType`    | String   | Currency notation                                                                      | "MYR"                                                                                           |
 | `amount`          | Uint     | Amount of order in cent. Only required when "isPrefillAmount" = true.                  | 100                                                                                             |
 | `platform`        | String   | Currently only support "OPEN_API"                                                      | "OPEN_API"                                                                                      |
-| `method`          | []String | [RM currently supported method](../.././method/transaction-qr)                                       | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN"] |
+| `method`          | []String | [RM currently supported method](../.././method/transaction-qr)                         | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN"] |
 | `expiry`          | Object   | Object of expiry                                                                       | (Refer to explanation above)                                                                    |
 | `code`            | String   | Embedded code in QR                                                                    | "c8ff3df0605a5f20cd6476661072eade"                                                              |
 | `status`          | String   | "VALID" (always valid for static QR) or "REDEEMED" (only applicable to dynamic QR)     | "VALID"                                                                                         |
@@ -265,3 +288,25 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/tra
   "code": "SUCCESS"
 }
 ```
+
+:::tip
+
+If you don't received any repsond please ingestion
+
+<Button
+  width="100%"
+  sx={{
+    ":hover": {
+      backgroundColor: "grey",
+    },
+    backgroundColor: "#292d3e",
+    borderRadius: 15,
+  }}
+  onClick={() => {
+    window.location.href = "./../query-status-by-order-id";
+  }}
+>
+  Query Status By Order ID
+</Button>
+
+:::

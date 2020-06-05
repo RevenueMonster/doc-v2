@@ -102,3 +102,15 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
   "code": "SUCCESS"
 }
 ```
+
+<hr/>
+
+### Set Your URL in Webhook
+
+In **Merchant Portal** > **Developer** > **Application** > **Products**
+
+![image](/img/developer-application/6.png)
+
+For **Loyalty and Social Media** features, you will need to input a **webhook URL** as below :
+
+![image](/img/developer-application/7.png)

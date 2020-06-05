@@ -7,7 +7,64 @@ sidebar_label: Quick Pay
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://sb-open.revenuemonster.my/v3/payment/quickpay`
+URL : `https://open.revenuemonster.my/v3/payment/quickpay`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/quickpay`
+
+:::note
+
+- Scan user eWallet QR code with RM terminal or RM Application.
+
+- Quick Pay Sequence Diagram
+
+<Flex justifyContent="center">
+  <Button
+    width="100%"
+    sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+    onClick={() => {
+      window.location.href =
+        "https://drive.google.com/drive/folders/1x5jjspiW46mPKXbFO-0d-BZoyjpM1kp4?usp=sharing";
+    }}
+  >
+    Click Here
+  </Button>
+</Flex>
+
+:::
+
+### Example of Quick Pay
+
+<Box
+  sx={{
+    width: "100%",
+    height: 0,
+    paddingBottom: 900 / 16 + "%",
+    position: "relative",
+    overflow: "hidden",
+    "& > iframe": {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      border: 0,
+    },
+  }}
+>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/sGmQCTvXORQ"
+    frameBorder="0"
+    allowFullScreen
+  />
+</Box>
 
 ### Request Parameters
 
@@ -85,22 +142,22 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/qui
 
 <strong>Transaction object (item):</strong>
 
-| Parameter       | Type     | Description                                      | Example                                    |
-| --------------- | -------- | ------------------------------------------------ | ------------------------------------------ |
-| `store`         | Object   | Store object                                     | (Refer to explanation below)               |
-| `referenceId`   | String   | Transaction ID (from WeChat server)              | ""                                         |
-| `transactionId` | String   | Transaction ID (from RM server)                  | "152161448229438994"                       |
-| `order`         | Object   | Order object                                     | (Refer to explanation below)               |
-| `payee`         | Object   | Object of userID made payment (payment sender)   | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`) | "MYR"                                      |
-| `platform`      | String   | Currently only support "OPEN_API"                | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](../method/quick-pay)       | ALL                                        |
-| `type`          | String   | Currently only support "QUICKPAY"                | "QUICKPAY"                                 |
-| `status`        | String   | Status returned from WeChat server               | "SUCCESS"                                  |
-| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"          | "MALAYSIA"                                 |
-| `error`         | String   | (Refer `Appendix: Error Codes`)                  | {}                                         |
-| `createdAt`     | DateTime | Creation date time of transaction                | "2018-03-21T06:41:22Z"                     |
-| `updatedAt`     | DateTime | Last update date time of transaction             | "2018-03-21T06:41:22Z"                     |
+| Parameter       | Type     | Description                                          | Example                                    |
+| --------------- | -------- | ---------------------------------------------------- | ------------------------------------------ |
+| `store`         | Object   | Store object                                         | (Refer to explanation below)               |
+| `referenceId`   | String   | Reference ID (from WeChat server)                    | ""                                         |
+| `transactionId` | String   | Transaction ID (from RM server)                      | "152161448229438994"                       |
+| `order`         | Object   | Order object                                         | (Refer to explanation below)               |
+| `payee`         | Object   | Object of userID made payment (payment sender)       | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
+| `currencyType`  | String   | Currency notation (currently only support `MYR`)     | "MYR"                                      |
+| `platform`      | String   | Currently only support "OPEN_API"                    | "OPEN_API"                                 |
+| `method`        | String   | [RM currently supported method](../method/quick-pay) | ALL                                        |
+| `type`          | String   | Currently only support "QUICKPAY"                    | "QUICKPAY"                                 |
+| `status`        | String   | Status returned from WeChat server                   | "SUCCESS"                                  |
+| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"              | "MALAYSIA"                                 |
+| `error`         | String   | (Refer `Appendix: Error Codes`)                      | {}                                         |
+| `createdAt`     | DateTime | Creation date time of transaction                    | "2018-03-21T06:41:22Z"                     |
+| `updatedAt`     | DateTime | Last update date time of transaction                 | "2018-03-21T06:41:22Z"                     |
 
 <br />
 <strong>Store object (store):</strong>
@@ -182,3 +239,13 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/qui
   "code": "SUCCESS"
 }
 ```
+
+### Set Your URL in Webhook
+
+In **Merchant Portal** > **Developer** > **Application** > **Products**
+
+![image](/img/developer-application/6.png)
+
+For **Payment** features, you will need to input a **webhook URL** as below :
+
+![image](/img/developer-application/8.png)

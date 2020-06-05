@@ -7,8 +7,8 @@ sidebar_label: Get QR Code & URL by checkout ID
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-Url : `https://open.revenuemonster.my/v3/payment/online/checkout`
-Sandbox Url : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
+URL : `https://open.revenuemonster.my/v3/payment/online/checkout`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 
 :::note
 To create a unified payment checkout page for your website.
@@ -16,7 +16,7 @@ To create a unified payment checkout page for your website.
 
 **Example of QR Code**
 
-<details>
+<details open>
   <summary>
     <b> Decoder your Image using Base64</b>
   </summary>
@@ -26,7 +26,7 @@ To create a unified payment checkout page for your website.
   </Card>
 </details>
 
-<details>
+<details open>
   <summary>
     <b>User will received</b>
   </summary>
