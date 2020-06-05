@@ -8,13 +8,13 @@ sidebar_label: Signature Algorithm
 
 ### Step 1 : Create New Application
 
-Go to **Merchant Portal** > **Application** > **Developer** tab (the last one) and you will see the following page:<br/>
+Go to **Merchant Portal** > **Developer** > **Applications** tab (the last one) and you will see the following page:<br/>
 
 ![image](/img/developer-application/1.png)<br />
 
-### Step 2 : Obtain 'clientID' and 'cilientSecret'
+### Step 2 : Obtain Credential
 
-Click on the <b>Application</b> created in Step 1 , you may edit and update relevant information here :
+Click on the <b>Applications</b> created in Step 1 , you may edit and update relevant information here :
 <br/>
 
 If you would like to disable the application , simple toggle **"ON/OFF"** switch button at Top Right.
