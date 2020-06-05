@@ -136,7 +136,6 @@ module.exports = {
     "Push Notification": ["push-notification/push-to-merchant"],
     // Downloads: ["introduction/overview"],
     // FAQ: ["introduction/overview"],
-    // Appendix: ["introduction/overview"],
-    "Error Codes": ["error-codes"],
+    Appendix: ["product-terms", "error-codes"],
   },
 };
