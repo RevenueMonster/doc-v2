@@ -91,6 +91,7 @@ module.exports = {
         type: "category",
         label: "Voucher",
         items: [
+          "campaign/voucher/overview",
           "campaign/voucher/get-voucher-batches",
           "campaign/voucher/voucher-by-code",
           "campaign/voucher/voucher-batch-by-key",
@@ -134,7 +135,7 @@ module.exports = {
     ],
 
     "Push Notification": ["push-notification/push-to-merchant"],
-    // Downloads: ["introduction/overview"],
+    Downloads: ["downloads/logo"],
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
   },
