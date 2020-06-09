@@ -135,7 +135,7 @@ module.exports = {
     ],
 
     "Push Notification": ["push-notification/push-to-merchant"],
-    Downloads: ["downloads/logo"],
+    Downloads: ["downloads/logo", "downloads/testing-wallets"],
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
   },
