@@ -1,7 +1,7 @@
 ---
 id: merchant-subscriptions
-title: Get Mercahant Subscriptions
-sidebar_label: Get Mercahant Subscriptions
+title: Get Merchant Subscriptions
+sidebar_label: Get Merchant Subscriptions
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

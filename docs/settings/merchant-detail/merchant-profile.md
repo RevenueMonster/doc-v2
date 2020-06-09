@@ -1,7 +1,7 @@
 ---
 id: merchant-profile
-title: Get Mercahant Profile
-sidebar_label: Get Mercahant Profile
+title: Get Merchant Profile
+sidebar_label: Get Merchant Profile
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

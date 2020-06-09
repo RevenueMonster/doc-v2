@@ -54,7 +54,7 @@ module.exports = {
 
     "POS Integration": ["pos-integration"],
 
-    "Support Payment Method": [
+    "Supported Payment Methods": [
       "method/quick-pay",
       "method/transaction-qr",
       "method/web-payment",

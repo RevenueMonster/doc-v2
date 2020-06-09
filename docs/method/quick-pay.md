@@ -27,7 +27,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
   </td> 
   </tr>
@@ -40,7 +40,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
   </td> 
   </tr>
@@ -53,7 +53,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
     </td>
   </tr>
@@ -66,7 +66,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
     </td>
   </tr>
@@ -79,7 +79,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-    > Active
+    > Yes
   </Card>
 </td>
   </tr>
@@ -92,7 +92,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
     </td>
   </tr>
@@ -105,7 +105,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
     </td>
   </tr>
@@ -118,7 +118,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card></td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card></td>
   </tr>
   <tr>
@@ -142,7 +142,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
       color:"white",
       textAlign: "center" 
     }}
-  > Active
+  > Yes
   </Card>
     </td>
   </tr>
