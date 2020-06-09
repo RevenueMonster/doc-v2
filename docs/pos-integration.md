@@ -11,7 +11,7 @@ URL :`https://open.revenuemonster.my/v3/payment/terminal/quickpay`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/terminal/quickpay`
 
 :::note
-Using this API to integrate RM Terminal with POS System or Kiosk machine
+Integrate RM Terminal with POS System or Kiosk machine (using local callback). This endpoint is only supporting payment initiation; for other methods (refund/reverse/settlement), kindly follow standard steps accordingly.
 :::
 
 ### Request Parameters
