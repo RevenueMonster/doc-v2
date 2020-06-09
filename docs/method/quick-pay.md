@@ -7,8 +7,8 @@ sidebar_label: Quick Pay
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
-**The following Method is Revenue Monster supported**<br/>
-(Currently not all Method supported in Production)
+**Following list is payment methods supported by Revenue Monster.**<br/>
+(For payment method(s) is not on the list are not supported)
 :::
 
 ### QuickPay

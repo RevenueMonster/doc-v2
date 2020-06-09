@@ -23,8 +23,6 @@ module.exports = {
     Payment: [
       "payment/overview",
       "payment/quick-pay",
-      "payment/refund",
-      "payment/reverse",
       {
         type: "category",
         label: "Transaction QR",
@@ -46,6 +44,8 @@ module.exports = {
           "payment/webpayment/get-online-transaction",
         ],
       },
+      "payment/refund",
+      "payment/reverse",
       "payment/query-status-by-order-id",
       "payment/query-status-by-transaction-id",
       "payment/get-all-transaction",

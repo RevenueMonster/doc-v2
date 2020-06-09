@@ -9,7 +9,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 The following language SDK(s) and documentations are available.
 
 :::note
-Not all SDK(s) fully implement non-payment functions. Pull requests are welcome.
+Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
 :::
 
 <Flex marginTop="20px">

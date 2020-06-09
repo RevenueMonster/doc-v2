@@ -7,7 +7,7 @@ sidebar_label: Wallet logo
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
-Get all your eWallet logo
+Get all eWallet logo
 :::
 
 <Flex justifyContent="center">
@@ -19,12 +19,13 @@ Get all your eWallet logo
       },
       backgroundColor: "#528ef7",
       borderRadius: 15,
+      cursor:"pointer",
     }}
     onClick={() => {
       window.location.href =
         "https://drive.google.com/drive/folders/1jHRMT6GlWuvgvE5xL_vid8xkWtMb9twG?usp=sharing";
     }}
   >
-    Wallet Logo
+    Download Wallet Logo
   </Button>
 </Flex>
