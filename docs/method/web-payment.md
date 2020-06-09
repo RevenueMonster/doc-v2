@@ -26,7 +26,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -38,7 +38,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -50,7 +50,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -62,7 +62,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -74,7 +74,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -86,7 +86,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -98,7 +98,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -110,7 +110,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -122,7 +122,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -134,7 +134,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
@@ -146,7 +146,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Active
+        }}> Yes
         </Card>
     </td>
   </tr>
