@@ -6,10 +6,6 @@ sidebar_label: Error Codes
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
-:::note
-**The following Method is Revenue Monster supported**<br/>
-(Currently not all Method supported in Production)
-:::
 
 | Error Codes              | Description                                                                                                                                       | Solution                                                                                                                                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
