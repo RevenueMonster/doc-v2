@@ -7,8 +7,8 @@ sidebar_label: Web Payment
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
-**The following Method is Revenue Monster supported**<br/>
-(Currently not all Method supported in Production)
+**Following list is payment methods supported by Revenue Monster.**<br/>
+(For payment method(s) is not on the list are not supported)
 :::
 
 ### Web Payment / Mobile Payment / Mobile Web Payment
@@ -50,7 +50,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
         backgroundColor: "#87d068",
         color:"white",
         textAlign: "center" 
-        }}> Yes
+        }}> Yes (Web)
         </Card>
     </td>
   </tr>

@@ -7,8 +7,9 @@ sidebar_label: Transaction QR
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
-**The following Method is Revenue Monster supported**<br/>
-(Currently not all Method supported in Production)
+**Following list is payment methods supported by Revenue Monster.**<br/>
+(For payment method(s) is not on the list are not supported)
+**WeChat Pay Web/App intergration requires to apply OPEN ID. Please get the OPEN ID ready before starting integration.**<br/>
 :::
 
 ### Transaction QR
