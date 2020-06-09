@@ -23,10 +23,9 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
       borderRadius: 2,
       border: "0.5px solid",
       borderColor: "#e3e8ee",
-      transition: "width 0.1s",
+      transition: "0.3s",
       ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-        width:"300px",
+        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
       },
     }}
       onClick={() => {
@@ -47,10 +46,9 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
       borderRadius: 2,
       border: "0.5px solid",
       borderColor: "#e3e8ee",
-      transition: "width 0.1s",
+      transition: "0.3s",
       ":hover": {
-        boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
-        width:"300px",
+        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
       },
     }}
     onClick={() => {
