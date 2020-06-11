@@ -14,7 +14,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/stores`
 
 - To query for ALL stores under a merchant.
 
-- To pass in pagination cursor, you may use query string: ~/?cursor= < cursor >\_
+- To implement a pagination cursor, you may use query string: ~/?cursor= < cursor >\_
 
 :::
 
@@ -24,7 +24,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/stores`
 No request parameter is required for this endpoint.
 :::
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -56,13 +56,13 @@ No request parameter is required for this endpoint.
 <br/>
 <strong>Database object (meta):</strong>
 
-| Parameter | Type   | Description                     | Example |
-| --------- | ------ | ------------------------------- | ------- |
-| `count`   | Int    | Current page record             | 1       |
-| `total`   | Int    | Total record in database        | 1       |
-| `cursor`  | String | Optional, if pagination exists. | 1       |
+| Parameter | Type | Description                     | Example |
+| --------- | ---- | ------------------------------- | ------- |
+| `count`   | Uint | Current page record             | 1       |
+| `total`   | Uint | Total record in database        | 1       |
+| `cursor`  | Uint | Optional, if pagination exists. | 1       |
 
-> Example Respond
+> Example Response
 
 ```json
 {

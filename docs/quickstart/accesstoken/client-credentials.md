@@ -16,10 +16,10 @@ This is for the scenario that merchant's trusted developer is provided with **Cl
 
 :::note
 
-To start with, get OAuth 2.0 client credentials you need (`client_id` & `client_secret`) from your [RM Merchant Portal](https://merchant.revenuemonster.my/).
-Request an **Access Token** from RM `Authorisation Server`, you will get a response consists of **Access Token** & **Refresh Token**. Use the **Access Token** to call Revenue Monster API that you want to access. Refresh token can be stored to get new access tokens.
+To start with, you will need to get OAuth 2.0 client credentials you need (`client_id` and `client_secret`) from your [RM Merchant Portal](https://merchant.revenuemonster.my/).
+Request an **Access Token** from RM `Authorisation Server`, and you will get a response consistsing of an **Access Token** and a **Refresh Token**. Use the **Access Token** to call the Revenue Monster API that you want to access. Refresh tokens can be stored to get new access tokens.
 
-After get an **Access Token** from RM Authorization Server , **Access token** is required for subsequent request to our resource server(s) to get protected resources.
+After getting an **Access Token** from RM Authorization Server , **Access token** is required for subsequent requests to our resource server(s) to get protected resources.
 :::
 
 ### Step 1 : Get Client ID and Client Secret
@@ -69,7 +69,7 @@ curl --location --request POST "https://sb-oauth.revenuemonster.my/v1/token" \
 }"
 ```
 
-**Response Parameters :**
+### Response Parameters
 
 | Parameter               |  Type  | Description                                                                  |              Example |
 | :---------------------- | :----: | ---------------------------------------------------------------------------- | -------------------: |

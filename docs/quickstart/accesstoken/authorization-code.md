@@ -15,9 +15,9 @@ URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 Sandbox URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 
 **Process flow for Grant Type:** `auth_code` <br/>
-This is for the scenario which a partner wants to request permission to develop an application of a merchant.
+This is for the scenario where a partner wants to request permission to develop an application of a merchant.
 
-For authorization code, only `client_id` is needed. You are required to pass in following request parameters as Query String. Go to [RM Merchant Portal](https://merchant.revenuemonster.my/) to get your **Client ID**
+For authorization code, only `client_id` is needed. You are required to use the following request parameters as Query String. Go to [RM Merchant Portal](https://merchant.revenuemonster.my/) to get your **Client ID**
 
 ### Request Parameters
 
@@ -59,10 +59,11 @@ Tf6RakxUp&state=123456</a>
 
 :::note
 
-- From the redirected response URI, we can get authorization code from the query string, as follow:- <br />
+- From the redirected response URI, we can get authorization code from the query string, as follows: <br />
   `iEWqJsA5KVEsWF11xTphDIx8vbUqomsiW2vT4KClOFaVqiGh517dDCfgPlHlqZUeP5atf0SnwiMO8P2X06md8Muv4nEWRW9nro6a5ef0M1jD7k1EFOh9fPV7Jvoe7wIRoVY6JYCSzHuWItQ3Un9J137smxcdSkZ8GKs14vDmREtwFsn8a0SSKBvgfjXEJGrWnCZaCOpEhXPDNzIfo71n0p8p38d9mUyNqxYpQ8UzlPpfAKEr0fiGIFTf6RakxUp`<br /><br />
 
-- Thereafter, user may use this code to generate access token and hence proceed to call other endpoints.<br /><br />
+- Thereafter, user may use this code to generate an access token and proceed to call other endpoints.<br /><br />
 
 - This code is valid for <b>ONE-TIME</b> only. Once used <b>(either successful or failed)</b>, you are required to request a new authorization code using the steps before.
-  :::
+
+:::

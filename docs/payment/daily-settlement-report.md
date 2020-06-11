@@ -11,7 +11,7 @@ URL :`https://open.revenuemonster.my/v3/payment/reconciliation`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/reconciliation`
 
 :::note
-To Get Daily Payment report
+To get Daily Payment report
 :::
 
 ### Request Parameters
@@ -62,7 +62,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 | `storeId`          | String   | Store ID                                                                                                                       | "4949529109748431621"                      |
 | `storeName`        | String   | Store Name                                                                                                                     | "Kim's Food Corner"                        |
 | `region`           | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                        | "MALAYSIA"                                 |
-| `method`           | String   | tyuioigiigqhih                                                                                                                 | "TNG"                                      |
+| `method`           | String   | [RM currently supported method](../method/quick-pay)                                                                           | "TNG"                                      |
 | `transactionType`  | String   | "PAYMENT" or "REFUND"                                                                                                          | "PAYMENT"                                  |
 | `type`             | String   | "QUICK_PAY" , "QR_PAY","Web_Payment" , "Mobile_Payment" , "Mobile_Web_Payment"                                                 | "QUICK_PAY"                                |
 | `transactionId`    | String   | Transaction ID (from RM server)                                                                                                | "191231070009010323431829"                 |
@@ -118,7 +118,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 | `currencyType`   | String | Currency notation (currently only support MYR) | "MYR"                          |
 | `amount`         | Uint   | Amount of order                                | 100                            |
 
-> Example Respond
+> Example Response
 
 ```json
 {

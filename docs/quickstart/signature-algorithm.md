@@ -8,16 +8,16 @@ sidebar_label: Signature Algorithm
 
 ### Step 1 : Create New Application
 
-Go to **Merchant Portal** > **Developer** > **Applications** tab (the last one) and you will see the following page:<br/>
+Go to **Merchant Portal** > **Developer** > **Applications** tab (last on the list) and you will see the following page:<br/>
 
 ![image](/img/developer-application/1.png)<br />
 
 ### Step 2 : Obtain Credential
 
-Click on the <b>Applications</b> created in Step 1 , you may edit and update relevant information here :
+Click on the <b>Applications</b> created in Step 1. You may edit and update relevant information here :
 <br/>
 
-If you would like to disable the application , simple toggle **"ON/OFF"** switch button at Top Right.
+If you would like to disable the application , simply toggle the **"ON/OFF"** switch button at the top right.
 <br/>
 
 ![image](/img/developer-application/4.png)
@@ -30,7 +30,7 @@ Click on **Show** to reveal your **clientSecret**:
 
 ### Generate RSA KEYS
 
-If you need help to generate key, go to **Merchant portal > Developer > Application > Generator RSA Key** Suggested key size: 2048 Bit. Keep your private keys in safe place! Or use our **Generate RSA key** tool.
+If you need help to generate a key, go to **Merchant portal > Developer > Application > Generator RSA Key** Suggested key size: 2048 Bit. Keep your private keys in a safe place! Or use our **Generate RSA key** tool.
 
 `Private Keys` are required to sign API request(s) contents. `Public Keys` are used to verify content received.
 
@@ -43,8 +43,7 @@ If you need help to generate key, go to **Merchant portal > Developer > Applicat
 `Public Keys` needs to have be wrap as following :
 
 ![image](/img/developer-application/9.png)<br/>
-For security purposes, we enhanced our authentication flow and Open API by adding layers of encryption to our endpoints. You may use our Signature Debugger
-You may develop your own encryption tool on your desired application directly, or you may use our Signature Debugger to do signing/verification using private/public keys as obtained from previous step.
+For security purposes, we enhanced our authentication flow and Open API by adding layers of encryption to our endpoints. You may develop your own encryption tool on your desired application directly, or use our Signature Debugger to do signing/verification using private/public keys as obtained from the previous step.
 Refer more on `Signature Debugger`
 
 ![image](/img/developer-application/signature-debug.png)

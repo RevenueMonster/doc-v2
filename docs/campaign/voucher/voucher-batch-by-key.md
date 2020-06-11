@@ -18,7 +18,7 @@ To get Multiple voucher batches by Key .
 
 :::note
 
-- The URL is consist of [base_URL]/v3/voucher-batch/[batchkey]/vouchers.
+- The URL is consists of [base_URL]/v3/voucher-batch/[batchkey]/vouchers.
 
 - [batchkey] can be retrieved by viewing at merchant portal or using endpoint [`Get voucher By Batches`](https://doc.revenuemonster.my/#get-voucher-by-batches)
 
@@ -42,12 +42,12 @@ To get Multiple voucher batches by Key .
 | `label`           | String           | label of voucher for merchant remarks                                                                                      | "Free Breakfast”                                                                  |
 | `voucherBathKey`  | String           | Parent key of current voucher                                                                                              | "EhQKCE1lcmNo<br/>YW50EJXVzd3wraqTORIYCgx<br/>Wb3VjaGVyQm<br/>F0Y2gQkvnGweaB2uQg" |
 | `type`            | String           | Define type of vouchers: **DISCOUNT**, **GIFT**, **CASH**                                                                  | “GIFT"                                                                            |
-| `amount`          | UInt             | Required if type = **CASH**, notation in cents, eg. RM 1.00 = 100                                                          | 10000                                                                             |
-| `discountRate`    | UInt             | Required if type = **DISCOUNT**, notation without decimals, eg. 1% = 100                                                   | 0                                                                                 |
+| `amount`          | Uint             | Required if type = **CASH**, notation in cents, eg. RM 1.00 = 100                                                          | 10000                                                                             |
+| `discountRate`    | Uint             | Required if type = **DISCOUNT**, notation without decimals, eg. 1% = 100                                                   | 0                                                                                 |
 | `imageUrl`        | String           | Image URL of current voucher, optional                                                                                     | Image Url link <br/>(Refer to the below code)                                     |
-| `quantity`        | UInt             | Total quantity of voucher(s) in this batch                                                                                 | 1                                                                                 |
-| `balanceQuantity` | UInt             | Total quantity of voucher(s) remaining in this batch                                                                       | 0                                                                                 |
-| `usedQuantity`    | UInt             | Total quantity of voucher(s) used/assigned/redeemed in this batch                                                          | 1                                                                                 |
+| `quantity`        | Uint             | Total quantity of voucher(s) in this batch                                                                                 | 1                                                                                 |
+| `balanceQuantity` | Uint             | Total quantity of voucher(s) remaining in this batch                                                                       | 0                                                                                 |
+| `usedQuantity`    | Uint             | Total quantity of voucher(s) used/assigned/redeemed in this batch                                                          | 1                                                                                 |
 | `expiry`          | Object of Expiry | Expiry date time of current voucher                                                                                        | (Refer below)                                                                     |
 | `origin`          | String           | **SYSTEM** (voucher code generated from RM server), **SELF** (voucher code uploaded from merchant csv file)                | “SYSTEM”                                                                          |
 | `isShipping`      | Boolean          | **True** if items/goods to be delivered physically to customers                                                            | false                                                                             |
@@ -65,7 +65,7 @@ To get Multiple voucher batches by Key .
 | `day`      | Uint     | Only required by **DYNAMIC** expiry type. To indicate number of days from now until expiry. | 30                                 |
 | `expiryAt` | DateTime | Only required by **FIXED**. To indicate specific expiry date.                               | "2020-10-07T17:44:26.679908+08:00" |
 
-> Example Respond
+> Example Response
 
 ```json
 {

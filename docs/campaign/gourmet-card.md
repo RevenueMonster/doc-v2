@@ -81,7 +81,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/cho
 | `createAt`           | DateTime | Create date time     | "2019-12-18T01:28:24Z"                                                                                                       |
 | `updateAt`           | DateTime | Update date time     | "2019-12-18T01:28:24Z"                                                                                                       |
 
-> Example Respond
+> Example Response
 
 ```json
 {

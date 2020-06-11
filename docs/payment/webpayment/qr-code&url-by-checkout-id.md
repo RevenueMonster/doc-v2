@@ -1,7 +1,7 @@
 ---
 id: qr-code&url-by-checkout-id
-title: Get QR Code & URL by checkout ID
-sidebar_label: Get QR Code & URL by checkout ID
+title: Get QR Code & URL By Checkout ID
+sidebar_label: Get QR Code & URL By Checkout ID
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -18,7 +18,7 @@ To create a unified payment checkout page for your website.
 
 <details open>
   <summary>
-    <b> Decoder your Image using Base64</b>
+    <b> Decode your Image using Base64</b>
   </summary>
   Using <b>qrCodeImageBase64</b> URL to generate a QR Code
   <Card width="100%">
@@ -28,7 +28,7 @@ To create a unified payment checkout page for your website.
 
 <details open>
   <summary>
-    <b>User will received</b>
+    <b>What user will receive</b>
   </summary>
   Once user scan the QR Code it will display 
   <Card width="100%">
@@ -61,10 +61,10 @@ curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \
 
 ### Response Parameters
 
-| Parameter | Type   | Description                                                                                   | Example                    |
-| --------- | ------ | --------------------------------------------------------------------------------------------- | -------------------------- |
-| `item`    | Object | Object of refund details.                                                                     | (Refer explanantion below) |
-| `code`    | String | Status returned from Revenue Monster server, whether successfully called our endpoint or not. | "SUCCESS"                  |
+| Parameter | Type   | Description                                                                                   | Example                      |
+| --------- | ------ | --------------------------------------------------------------------------------------------- | ---------------------------- |
+| `item`    | Object | Object of refund details.                                                                     | (Refer to explanation below) |
+| `code`    | String | Status returned from Revenue Monster server, whether successfully called our endpoint or not. | "SUCCESS"                    |
 
 <br/>
 
@@ -75,7 +75,7 @@ curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \
 | `type`    | String | `URL` or `QRCODE`                                        | "URL"                    |
 | `url`     | String | Once you press this link it will redirect to the wallet. | "Url link show as below" |
 
-> Example Respond for URL
+> Example Response for URL
 
 ```json
 {
@@ -87,7 +87,7 @@ curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \
 }
 ```
 
-> Example Respond for QR Code
+> Example Response for QR Code
 
 ```json
 {

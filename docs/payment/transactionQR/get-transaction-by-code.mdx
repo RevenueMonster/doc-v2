@@ -11,7 +11,8 @@ URL : `https://open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a94
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a9440dd351b2dde0c0ea166/transactions`
 
 :::note
-To get all transactions under existing QR code, by passing in code in your query (/qrcode/.../transactions).
+- To get all transactions under existing QR code, by inputting code in your query.
+- The URL is consists of `[base_URL]`/v3/payment/transaction/qrcode/`[code]`/transactions
 :::
 
 ### Request Parameters
@@ -77,9 +78,9 @@ No request parameter is required for this endpoint\_
 
 | Parameter | Type | Description         | Example |
 | --------- | ---- | ------------------- | ------- |
-| `count`   | Int  | Current page record | 1       |
+| `count`   | Uint  | Current page record | 1       |
 
-> Example Respond
+> Example Response
 
 ```json
 {

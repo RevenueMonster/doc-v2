@@ -11,7 +11,7 @@ URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward/calculate`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/calculate`
 
 :::note
-Using amount to Calculate Spending Reward point
+Use amount sales to Calculate Spending Reward points
 :::
 
 ### Request Parameters
@@ -55,7 +55,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/spending-reward/cal
 
 Currency notation (currently only support MYR)
 
-> Example Respond
+> Example Response
 
 ```json
 {

@@ -8,8 +8,8 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
-(For payment method(s) is not on the list are not supported)
-**WeChat Pay Web/App intergration requires to apply OPEN ID. Please get the OPEN ID ready before starting integration.**<br/>
+(Payment method(s) not on the list are not supported)
+**WeChat Pay Web/App integration requires the Merchant to apply for an OPEN ID. Please get the OPEN ID ready before starting integration.**<br/>
 :::
 
 ### Transaction QR

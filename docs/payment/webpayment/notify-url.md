@@ -87,7 +87,7 @@ Example of Notify URL Response
 | `latitude`  | Uint | Yes      | 0       |
 | `longitude` | Uint | Yes      | 0       |
 
-> Example Respond
+> Example Response
 
 ```json
 {

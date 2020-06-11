@@ -36,7 +36,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/cho
 }"
 ```
 
-### Respond Parameters
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -58,7 +58,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/cho
 | `createdAt`        | DateTime | Creation date time    | "2020-03-05T09:40:21Z"                                                        |
 | `updatedAt`        | DateTime | Last update date time | "2020-03-05T09:40:21Z"                                                        |
 
-> Example Respond
+> Example Response
 
 ```json
 {

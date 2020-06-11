@@ -53,7 +53,7 @@ Generate a QR code to display on your web or mobile for user to scan
 | `qrCodeImageBase64` | String | Decoder the Url by using Base64 Image | Example will display at above |
 | `url`               | String | payment Url                           | Example will display at below |
 
-> Example Respond
+> Example Response
 
 ```json
 {

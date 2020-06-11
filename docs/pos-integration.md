@@ -11,7 +11,7 @@ URL :`https://open.revenuemonster.my/v3/payment/terminal/quickpay`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/terminal/quickpay`
 
 :::note
-Integrate RM Terminal with POS System or Kiosk machine (using local callback). This endpoint is only supporting payment initiation; for other methods (refund/reverse/settlement), kindly follow standard steps accordingly.
+Integrate RM Terminal with POS System or Kiosk machine (using local callback). This endpoint only supports payment initiation. For other methods (refund/reverse/settlement), please follow back refund , reverse , settlement API standard steps accordingly.
 :::
 
 ### Request Parameters
@@ -91,7 +91,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/ter
 | `details`        | String | Yes      | Order details, max: 600                             | "XXXX-XXXX-XXXX-3121" |
 | `additionalData` | String | Yes      | For merchant's remark, max 128                      | "000008"              |
 
-> Example Respond
+> Example Response
 
 ```json
 {

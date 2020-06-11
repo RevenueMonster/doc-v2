@@ -12,10 +12,10 @@ Sandbox URL : `https://sb-oauth.revenuemonster.my/v1/token`<br/>
 
 :::note Refresh token is used to get new access token
 
-- When Access token is expired (29 day)
+- When Access Token has expired (29 days)
 - Access token is compromised/hacked/stolen/destroyed
 
-In case you lost refresh token or do not want to deal with refresh token, you may opt to get new access token/refresh token using client credentials again. But this is not a suggested practice. (You don't want your clientid/clientsecret always exposed in network traffic. That is why you shall use refresh token.)
+In case you lost your refresh token or do not want to deal with refresh token, you may opt to get new access token/refresh token using client credentials again. But this is not a suggested practice. (You don't want your clientid/clientsecret always exposed in network traffic. That is why you should use refresh tokens.)
 
 :::
 
@@ -76,7 +76,7 @@ curl --location --request POST "https://sb-oauth.revenuemonster.my/v1/token" \
 | `refreshToken`          | String | Required for getting new access token after expiry                           | Refresh token string |
 | `refreshTokenExpiresIn` | String | Token expiry, in seconds format. “1576799999” means 1576799999 seconds       |           1576799999 |
 
-> Example Respond
+> Example Response
 
 ```json
 {

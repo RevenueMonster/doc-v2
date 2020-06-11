@@ -8,7 +8,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
-(For payment method(s) is not on the list are not supported)
+(Payment method(s) not on the list are not supported)
 :::
 
 ### Web Payment / Mobile Payment / Mobile Web Payment

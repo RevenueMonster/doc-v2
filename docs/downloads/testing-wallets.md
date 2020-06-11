@@ -11,8 +11,8 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 :::note
 
 - Only limited wallets provide testing wallets, and most of them are in beta version (unstable).
-- WeChat Pay is the only wallet can use production real wallet in BOTH production and sandbox environment.
-- Hence, we highly recommend you to use WeChat Pay in sandbox to do one round of testing and move to production for other wallet(s) testing.
+- WeChat Pay is the only wallet that can use production real wallet in BOTH production and sandbox environment.
+- Hence, we highly recommend using WeChat Pay in sandbox to do one round of testing and move to production for other wallet(s) testing.
 
 :::
 

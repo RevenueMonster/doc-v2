@@ -11,7 +11,7 @@ URL : `https://open.revenuemonster.my/v3/payment/refund`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/refund`
 
 :::note
-Refund is to get funds returned to customer before settlement. <br/>(Before money is settled to merchant.)
+Refund returns funds to the customer before settlement. <br/>(Before money is settled with the merchant.)
 :::
 
 ### Example of Refund
@@ -142,7 +142,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/ref
 | `currencyType`   | String | Currency notation (currently only support `MYR`) | "MYR"                          |
 | `amount`         | Uint   | Amount of order in cent                          | 100                            |
 
-> Example Respond
+> Example Response
 
 ```json
 {

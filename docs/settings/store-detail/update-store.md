@@ -11,14 +11,14 @@ URL : `https://open.revenuemonster.my/v3/store/1662168764176583360`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/store/1662168764176583360`
 
 :::note
-To update specific store under this merchant. Specify `store_id` in your query.
+To update a specific store under the merchant. Specify `store_id` in your query.
 :::
 
 ### Request Parameters
 
 :::note
 
-- The URL is consist of `[base_URL]`/v3/store/`[store_id]`
+- The URL is consists of `[base_URL]`/v3/store/`[store_id]`
 
 - Pass in `Store ID` in your query
 
@@ -58,7 +58,7 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/store/1662
 }"
 ```
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -86,7 +86,7 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/store/1662
 | `createdAt`    | DateTime          | Creation date time of store                                 | "2018-02-12T08:53:13Z"                              |
 | `updatedAt`    | DateTime          | Last update date time of store                              | "2018-02-12T08:53:13Z"                              |
 
-> Example Respond
+> Example Response
 
 ```json
 {

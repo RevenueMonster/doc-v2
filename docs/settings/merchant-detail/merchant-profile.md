@@ -20,11 +20,11 @@ To query for merchant details.
 No request parameter is required for this endpoint.
 :::
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type   | Description                                                                                   | Example                    |
 | --------- | ------ | --------------------------------------------------------------------------------------------- | -------------------------- |
-| `item`    | Object | Object of refund details.                                                                     | (Refer explanantion below) |
+| `item`    | Object | Object of item details.                                                                       | (Refer explanantion below) |
 | `code`    | String | Status returned from Revenue Monster server, whether successfully called our endpoint or not. | "SUCCESS"                  |
 
 <br/>
@@ -72,7 +72,7 @@ No request parameter is required for this endpoint.
 | `state`        | String | State of merchant     | "Selangor"                              |
 | `country`      | String | Country of merchant   | "Malaysia"                              |
 
-> Example Respond
+> Example Response
 
 ```json
 {

@@ -11,7 +11,8 @@ URL : `https://open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a94
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a9440dd351b2dde0c0ea166`
 
 :::note
-To get specific QR Code generated previously in the system, by passing in code in your query (/qrcode/...).
+- To get a specific QR Code previously generated in the system, by inputting code in your query.
+- The URL is consists of `[base_URL]`/v3/payment/transaction/qrcode/`[code]`
 :::
 
 ### Request Parameters
@@ -59,7 +60,7 @@ No request parameter is required for this endpoint.
 | `day`       | Uint     | Only required by "DYNAMIC" expiry type. To indicate number of days from now until expiry. | 3                                  |
 | `expiredAt` | DateTime | Only required by "FIXED". To indicate specific expiry date.                               | "2020-10-07T17:44:26.679908+08:00" |
 
-> Example Respond
+> Example Response
 
 ```json
 {
