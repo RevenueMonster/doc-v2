@@ -50,7 +50,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/store" \
 }"
 ```
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -79,7 +79,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/store" \
 | `createdAt`    | DateTime          | Creation date time of store                                 | "2018-02-12T08:53:13Z"                              |
 | `updatedAt`    | DateTime          | Last update date time of store                              | "2018-02-12T08:53:13Z"                              |
 
-> Example Respond
+> Example Response
 
 ```json
 {

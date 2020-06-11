@@ -18,15 +18,15 @@ Get Loyalty Member Point History By `Member ID`
 
 :::note
 
-- The URL is consist of `[base_URL]`/v3/loyalty/member/`[member_id]`/history
+- The URL is consists of `[base_URL]`/v3/loyalty/member/`[member_id]`/history
 
 - Pass an empty JSON object Example: `{}`
 
 :::
 
-### Respond Parameters
+### Response Parameters
 
-> Example Respond
+> Example Response
 
 ```json
 {

@@ -20,7 +20,7 @@ To query for ALL users under this merchant.
 No request parameter is required for this endpoint.
 :::
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -46,7 +46,7 @@ No request parameter is required for this endpoint.
 | `createdAt`   | DateTime | Creation date time of user          | "2018-02-12T08:53:13Z"                                        |
 | `updatedAt`   | DateTime | Last update date time of user       | "2018-02-12T08:53:13Z"                                        |
 
-> Example Respond
+> Example Response
 
 ```json
 {

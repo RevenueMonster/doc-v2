@@ -67,7 +67,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 ### Step 1 : Create a QR Code
 
-Get the QR Code URL <b>qrCodeUrl</b> from repsond endpoint <br />
+Get the QR Code URL <b>qrCodeUrl</b> from the response endpoint <br />
 
 Example of QR Code URL:
 https://dev-rm-api.ap.ngrok.io/payment/unified?code=a669adc3b06fe5cef977cc762f40ce8c
@@ -93,7 +93,7 @@ If <b>"isPreFillAmount": true</b>, user will be directly prompted for payment.
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/3.jpeg" />
 </Card>
 
-### Step 4 : User will received a payment status notification
+### Step 4 : User will receive a payment status notification
 
 <Card width={258}>
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/4.jpeg" />
@@ -101,15 +101,15 @@ If <b>"isPreFillAmount": true</b>, user will be directly prompted for payment.
 
 ### Step 5 : Redirect to Merchant Page
 
-After payment done user will redirect to a Url link that set at <b>redirectUrl</b>.
+After payment is complete, the user will be redirected to a URL link set at <b>redirectUrl</b>.
 
 ### Step 6 : Payment History
 
-User can view they transaction history in they own wallet application
+Users can view their transaction history in their own wallet application
 
-### Step 7 : Merchant can view their transaction record in Merchant Portal
+### Step 7 : Merchants can view their transaction record in Merchant Portal
 
-After payment done merchant can view their transaction in Merchant Portal.
+After payment is complete, merchants can view their transaction in Merchant Portal.
 
 <Card width={258}>
   <Image src="https://storage.googleapis.com/rm-portal-assets/img/rm-doc/transaction-qr/6.png" />
@@ -239,7 +239,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/tra
 | `title`          | String | Order title, max: 32            | "Sales"                                 |
 | `additionalData` | String | Order additional data, max: 128 | "Sales for customer xxx at branch xxx." |
 
-> Example Respond
+> Example Response
 
 ```json
 {
@@ -291,7 +291,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/tra
 
 :::note
 
-If you don't received any repsond please ingestion
+If you don't receive any response please ingestion **Query Status By Order ID**
 
 <Button
   width="100%"

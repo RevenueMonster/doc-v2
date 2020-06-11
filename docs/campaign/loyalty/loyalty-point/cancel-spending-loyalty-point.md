@@ -41,7 +41,7 @@ curl --location --request POST "{{open_base_path}}/v3/loyalty/spending-reward/ca
 | --------- | ------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------- |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer [Appendix 1: Error Codes](https://doc.revenuemonster.my/#appendix-1-error-codes)) | "SUCCESS" |
 
-> Example Respond
+> Example Response
 
 ```json
 {

@@ -22,7 +22,7 @@ No request parameter is required for this endpoint.
 
 ### Response Parameters
 
-> Example Respond
+> Example Response
 
 ```json
 {

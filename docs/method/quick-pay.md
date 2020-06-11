@@ -8,7 +8,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
-(For payment method(s) is not on the list are not supported)
+(Payment method(s) not on the list are not supported)
 :::
 
 ### QuickPay
@@ -20,6 +20,45 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
   </tr>
   <tr>
     <td>WECHATPAY</td>
+    <td>
+    <Card
+    sx={{
+      backgroundColor: "#87d068",
+      color:"white",
+      textAlign: "center" 
+    }}
+  > Yes
+  </Card>
+  </td> 
+  </tr>
+  <tr>
+    <td>TNG</td>
+    <td>
+    <Card
+    sx={{
+      backgroundColor: "#87d068",
+      color:"white",
+      textAlign: "center" 
+    }}
+  > Yes
+  </Card>
+  </td> 
+  </tr>
+  <tr>
+    <td>BOOST</td>
+    <td>
+    <Card
+    sx={{
+      backgroundColor: "#87d068",
+      color:"white",
+      textAlign: "center" 
+    }}
+  > Yes
+  </Card>
+  </td> 
+  </tr>
+  <tr>
+    <td>PRESTO</td>
     <td>
     <Card
     sx={{

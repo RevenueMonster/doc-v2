@@ -18,15 +18,15 @@ Get loyalty member by `Member ID`
 
 :::note
 
-- The URL is consist of `[base_URL]`/v3/loyalty/member/`[member_id]`
+- The URL is consists of `[base_URL]`/v3/loyalty/member/`[member_id]`
 
 - Pass an empty JSON object Example: `{}`
 
 :::
 
-### Respond Parameters
+### Response Parameters
 
-> Example Respond
+> Example Response
 
 ```json
 {

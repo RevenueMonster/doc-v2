@@ -11,7 +11,7 @@ URL : `https://open.revenuemonster.my/v3/loyalty/reward`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/reward`
 
 :::note
-To give loyalty point(s) to customer's using phone number or member ID.
+To give loyalty point(s) to customers using phone number or member ID.
 :::
 
 ### Request Parameters
@@ -84,7 +84,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 | --------- | ------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------- |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer [Appendix 1: Error Codes](https://doc.revenuemonster.my/#appendix-1-error-codes)) | "SUCCESS" |
 
-> Example Respond (PhoneNumber & Memebr ID)
+> Example Response (PhoneNumber & Member ID)
 
 ```json
 {
@@ -92,7 +92,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 }
 ```
 
-> Example Respond (QR Code)
+> Example Response (QR Code)
 
 ```json
 {

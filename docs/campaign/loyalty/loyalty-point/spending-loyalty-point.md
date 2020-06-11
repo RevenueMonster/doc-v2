@@ -11,12 +11,12 @@ URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward`
 
 :::note
-To give loyalty point(s) to customer's using phone number or member ID.
+To give loyalty point(s) to customers using phone number or member ID.
 :::
 
 :::caution
 
-**Only WeChat Pay + WeChat OA loyalty** program can support auto give point during payment. All other wallets **DO NOT** support auto give point. You should use merchant app/terminal app or this endpoint to give point manually on each payment.
+**Only WeChat Pay + WeChat OA loyalty** program can support auto-give points during payment. All other wallets **DO NOT** support auto-give points. You should use the merchant app/terminal app or this endpoint to give points manually for each payment.
 
 :::
 
@@ -90,7 +90,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 | --------- | ------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------- |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer [Appendix 1: Error Codes](https://doc.revenuemonster.my/#appendix-1-error-codes)) | "SUCCESS" |
 
-> Example Respond (PhoneNumber & Memebr ID)
+> Example Response (PhoneNumber & Member ID)
 
 ```json
 {
@@ -98,7 +98,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/rew
 }
 ```
 
-> Example Respond (QR Code)
+> Example Response (QR Code)
 
 ```json
 {

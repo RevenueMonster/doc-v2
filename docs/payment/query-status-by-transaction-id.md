@@ -78,7 +78,7 @@ No request parameter is required for this endpoint.
 | `currencyType`   | String | Currency notation (currently only support MYR) | "MYR"                          |
 | `amount`         | Uint   | Amount of order                                | 100                            |
 
-> Example Respond
+> Example Response
 
 ```json
 {

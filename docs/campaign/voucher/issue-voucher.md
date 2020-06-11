@@ -18,7 +18,7 @@ To issue vouchers for customer.
 
 :::note
 
-- The URL is consist of [base_URL]/v3/voucher-batch/[batchkey]/issue.
+- The URL is consists of [base_URL]/v3/voucher-batch/[batchkey]/issue.
 
 - [base_URL] is the base URL depending on your environment (Sandbox or production)
 
@@ -43,7 +43,7 @@ To issue vouchers for customer.
 | `code`    | String | Voucher Code, members can keep this code for future redemption. Same as the qrURL below except this code is not a URL. | "NAklEfbVdV"                      |
 | `qrUrl`   | String | QR code for user to scan with Wechat or Facebook to add the voucher into their member account.                         | QR Url link (refer to below code) |
 
-> Example Respond
+> Example Response
 
 ```json
 {

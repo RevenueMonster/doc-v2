@@ -18,13 +18,13 @@ Use `Store ID` to check a particular store details.
 
 :::note
 
-- The URL is consist of `[base_URL]`/v3/store/`[store_id]`
+- The URL is consists of `[base_URL]`/v3/store/`[store_id]`
 
 - Pass in `Store ID` in your query
 
 :::
 
-### Response Parameters:
+### Response Parameters
 
 | Parameter | Type     | Description                                                                                               | Example                      |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
@@ -52,7 +52,7 @@ Use `Store ID` to check a particular store details.
 | `createdAt`    | DateTime           | Creation date time of store                     | "2018-02-12T08:53:13Z"                                       |
 | `updatedAt`    | DateTime           | Last update date time of store                  | "2018-02-12T08:53:13Z"                                       |
 
-> Example Respond
+> Example Response
 
 ```json
 {
