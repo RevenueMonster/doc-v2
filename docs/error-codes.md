@@ -6,7 +6,6 @@ sidebar_label: Error Codes
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
-
 | Error Codes              | Description                                                                                                                                       | Solution                                                                                                                                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | InvalidRequest:          | The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed. | Refer to request paramenter(s) as described in API documentation and retry again.                                                                                                                                  |
@@ -19,8 +18,8 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | UnSupportedGrantType:    | Unsupported grant type                                                                                                                            | Currently we only support grant types of `Client Credentials`, `Authorization Code` and `Refresh Token`.                                                                                                           |
 | UnSupportedResponseType: | The authorization server does not support obtaining an authorization code using this method.                                                      | Use `responseType=code` in request URI query string and try again.                                                                                                                                                 |
 | AccessDenied:            | The resource owner or authorization server denied the request                                                                                     | User is inactivated in our system, please try again.                                                                                                                                                               |
-| InternalError:           | The authorization server encountered an unexpected condition that prevented it from fulfilling the request                                        | Should this condition presists, please contact our customer support.                                                                                                                                               |
-| TemporaryUnAvailable:    | The authorization server is currently unable to handle the request due to a temporary overloading or maintenance of the server                    | Should this condition presists, please contact our customer support.                                                                                                                                               |
+| InternalError:           | The authorization server encountered an unexpected condition that prevented it from fulfilling the request                                        | If this condition persists, please contact our customer support.                                                                                                                                                   |
+| TemporaryUnAvailable:    | The authorization server is currently unable to handle the request due to a temporary overloading or maintenance of the server                    | If this condition persists, please contact our customer support.                                                                                                                                                   |
 
 <hr/>
 
@@ -28,7 +27,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 | Error Message                               | Description                                                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ALIPAY_CHINA_NOT_ACTIVE                     | Alipay China is not active. Please contact Revenue Monster to activate merchant for alipay (016-6999168 / support@revenuemonster.my) |
+| ALIPAY_CHINA_NOT_ACTIVE                     | Alipay China is not active. Please contact Revenue Monster to activate merchant for Alipay (016-6999168 / support@revenuemonster.my) |
 | ACCESS_TOKEN_READ_FAIL                      | Cannot read access token file                                                                                                        |
 | ACCOUNT_FROZEN                              | Your account has been frozen. Please contact support.                                                                                |
 | ACCOUNT_INACTIVE                            | User account is inactive                                                                                                             |
@@ -45,10 +44,10 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | AUTH_CODE_EXPIRED                           | Customer code expired. Please scan again.                                                                                            |
 | AUTH_CODE_INVALID                           | Customer code expired. Please scan again.                                                                                            |
 | AUTH_CODE_MIS_MATCH                         | Invalid Customer Code                                                                                                                |
-| AUTH_CODE_USED                              | Customer code already been used. Please refresh for another transaction.                                                             |
+| AUTH_CODE_USED                              | Customer code has already been used. Please refresh for another transaction.                                                         |
 | AUTHORIZATION_HEADER_NOT_ALLOWED            | Authorization header is not allowed                                                                                                  |
 | BANK_ERROR                                  | Bank system error                                                                                                                    |
-| BOOST_MALAYSIA_NOT_ACTIVE                   | Boost Malaysia is not active. Please contact Revenue Monster to activate merchant for boost.                                         |
+| BOOST_MALAYSIA_NOT_ACTIVE                   | Boost Malaysia is not active. Please contact Revenue Monster to activate merchant for Boost.                                         |
 | BUSINESS_CATEGORY_NOT_FOUND                 | Business category not found                                                                                                          |
 | BUYER_ACCOUNT_ERROR                         | Customer account error                                                                                                               |
 | BUYER_ACCOUNT_IN_ACTIVE                     | Customer account is inactive                                                                                                         |
@@ -56,25 +55,24 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | CANNOT_UPDATE_SAME_PHONE_NUMBER             | Cannot update the same phone number                                                                                                  |
 | CHOP_STAMP_NOT_ACTIVE                       | Chop stamp not active                                                                                                                |
 | CHOP_STAMP_NOT_FOUND                        | Chop stamp not found                                                                                                                 |
-| CHOP_STAMP_QUANTITY_EXCEED                  | Reached exceed number of chop stamp card                                                                                             |
+| CHOP_STAMP_QUANTITY_EXCEED                  | Exceeded the number of chop stamp card                                                                                               |
 | CLIENT_INVALID                              | Invalid client                                                                                                                       |
 | CLIENT_NO_PERMISSION                        | Developer application does not have permission to access                                                                             |
-| CLIENT_NOT_AUTHORIZE_STORE                  | Developer application not authorize user store                                                                                       |
+| CLIENT_NOT_AUTHORIZE_STORE                  | Mercahant don't have the authorize to enter this store                                                                               |
 | CLIENT_NOT_FOUND                            | Developer application client not found                                                                                               |
 | CLIENT_NOT_SET_PUBLIC_KEY                   | Developer application does not set public key                                                                                        |
 | CLIENT_PRODUCT_NOT_SETUP                    | Developer application product not setup                                                                                              |
 | CLIENT_PRODUCT_SUBSCRIBED                   | Developer application already subscribed to product                                                                                  |
 | COMPANY_TYPE_NOT_FOUND                      | Company type not found                                                                                                               |
-| CUSTOMER_REACHED_TRANSACTION_LIMIT          | Customer reached transaction limit                                                                                                   |
+| CUSTOMER_REACHED_TRANSACTION_LIMIT          | Customer has reached their transaction limit                                                                                         |
 | DAILY_PAYMENT_EXCEEDED                      | Daily payment limit exceeded                                                                                                         |
-| DAILY_RECEIVED_EXCEEDED                     | Daily payment limit exceeded                                                                                                         |
 | DEFAULT_STORE_DELETE_NOT_ALLOWED            | Default store not allowed to delete                                                                                                  |
 | DOES_NOT_ALLOW_MULTIPLE_BATCH_PROCESSING    | Does not allow multiple batch processing                                                                                             |
 | DOES_NOT_HAVE_ACTIVE_WALLET                 | Does not have active wallet. Please contact Revenue Monster to activate wallet                                                       |
 | EMAIL_DUPLICATE                             | Email address already exists                                                                                                         |
 | EMAIL_NOT_FOUND                             | Email address not found                                                                                                              |
 | EXCEEDED_LIMIT                              | Rate limit exceeded                                                                                                                  |
-| EXCEED_TIME_FOR_REVERSE_TRANSACTION         | Exceed time for transaction to reverse                                                                                               |
+| EXCEED_TIME_FOR_REVERSE_TRANSACTION         | Exceeded time for reversal of transaction                                                                                            |
 | EXPIRY_INVALID                              | Invalid expiry type                                                                                                                  |
 | EXPIRY_MIN                                  | Min expiry day                                                                                                                       |
 | FAILED_TO_REVERSE_ORDER                     | Failed to reverse order                                                                                                              |
@@ -83,15 +81,15 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | GRABPAY_MALAYSIA_MERCHANT_ID_NOT_SET        | GrabPay Malaysia is not active. Please contact Revenue Monster to activate merchant for GrabPay                                      |
 | GRABPAY_MALAYSIA_NOT_ACTIVE                 | GrabPay Malaysia is not active. Please contact Revenue Monster to activate merchant for GrabPay                                      |
 | GRANT_TYPE_INVALID                          | Invalid grant type                                                                                                                   |
-| INSUFFICIENT_CARD_BALANCE                   | Insuﬃcient customer balance                                                                                                         |
-| INSUFFICIENT_LOYALTY_BALANCE                | Insuffience loyalty balance                                                                                                          |
-| INSUFFICIENT_MERCHANT_BALANCE               | Insuﬃcient merchant balance                                                                                                         |
+| INSUFFICIENT_CARD_BALANCE                   | Insuﬃcient customer balance                                                                                                          |
+| INSUFFICIENT_LOYALTY_BALANCE                | Insuﬃcient loyalty balance                                                                                                           |
+| INSUFFICIENT_MERCHANT_BALANCE               | Insuﬃcient merchant balance                                                                                                          |
 | INSUFFICIENT_PERMISSION_LEVEL               | Insufficient Permission                                                                                                              |
 | INSUFFICIENT_REFUND_AMOUNT                  | Insufficient refund amount                                                                                                           |
 | INTERNAL_ERROR                              | Internal error                                                                                                                       |
 | INVALID_AGREEMENT_VERSION                   | Invalid Agreement Version                                                                                                            |
 | INVALID_APP_ID                              | Invalid parameters                                                                                                                   |
-| INVALID_CHARSET                             | Invalid format                                                                                                                       |
+| INVALID_CHARSET                             | Invalid Charset                                                                                                                      |
 | INVALID_CLIENT                              | Invalid client                                                                                                                       |
 | INVALID_ENCRYPTION                          | Invalid encryption                                                                                                                   |
 | INVALID_FILE                                | Invalid file                                                                                                                         |
@@ -116,17 +114,16 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | KEYWORD_KEY_INVALID                         | Invalid keyword key                                                                                                                  |
 | KEYWORD_NOT_FOUND                           | Keyword not found                                                                                                                    |
 | LIST_TEMPLATE_INVALID                       | Invalid list template                                                                                                                |
-| LOYALTY_BATCH_ALREADY_GENERATE_CSV          | Loyalty batch already generate csv                                                                                                   |
-| LOYALTY_BATCH_ALREADY_ZIP                   | Loyalty batch already zip                                                                                                            |
+| LOYALTY_BATCH_ALREADY_GENERATE_CSV          | CSV for loyalty batch has already been generated                                                                                     |
+| LOYALTY_BATCH_ALREADY_ZIP                   | Loyalty batch has already been zipped                                                                                                |
 | LOYALTY_BIRTHDAY_FIELD_NOT_REQUIRED         | Birth date field not required                                                                                                        |
-| LOYALTY_CREDIT_NOT_ENABLED                  | Loyalty credit not enable                                                                                                            |
+| LOYALTY_CREDIT_NOT_ENABLED                  | Loyalty credit not enabled                                                                                                           |
 | LOYALTY_EXPIRED                             | Loyalty point expired                                                                                                                |
 | LOYALTY_GENERATE_ERROR                      | Error in generating loyalty point                                                                                                    |
 | LOYALTY_INSUFFICIENT                        | Insufficient point                                                                                                                   |
-| LOYALTY_MEMBER_REGISTRATION_TOO_MANY        | length of entity too large                                                                                                           |
+| LOYALTY_MEMBER_REGISTRATION_TOO_MANY        | Creating too many members, limit is 1,000                                                                                            |
 | LOYALTY_NOT_CORRECT_FORMAT                  | Loyalty not correct format                                                                                                           |
 | LOYALTY_NOT_FOUND                           | Loyalty not found                                                                                                                    |
-| LOYALTY_NOT_MERCHANT                        | Loyalty not belongs to merchant                                                                                                      |
 | LOYALTY_NOT_SUBSCRIBED                      | Not subscribed to loyalty                                                                                                            |
 | LOYALTY_POINT_ALREADY_REDEEMED              | Loyalty point already redeemed                                                                                                       |
 | LOYALTY_POINT_IS_PROCESSING                 | Loyalty point is proccessing                                                                                                         |
@@ -373,8 +370,8 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | VOUCHER_INSUFFICIENT                        | Insufficient voucher batch                                                                                                           |
 | VOUCHER_NOT_ALLOW_VOID                      | Voucher not allow to void                                                                                                            |
 | VOUCHER_NOT_FOUND                           | Voucher not found                                                                                                                    |
-| VOUCHER\_\_NOT_MERCHANT                     | Voucher is not belongs to merchant                                                                                                   |
-| VOUCHER\_\_NOT_MINIMUM_AMOUNT               | Voucher does not meet minimum amount                                                                                                 |
+| VOUCHER_NOT_MERCHANT                        | Voucher is not belongs to merchant                                                                                                   |
+| VOUCHER_NOT_MINIMUM_AMOUNT                  | Voucher does not meet minimum amount                                                                                                 |
 | VOUCHER_NOT_REDEMMED                        | Voucher is not redeemed                                                                                                              |
 | VOUCHER_OWNER_INVALID                       | Voucher not owned                                                                                                                    |
 | VOUCHER_REDEEMED                            | Voucher redeemed                                                                                                                     |
