@@ -51,7 +51,7 @@ Refer more on `Signature Debugger`
 
 <hr/>
 
-### Using API to get Signature
+### Use API to get Signature
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 URL : `https://open.revenuemonster.my/tool/signature/generate`<br/>
@@ -117,9 +117,9 @@ If you received **INVALID_REQUEST_SIGNATURE**
 ```
 
 - Check your **Private key** and **Public key**
-- No space in **JSON DATA**
-- For access all wallet **method:[]**
-- For **amount:100** = 0.10 sen
+- **No space** in JSON data
+- To access all wallets, use `method:[]`
+- For **amount:100** is RM 1.00
 
 :::
 
