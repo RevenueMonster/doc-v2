@@ -35,3 +35,9 @@
 .menu.menu--responsive .menu__button {
   color: black !important;
 }
+
+@media screen and (max-width: 966px) {
+  .navbar .navbar__search .navbar__search-input {
+    width: 6.7rem;
+  }
+}

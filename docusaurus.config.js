@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = {
   title: "Revenue Monster",
   tagline:
@@ -7,6 +8,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "revenuemonster", // Usually your GitHub org/user name.
   projectName: "doc-v2", // Usually your repo name.
+  plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
   themeConfig: {
     disableDarkMode: true,
     navbar: {
@@ -14,6 +16,7 @@ module.exports = {
       logo: {
         alt: "My Site Logo",
         src: "/img/logo.png",
+        width: "600px",
       },
       links: [
         {
