@@ -5,6 +5,7 @@ sidebar_label: SDK
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
+import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css";
 
 The following language SDK(s) and documentations are available.
 
@@ -17,22 +18,12 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+    className={styles.sdkBox}
       onClick={() => {
-      window.location.href = "https://github.com/RevenueMonster/rm-sdk-go";
+        window.open("https://github.com/RevenueMonster/rm-sdk-go", "_blank");
     }}
     >
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text} >
      Go
     </Text>
   </Box>
@@ -40,21 +31,11 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+   className={styles.sdkBox}
    onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-PHP";
+      window.open("https://github.com/RevenueMonster/RM-API-SDK-PHP", "_blank");
     }}>
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text}  >
      Php
     </Text>
   </Box>
@@ -62,21 +43,11 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+    className={styles.sdkBox}
     onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Nodejs";
+       window.open("https://github.com/RevenueMonster/RM-API-SDK-Nodejs", "_blank");
     }}>
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text} >
      NodeJS
     </Text>
   </Box>
@@ -86,21 +57,11 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+   className={styles.sdkBox}
     onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-JAVA";
+       window.open("https://github.com/RevenueMonster/RM-API-SDK-JAVA", "_blank");
     }}>
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text} >
     Java
     </Text>
   </Box>
@@ -108,21 +69,11 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+   className={styles.sdkBox}
     onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Python";
+       window.open("https://github.com/RevenueMonster/RM-API-SDK-Python", "_blank");
     }}>
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text}>
      Python
     </Text>
   </Box>
@@ -130,21 +81,11 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+    className={styles.sdkBox}
     onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-API-SDK-Csharp";
+       window.open("https://github.com/RevenueMonster/RM-API-SDK-Csharp", "_blank");
     }}>
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text} >
     C# (Deprecated)
     </Text>
   </Box>

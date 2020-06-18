@@ -5,6 +5,7 @@ sidebar_label: Mobile SDK
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
+import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css";
 
 The following language SDK(s) and documentations are available.
 
@@ -17,22 +18,12 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+   className={styles.sdkBox}
       onClick={() => {
-      window.location.href = "https://github.com/RevenueMonster/RM-Android";
+         window.open("https://github.com/RevenueMonster/RM-Android", "_blank");
     }}
     >
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text}>
      Android
     </Text>
   </Box>
@@ -40,22 +31,12 @@ Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
     width={1 / 3}
     marginRight="20px"
     px={3}
-    sx={{
-      cursor:"pointer",
-      p: 1,
-      borderRadius: 2,
-      border: "0.5px solid",
-      borderColor: "#e3e8ee",
-      transition: "0.3s",
-      ":hover": {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)", 
-      },
-    }}
+   className={styles.sdkBox}
     onClick={() => {
-    window.location.href = "https://github.com/RevenueMonster/RM-IOS";
+       window.open("https://github.com/RevenueMonster/RM-IOS", "_blank");
     }}
     >
-    <Text p={1} color="background" bg="primary" textAlign="center" fontWeight="700" >
+    <Text className={styles.text} >
      IOS
     </Text>
   </Box>
