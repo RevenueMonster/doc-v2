@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #4a89f7;
+  --ifm-color-primary: #0000ff;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -36,8 +36,26 @@
   color: black !important;
 }
 
+.navbar .navbar__search .navbar__search-input {
+  width: 2rem;
+  /* -webkit-transition: width 0.4s ease-in-out; */
+  animation-timing-function: width 0.2s ease-in-out;
+  /* transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); */
+}
+
 @media screen and (max-width: 966px) {
-  .navbar .navbar__search .navbar__search-input {
-    width: 6.7rem;
+  .navbar .navbar__search .navbar__search-input:focus {
+    background-color: aliceblue;
+    width: 25%;
+    position: absolute;
+    right: 1px;
+    left: 1px;
+    top: 15px;
+    z-index: 1;
   }
+}
+
+.navbar .navbar__search .navbar__search-input:focus {
+  background-color: aliceblue;
+  width: 100%;
 }
