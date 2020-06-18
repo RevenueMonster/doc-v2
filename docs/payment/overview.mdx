@@ -5,6 +5,7 @@ sidebar_label: Overview
 ---
 
 import { Heading, Text, Card, Image, Button } from "rebass";
+import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css";
 import { Flex, Box } from "reflexbox";
 
 ## Integrate payments using RM APIs.
@@ -18,138 +19,48 @@ Go to [Client Credentials](../quickstart/accesstoken/client-credentials) to get 
 <Flex flexWrap="wrap" mx={-2}>
   <Box p={2} width={[1, 1 / 3]}>
     <Box
-      sx={{
-        cursor: "pointer",
-        p: 1,
-        borderRadius: 2,
-        border: "0.5px solid",
-        borderColor: "#e3e8ee",
-        transition: "0.3s",
-        ":hover": {
-          boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-        },
-      }}
+      className={styles.boxes}
       onClick={() => {
         window.location.href = "././quick-pay";
       }}
     >
-      <Text
-        paddingTop={30}
-        paddingBottom={30}
-        fontSize="20px"
-        color="background"
-        bg="primary"
-        textAlign="center"
-        fontWeight="700"
-      >
-        Quick Pay
-      </Text>
-      <Text
-        p={1}
-        fontSize="12px"
-        color="black"
-        textAlign="left"
-        paddingBottom={25}
-      >
+      <Text className={styles.text}>Quick Pay</Text>
+      <Text className={styles.title}>
         <b> Merchant Scans User</b>
       </Text>
-      <Text
-        p={1}
-        fontSize="12px"
-        color="black"
-        textAlign="left"
-        paddingBottom={10}
-      >
+      <Text className={styles.subtitle}>
         Scan user eWallet QR code with RM terminal or RM Application.
       </Text>
     </Box>
   </Box>
   <Box p={2} width={[1, 1 / 3]}>
     <Box
-      sx={{
-        cursor: "pointer",
-        p: 1,
-        borderRadius: 2,
-        border: "0.5px solid",
-        borderColor: "#e3e8ee",
-        transition: "0.3s",
-        ":hover": {
-          boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-        },
-      }}
+      className={styles.boxes}
       onClick={() => {
         window.location.href = "././transactionQR/transaction-qr";
       }}
     >
-      <Text
-        paddingTop={30}
-        paddingBottom={30}
-        fontSize="20px"
-        color="background"
-        bg="primary"
-        textAlign="center"
-        fontWeight="700"
-      >
-        Transaction QR
-      </Text>
-      <Text
-        p={1}
-        fontSize="12px"
-        color="black"
-        textAlign="left"
-        paddingBottom={25}
-      >
+      <Text className={styles.text}>Transaction QR</Text>
+      <Text className={styles.title}>
         <b> User Scans Merchant </b>
       </Text>
-      <Text
-        p={1}
-        fontSize="12px"
-        color="black"
-        textAlign="left"
-        paddingBottom={10}
-      >
+      <Text className={styles.subtitle}>
         Merchant displays QR code for user to scan and pay.
       </Text>
     </Box>
   </Box>
   <Box p={2} width={[1, 1 / 3]}>
     <Box
-      sx={{
-        cursor: "pointer",
-        p: 1,
-        borderRadius: 2,
-        border: "0.5px solid",
-        borderColor: "#e3e8ee",
-        transition: "0.3s",
-        ":hover": {
-          boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-        },
-      }}
+      className={styles.boxes}
       onClick={() => {
         window.location.href = "././webpayment/web-payment";
       }}
     >
-      <Text
-        paddingTop={30}
-        paddingBottom={30}
-        fontSize="20px"
-        color="background"
-        bg="primary"
-        textAlign="center"
-        fontWeight="700"
-      >
-        Web Payment
-      </Text>
-      <Text p={1} fontSize="12px" color="black" textAlign="left">
+      <Text className={styles.text}>Web Payment</Text>
+      <Text className={styles.title}>
         <b> Online acceptance eWallet and Credit card payment </b>
       </Text>
-      <Text
-        p={1}
-        fontSize="12px"
-        color="black"
-        textAlign="left"
-        paddingBottom={2}
-      >
+      <Text className={styles.subtitle}>
         Used by e-commerce and SaaS business platform.
       </Text>
     </Box>
@@ -176,4 +87,3 @@ Go to [Client Credentials](../quickstart/accesstoken/client-credentials) to get 
     Our Payment Sequence Diagram
   </Button>
 </Flex>
-

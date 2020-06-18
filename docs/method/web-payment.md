@@ -5,6 +5,7 @@ sidebar_label: Web Payment
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
+import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css"
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
@@ -13,20 +14,22 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 
 ### Web Payment / Mobile Payment / Mobile Web Payment
 
-<table>
+<table style={{width:"60%"}}>
   <tr>
-    <th>Method</th>
-    <th>Supported</th>
+    <th style={{width:"20%"}}>Method</th>
+    <th style={{width:"20%"}}>Web Payment Supported</th>
+    <th style={{width:"20%"}}>Mobile Web Payment Supported</th>
   </tr>
   <tr>
     <td>WECHATPAY_MY</td>
    <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -34,11 +37,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>WECHATPAY_CN</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -46,11 +50,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>BOOST_MY</td>
    <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes (Web)
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+   <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -58,11 +63,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>PRESTO_MY</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.noSupportCard}> NO
         </Card>
     </td>
   </tr>
@@ -70,11 +76,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>ALIPAY_CN</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -82,11 +89,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>TNG_MY</td>
    <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+   <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -94,11 +102,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>GRABPAY_MY</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -106,11 +115,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>MAYBANK_MY</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.noSupportCard}> NO
         </Card>
     </td>
   </tr>
@@ -118,11 +128,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>RAZERPAY_MY</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -130,11 +141,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>MCASH_MY</td>
    <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+   <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
@@ -142,11 +154,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
     <td>GOBIZ_MY</td>
     <td>
      <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>

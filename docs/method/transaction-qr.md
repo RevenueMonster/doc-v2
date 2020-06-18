@@ -5,6 +5,7 @@ sidebar_label: Transaction QR
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
+import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css"
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
@@ -22,48 +23,32 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
   <tr>
     <td>WECHATPAY</td>
     <td>
-     <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+    <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
    <tr>
     <td>BOOST</td>
   <td>
-     <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+    <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
   <tr>
     <td>PRESTO</td>
     <td>
-     <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+    <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>
   <tr>
     <td>ALIPAY</td>
    <td>
-     <Card
-        sx={{
-        backgroundColor: "#87d068",
-        color:"white",
-        textAlign: "center" 
-        }}> Yes
+    <Card
+        className={styles.supportCard}> Yes
         </Card>
     </td>
   </tr>

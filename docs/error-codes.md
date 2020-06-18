@@ -124,11 +124,11 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | LOYALTY_MEMBER_REGISTRATION_TOO_MANY        | Creating too many members, limit is 1,000                                                                                            |
 | LOYALTY_NOT_CORRECT_FORMAT                  | Loyalty not correct format                                                                                                           |
 | LOYALTY_NOT_FOUND                           | Loyalty not found                                                                                                                    |
-| LOYALTY_NOT_SUBSCRIBED                      | Not subscribed to loyalty                                                                                                            |
+| LOYALTY_NOT_SUBSCRIBED                      | Not subscribed to loyalty program                                                                                                    |
 | LOYALTY_POINT_ALREADY_REDEEMED              | Loyalty point already redeemed                                                                                                       |
 | LOYALTY_POINT_IS_PROCESSING                 | Loyalty point is proccessing                                                                                                         |
 | LOYALTY_POINT_MISSING                       | Loyalty point missing for certain custom id                                                                                          |
-| LOYALTY_QUANTITY_MAX                        | Exceeded maximum quantity                                                                                                            |
+| LOYALTY_QUANTITY_MAX                        | Member has exceeded the maximum quantity of loyalty points                                                                           |
 | LOYALTY_SPENDING_NOT_ALLOWED                | Loyalty spending not allowed                                                                                                         |
 | LOYALTY_SPENDING_NOT_FOUND                  | Loyalty spending not found                                                                                                           |
 | LOYALTY_SSE_ERROR                           | Error in SSE                                                                                                                         |
@@ -143,11 +143,11 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | MAX_VALUE                                   | Account update failed: value is too long (maximum is n characters)                                                                   |
 | MAX_VALUE_MEMBER_TIER                       | Reach maximum limit for member tier                                                                                                  |
 | MAX_VALUE_ROLE                              | Reach maximum limit for creating Role                                                                                                |
-| MAYBANK_FAIL_TO_CANCELLED                   | Maybank fail to cancelled                                                                                                            |
+| MAYBANK_FAIL_TO_CANCELLED                   | Maybank failed to cancel                                                                                                             |
 | MAYBANK_KEY_EXPIRED                         | Maybank key expired                                                                                                                  |
 | MAYBANK_KEY_NOT_FOUND                       | Maybank key not found                                                                                                                |
-| MAYBANKA_MALAYSIA_MERCHANT_ID_NOT_SET       | Maybank Malaysia is not active. Please contact Revenue Monster to activate merchant for maybank                                      |
-| MAYBANK_MALAYSIA_NOT_ACTIVE                 | Maybank Malaysia is not active. Please contact Revenue Monster to activate merchant for maybank                                      |
+| MAYBANK_MALAYSIA_MERCHANT_ID_NOT_SET        | Maybank Malaysia is not active. Please contact Revenue Monster to activate merchant for Maybank                                      |
+| MAYBANK_MALAYSIA_NOT_ACTIVE                 | Maybank Malaysia is not active. Please contact Revenue Monster to activate merchant for Maybank                                      |
 | MEMBER_NOT_FOUND                            | Member not found                                                                                                                     |
 | MEMBER_NOT_MERCHANT                         | Member not belongs to merchant                                                                                                       |
 | MEMBER_PARENT_INVALID                       | Invalid member parent                                                                                                                |
@@ -155,7 +155,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | MEMBER_TIER_MAX                             | Reached max member tier                                                                                                              |
 | MEMBER_TIER_NOT_FOUND                       | Member Tier not found                                                                                                                |
 | MENU_INVALID                                | Invalid Menu                                                                                                                         |
-| MERCHANT_CHOP_STAMP_EXPIRED                 | Merchant chop stamp event is expired                                                                                                 |
+| MERCHANT_CHOP_STAMP_EXPIRED                 | Merchant chop stamp event has expired                                                                                                |
 | MERCHANT_CHOP_STAMP_NOT_FOUND               | Merchant chop stamp event not found                                                                                                  |
 | MERCHANT_CHOP_STAMP_NOT_STARTED             | Merchant chop stamp event not started                                                                                                |
 | MERCHANT_GALLERY_NOT_FOUND                  | Merchant gallery not found                                                                                                           |
@@ -165,11 +165,11 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | MERCHANT_MDR_NOT_SET                        | Merchant mdr not set. Please contact Revenue Monster to set.                                                                         |
 | MERCHANT_NOT_ACTIVE                         | Merchant not active                                                                                                                  |
 | MERCHANT_NOT_FOUND                          | Merchant not found                                                                                                                   |
-| MERCHANT_NOT_HAVE_MASTER_MERCHANT           | Merchant not have master merchant                                                                                                    |
+| MERCHANT_NOT_HAVE_MASTER_MERCHANT           | Merchant does not have master merchant                                                                                               |
 | MERCHANT_NOT_HAVE_PARTNER                   | Merchant does not have partner                                                                                                       |
 | MERCHANT_NOT_SAME                           | Merchant not same                                                                                                                    |
 | MERCHANT_NOT_SETUP                          | Merchant not setup                                                                                                                   |
-| MERCHANT_REQUESTED_JOIN                     | Merchant already requested for join as sub merchant                                                                                  |
+| MERCHANT_REQUESTED_JOIN                     | Merchant already requested to join as sub-merchant                                                                                   |
 | MERCHANT_REQUESTED_JOIN_NOT_FOUND           | Merchant join request not found                                                                                                      |
 | MERCHANT_SUSPENDED                          | Merchant suspended                                                                                                                   |
 | MERCHANT_VERIFIED                           | Merchant profile is verified                                                                                                         |
@@ -184,38 +184,38 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | MESSENGER_PAGE_NOT_FOUND                    | Messenger page not found                                                                                                             |
 | METHOD_NOT_ALLOWED                          | Method not allowed                                                                                                                   |
 | MINIMUM_AMOUNT_REQUIRED                     | Minimum amount should be 10sen                                                                                                       |
-| Min_PTS_DUPLICATE                           | Min point exists in member tier                                                                                                      |
-| MONEY_PACKET_EXPIRED                        | Money packet is expired                                                                                                              |
+| MIN_PTS_DUPLICATE                           | Min point exists in member tier                                                                                                      |
+| MONEY_PACKET_EXPIRED                        | Money packet has expired                                                                                                             |
 | MONEY_PACKET_NOT_FOUND                      | Money packet not found                                                                                                               |
 | MONEY_PACKET_NOT_REDEEMED                   | Money packet redeemed                                                                                                                |
-| NINE_GRID_MERCHANT_NOT_ALLOW_PAYMENT        | Nine grid not allow to make payment                                                                                                  |
-| NO_ACCESS                                   | This application is not allowed to access                                                                                            |
+| NINE_GRID_MERCHANT_NOT_ALLOW_PAYMENT        | Nine Grid merchant not allowed to make payment                                                                                       |
+| NO_ACCESS                                   | This application is not allowed access                                                                                               |
 | NO_APP_ID                                   | Missing parameter                                                                                                                    |
 | NO_MERCHANT_ID                              | Missing parameter                                                                                                                    |
 | NO_METHOD                                   | Missing parameter                                                                                                                    |
-| NOT_ALLOW_DELETE_APPROVED_JOIN_REQUEST      | Not allow delete join request                                                                                                        |
+| NOT_ALLOW_DELETE_APPROVED_JOIN_REQUEST      | Delete and join requests not allowed                                                                                                 |
 | NOT_ALLOW_LINK_PRODUCTION                   | Not allow link for production                                                                                                        |
-| NOT_ALLOW_REFUND                            | Refunded not allowed                                                                                                                 |
+| NOT_ALLOW_REFUND                            | Refund not allowed                                                                                                                   |
 | NOT_AUTH                                    | Could not authenticate                                                                                                               |
-| NOT_AUTHORIZE_USER_STORE                    | Not authorize user store                                                                                                             |
+| NOT_AUTHORIZE_USER_STORE                    | User store is not authorized                                                                                                         |
 | NOT_MASTER_MERCHANT                         | Not a master merchant                                                                                                                |
 | NOT_MASTER_MERCHANT_ACCOUNT                 | Not a master merchant account                                                                                                        |
-| NOT_NINER_GRID_MERCHANT                     | Not a nine grid merchant                                                                                                             |
+| NOT_NINER_GRID_MERCHANT                     | Not a Nine Grid merchant                                                                                                             |
 | NOT_PARTNER_ACCOUNT                         | Not a partner account                                                                                                                |
 | NOT_PERMITTED                               | Not permitted to perform this action.                                                                                                |
 | NOT_SUBSCRIBE                               | Merchant not subscribed to this product                                                                                              |
-| NOT_TERMNAL_TRANSACTION                     | Transaction not allowed for different using different terminal                                                                       |
+| NOT_TERMNAL_TRANSACTION                     | Transaction not allowed due to different terminal                                                                                    |
 | NOT_USER_STORE                              | Not user store                                                                                                                       |
 | OLD_PW_INVALID                              | Invalid old password                                                                                                                 |
 | ONLY_FREE_TIER_PLUGIN                       | Only free tier plugin                                                                                                                |
-| ONLY_OWNER_ALLOW_FOR_E_AGREEMENT            | Only owner allow see e agreement                                                                                                     |
+| ONLY_OWNER_ALLOW_FOR_E_AGREEMENT            | Only owner allow see E-Agreement                                                                                                     |
 | OPEN_FAIL                                   | Fail to request open ID                                                                                                              |
-| ORDDR_CANCELLED                             | Order error                                                                                                                          |
+| ORDER_CANCELLED                             | Order cancelled                                                                                                                      |
 | ORDER_CLOSED                                | Order error                                                                                                                          |
 | ORDER_ID_DUPLICATE                          | Order id duplicate                                                                                                                   |
 | ORDER_NOT_EXIST                             | Order error                                                                                                                          |
 | ORDER_NOT_PAID                              | Order not paid                                                                                                                       |
-| ORDER_PAID                                  | Order is paid                                                                                                                        |
+| ORDER_PAID                                  | Order already paid                                                                                                                   |
 | ORIGIN_INVALID                              | Invalid origin type                                                                                                                  |
 | OVERLOAD                                    | Over capacity                                                                                                                        |
 | OWNER_NOT_ALLOWED_CREATE                    | Create owner not allowed                                                                                                             |
@@ -225,23 +225,23 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | PARTNER_MDR_NOT_SET                         | Partner mdr is not set. Please contact Revenue Monster to set the partner mdr                                                        |
 | PARTNER_NOT_FOUND                           | Partner not found                                                                                                                    |
 | PARTNER_NOT_SAME                            | Partner not same                                                                                                                     |
-| PASSWORD_IVALID                             | Email address or password is wrong                                                                                                   |
-| PASSWORD_NOT_STRENGTH                       | Password not strength                                                                                                                |
+| PASSWORD_INVALID                            | Email address or password is wrong                                                                                                   |
+| PASSWORD_NOT_STRENGTH                       | Password is not strong enough                                                                                                        |
 | PASSWORD_REQUIRED                           | Pending customer password                                                                                                            |
 | PAYMENT_AMT_INVALID                         | Invalid amount format                                                                                                                |
 | PAYMENT_CURRENCY_INVALID                    | Payment currency is invalid                                                                                                          |
 | PAYMENT_DECIMAL_INVALID                     | Invalid decimal                                                                                                                      |
 | PAYMENT_EXCEED_AMOUNT_LIMIT_PER_TRANSACTION | Transaction amount is over the limit                                                                                                 |
-| PAYMENT_EXCEED_AMOUNT_PER_DAY               | Payment exceed amount for per day                                                                                                    |
+| PAYMENT_EXCEED_AMOUNT_PER_DAY               | Payment exceed amount per day                                                                                                        |
 | PAYMENT_EXCEED_AMOUNT_PER_MONTH             | Payment exceed amount for per month                                                                                                  |
-| PAYMENT_EXCEED_NO_TRANSACTION_PER_DAY       | Reached exceed number of daily transaction                                                                                           |
-| PAYMENT_EXCEED_AMOUNT_LIMIT_PER_MONTH       | Reached exceed number of monthly transaction                                                                                         |
+| PAYMENT_EXCEED_NO_TRANSACTION_PER_DAY       | Exceed number of daily transactions                                                                                                  |
+| PAYMENT_EXCEED_AMOUNT_LIMIT_PER_MONTH       | Exceed number of monthly transactions                                                                                                |
 | PAYMENT_FULLY_REFUNDED                      | Payment already refunded                                                                                                             |
 | PAYMENT_LIMIT_NOT_SET                       | Payment limit not set. Please contact Revenue Monster to set the limit                                                               |
 | PAYMENT_PARAM_INVALID                       | Invalid payment params                                                                                                               |
 | PAYMENT_REDIRECT                            | Merchant ID and redirect URL not found                                                                                               |
-| PAYMENT_REFUND_AMOUNT_EXCEED_PER_DAY        | Refund amount transaction exceed then sales amount of the day                                                                        |
-| PAYMENT_REFUNDING                           | Payment still refunding process                                                                                                      |
+| PAYMENT_REFUND_AMOUNT_EXCEED_PER_DAY        | Amount of refund transactions has exceeded sales amount of the day                                                                   |
+| PAYMENT_REFUNDING                           | Refund is still being processed                                                                                                      |
 | PAYMENT_SCAN_INVALID                        | Invalid platform scan                                                                                                                |
 | PAYMENT_SUBSCRIPTION_METHOD_ACTIVE          | Payment method is active                                                                                                             |
 | PAYMENT_TIMEOUT                             | Payment timeout                                                                                                                      |
@@ -250,12 +250,12 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | PIN_INVALID                                 | Pin is invalid                                                                                                                       |
 | PLATFORM_NOT_FOUND                          | Platform not found                                                                                                                   |
 | PLUGIN_ALREADY_INSTALLED                    | Plugin already installed                                                                                                             |
-| PLUGIN_NOT_ALLOW_TO_UPDATE_PRICING          | Plugin not allow to update pricing                                                                                                   |
+| PLUGIN_NOT_ALLOW_TO_UPDATE_PRICING          | Plugin not allowed to update pricing                                                                                                 |
 | PLUGIN_NOT_FOUND                            | Plugin not found                                                                                                                     |
 | PLUGIN_NOT_INSTALLED                        | Plugin not installed                                                                                                                 |
 | PLUGIN_NOT_VERIFIED                         | Plugin not verified                                                                                                                  |
-| PLUGIN_SHOULD_GREATE_THAN_PREVIOUS_VERSION  | Plugin version should greater than previous version                                                                                  |
-| PRESTRO_MALAYSIA_NOT_ACTIVE                 | Presto Malaysia is not active. Please contact Revenue Monster to activate merchant for presto                                        |
+| PLUGIN_SHOULD_GREATE_THAN_PREVIOUS_VERSION  | Plugin version should be greater than previous version                                                                               |
+| PRESTO_MALAYSIA_NOT_ACTIVE                  | Presto Malaysia is not active. Please contact Revenue Monster to activate merchant for Presto                                        |
 | PRESTO_MDR_NOT_SET                          | Presto mdr not set. Please contact Revenue Monster to set.                                                                           |
 | PRESTO_MERCHANT_ID_NOT_SET                  | Presto merchant id not set. Please contact Revenue Monster to set the merchant id                                                    |
 | PRIVATE_KEY_READ_FILE                       | Cannot read private key                                                                                                              |
@@ -288,11 +288,10 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | SPENDING_DUPLICATE                          | Spending loyalty set                                                                                                                 |
 | SPENDING_NOT_FOUND                          | No spending loyalty                                                                                                                  |
 | SSL_REQUIRED                                | SSL is required                                                                                                                      |
-| STORE_NOT_USER                              | The store has user                                                                                                                   |
 | STORE_ID_INVALID                            | Invalid store ID                                                                                                                     |
 | STORE_INVALID_FORMAT                        | Store format invalid                                                                                                                 |
 | STORE_KEY_INVALID                           | Invalid store key                                                                                                                    |
-| STORE_MAXIMUM                               | Maximum store allowed to create is 10                                                                                                |
+| STORE_MAXIMUM                               | Maximum store that can be created is 10                                                                                              |
 | STORE_NOT_FOUND                             | Store not found                                                                                                                      |
 | STORE_NOT_SET                               | Store not set                                                                                                                        |
 | SUB_MERCHANT_DOES_NOT_ALLOWED_LOYALTY       | Sub merchant not allowed to access loyalty                                                                                           |
@@ -302,7 +301,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | SUBSCRIPTION_NOT_FOUND                      | Subscription not found                                                                                                               |
 | SYSTEM_ERROR                                | System timed out                                                                                                                     |
 | TAC_INVALID                                 | Invalid TAC code                                                                                                                     |
-| TAC_LIMIT                                   | TAC code limit has reached                                                                                                           |
+| TAC_LIMIT                                   | TAC code limit has been reached                                                                                                      |
 | TAC_REQUIRED                                | User TAC code is required                                                                                                            |
 | TAC_SENT                                    | TAC code has sent                                                                                                                    |
 | TEMPLATE_BODY_INVALID                       | Invalid template body                                                                                                                |
@@ -318,25 +317,25 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | TERMINAL_REFUND_TOKEN_INVALID               | Terminal refund token invalid                                                                                                        |
 | TERMINAL_SERIAL_ALREADY_EXIST               | Terminal serial already exist                                                                                                        |
 | TERMINAL_SERIAL_NOT_FOUND                   | Terminal serial not found                                                                                                            |
-| TNG_MALAYSIA_NOT_ACTIVE                     | TNG Malaysia is not active. Please contact Revenue Monster to activate merchant for tng                                              |
+| TNG_MALAYSIA_NOT_ACTIVE                     | TNG Malaysia is not active. Please contact Revenue Monster to activate merchant for TNG                                              |
 | TOKEN_EXPIRED                               | Invalid or expired token                                                                                                             |
 | TOKEN_INVALID                               | Unable to verify your credentials                                                                                                    |
 | TOKEN_SUSPENDED                             | Access token suspended                                                                                                               |
 | TRANSACTION_DUPLICATE                       | Duplicate order number                                                                                                               |
-| TRANSACTION_EXPIRED                         | Transaction is expired                                                                                                               |
+| TRANSACTION_EXPIRED                         | Transaction has expired                                                                                                              |
 | TRANSACTION_NOT_FOUND                       | No payment transaction                                                                                                               |
 | TRANSACTION_PAID                            | Transaction already paid                                                                                                             |
 | TRANSACTION_QR_CODE_NOT_FOUND               | Transaction qr code not found                                                                                                        |
 | TRANSACTION_STATUS_FAILED                   | Payment transaction status failed                                                                                                    |
-| TRANSACTION_STATUS_NOT_IN_PROCCESS          | Transaction status not in process                                                                                                    |
-| TRANSACTIN_STATUS_NOT_SUCCESS               | Transaction status not success                                                                                                       |
+| TRANSACTION_STATUS_NOT_IN_PROCESS           | Transaction status is not being processed                                                                                            |
+| TRANSACTIN_STATUS_NOT_SUCCESS               | Transaction status not successful                                                                                                    |
 | UNAUTHORIZED                                | Unauthorized                                                                                                                         |
 | UNIQUE_CODE_DUPLICATE                       | Duplicate unique code                                                                                                                |
 | UNIQUE_CODE_EMPTY                           | Empty unique code                                                                                                                    |
 | UNIQUE_CODE_INVALID                         | Invalid unique code                                                                                                                  |
 | UNSUPPORTED_JSAPI_METHOD                    | Unsupported method for jsapi                                                                                                         |
 | UNSUPPORTED_JSAPI_REGION                    | Unsupported region for jsapi                                                                                                         |
-| UNSUPPORTED_METHOD_PAYMENT_REFUND           | Unsupported method payment refund                                                                                                    |
+| UNSUPPORTED_METHOD_PAYMENT_REFUND           | Unsupported payment refund method                                                                                                    |
 | UNSUPPORTED_METHOD_REVERSE                  | Unsupported method for reverse                                                                                                       |
 | USER_ALREADY_REGISTERED                     | User already registered                                                                                                              |
 | USER_CANNOT_UPDATE_OWN_ACCOUNT              | User cannot update own account                                                                                                       |
@@ -346,8 +345,8 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | USER_DUPLICATE                              | User account already exist                                                                                                           |
 | USER_KEY_INVALID                            | Invalid user key                                                                                                                     |
 | USER_NO_PERMISSION                          | User does not have permission to access                                                                                              |
-| USR_NOT_ACTIVE                              | User not active                                                                                                                      |
-| USER_NOT_CREATE_ACCOUNT                     | User not create account                                                                                                              |
+| USER_NOT_ACTIVE                             | User not active                                                                                                                      |
+| USER_NOT_CREATE_ACCOUNT                     | User cannot create account                                                                                                           |
 | USER_NOT_FOUND                              | User not found                                                                                                                       |
 | USER_PIN_CODE_INVALID                       | Invalid user pin code                                                                                                                |
 | USER_PROFILE_NOT_FOUND                      | User login profile not found                                                                                                         |
@@ -356,10 +355,10 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | V_EMAIL_NOT_FOUND                           | User verification email not found                                                                                                    |
 | VERIFICATION_CODE_ALREADY_REQUESTED         | Verification code already requested                                                                                                  |
 | VERIFICATION_CODE_INVALID                   | Verification code invalid                                                                                                            |
-| VERIFICATION_CODE_REACH_DAILY_LIMIT         | Verification code request reach daily limit                                                                                          |
+| VERIFICATION_CODE_REACH_DAILY_LIMIT         | Verification code requests have reached daily limit                                                                                  |
 | VERIFICATION_TOKEN_INVALID                  | Invalid verification token                                                                                                           |
 | VERIFICATION_TYPE_NOT_FOUND                 | Verification code type not found                                                                                                     |
-| V_LINK_EXPIRED                              | Verification link is expired                                                                                                         |
+| V_LINK_EXPIRED                              | Verification link has expired                                                                                                        |
 | VOUCHER_BATCH_EXPIRED                       | Voucher batch expired                                                                                                                |
 | VOUCHER_BATCH_KEY_INVALID                   | Voucher batch key is invalid                                                                                                         |
 | VOUCHER_BATCH_NOT_ENOUGH_QUANTITY           | Voucher batch not enough quantity                                                                                                    |
@@ -370,26 +369,26 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | VOUCHER_INSUFFICIENT                        | Insufficient voucher batch                                                                                                           |
 | VOUCHER_NOT_ALLOW_VOID                      | Voucher not allow to void                                                                                                            |
 | VOUCHER_NOT_FOUND                           | Voucher not found                                                                                                                    |
-| VOUCHER_NOT_MERCHANT                        | Voucher is not belongs to merchant                                                                                                   |
+| VOUCHER_NOT_MERCHANT                        | Voucher does not belongs to merchant                                                                                                 |
 | VOUCHER_NOT_MINIMUM_AMOUNT                  | Voucher does not meet minimum amount                                                                                                 |
-| VOUCHER_NOT_REDEMMED                        | Voucher is not redeemed                                                                                                              |
+| VOUCHER_NOT_REDEEMED                        | Voucher has not been redeemed                                                                                                        |
 | VOUCHER_OWNER_INVALID                       | Voucher not owned                                                                                                                    |
 | VOUCHER_REDEEMED                            | Voucher redeemed                                                                                                                     |
-| VOUCHER_REDEEMED_INVALID                    | Invalid direct redeem                                                                                                                |
-| VOUCHER_REDEEM_MAX                          | Max redeem voucher                                                                                                                   |
+| VOUCHER_REDEEMED_INVALID                    | Voucher redeemed is invalid                                                                                                          |
+| VOUCHER_REDEEM_MAX                          | Voucher has reached maximum redemption limit                                                                                         |
 | VOUCHER_SOLD_OUT                            | Voucher sold out                                                                                                                     |
 | WECHAT_ACCOUNT_DUPLICATE                    | WeChat account already exists                                                                                                        |
-| WECHAT_PAGE_DUPLICATE                       | Duplicate wechat page                                                                                                                |
-| WECHAT_PAGE_INVALID                         | Invalid wechat page                                                                                                                  |
+| WECHAT_PAGE_DUPLICATE                       | Duplicate WeChat page                                                                                                                |
+| WECHAT_PAGE_INVALID                         | Invalid WeChat page                                                                                                                  |
 | WECHAT_PAGE_NOT_FOUND                       | Wechat page not found                                                                                                                |
-| WECHATPAY_CHINA_MDR_NOT_SET                 | WeChatPay China mdr not set. Please contact Revenue Monster to set.                                                                  |
-| WECHATPAY_CHINA_MERCHANT_ID_NOT_SET         | WeChatPay China merchant id not set. Please contact Revenue Monster to set the merchant id                                           |
-| WECHATPAY_CHINA_NOT_ACTIVE                  | WeChatPay China is not active. Please contact Revenue Monster to activate merchant for wechat pay                                    |
-| WECHATPAY_CLIENT_DUPLICATE                  | Wechat pay client duplicate                                                                                                          |
-| WECHATPAY_CLIENT_NOT_FOUND                  | Wechat pay client not found                                                                                                          |
-| WECHATPAY_MALAYSIA_MDR_NOT_SET              | WeChatPay Malaysia mdr not set. Please contact Revenue Monster to set.                                                               |
-| WECHATPAY_MALAYSIA_MERCHANT_ID_NOT_SET      | WeChatPay Malaysia merchant id not set. Please contact Revenue Monster to set the merchant id                                        |
-| WECHATPAY_MALAYSIA_NOT_ACTIVE               | WeChatPay Malaysia is not active. Please contact Revenue Monster to activate merchant for wechat pay                                 |
-| WECHAT_PHONE_INVALID                        | Invalid wechat phone number                                                                                                          |
+| WECHATPAY_CHINA_MDR_NOT_SET                 | WeChat Pay China mdr not set. Please contact Revenue Monster to set.                                                                 |
+| WECHATPAY_CHINA_MERCHANT_ID_NOT_SET         | WeChat Pay China merchant id not set. Please contact Revenue Monster to set the merchant id                                          |
+| WECHATPAY_CHINA_NOT_ACTIVE                  | WeChat Pay China is not active. Please contact Revenue Monster to activate merchant for WeChat Pay                                   |
+| WECHATPAY_CLIENT_DUPLICATE                  | Wechat Pay client duplicate                                                                                                          |
+| WECHATPAY_CLIENT_NOT_FOUND                  | Wechat Pay client not found                                                                                                          |
+| WECHATPAY_MALAYSIA_MDR_NOT_SET              | WeChat Pay Malaysia mdr not set. Please contact Revenue Monster to set.                                                              |
+| WECHATPAY_MALAYSIA_MERCHANT_ID_NOT_SET      | WeChat Pay Malaysia merchant id not set. Please contact Revenue Monster to set the merchant id                                       |
+| WECHATPAY_MALAYSIA_NOT_ACTIVE               | WeChat Pay Malaysia is not active. Please contact Revenue Monster to activate merchant for WeChat Pay                                |
+| WECHAT_PHONE_INVALID                        | Invalid WeChat phone number                                                                                                          |
 | WECHAT_TEMPLATE_MESSAGE_FAILED              | WeChat template message failed                                                                                                       |
 | TOO_MANY_REQUEST_PER_SECOND                 | Reached maximum request limit per second                                                                                             |
