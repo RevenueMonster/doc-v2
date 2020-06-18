@@ -11,7 +11,7 @@ URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward`
 
 :::note
-To give loyalty point(s) to customers using phone number or member ID.
+To give loyalty point(s) based on amount to customers using phone number or member ID.
 :::
 
 :::caution
