@@ -126,18 +126,18 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
 
 ### Response Parameters
 
-| Parameter    | Type   | Description                                                                                               | Example                      |
-| ------------ | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `item`       | Object | item object                                                                                               | (Refer to explanation below) |
-| `checkoutId` | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
+| Parameter | Type   | Description                                                                                               | Example                      |
+| --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `item`    | Object | item object                                                                                               | (Refer to explanation below) |
+| `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 
 <br />
 <strong>item Object (item):</strong>
 
-| Parameter | Type   | Description                                                            | Example                                                   |
-| --------- | ------ | ---------------------------------------------------------------------- | --------------------------------------------------------- |
-| `code`    | String | Code to identify web payment url                                       | "1547775958720585401"                                     |
-| `url`     | String | Example to form checkout URL. Note: to change base URL to desired URL. | "http://localhost:8081/checkout?code=1547775958720585401" |
+| Parameter    | Type   | Description                                                            | Example                                                   |
+| ------------ | ------ | ---------------------------------------------------------------------- | --------------------------------------------------------- |
+| `checkoutId` | String | Code to identify web payment url                                       | "1548316308361173347"                                     |
+| `url`        | String | Example to form checkout URL. Note: to change base URL to desired URL. | "http://localhost:8081/checkout?code=1548316308361173347" |
 
 > Example Response
 
