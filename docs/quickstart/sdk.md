@@ -5,7 +5,7 @@ sidebar_label: SDK
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
-import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css";
+import styles from "../../src/pages/styles.module.css";
 
 The following language SDK(s) and documentations are available.
 

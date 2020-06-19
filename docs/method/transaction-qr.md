@@ -5,7 +5,7 @@ sidebar_label: Transaction QR
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
-import styles from "/Users/edwin/Developer/doc-v2/src/pages/styles.module.css"
+import styles from "../../src/pages/styles.module.css"
 
 :::note
 **Following list is payment methods supported by Revenue Monster.**<br/>
