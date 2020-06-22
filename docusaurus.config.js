@@ -12,20 +12,30 @@ module.exports = {
   themeConfig: {
     disableDarkMode: true,
     navbar: {
-      title: "Revenue Monster",
       logo: {
         alt: "My Site Logo",
-        src: "/img/logo.png",
-        width: "600px",
+        src: "/img/rm-logo.svg",
+        href: "https://revenuemonster.my",
+        width: "800px",
       },
       links: [
         {
           to: "docs/introduction/overview",
           activeBasePath: "docs",
           label: "Docs",
-          position: "left",
+          position: "right",
         },
-        { to: "blog", label: "Blog", position: "left" },
+        {
+          to: "/docs/quickstart/sdk",
+          label: "SDK",
+          position: "right",
+        },
+        { to: "blog", label: "Blog", position: "right" },
+        {
+          to: "https://github.com/RevenueMonster",
+          label: "GitHub",
+          position: "right",
+        },
       ],
     },
     footer: {
