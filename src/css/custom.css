@@ -70,11 +70,9 @@
 }
 
 .hero.hero--primary {
-  --ifm-hero-background-color: var(--ifm-color-primary);
-  --ifm-hero-background-image: url("/static/img/working-woman-technology-computer-7374@2x.jpg");
+  --ifm-hero-background-image: url("/static/img/background.jpg");
   --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
-  background-color: var(--ifm-hero-background-color);
-  background-image: url("/static/img/working-woman-technology-computer-7374.jpg");
+  background-image: url("/static/img/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
