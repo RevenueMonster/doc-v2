@@ -27,11 +27,13 @@ function Footer() {
       })}
     >
       <div className={styles.container}>
-        <img
-          style={{ marginBottom: "40px" }}
-          src="/img/rm-white-logo.svg"
-          alt="RM logo"
-        ></img>
+        <div>
+          <img
+            style={{ marginBottom: "40px" }}
+            src="/img/rm-white-logo.svg"
+            alt="RM logo"
+          ></img>
+        </div>
 
         <div className={styles.rightContainer}>
           <div className={styles.font}>Follow Us</div>

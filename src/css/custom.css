@@ -24,6 +24,7 @@
   --ifm-footer-title-color: var(--ifm-color-white);
   background-color: var(--ifm-footer-background-color);
   color: var(--ifm-footer-color);
+  height: auto;
 }
 
 .docusaurus-highlight-code-line {
