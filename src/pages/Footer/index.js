@@ -29,7 +29,7 @@ function Footer() {
       <div className={styles.container}>
         <img
           style={{ marginBottom: "40px" }}
-          src="/static/img/rm-white-logo.svg"
+          src="/img/rm-white-logo.svg"
           alt="RM logo"
         ></img>
 
