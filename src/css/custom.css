@@ -79,6 +79,10 @@
   color: var(--ifm-hero-text-color);
 }
 
+.hero .hero__subtitle {
+  color: #00ffff;
+}
+
 @media screen and (max-width: 966px) {
   .navbar .navbar__search .navbar__search-input:focus {
     background-color: aliceblue;
@@ -88,5 +92,13 @@
     left: 1px;
     top: 15px;
     z-index: 1;
+  }
+
+  .hero .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero .hero__subtitle {
+    font-size: 1rem;
   }
 }
