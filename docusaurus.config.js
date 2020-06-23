@@ -8,6 +8,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "revenuemonster", // Usually your GitHub org/user name.
   projectName: "doc-v2", // Usually your repo name.
+
   plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
   themeConfig: {
     disableDarkMode: true,
@@ -40,48 +41,6 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Introduction",
-              to: "docs/introduction/overview",
-            },
-            {
-              label: "SDK",
-              to: "docs/quickstart/sdk",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Facebook",
-              href: "https://www.facebook.com/RevenueMonster/",
-            },
-            {
-              label: "Linkedln",
-              href: "https://www.linkedin.com/company/revenuemonster/",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/RevenueMonster",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Revenue Monster. All Rights Reserved.`,
     },
   },
   presets: [
@@ -107,3 +66,45 @@ module.exports = {
     ],
   ],
 };
+
+// links: [
+//   {
+//     title: "Docs",
+//     items: [
+//       {
+//         label: "Introduction",
+//         to: "docs/introduction/overview",
+//       },
+//       {
+//         label: "SDK",
+//         to: "docs/quickstart/sdk",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Community",
+//     items: [
+//       {
+//         label: "Facebook",
+//         href: "https://www.facebook.com/RevenueMonster/",
+//       },
+//       {
+//         label: "Linkedln",
+//         href: "https://www.linkedin.com/company/revenuemonster/",
+//       },
+//     ],
+//   },
+//   {
+//     title: "More",
+//     items: [
+//       {
+//         label: "Blog",
+//         to: "blog",
+//       },
+//       {
+//         label: "GitHub",
+//         href: "https://github.com/RevenueMonster",
+//       },
+//     ],
+//   },
+// ],

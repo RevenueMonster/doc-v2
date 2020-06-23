@@ -2,38 +2,39 @@ import React from "react";
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import Footer from "./Footer/index.js";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>Unified Payment</>,
+    title: <h3 style={{ textAlign: "center" }}>Unified Payment</h3>,
     imageUrl: "img/unified-payment.png",
     description: (
-      <>
+      <p style={{ textAlign: "center" }}>
         Empower your business with easy access to all mobile payment channels.
-      </>
+      </p>
     ),
   },
   {
-    title: <>Loyalty 2.0 (Social Media)</>,
+    title: <h3 style={{ textAlign: "center" }}>Loyalty 2.0 (Social Media)</h3>,
     imageUrl: "img/loyalty.png",
     description: (
-      <>
+      <p style={{ textAlign: "center" }}>
         One platform for all your loyalty program and social media needs. Wechat
         Official Account and Facebook Messenger ready.
-      </>
+      </p>
     ),
   },
   {
-    title: <>Financial Cloud</>,
+    title: <h3 style={{ textAlign: "center" }}>Financial Cloud</h3>,
     imageUrl: "img/financial-cloud.png",
     description: (
-      <>
+      <p style={{ textAlign: "center" }}>
         Secure and accelerate your Fintech innovation with our expertise in
         Alibaba Cloud.
-      </>
+      </p>
     ),
   },
 ];
@@ -91,6 +92,7 @@ function Home() {
           </section>
         )}
       </main>
+      <Footer />
     </Layout>
   );
 }
