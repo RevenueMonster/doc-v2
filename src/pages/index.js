@@ -92,6 +92,7 @@ function Home() {
           </section>
         )}
       </main>
+
       <Footer />
     </Layout>
   );

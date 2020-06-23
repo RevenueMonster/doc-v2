@@ -41,6 +41,7 @@ module.exports = {
     },
     footer: {
       style: "dark",
+      copyright: `Copyright © ${new Date().getFullYear()} Revenue Monster SDN BHD (Company NO.1236838-T). All rights reserved`,
     },
   },
   presets: [
@@ -66,45 +67,3 @@ module.exports = {
     ],
   ],
 };
-
-// links: [
-//   {
-//     title: "Docs",
-//     items: [
-//       {
-//         label: "Introduction",
-//         to: "docs/introduction/overview",
-//       },
-//       {
-//         label: "SDK",
-//         to: "docs/quickstart/sdk",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Community",
-//     items: [
-//       {
-//         label: "Facebook",
-//         href: "https://www.facebook.com/RevenueMonster/",
-//       },
-//       {
-//         label: "Linkedln",
-//         href: "https://www.linkedin.com/company/revenuemonster/",
-//       },
-//     ],
-//   },
-//   {
-//     title: "More",
-//     items: [
-//       {
-//         label: "Blog",
-//         to: "blog",
-//       },
-//       {
-//         label: "GitHub",
-//         href: "https://github.com/RevenueMonster",
-//       },
-//     ],
-//   },
-// ],
