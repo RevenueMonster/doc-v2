@@ -92,7 +92,7 @@ function Home() {
           </section>
         )}
       </main>
-
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <Footer />
     </Layout>
   );
