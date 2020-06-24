@@ -46,6 +46,13 @@
   color: black !important;
 }
 
+.navbar .navbar__items {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  width: 20%;
+}
+
 .navbar .navbar__search .navbar__search-input {
   width: 6.5rem;
   /* -webkit-transition: width 0.4s ease-in-out; */
@@ -101,5 +108,10 @@
 
   .hero .hero__subtitle {
     font-size: 1rem;
+  }
+
+  .navbar .navbar__search .navbar__search-input:focus {
+    background-color: aliceblue;
+    width: 100%;
   }
 }
