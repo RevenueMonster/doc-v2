@@ -1,0 +1,41 @@
+---
+id: wooCommerce
+title: WooCommerce
+sidebar_label: WooCommerce
+---
+
+import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
+
+:::note
+Enable RM payment for WooCommerce
+:::
+
+### Step 1 : Enable RM plug-in
+
+![image](/img/gif/woocommerce-guide.gif)<br/>
+Go to WooCommerce > Settings > Payments > <b>(Enable)</b> RevenueMonster Checkout
+
+### Step 2 : Setup Payment Gateway
+
+| Title              | Example                                                                                                                         |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Title              | RM Gateway                                                                                                                      |
+| Description        | RM Gateway                                                                                                                      |
+| Logo               | https://revenuemonster.my/public/img/rm-logowhite-3x.png                                                                        |
+| Store ID           | [RM Merchant portal](https://merchant.revenuemonster.my/) > Store Management > Store ID                                         |
+| Client ID          | <a href="https://doc.revenuemonster.my/docs/quickstart/signature-algorithm#step-1--create-new-application">Get Client ID</a>    |
+| Client Secret      | <a href="https://doc.revenuemonster.my/docs/quickstart/signature-algorithm#step-2--obtain-credential">Get Client Secret</a>     |
+| Client Private Key | <a href="https://doc.revenuemonster.my/docs/quickstart/signature-algorithm#generate-rsa-keys">Get Client Private Key</a>        |
+| Server Public Key  | <a href="https://doc.revenuemonster.my/docs/quickstart/signature-algorithm#step-2--obtain-credential">Get Server Public Key</a> |
+
+After done all the flow click **Save Changes**
+
+### Example of Payment
+
+<b>Web view</b> <br />
+
+![image](/img/gif/woocommerce-demo.gif) <br />
+
+<b>Mobile view</b> <br />
+
+![image](/img/gif/woocommerce-mobile-demo.gif)
