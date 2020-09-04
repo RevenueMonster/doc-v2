@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Set Environment
           command: |
-            echo 'export DOCKER_IMAGE=asia.gcr.io/rm-srv-sb/rm-api/sandbox/rm-doc-v2' >> $BASH_ENV
+            echo 'export DOCKER_IMAGE=asia.gcr.io/rm-srv-sb/rm-api/sandbox/gateway/rm-doc-v2' >> $BASH_ENV
 
       - run:
           name: Install Kubectl
