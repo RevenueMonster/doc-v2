@@ -35,6 +35,6 @@ spec:
       imagePullSecrets:
         - name: gcr-registry
       containers:
-        - name: api-gateway
+        - name: rm-doc-v2
           image: asia.gcr.io/rm-srv-sb/rm-api/sandbox/gateway/rm-doc-v2
           imagePullPolicy: 'Always'
