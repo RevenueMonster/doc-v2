@@ -21,7 +21,7 @@ module.exports = {
         href: "https://revenuemonster.my",
         width: "800px",
       },
-      links: [
+      items: [
         {
           to: "docs/introduction/overview",
           activeBasePath: "docs",
