@@ -1,7 +1,61 @@
-version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.12.7-node
+    working_directory: /go/src/github.com/RevenueMonster/doc-v2
+    environment:
+      ENVIRONMENT: ''
+      GOOGLE_APPLICATION_CREDENTIALS: /home/circleci/gcp-key.json
+      KUBECONFIG: /home/circleci/config
+      DOCKER_IMAGE: ''
+      PRIVATE_DOCKER_IMAGE: ''
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      - run:
+          name: Set Environment
+          command: |
+            echo 'export DOCKER_IMAGE=asia.gcr.io/rm-srv-sb/rm-api/sandbox/rm-doc-v2' >> $BASH_ENV
+
+      - run:
+          name: Install Kubectl
+          command: |
+            sudo apt-get update && sudo apt-get install -y apt-transport-https
+            curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+            sudo touch /etc/apt/sources.list.d/kubernetes.list
+            echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+            sudo apt-get update
+            sudo apt-get install -y kubectl
+
+      - run:
+          name: Docker Login and Set Kubectl Credential
+          command: |
+            echo ${GOOGLE_GCLOUD_SERVICE_KEY} | base64 --decode --ignore-garbage > ${GOOGLE_APPLICATION_CREDENTIALS}
+            echo ${ALIYUN_CREDENTIAL_KEY} | base64 --decode --ignore-garbage > ${KUBECONFIG}
+            docker login -u _json_key --password-stdin https://asia.gcr.io < ${GOOGLE_APPLICATION_CREDENTIALS}
+
+      - run:
+          name: Docker Build and Push to Container Registry
+          command: |
+            docker build -t ${DOCKER_IMAGE}:${CIRCLE_SHA1} -t ${DOCKER_IMAGE}:latest . -f deployment/Dockerfile
+            docker push ${DOCKER_IMAGE}:${CIRCLE_SHA1}
+            docker push ${DOCKER_IMAGE}:latest
+
+      - deploy:
+          name: Set New Image to Deployment
+          command: |
+            kubectl apply -f deployment/deployment.yaml
+            kubectl set image deployment rm-doc-v2 rm-doc-v2=${DOCKER_IMAGE}:${CIRCLE_SHA1} --namespace=sandbox
+
 workflows:
-  node-tests:
+  version: 2
+  build:
     jobs:
-      - node/test
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+                - circleci-project-setup
