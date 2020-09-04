@@ -18,8 +18,7 @@ module.exports = {
       logo: {
         alt: "My Site Logo",
         src: "/img/rm-logo.svg",
-        href: "https://revenuemonster.my",
-        width: "800px",
+        href: "https://revenuemonster.my"
       },
       items: [
         {
