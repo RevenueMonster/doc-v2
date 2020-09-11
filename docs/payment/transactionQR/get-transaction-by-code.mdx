@@ -11,14 +11,15 @@ URL : `https://open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a94
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/qrcode/5413b4583a9440dd351b2dde0c0ea166/transactions`
 
 :::note
+
 - To get all transactions under existing QR code, by inputting code in your query.
 - The URL is consists of `[base_URL]`/v3/payment/transaction/qrcode/`[code]`/transactions
-:::
+  :::
 
 ### Request Parameters
 
 :::note
-No request parameter is required for this endpoint\_
+No request parameter is required for this endpoint.
 :::
 
 ### Response Parameters
@@ -42,7 +43,7 @@ No request parameter is required for this endpoint\_
 | `currencyType`  | String   | Currency notation                                                                                                                          | "MYR"                                                                                           |
 | `balanceAmount` | Uint     | Total available amount (= total received amount - total refunded amount). In this case, amount 100 is failed, so no amount is received.    | 0                                                                                               |
 | `platform`      | String   | "OPEN_API" (generated through API calls) or "PORTAL" (generated through merchant portal)                                                   | "OPEN_API"                                                                                      |
-| `method`        | String   | [RM currently supported method](../.././method/transaction-qr)                                                                                           | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN"] |
+| `method`        | String   | [RM currently supported method](../.././method/transaction-qr)                                                                             | ["WECHATPAY","WECHATPAY_MY", <br/> "WECHATPAY_CN","PRESTO_MY",<br/>"BOOST_MY",<br/>"ALIPAY_CN"] |
 | `error`         | String   | Error message only if transaction failed (optional)                                                                                        | {message": "Payment timeout"}                                                                   |
 | `transactionAt` | DateTime | Transaction date time (from wallet server)                                                                                                 | "2018-08-02T09:34:53"                                                                           |
 | `type`          | String   | Can support "QUICK_PAY" , "QR_PAY"                                                                                                         | "QUICK_PAY" or "QR_PAY"                                                                         |
@@ -78,7 +79,7 @@ No request parameter is required for this endpoint\_
 
 | Parameter | Type | Description         | Example |
 | --------- | ---- | ------------------- | ------- |
-| `count`   | Uint  | Current page record | 1       |
+| `count`   | Uint | Current page record | 1       |
 
 > Example Response
 

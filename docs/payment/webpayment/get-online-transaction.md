@@ -7,11 +7,14 @@ sidebar_label: Get Online Transaction By Checkout ID
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-URL : `https://open.revenuemonster.my/v3/payment/online/checkout`<br/>
-Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
+URL : `https://open.revenuemonster.my/v3/payment/online?checkoutId=1564042398456416062`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online?checkoutId=1564042398456416062`
 
 :::note
-To create a unified payment checkout page for your website.
+
+- To get transaction report, by inputting **checkoutId** in your query.
+- The URL is consists of `[base_URL]`/v3/payment/online?checkoutId=`[checkoutId]`
+
 :::
 
 ### Request Parameters
