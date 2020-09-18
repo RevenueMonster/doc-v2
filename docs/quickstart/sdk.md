@@ -13,80 +13,86 @@ The following language SDK(s) and documentations are available.
 Not all SDK(s) fully implemented all API functions. Pull requests are welcome.
 :::
 
-<Flex marginTop="20px">
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    className={styles.sdkBox}
+<Flex flexWrap="wrap" mx={-2}>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
       onClick={() => {
-        window.open("https://github.com/RevenueMonster/rm-sdk-go", "_blank");
-    }}
+        window.open(
+          "https://github.com/RevenueMonster/rm-sdk-go",
+          "_blank"
+        );
+      }}
     >
-    <Text className={styles.text} >
-     Go
-    </Text>
+      <Text className={styles.text}>Go</Text>
+    </Box>
   </Box>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-   className={styles.sdkBox}
-   onClick={() => {
-      window.open("https://github.com/RevenueMonster/RM-API-SDK-PHP", "_blank");
-    }}>
-    <Text className={styles.text}  >
-     Php
-    </Text>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
+      onClick={() => {
+        window.open(
+          "https://github.com/RevenueMonster/RM-API-SDK-PHP",
+          "_blank"
+        );
+      }}
+    >
+      <Text className={styles.text}> Php</Text>
+    </Box>
   </Box>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    className={styles.sdkBox}
-    onClick={() => {
-       window.open("https://github.com/RevenueMonster/RM-API-SDK-Nodejs", "_blank");
-    }}>
-    <Text className={styles.text} >
-     NodeJS
-    </Text>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
+      onClick={() => {
+        window.open(
+          "https://github.com/RevenueMonster/RM-API-SDK-Nodejs",
+          "_blank"
+        );
+      }}
+    >
+      <Text className={styles.text}>NodeJS</Text>
+    </Box>
   </Box>
 </Flex>
-<Flex marginTop="20px">
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-   className={styles.sdkBox}
-    onClick={() => {
-       window.open("https://github.com/RevenueMonster/RM-API-SDK-JAVA", "_blank");
-    }}>
-    <Text className={styles.text} >
-    Java
-    </Text>
+
+<Flex flexWrap="wrap" mx={-2}>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
+      onClick={() => {
+        window.open(
+          "https://github.com/RevenueMonster/RM-API-SDK-JAVA",
+          "_blank"
+        );
+      }}
+    >
+      <Text className={styles.text}>Java</Text>
+    </Box>
   </Box>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-   className={styles.sdkBox}
-    onClick={() => {
-       window.open("https://github.com/RevenueMonster/RM-API-SDK-Python", "_blank");
-    }}>
-    <Text className={styles.text}>
-     Python
-    </Text>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
+      onClick={() => {
+        window.open(
+          "https://github.com/RevenueMonster/RM-API-SDK-Python",
+          "_blank"
+        );
+      }}
+    >
+      <Text className={styles.text}> Python</Text>
+    </Box>
   </Box>
-  <Box
-    width={1 / 3}
-    marginRight="20px"
-    px={3}
-    className={styles.sdkBox}
-    onClick={() => {
-       window.open("https://github.com/RevenueMonster/RM-API-SDK-Csharp", "_blank");
-    }}>
-    <Text className={styles.text} >
-    C# (Deprecated)
-    </Text>
+  <Box p={2} width={[1, 1 / 3]}>
+    <Box
+      className={styles.box}
+      onClick={() => {
+        window.open(
+          "https://github.com/RevenueMonster/RM-API-SDK-Csharp",
+          "_blank"
+        );
+      }}
+    >
+      <Text className={styles.text}>C# (Deprecated)</Text>
+    </Box>
   </Box>
 </Flex>
