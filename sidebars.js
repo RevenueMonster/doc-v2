@@ -52,6 +52,20 @@ module.exports = {
       "payment/daily-settlement-report",
     ],
 
+    "à la carte": [
+      "alacarte-open/auth",
+      "alacarte-open/orders",
+      "alacarte-open/settings",
+      {
+        type: "category",
+        label: "Inventory",
+        items: [
+          "alacarte-open/inventory/category",
+          "alacarte-open/inventory/item",
+        ],
+      },
+    ],
+
     "POS Integration": ["pos-integration"],
 
     "Supported Payment Methods": [
