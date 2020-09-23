@@ -1,7 +1,7 @@
 ---
-id: get-store-by-id
-title: Get Store By ID
-sidebar_label: Get Store By ID
+id: update-store-by-id-availability
+title: Update Store By ID (Availability)
+sidebar_label: Update Store By ID (Availability)
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,12 +28,11 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "get.store.settings",
+  "function": "update.store.settings.avaiablility",
   "request": {
     "storeId": "2808912573238362402",
-  }
-}
-'
+    "closedUntil": "2020-09-22T05:00:06.741Z",
+}'
 ```
 
 ### Response Parameters

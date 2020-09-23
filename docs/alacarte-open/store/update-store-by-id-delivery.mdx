@@ -1,7 +1,7 @@
 ---
-id: update-store-by-id
-title: Update Store By ID
-sidebar_label: Update Store By ID
+id: update-store-by-id-delivery
+title: Update Store By ID (Delivery)
+sidebar_label: Update Store By ID (Delivery)
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,18 +28,11 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "update.store",
+  "function": "update.store.settings.delivery",
   "request": {
     "storeId": "2808912573238362402",
-    "bannerUrl": "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/83350b4c-5d4b-4c8f-be89-9dd7b8e5cb3b",
-    "isShowInMainPage": true,
-    "orderAheadDays": 2,
-    "closedUntil": "2020-09-22T05:00:06.741Z",
-    "supportedDineType": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"],
-    "serviceTax": { "type": "PERCENTAGE", "dineIn": 0, "others": 1300 },
-    "serviceFee": { "type": "PERCENTAGE", "dineIn": 0, "others": 500 },
-    "deliveryMethod": "OWN",
-    "deliveryCost": [
+    "method": "OWN",
+    "cost": [
       {
         "type": "FIXED",
         "startDistanceInMeter": 0,
@@ -70,46 +63,31 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 ```json
 {
   "item": {
-    "storeId": "2808912573238362402",
-    "merchantId": "4118165203679668885",
-    "name": "Testing",
-    "addressLine1": "A,  B,  Petaling Jaya",
-    "addressLine2": "",
-    "postCode": "40150",
-    "city": "Shah Alam",
-    "state": "Selangor",
-    "country": "Malaysia",
-    "countryCode": "60",
-    "phoneNumber": "112362675",
-    "location": { "lat": 3.0898999, "lng": 101.5597999 },
-    "bannerUrl": "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/83350b4c-5d4b-4c8f-be89-9dd7b8e5cb3b",
-    "isShowInMainPage": true,
-    "orderAheadDays": 2,
     "closedUntil": "2020-09-22T05:00:06.741Z",
-    "supportedDineType": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"],
-    "serviceTax": { "type": "PERCENTAGE", "dineIn": 0, "others": 1300 },
-    "serviceFee": { "type": "PERCENTAGE", "dineIn": 0, "others": 500 },
-    "deliveryMethod": "OWN",
-    "deliveryCost": [
-      {
-        "type": "FIXED",
-        "startDistanceInMeter": 0,
-        "endDistanceInMeter": 5000,
-        "amount": 0
-      },
-      {
-        "type": "DYNAMIC",
-        "startDistanceInMeter": 5000,
-        "endDistanceInMeter": 10000,
-        "amount": 0
-      },
-      {
-        "type": "DYNAMIC",
-        "startDistanceInMeter": 10000,
-        "endDistanceInMeter": 1000000,
-        "amount": 0
-      }
-    ],
+    "supportedTypes": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"],
+    "delivery": {
+      "method": "OWN",
+      "cost": [
+        {
+          "type": "FIXED",
+          "startDistanceInMeter": 0,
+          "endDistanceInMeter": 5000,
+          "amount": 0
+        },
+        {
+          "type": "DYNAMIC",
+          "startDistanceInMeter": 5000,
+          "endDistanceInMeter": 10000,
+          "amount": 0
+        },
+        {
+          "type": "DYNAMIC",
+          "startDistanceInMeter": 10000,
+          "endDistanceInMeter": 1000000,
+          "amount": 0
+        }
+      ]
+    },
     "updatedAt": "2020-09-23T00:54:05.811779863Z"
   }
 }

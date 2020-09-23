@@ -68,7 +68,9 @@ module.exports = {
         label: "Store",
         items: [
           "alacarte-open/store/get-store-by-id",
-          "alacarte-open/store/update-store-by-id",
+          "alacarte-open/store/update-store-by-id-delivery",
+          "alacarte-open/store/update-store-by-id-types",
+          "alacarte-open/store/update-store-by-id-availability",
         ],
       },
       {
