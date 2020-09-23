@@ -28,9 +28,18 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
     "service": "test.plugin.alacarte",
     "version": "v1",
-    "function": "get.orders",
+    "function": "get.store.orders",
     "request": {
-        "storeId": "1234"
+        "storeId": "2808912573238362402",
+        "cursor": "",
+        "paymentStatus": "DONE",
+        "startOrderAt": "2020-09-22T02:00:00.000Z",
+        "endDeliveryAt": "2020-09-22T02:00:00.000Z",
+        "startDeliveryAt": "2020-09-22T02:00:00.000Z",
+        "endDeliveryAt": "2020-09-22T02:00:00.000Z",
+        "type": ["DINEIN","DELIVERY"],
+        "deliveryStatus": ["WAIT_FOR_CONFIRMATION","FINDING_COURIER"],
+        "sort": "-deliveryTime"
     }
 }'
 ```
@@ -39,8 +48,119 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 > Example Response
 
-```bash
+```json
 {
-  "code": "SUCCESS"
+  "items": [
+    {
+      "item": {
+        "item": {
+          "orderId": "5f6984d6585d7cc1ae35a39c",
+          "storeId": "2808912573238362402",
+          "queueNo": 0,
+          "quantity": 2,
+          "type": "DELIVERY",
+          "state": "ACCEPTED",
+          "status": "WAIT_FOR_CONFIRMATION",
+          "deliverBy": "2020-09-22T05:15:49.54Z",
+          "delivery": {
+            "id": "1600750806701530897",
+            "vendorId": "",
+            "method": "MRSPEEDY",
+            "courier": {
+              "id": "",
+              "surname": "",
+              "name": "",
+              "phone": "",
+              "photoUrl": "",
+              "latitude": 0,
+              "longitude": 0
+            },
+            "distanceInMeter": 27656,
+            "address": {
+              "name": "Office",
+              "unit": "18-B-1",
+              "remark": "",
+              "addressLine1": "Top Glove Tower No.16, Persiaran Setia Dagang, Setia Alam, Seksyen U13, Alam Nusantara",
+              "addressLine2": "",
+              "postCode": "40170",
+              "city": "Shah Alam",
+              "state": "Selangor",
+              "country": "Malaysia",
+              "lat": 3.1078954,
+              "lng": 101.4589521
+            }
+          },
+          "driveThru": {
+            "vehicleNo": "",
+            "vehicleDescription": ""
+          },
+          "table": {
+            "id": "5e86af7ef9e6794801df330c",
+            "type": "DELIVERY/PICKUP",
+            "name": "Default Table",
+            "isActive": true,
+            "isDefault": true
+          },
+          "customer": {
+            "id": "5f69845e585d7cc1ae35a399",
+            "name": "ALSON TEST",
+            "email": "alson899@gmail.com",
+            "countryCode": "60",
+            "phoneNumber": "102212339"
+          },
+          "payment": {
+            "status": "PAID",
+            "subTotal": { "amount": 600, "currencyType": "MYR" },
+            "deliveryFee": { "amount": 3000, "currencyType": "MYR" },
+            "serviceFee": {
+              "percentage": 600,
+              "amount": 36,
+              "currencyType": "MYR"
+            },
+            "serviceTax": {
+              "percentage": 700,
+              "amount": 42,
+              "currencyType": "MYR"
+            },
+            "totalBeforeRounding": { "amount": 3678, "currencyType": "MYR" },
+            "rounding": { "amount": 2, "currencyType": "MYR" },
+            "totalAfterRounding": { "amount": 3680, "currencyType": "MYR" }
+          },
+          "items": [
+            {
+              "id": "5e9567d580a0239d6de76081",
+              "name": "Char Kuey Teow",
+              "description": "",
+              "imageUrl": [
+                "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/4cf5f4e8-1f0d-4697-86ca-3c2c880f37f7"
+              ],
+              "price": { "amount": 500, "currencyType": "MYR" },
+              "quantity": 1,
+              "sides": [],
+              "attributes": [],
+              "remark": ""
+            },
+            {
+              "id": "5ea6b52c0fe6fe5f229f6eac",
+              "name": "Lamb BBQ",
+              "description": "",
+              "imageUrl": [
+                "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/d2192d9f-783c-4eeb-9903-9da5536f487f"
+              ],
+              "price": { "amount": 100, "currencyType": "MYR" },
+              "quantity": 1,
+              "sides": [],
+              "attributes": [],
+              "remark": ""
+            }
+          ],
+          "createdAt": "2020-09-22T05:00:06.741Z",
+          "updatedAt": "2020-09-22T05:00:06.741Z"
+        }
+      }
+    }
+  ],
+  "cursor": "",
+  "count": 1
 }
 ```

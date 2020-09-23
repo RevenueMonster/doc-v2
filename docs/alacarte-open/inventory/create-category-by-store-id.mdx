@@ -1,7 +1,7 @@
 ---
-id: get-items-by-menu-id
-title: Get Items By Menu ID
-sidebar_label: Get Items By Menu ID
+id: create-category-by-store-id
+title: Create Category
+sidebar_label: Create Category
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -26,12 +26,14 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Skip: true' \
 --header 'Cookie: SB-SID-LIST=MTU5OTE5MjgzMXxOd3dBTkV0U1YxUTFVVXBHV1RORFNVeFhUMDVXVUZWQlJqSmFRa2hCTjBwVE5rYzNUbGRPVDFWWldWbEdVRE0xVVVZek5qTTFSMUU9fJOuNAHQx3JzseOCgLHttpZxwd5Sw46dyY-76pvKkUfE; SB-SID=MTU5OTE5MjgzMXxOd3dBTkVwSFVWVklOVFl6VWtGVFFWTlJORVpaVDFwRFNVTkNSMHMwV1VsSVQxQklNalUwVlVWQ1JGaEZVMG8zVXpkUlVVczJUMEU9fAF5jKSWmCYcLnMxwtmP9INye1UQSY9N6WXXO4sXUi2W; DEV-SID-LIST=MTYwMDQyMDc0NnxOd3dBTkZGS05FaFpSRkpLUVVoWFFVOUhTMGhJUmxZM1JVRkJObE5hUjBWU1ZVeEhVRFl6VkV0TFEwdFJXVGMzVEVwWFZ6WlhSMUU9fL0oW5k7HmzYM9-tdI3uzhszpjftGruCZD9EunqTledF; DEV-SID=MTYwMDQyMDc0NnxOd3dBTkRKYVJFODJXRFJQTWxwSFdFeFdOa3cxU0U5VE4wUkNTelZYVmpkT1VEWTNTRmRhTkU5WVNGQkhOMHhOUmpWSlZsQlFXVUU9fPny0cm7qpc_FKeFUzvLT02pxoMXzLkIHkzz_sR4xiWs; route=98167a1c8a2a1948312c3dab462ebc5a' \
 --data-raw '{
-    "service": "test.plugin.alacarte",
-    "version": "v1",
-    "function": "create.cart",
-    "request": {
-        "foodId": "1234"
-    }
+  "service": "test.plugin.alacarte",
+  "version": "v1",
+  "function": "create.category",
+  "request": {
+    "storeId": "1556079400120532579",
+    "name": "Drinks",
+    "status": "ACTIVE"
+  }
 }'
 ```
 
@@ -41,6 +43,15 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 ```json
 {
-  "code": "SUCCESS"
+  "item": {
+    "categoryId": "5f697cb3585d7cc1ae35a37f",
+    "storeId": "1556079400120532579",
+    "itemIds": null,
+    "name": "Test",
+    "status": "ACTIVE",
+    "position": 7,
+    "createdAt": "2020-09-22T04:25:23.684330293Z",
+    "updatedAt": "2020-09-22T04:25:23.684330293Z"
+  }
 }
 ```

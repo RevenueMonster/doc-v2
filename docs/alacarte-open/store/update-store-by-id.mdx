@@ -1,7 +1,7 @@
 ---
-id: get-store-by-id
-title: Get Store By ID
-sidebar_label: Get Store By ID
+id: update-store-by-id
+title: Update Store By ID
+sidebar_label: Update Store By ID
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,12 +28,39 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "get.store",
+  "function": "update.store",
   "request": {
     "storeId": "2808912573238362402",
+    "bannerUrl": "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/83350b4c-5d4b-4c8f-be89-9dd7b8e5cb3b",
+    "isShowInMainPage": true,
+    "orderAheadDays": 2,
+    "closedUntil": "2020-09-22T05:00:06.741Z",
+    "supportedDineType": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"],
+    "serviceTax": { "type": "PERCENTAGE", "dineIn": 0, "others": 1300 },
+    "serviceFee": { "type": "PERCENTAGE", "dineIn": 0, "others": 500 },
+    "deliveryMethod": "OWN",
+    "deliveryCost": [
+      {
+        "type": "FIXED",
+        "startDistanceInMeter": 0,
+        "endDistanceInMeter": 5000,
+        "amount": 0
+      },
+      {
+        "type": "DYNAMIC",
+        "startDistanceInMeter": 5000,
+        "endDistanceInMeter": 10000,
+        "amount": 0
+      },
+      {
+        "type": "DYNAMIC",
+        "startDistanceInMeter": 10000,
+        "endDistanceInMeter": 1000000,
+        "amount": 0
+      }
+    ]
   }
-}
-'
+}'
 ```
 
 ### Response Parameters

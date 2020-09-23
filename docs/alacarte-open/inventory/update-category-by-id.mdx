@@ -26,12 +26,16 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Skip: true' \
 --header 'Cookie: SB-SID-LIST=MTU5OTE5MjgzMXxOd3dBTkV0U1YxUTFVVXBHV1RORFNVeFhUMDVXVUZWQlJqSmFRa2hCTjBwVE5rYzNUbGRPVDFWWldWbEdVRE0xVVVZek5qTTFSMUU9fJOuNAHQx3JzseOCgLHttpZxwd5Sw46dyY-76pvKkUfE; SB-SID=MTU5OTE5MjgzMXxOd3dBTkVwSFVWVklOVFl6VWtGVFFWTlJORVpaVDFwRFNVTkNSMHMwV1VsSVQxQklNalUwVlVWQ1JGaEZVMG8zVXpkUlVVczJUMEU9fAF5jKSWmCYcLnMxwtmP9INye1UQSY9N6WXXO4sXUi2W; DEV-SID-LIST=MTYwMDQyMDc0NnxOd3dBTkZGS05FaFpSRkpLUVVoWFFVOUhTMGhJUmxZM1JVRkJObE5hUjBWU1ZVeEhVRFl6VkV0TFEwdFJXVGMzVEVwWFZ6WlhSMUU9fL0oW5k7HmzYM9-tdI3uzhszpjftGruCZD9EunqTledF; DEV-SID=MTYwMDQyMDc0NnxOd3dBTkRKYVJFODJXRFJQTWxwSFdFeFdOa3cxU0U5VE4wUkNTelZYVmpkT1VEWTNTRmRhTkU5WVNGQkhOMHhOUmpWSlZsQlFXVUU9fPny0cm7qpc_FKeFUzvLT02pxoMXzLkIHkzz_sR4xiWs; route=98167a1c8a2a1948312c3dab462ebc5a' \
 --data-raw '{
-    "service": "test.plugin.alacarte",
-    "version": "v1",
-    "function": "get.orders",
-    "request": {
-        "storeId": "1234"
-    }
+  "service": "test.plugin.alacarte",
+  "version": "v1",
+  "function": "update.category",
+  "request": {
+    "storeId": "10946114768247530",
+    "categoryId": "5f68485ccb3285b9d3955696",
+    "name": "Drinks",
+    "status": "ACTIVE",
+    "positionChange": 1
+  }
 }'
 ```
 
@@ -39,8 +43,17 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 > Example Response
 
-```bash
+```json
 {
-  "code": "SUCCESS"
+  "item": {
+    "categoryId": "5f68485ccb3285b9d3955696",
+    "storeId": "10946114768247530",
+    "itemIds": null,
+    "name": "Test",
+    "status": "ACTIVE",
+    "position": 7,
+    "createdAt": "2020-09-22T04:25:23.684330293Z",
+    "updatedAt": "2020-09-22T04:25:23.684330293Z"
+  }
 }
 ```

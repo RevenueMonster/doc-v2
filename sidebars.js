@@ -53,14 +53,13 @@ module.exports = {
     ],
 
     "à la carte": [
-      "alacarte-open/auth",
       {
         type: "category",
         label: "Orders",
         items: [
           "alacarte-open/orders/get-orders-by-store-id",
           "alacarte-open/orders/get-order-by-id",
-          "alacarte-open/orders/update-order-delivery-status",
+          "alacarte-open/orders/update-order-status",
           "alacarte-open/orders/refund-order",
         ],
       },
@@ -69,16 +68,18 @@ module.exports = {
         label: "Store",
         items: [
           "alacarte-open/store/get-store-by-id",
-          "alacarte-open/store/close-store",
+          "alacarte-open/store/update-store-by-id",
         ],
       },
       {
         type: "category",
         label: "Inventory",
         items: [
+          "alacarte-open/inventory/create-category-by-store-id",
           "alacarte-open/inventory/get-categories-by-store-id",
           "alacarte-open/inventory/update-category-by-id",
-          "alacarte-open/inventory/get-items-by-menu-id",
+          "alacarte-open/inventory/create-item",
+          "alacarte-open/inventory/get-items-by-category-id",
           "alacarte-open/inventory/get-all-items-by-store-id",
           "alacarte-open/inventory/update-item-by-id",
           "alacarte-open/inventory/update-item-quantity-by-id",

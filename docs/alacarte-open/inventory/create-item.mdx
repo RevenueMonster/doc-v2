@@ -1,7 +1,7 @@
 ---
-id: update-item-by-id
-title: Update Item By ID
-sidebar_label: Update Item By ID
+id: create-item
+title: Create Item
+sidebar_label: Create Item
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,37 +28,29 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "update.item",
+  "function": "create.item",
   "request": {
-    "itemId": "5f698149585d7cc1ae35a391",
-    "categoryId": "",
-    "positionChange": 1,
-    "categoryName": "",
-    "supportedTypes": null,
-    "position": 2,
+    "storeId": "1556079400120532579",
     "name": "Test123",
     "description": "Describe",
     "imageUrl": [],
-    "price": { "amount": 100, "currencyType": "MYR" },
     "isActive": true,
     "quantity": 350,
-    "sideCategories": [
+    "price": { "amount": 100, "currencyType": "MYR" },
+    "sides": [
       {
-        "sideCategoryId": "5f698149585d7cc1ae35a395",
         "name": "Side Category 1",
-        "isActive": true,
         "minChoice": 1,
         "maxChoice": 2,
-        "sideItems": [
+        "isActive": true,
+        "items": [
           {
             "referenceItemId": "5eaa7b72e0e9cd7b01a3a2b2",
-            "id": "5f698149585d7cc1ae35a392",
             "name": "Coke",
             "price": { "amount": 10, "currencyType": "MYR" },
             "isActive": true
           },
           {
-            "id": "5f698149585d7cc1ae35a394",
             "name": "New Drink",
             "price": { "amount": 312, "currencyType": "MYR" },
             "isActive": true
@@ -66,20 +58,17 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
         ]
       },
       {
-        "sideCategoryId": "5f698149585d7cc1ae35a398",
         "name": "Side Category 2",
-        "isActive": true,
         "minChoice": 1,
         "maxChoice": 1,
-        "sideItems": [
+        "isActive": true,
+        "items": [
           {
-            "id": "5f698149585d7cc1ae35a396",
             "name": "Salad 2",
             "price": { "amount": 200, "currencyType": "MYR" },
             "isActive": true
           },
           {
-            "id": "5f698149585d7cc1ae35a397",
             "name": "Salad 1",
             "price": { "amount": 100, "currencyType": "MYR" },
             "isActive": true
@@ -89,23 +78,13 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
     ],
     "attributes": [
       {
-        "id": "5f698149585d7cc1ae35a38d",
         "name": "Sweetness",
         "minChoice": 1,
         "maxChoice": 3,
         "labels": [
-          {
-            "id": "5f698149585d7cc1ae35a38e",
-            "name": "Basic"
-          },
-          {
-            "id": "5f698149585d7cc1ae35a38f",
-            "name": "Sweeet"
-          },
-          {
-            "id": "5f698149585d7cc1ae35a390",
-            "name": "Very Sweet"
-          }
+          { "name": "Basic" },
+          { "name": "Sweeet" },
+          { "name": "Very Sweet" }
         ]
       }
     ],
@@ -113,9 +92,9 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
       ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"],
       ["2020-09-22T15:00:00.000Z", "2020-09-22T15:45:00.000Z"]
     ],
+    "categoryIds": ["5ec1bf480e7df1ca6f3f6350"]
   }
-}
-'
+}'
 ```
 
 ### Response Parameters
@@ -138,7 +117,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
     "quantity": 350,
     "sideCategories": [
       {
-        "sideCategoryId": "5f698149585d7cc1ae35a395",
+        "id": "5f698149585d7cc1ae35a395",
         "name": "Side Category 1",
         "isActive": true,
         "minChoice": 1,
@@ -160,7 +139,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
         ]
       },
       {
-        "sideCategoryId": "5f698149585d7cc1ae35a398",
+        "id": "5f698149585d7cc1ae35a398",
         "name": "Side Category 2",
         "isActive": true,
         "minChoice": 1,
