@@ -142,6 +142,6 @@ module.exports = {
     ],
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
-    "Plug-in": ["plug-in/wooCommerce"],
+    "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
   },
 };
