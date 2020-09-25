@@ -12,9 +12,9 @@ Enable RM payment for Opencart
 
 ### Step 1 : Install RM in Opencart
 
-Go to this link [Install RM payment gateway](https://github.com/RevenueMonster/woocommerce-revenuemonster-payment-gateway) > Code > Download ZIP<br/>
+Go to this link [Install RM payment gateway](https://github.com/RevenueMonster/opencart-payment-gateway) > Code > Download ZIP<br/>
 
-![image](/img/gif/install-woocommerce.png)
+![image](/img/gif/download-opencart.png)
 
 ### Step 2 : Plugin RM in Opencart
 
