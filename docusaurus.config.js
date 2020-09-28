@@ -22,7 +22,8 @@ module.exports = {
         src: "/img/rm-logo.svg",
         href: "https://revenuemonster.my",
       },
-      links: [
+      // links
+      items: [
         {
           to: "docs/introduction/overview",
           activeBasePath: "docs",
