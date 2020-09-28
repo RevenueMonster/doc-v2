@@ -11,9 +11,10 @@ module.exports = {
 
   plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
   themeConfig: {
-    // colorMode: {
-    //   disableSwitch: false,
-    // },
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: true,
+    },
     disableDarkMode: true,
     navbar: {
       logo: {
