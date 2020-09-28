@@ -15,7 +15,7 @@ module.exports = {
       defaultMode: "light",
       disableSwitch: true,
     },
-    disableDarkMode: true,
+    // disableDarkMode: true,
     navbar: {
       logo: {
         alt: "My Site Logo",
