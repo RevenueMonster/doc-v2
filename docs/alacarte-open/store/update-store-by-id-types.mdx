@@ -1,7 +1,7 @@
 ---
 id: update-store-by-id-types
-title: Update Store By ID (Types)
-sidebar_label: Update Store By ID (Types)
+title: Update Store Types
+sidebar_label: Update Store Types
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,10 +28,11 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "update.store.settings.types",
+  "function": "update.store.types",
   "request": {
     "storeId": "2808912573238362402",
-    "supportedTypes": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"],
+    "supportedTypes": ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"]
+  }
 }'
 ```
 

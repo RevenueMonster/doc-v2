@@ -1,7 +1,7 @@
 ---
 id: update-store-by-id-delivery
-title: Update Store By ID (Delivery)
-sidebar_label: Update Store By ID (Delivery)
+title: Update Store Delivery
+sidebar_label: Update Store Delivery
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -28,7 +28,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --data-raw '{
   "service": "test.plugin.alacarte",
   "version": "v1",
-  "function": "update.store.settings.delivery",
+  "function": "update.store.delivery",
   "request": {
     "storeId": "2808912573238362402",
     "method": "OWN",
