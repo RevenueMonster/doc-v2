@@ -12,7 +12,24 @@ URL: `https://open.revenuemonster.my/v3/service`<br/>
 
 Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
+:::note
+
+- Using `storeId` to get categories
+
+:::
+
 ### Request Parameters
+
+| Parameter  | Type   | Description                       | Example                      |
+| ---------- | ------ | --------------------------------- | ---------------------------- |
+| `service`  | String | alacarte service                  | "alacarte"                   |
+| `version`  | String | Currently only support 'v1"       | "v1"                         |
+| `function` | String | Function that provide by alacarte | "get.category"               |
+| `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
+
+| Parameter | Type   | Description                         | Example               |
+| --------- | ------ | ----------------------------------- | --------------------- |
+| `storeId` | String | ID of the Store that Create from RM | "1556079400120532579" |
 
 > Example Request
 
@@ -26,7 +43,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Skip: true' \
 --header 'Cookie: SB-SID-LIST=MTU5OTE5MjgzMXxOd3dBTkV0U1YxUTFVVXBHV1RORFNVeFhUMDVXVUZWQlJqSmFRa2hCTjBwVE5rYzNUbGRPVDFWWldWbEdVRE0xVVVZek5qTTFSMUU9fJOuNAHQx3JzseOCgLHttpZxwd5Sw46dyY-76pvKkUfE; SB-SID=MTU5OTE5MjgzMXxOd3dBTkVwSFVWVklOVFl6VWtGVFFWTlJORVpaVDFwRFNVTkNSMHMwV1VsSVQxQklNalUwVlVWQ1JGaEZVMG8zVXpkUlVVczJUMEU9fAF5jKSWmCYcLnMxwtmP9INye1UQSY9N6WXXO4sXUi2W; DEV-SID-LIST=MTYwMDQyMDc0NnxOd3dBTkZGS05FaFpSRkpLUVVoWFFVOUhTMGhJUmxZM1JVRkJObE5hUjBWU1ZVeEhVRFl6VkV0TFEwdFJXVGMzVEVwWFZ6WlhSMUU9fL0oW5k7HmzYM9-tdI3uzhszpjftGruCZD9EunqTledF; DEV-SID=MTYwMDQyMDc0NnxOd3dBTkRKYVJFODJXRFJQTWxwSFdFeFdOa3cxU0U5VE4wUkNTelZYVmpkT1VEWTNTRmRhTkU5WVNGQkhOMHhOUmpWSlZsQlFXVUU9fPny0cm7qpc_FKeFUzvLT02pxoMXzLkIHkzz_sR4xiWs; route=98167a1c8a2a1948312c3dab462ebc5a' \
 --data-raw '{
-  "service": "test.plugin.alacarte",
+  "service": "alacarte",
   "version": "v1",
   "function": "get.categories",
   "request": {
@@ -36,6 +53,23 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 ```
 
 ### Response Parameters
+
+| Parameter | Type   | Description                     | Example                      |
+| --------- | ------ | ------------------------------- | ---------------------------- |
+| `items`   | Array  | (Refer to explanation below)    | (Refer to explanation below) |
+| `cursor`  | String | Optional, if pagination exists. | "0"                          |
+| `count`   | Uint   | Current page record             | 2                            |
+
+| Parameter    | Type     | Description                         | Example                      |
+| ------------ | -------- | ----------------------------------- | ---------------------------- |
+| `categoryId` | String   | Category ID                         | "5f68485ccb3285b9d3955696"   |
+| `storeId`    | String   | ID of the Store that Create from RM | "1556079400120532579"        |
+| `itemIds`    | Array    | Category Items                      | ["5f68485ccb3285b9d3955699"] |
+| `name`       | String   | Item Name                           | "Drinks"                     |
+| `status`     | String   | Status of Item                      | "ACTIVE"                     |
+| `position`   | Uint     | Current position among Category     | 0                            |
+| `createdAt`  | DateTime | Creation date time                  | "2020-09-21T06:29:48.839Z"   |
+| `updatedAt`  | DateTime | Last update date time               | "2020-09-21T06:29:48.839Z"   |
 
 > Example Response
 
