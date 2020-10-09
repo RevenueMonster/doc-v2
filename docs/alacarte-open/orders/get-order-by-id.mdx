@@ -12,7 +12,25 @@ URL: `https://open.revenuemonster.my/v3/service`<br/>
 
 Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
+:::note
+
+- Using `storeId` to get Order.
+
+:::
+
 ### Request Parameters
+
+| Parameter  | Type   | Description                       | Example                      |
+| ---------- | ------ | --------------------------------- | ---------------------------- |
+| `service`  | String | alacarte service                  | "alacarte"                   |
+| `version`  | String | Currently only support 'v1"       | "v1"                         |
+| `function` | String | Function that provide by alacarte | "get.store.order"            |
+| `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
+
+| Parameter | Type   | Description                         | Example                     |
+| --------- | ------ | ----------------------------------- | --------------------------- |
+| `storeId` | String | ID of the Store that Create from RM | "2808912573238362402"       |
+| `orderId` | String | Order Id                            | "25f6984d6585d7cc1ae35a39c" |
 
 > Example Request
 
@@ -26,7 +44,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Skip: true' \
 --header 'Cookie: SB-SID-LIST=MTU5OTE5MjgzMXxOd3dBTkV0U1YxUTFVVXBHV1RORFNVeFhUMDVXVUZWQlJqSmFRa2hCTjBwVE5rYzNUbGRPVDFWWldWbEdVRE0xVVVZek5qTTFSMUU9fJOuNAHQx3JzseOCgLHttpZxwd5Sw46dyY-76pvKkUfE; SB-SID=MTU5OTE5MjgzMXxOd3dBTkVwSFVWVklOVFl6VWtGVFFWTlJORVpaVDFwRFNVTkNSMHMwV1VsSVQxQklNalUwVlVWQ1JGaEZVMG8zVXpkUlVVczJUMEU9fAF5jKSWmCYcLnMxwtmP9INye1UQSY9N6WXXO4sXUi2W; DEV-SID-LIST=MTYwMDQyMDc0NnxOd3dBTkZGS05FaFpSRkpLUVVoWFFVOUhTMGhJUmxZM1JVRkJObE5hUjBWU1ZVeEhVRFl6VkV0TFEwdFJXVGMzVEVwWFZ6WlhSMUU9fL0oW5k7HmzYM9-tdI3uzhszpjftGruCZD9EunqTledF; DEV-SID=MTYwMDQyMDc0NnxOd3dBTkRKYVJFODJXRFJQTWxwSFdFeFdOa3cxU0U5VE4wUkNTelZYVmpkT1VEWTNTRmRhTkU5WVNGQkhOMHhOUmpWSlZsQlFXVUU9fPny0cm7qpc_FKeFUzvLT02pxoMXzLkIHkzz_sR4xiWs; route=98167a1c8a2a1948312c3dab462ebc5a' \
 --data-raw '{
-    "service": "test.plugin.alacarte",
+    "service": "alacarte",
     "version": "v1",
     "function": "get.store.order",
     "request": {
@@ -38,105 +56,259 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 ### Response Parameters
 
+| Parameter    | Type     | Description                                                         | Example                          |
+| ------------ | -------- | ------------------------------------------------------------------- | -------------------------------- |
+| `createdAt`  | DateTime | Creation date time of store                                         | "2020-09-22T04:44:57.950398414Z" |
+| `customer`   | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
+| `delivery`   | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
+| `deliveryAt` | String   | When and what time the order deliver                                | "2020-10-01T08:35:22.525Z"       |
+| `driveThru`  | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
+| `items`      | Array    | Refer to explanation below                                          | (Refer to explanation below)     |
+| `orderId`    | String   | Order ID                                                            | "5f7596e066ef1c1a4f9807f4"       |
+| `payment`    | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
+| `quantity`   | Uint     | Quantity of the item                                                | 1                                |
+| `queueNo`    | Uint     | Queue number of the item                                            | 0                                |
+| `state`      | String   | State of the item                                                   | "ACCEPTED"                       |
+| `status`     | String   | Status of the item                                                  | "EMPTY"                          |
+| `storeId`    | String   | ID of the Store that Create from RM                                 | "10946114768247530"              |
+| `table`      | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
+| `type`       | String   | Current type will be "DINEIN" , "DELIVERY" , "PICKUP", "DRIVE_THRU" | "PICKUP"                         |
+| `updatedAt`  | DateTime | Last update date time                                               | "2020-10-01T08:44:16.863Z"       |
+
+### Inside Customer (parameter)
+
+| Parameter     | Type   | Description             | Example                    |
+| ------------- | ------ | ----------------------- | -------------------------- |
+| `CountryCode` | String | Country Code            | "60"                       |
+| `Email`       | String | Customer Email          | "bassem@revenuemosnter.my" |
+| `Name`        | String | Customer Name           | "Bassem AlSabbagh"         |
+| `PhoneNumber` | String | Customer contact number | "1123621544"               |
+| `id`          | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+
+### Inside Address (parameter)
+
+| Parameter      | Type   | Description             | Example                    |
+| -------------- | ------ | ----------------------- | -------------------------- |
+| `addressLine1` | String | Country Code            | "60"                       |
+| `addressLine2` | String | Customer Email          | "bassem@revenuemosnter.my" |
+| `city`         | String | Customer Name           | "Bassem AlSabbagh"         |
+| `country`      | String | Customer contact number | "1123621544"               |
+| `lat`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `lng`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `name`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `postCode`     | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `remark`       | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `state`        | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `unit`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+
+### Inside Address (parameter)
+
+| Parameter      | Type   | Description             | Example                    |
+| -------------- | ------ | ----------------------- | -------------------------- |
+| `addressLine1` | String | Country Code            | "60"                       |
+| `addressLine2` | String | Customer Email          | "bassem@revenuemosnter.my" |
+| `city`         | String | Customer Name           | "Bassem AlSabbagh"         |
+| `country`      | String | Customer contact number | "1123621544"               |
+| `lat`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `lng`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `name`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `postCode`     | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `remark`       | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `state`        | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| `unit`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+
+<!-- TODO: need check with baseem  -->
+
+### Inside Courier (parameter)
+
+| Parameter   | Type   | Description                | Example                      |
+| ----------- | ------ | -------------------------- | ---------------------------- |
+| `ID`        | String | Refer to explanation below | (Refer to explanation below) |
+| `Latitude`  | Uint   | Refer to explanation below | (Refer to explanation below) |
+| `Longitude` | Uint   | Distance (In Meter)        | 0                            |
+| `Name`      | Uint   | Deliver ID                 | ""                           |
+| `Phone`     | Uint   | Deliver method             | ""                           |
+| `PhotoURL`  | Uint   | Deliver Vendor ID          | ""                           |
+| `Surname`   | Uint   | Deliver Vendor ID          | ""                           |
+
+<!-- ///////// -->
+
+### Inside Drive Thru (parameter)
+
+| Parameter            | Type   | Description         | Example   |
+| -------------------- | ------ | ------------------- | --------- |
+| `vehicleDescription` | String | Vehicle description | ""        |
+| `vehicleNo`          | Uint   | Vehicle Number      | "TLA3202" |
+
+<!-- TODO: need check with baseem what is preferences for  -->
+
+### Inside Items (parameter)
+
+| Parameter        | Type   | Description                                                         | Example                         |
+| ---------------- | ------ | ------------------------------------------------------------------- | ------------------------------- |
+| `preferences`    | String | we have "DYNAMIC" , "FIXED"                                         | "FIXED"                         |
+| `customerRemark` | Uint   | Customer Remark                                                     | ""                              |
+| `deliveryStatus` | Uint   |                                                                     | ""                              |
+| `description`    | Uint   | Item description                                                    | "got Nasi gt lemak"             |
+| `id`             | Uint   | Item ID                                                             | "5f69a41f212de28db36031d6"      |
+| `imageUrl`       | Uint   | Item Image                                                          | []                              |
+| `name`           | Uint   | Item Name                                                           | "Nasi lemak & Lemak"            |
+| `orderDineType`  | Uint   | Current type will be "DINEIN" , "DELIVERY" , "PICKUP", "DRIVE_THRU" | "PICKUP"                        |
+| `orderQuantity`  | Uint   | Order Quantity                                                      | 1                               |
+| `price`          | Object | Refer to the <b>Price parameter</b>                                 | ( Refer to the Price parameter) |
+| `sides`          | Uint   | User selected side                                                  | []                              |
+
+### Inside Payment (parameter)
+
+| Parameter             | Type   | Description                         | Example                         |
+| --------------------- | ------ | ----------------------------------- | ------------------------------- |
+| `deliveryFee`         | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `rounding`            | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `serviceFee`          | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `serviceTax`          | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `status`              | String | Payment Status                      | "NOTPAID"                       |
+| `subTotal`            | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `totalAfterRounding`  | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `totalBeforeRounding` | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+
+### Inside Price (parameter)
+
+:::note
+
+Only `serviceFee` and `serviceTax` have <b>percentage</b>
+
+:::
+
+| Parameter      | Type   | Description                                      | Example |
+| -------------- | ------ | ------------------------------------------------ | ------- |
+| `amount`       | Uint   | Amount in cent (min RM 0.10 <b>10 = RM 0.10</b>) | 100     |
+| `currencyType` | String | Current only support Ringgit Malaysia            | "MYR"   |
+| `percentage`   | Uint   | precentage will be divide 100 eg: 1300/100       | 1300    |
+
+### Inside Table (parameter)
+
+| Parameter     | Type   | Description    | Example                             |
+| ------------- | ------ | -------------- | ----------------------------------- |
+| `id`          | String | Table ID       | "5e86af7ef9e6794801df3302"          |
+| `isAvailable` | Bool   | Vehicle Number | true                                |
+| `isDefault`   | Bool   | Vehicle Number | true                                |
+| `name`        | String | Table Name     | "Default Table"                     |
+| `type`        | String | Table type     | "DELIVERY/DINEIN/DRIVE_THRU/PICKUP" |
+
 > Example Response
 
 ```json
 {
   "item": {
-    "orderId": "5f6984d6585d7cc1ae35a39c",
-    "storeId": "2808912573238362402",
-    "queueNo": 0,
-    "quantity": 2,
-    "type": "DELIVERY",
-    "state": "ACCEPTED",
-    "status": "WAIT_FOR_CONFIRMATION",
-    "deliverBy": "2020-09-22T05:15:49.54Z",
-    "delivery": {
-      "id": "1600750806701530897",
-      "vendorId": "",
-      "method": "MRSPEEDY",
-      "courier": {
-        "id": "",
-        "surname": "",
-        "name": "",
-        "phone": "",
-        "photoUrl": "",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "distanceInMeter": 27656,
-      "address": {
-        "name": "Office",
-        "unit": "18-B-1",
-        "remark": "",
-        "addressLine1": "Top Glove Tower No.16, Persiaran Setia Dagang, Setia Alam, Seksyen U13, Alam Nusantara",
-        "addressLine2": "",
-        "postCode": "40170",
-        "city": "Shah Alam",
-        "state": "Selangor",
-        "country": "Malaysia",
-        "lat": 3.1078954,
-        "lng": 101.4589521
-      }
-    },
-    "driveThru": {
-      "vehicleNo": "",
-      "vehicleDescription": ""
-    },
-    "table": {
-      "id": "5e86af7ef9e6794801df330c",
-      "type": "DELIVERY/PICKUP",
-      "name": "Default Table",
-      "isActive": true,
-      "isDefault": true
-    },
+    "createdAt": "2020-10-01T08:44:16.863Z",
     "customer": {
-      "id": "5f69845e585d7cc1ae35a399",
-      "name": "ALSON TEST",
-      "email": "alson899@gmail.com",
-      "countryCode": "60",
-      "phoneNumber": "102212339"
+      "CountryCode": "60",
+      "Email": "bassem@revenuemosnter.my",
+      "Name": "Bassem AlSabbagh",
+      "PhoneNumber": "1123621544",
+      "id": "5f63082ae9c755d6ba3122ac"
     },
-    "payment": {
-      "status": "PAID",
-      "subTotal": { "amount": 600, "currencyType": "MYR" },
-      "deliveryFee": { "amount": 3000, "currencyType": "MYR" },
-      "serviceFee": { "percentage": 600, "amount": 36, "currencyType": "MYR" },
-      "serviceTax": { "percentage": 700, "amount": 42, "currencyType": "MYR" },
-      "totalBeforeRounding": { "amount": 3678, "currencyType": "MYR" },
-      "rounding": { "amount": 2, "currencyType": "MYR" },
-      "totalAfterRounding": { "amount": 3680, "currencyType": "MYR" }
+    "delivery": {
+      "address": {
+        "addressLine1": "",
+        "addressLine2": "",
+        "city": "",
+        "country": "",
+        "lat": 0,
+        "lng": 0,
+        "name": "",
+        "postCode": "",
+        "remark": "",
+        "state": "",
+        "unit": ""
+      },
+      "courier": {
+        "ID": "",
+        "Latitude": 0,
+        "Longitude": 0,
+        "Name": "",
+        "Phone": "",
+        "PhotoURL": "",
+        "Surname": ""
+      },
+      "distanceInMeter": 0,
+      "id": "",
+      "method": "",
+      "vendorId": ""
+    },
+    "deliveryAt": "2020-10-01T08:35:22.525Z",
+    "driveThru": {
+      "vehicleDescription": "",
+      "vehicleNo": "TLA3202"
     },
     "items": [
       {
-        "id": "5e9567d580a0239d6de76081",
-        "name": "Char Kuey Teow",
-        "description": "",
+        "preferences": [],
+        "customerRemark": "",
+        "deliveryStatus": "",
+        "description": "got Nasi gt lemak",
+        "id": "5f69a41f212de28db36031d6",
         "imageUrl": [
-          "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/4cf5f4e8-1f0d-4697-86ca-3c2c880f37f7"
+          "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/193557da-8d2e-4bd4-8df5-13663cb99eff"
         ],
-        "price": { "amount": 500, "currencyType": "MYR" },
-        "quantity": 1,
-        "sides": [],
-        "attributes": [],
-        "remark": ""
-      },
-      {
-        "id": "5ea6b52c0fe6fe5f229f6eac",
-        "name": "Lamb BBQ",
-        "description": "",
-        "imageUrl": [
-          "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/d2192d9f-783c-4eeb-9903-9da5536f487f"
-        ],
-        "price": { "amount": 100, "currencyType": "MYR" },
-        "quantity": 1,
-        "sides": [],
-        "attributes": [],
-        "remark": ""
+        "name": "Nasi lemak & Lemak",
+        "orderDineType": "PICKUP",
+        "orderQuantity": 1,
+        "price": {
+          "amount": 10,
+          "currencyType": "MYR"
+        },
+        "sides": []
       }
     ],
-    "createdAt": "2020-09-22T05:00:06.741Z",
-    "updatedAt": "2020-09-22T05:00:06.741Z"
+    "orderId": "5f7596e066ef1c1a4f9807f4",
+    "payment": {
+      "deliveryFee": {
+        "amount": 0,
+        "currencyType": ""
+      },
+      "rounding": {
+        "amount": -2,
+        "currencyType": "MYR"
+      },
+      "serviceFee": {
+        "amount": 1,
+        "currencyType": "MYR",
+        "percentage": 500
+      },
+      "serviceTax": {
+        "amount": 1,
+        "currencyType": "MYR",
+        "percentage": 1300
+      },
+      "status": "NOTPAID",
+      "subTotal": {
+        "amount": 10,
+        "currencyType": "MYR"
+      },
+      "totalAfterRounding": {
+        "amount": 10,
+        "currencyType": "MYR"
+      },
+      "totalBeforeRounding": {
+        "amount": 12,
+        "currencyType": "MYR"
+      }
+    },
+    "quantity": 1,
+    "queueNo": 0,
+    "state": "ACCEPTED",
+    "status": "EMPTY",
+    "storeId": "10946114768247530",
+    "table": {
+      "id": "5e86af7ef9e6794801df3302",
+      "isAvailable": true,
+      "isDefault": true,
+      "name": "Default Table",
+      "type": "DELIVERY/DINEIN/DRIVE_THRU/PICKUP"
+    },
+    "type": "PICKUP",
+    "updatedAt": "2020-10-01T08:44:16.863Z"
   }
 }
 ```

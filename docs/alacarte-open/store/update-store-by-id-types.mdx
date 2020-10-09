@@ -12,7 +12,25 @@ URL: `https://open.revenuemonster.my/v3/service`<br/>
 
 Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
+:::note
+
+- Using `storeId` to update the support types.
+
+:::
+
 ### Request Parameters
+
+| Parameter  | Type   | Description                       | Example                      |
+| ---------- | ------ | --------------------------------- | ---------------------------- |
+| `service`  | String | alacarte service                  | "alacarte"                   |
+| `version`  | String | Currently only support 'v1"       | "v1"                         |
+| `function` | String | Function that provide by alacarte | "updates.store.types"        |
+| `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
+
+| Parameter        | Type   | Description                         | Example                                        |
+| ---------------- | ------ | ----------------------------------- | ---------------------------------------------- |
+| `storeId`        | String | ID of the Store that Create from RM | "2808912573238362402"                          |
+| `supportedTypes` | Array  | We have 4 type for user to choose   | ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"] |
 
 > Example Request
 
@@ -26,7 +44,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Skip: true' \
 --header 'Cookie: SB-SID-LIST=MTU5OTE5MjgzMXxOd3dBTkV0U1YxUTFVVXBHV1RORFNVeFhUMDVXVUZWQlJqSmFRa2hCTjBwVE5rYzNUbGRPVDFWWldWbEdVRE0xVVVZek5qTTFSMUU9fJOuNAHQx3JzseOCgLHttpZxwd5Sw46dyY-76pvKkUfE; SB-SID=MTU5OTE5MjgzMXxOd3dBTkVwSFVWVklOVFl6VWtGVFFWTlJORVpaVDFwRFNVTkNSMHMwV1VsSVQxQklNalUwVlVWQ1JGaEZVMG8zVXpkUlVVczJUMEU9fAF5jKSWmCYcLnMxwtmP9INye1UQSY9N6WXXO4sXUi2W; DEV-SID-LIST=MTYwMDQyMDc0NnxOd3dBTkZGS05FaFpSRkpLUVVoWFFVOUhTMGhJUmxZM1JVRkJObE5hUjBWU1ZVeEhVRFl6VkV0TFEwdFJXVGMzVEVwWFZ6WlhSMUU9fL0oW5k7HmzYM9-tdI3uzhszpjftGruCZD9EunqTledF; DEV-SID=MTYwMDQyMDc0NnxOd3dBTkRKYVJFODJXRFJQTWxwSFdFeFdOa3cxU0U5VE4wUkNTelZYVmpkT1VEWTNTRmRhTkU5WVNGQkhOMHhOUmpWSlZsQlFXVUU9fPny0cm7qpc_FKeFUzvLT02pxoMXzLkIHkzz_sR4xiWs; route=98167a1c8a2a1948312c3dab462ebc5a' \
 --data-raw '{
-  "service": "test.plugin.alacarte",
+  "service": "alacarte",
   "version": "v1",
   "function": "update.store.types",
   "request": {
@@ -37,6 +55,29 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 ```
 
 ### Response Parameters
+
+| Parameter        | Type     | Description                       | Example                                        |
+| ---------------- | -------- | --------------------------------- | ---------------------------------------------- |
+| `closedUntil`    | DateTime | Set when your store will close    | "2020-09-22T05:00:06.741Z"                     |
+| `supportedTypes` | Array    | We have 4 type for user to choose | ["DELIVERY", "DINEIN", "DRIVE_THRU", "PICKUP"] |
+| `delivery`       | Object   | Refer to explanation below        | (Refer to explanation below)                   |
+| `updatedAt`      | DateTime | Last update date time             | "2020-09-22T04:44:57.950398414Z"               |
+
+### Inside Delivery (parameter)
+
+| Parameter | Type   | Description                                                                        | Example                      |
+| --------- | ------ | ---------------------------------------------------------------------------------- | ---------------------------- |
+| `method`  | String | Current delivery service for merchant to select "OWN" , "MRSPEEDY" , "GRABEXPRESS" | "OWN"                        |
+| `cost`    | Array  | Refer to explanation below                                                         | (Refer to explanation below) |
+
+### Inside Cost (parameter)
+
+| Parameter              | Type   | Description                     | Example |
+| ---------------------- | ------ | ------------------------------- | ------- |
+| `type`                 | String | we have "DYNAMIC" , "FIXED"     | "FIXED" |
+| `startDistanceInMeter` | Uint   | Set a Start Distance (In Meter) | 0       |
+| `endDistanceInMeter`   | Uint   | Set a End Distance (In Meter)   | 5000    |
+| `amount`               | Uint   | Set Distance amount             | 0       |
 
 > Example Response
 
