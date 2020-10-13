@@ -56,109 +56,179 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 ### Response Parameters
 
-| Parameter    | Type     | Description                                                         | Example                          |
-| ------------ | -------- | ------------------------------------------------------------------- | -------------------------------- |
-| `createdAt`  | DateTime | Creation date time of store                                         | "2020-09-22T04:44:57.950398414Z" |
-| `customer`   | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
-| `delivery`   | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
-| `deliveryAt` | String   | When and what time the order deliver                                | "2020-10-01T08:35:22.525Z"       |
-| `driveThru`  | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
-| `items`      | Array    | Refer to explanation below                                          | (Refer to explanation below)     |
-| `orderId`    | String   | Order ID                                                            | "5f7596e066ef1c1a4f9807f4"       |
-| `payment`    | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
-| `quantity`   | Uint     | Quantity of the item                                                | 1                                |
-| `queueNo`    | Uint     | Queue number of the item                                            | 0                                |
-| `state`      | String   | State of the item                                                   | "ACCEPTED"                       |
-| `status`     | String   | Status of the item                                                  | "EMPTY"                          |
-| `storeId`    | String   | ID of the Store that Create from RM                                 | "10946114768247530"              |
-| `table`      | Object   | Refer to explanation below                                          | (Refer to explanation below)     |
-| `type`       | String   | Current type will be "DINEIN" , "DELIVERY" , "PICKUP", "DRIVE_THRU" | "PICKUP"                         |
-| `updatedAt`  | DateTime | Last update date time                                               | "2020-10-01T08:44:16.863Z"       |
+:::note
+
+- Current type in <b>Status</b> will be :-
+
+  - "EMPTY"<br/>
+  - "WAITING_FOR_PAYMENT"<br/>
+  - "WAIT_FOR_CONFIRMATION"<br/>
+  - "CANCELLED"<br/>
+  - "PROGRESSING"<br/>
+  - "WAITING_FOR_COURIER"<br/>
+  - "FINDING_COURIER"<br/>
+  - "SHIPPING"<br/>
+  - "COMPLETED"<br/>
+  - "DELAYED"<br/>
+  - "REJECTED"<br/>
+
+- Current type in <b>State</b> will be :-
+
+  - "ACCEPTED" , "REJECTED" , "CANCELED" , "REFUNDED"
+
+- Current type in <b>Type</b> will be :-
+
+  - "DINEIN" , "DELIVERY" , "PICKUP", "DRIVE_THRU"
+
+:::
+
+| Parameter    | Type     | Description                          | Example                          |
+| ------------ | -------- | ------------------------------------ | -------------------------------- |
+| `createdAt`  | DateTime | Creation date time of store          | "2020-09-22T04:44:57.950398414Z" |
+| `customer`   | Object   | Refer to explanation below           | (Refer to explanation below)     |
+| `delivery`   | Object   | Refer to explanation below           | (Refer to explanation below)     |
+| `deliveryAt` | String   | When and what time the order deliver | "2020-10-01T08:35:22.525Z"       |
+| `driveThru`  | Object   | Refer to explanation below           | (Refer to explanation below)     |
+| `items`      | Array    | Refer to explanation below           | (Refer to explanation below)     |
+| `orderId`    | String   | Order ID                             | "5f7596e066ef1c1a4f9807f4"       |
+| `payment`    | Object   | Refer to explanation below           | (Refer to explanation below)     |
+| `quantity`   | Uint     | Quantity of the item                 | 1                                |
+| `queueNo`    | Uint     | Queue number of the item             | 0                                |
+| `state`      | String   | State of the item                    | "ACCEPTED"                       |
+| `status`     | String   | Status of the item                   | "EMPTY"                          |
+| `storeId`    | String   | ID of the Store that Create from RM  | "10946114768247530"              |
+| `table`      | Object   | Refer to explanation below           | (Refer to explanation below)     |
+| `type`       | String   | Type of the item                     | "PICKUP"                         |
+| `updatedAt`  | DateTime | Last update date time                | "2020-10-01T08:44:16.863Z"       |
 
 ### Inside Customer (parameter)
 
 | Parameter     | Type   | Description             | Example                    |
 | ------------- | ------ | ----------------------- | -------------------------- |
-| `CountryCode` | String | Country Code            | "60"                       |
-| `Email`       | String | Customer Email          | "bassem@revenuemosnter.my" |
-| `Name`        | String | Customer Name           | "Bassem AlSabbagh"         |
-| `PhoneNumber` | String | Customer contact number | "1123621544"               |
+| `countryCode` | String | Country Code            | "60"                       |
+| `email`       | String | Customer Email          | "bassem@revenuemosnter.my" |
+| `name`        | String | Customer Name           | "Bassem AlSabbagh"         |
+| `phoneNumber` | String | Customer contact number | "1123621544"               |
 | `id`          | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
 
-### Inside Address (parameter)
+### Inside Delivery (parameter)
 
-| Parameter      | Type   | Description             | Example                    |
-| -------------- | ------ | ----------------------- | -------------------------- |
-| `addressLine1` | String | Country Code            | "60"                       |
-| `addressLine2` | String | Customer Email          | "bassem@revenuemosnter.my" |
-| `city`         | String | Customer Name           | "Bassem AlSabbagh"         |
-| `country`      | String | Customer contact number | "1123621544"               |
-| `lat`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `lng`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `name`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `postCode`     | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `remark`       | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `state`        | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `unit`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
+| Parameter         | Type   | Description                  | Example                      |
+| ----------------- | ------ | ---------------------------- | ---------------------------- |
+| `address`         | String | Refer to explanation below   | (Refer to explanation below) |
+| `courier`         | String | Refer to explanation below   | (Refer to explanation below) |
+| `distanceInMeter` | Int    | Delivery Distance (In Meter) | 17446                        |
+| `id`              | String | Customer contact number      | "5f815e2c3c6920f1233a540f"   |
+| `method`          | String | Customer ID                  | "OWN"                        |
+| `vendorId`        | String | Customer ID                  | "5f815e2c3c6920f1233a540f"   |
 
 ### Inside Address (parameter)
 
-| Parameter      | Type   | Description             | Example                    |
-| -------------- | ------ | ----------------------- | -------------------------- |
-| `addressLine1` | String | Country Code            | "60"                       |
-| `addressLine2` | String | Customer Email          | "bassem@revenuemosnter.my" |
-| `city`         | String | Customer Name           | "Bassem AlSabbagh"         |
-| `country`      | String | Customer contact number | "1123621544"               |
-| `lat`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `lng`          | Int    | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `name`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `postCode`     | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `remark`       | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `state`        | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-| `unit`         | String | Customer ID             | "5f63082ae9c755d6ba3122ac" |
-
-<!-- TODO: need check with baseem  -->
+| Parameter      | Type   | Description                  | Example |
+| -------------- | ------ | ---------------------------- | ------- |
+| `addressLine1` | String | AddressLine1                 | ""      |
+| `addressLine2` | String | AddressLine2                 | ""      |
+| `city`         | String | City                         | ""      |
+| `country`      | String | Country                      | ""      |
+| `latitude`     | Int    | Address latitude (In Meter)  | 0       |
+| `longitude`    | Int    | Address longitude (In Meter) | 0       |
+| `name`         | String | Customer Name                | ""      |
+| `postCode`     | String | Customer Remark              | ""      |
+| `remark`       | String | Customer Remark              | ""      |
+| `state`        | String | Address State                | ""      |
+| `unit`         | String | Address Unit                 | ""      |
 
 ### Inside Courier (parameter)
 
-| Parameter   | Type   | Description                | Example                      |
-| ----------- | ------ | -------------------------- | ---------------------------- |
-| `ID`        | String | Refer to explanation below | (Refer to explanation below) |
-| `Latitude`  | Uint   | Refer to explanation below | (Refer to explanation below) |
-| `Longitude` | Uint   | Distance (In Meter)        | 0                            |
-| `Name`      | Uint   | Deliver ID                 | ""                           |
-| `Phone`     | Uint   | Deliver method             | ""                           |
-| `PhotoURL`  | Uint   | Deliver Vendor ID          | ""                           |
-| `Surname`   | Uint   | Deliver Vendor ID          | ""                           |
+:::note
 
-<!-- ///////// -->
+- If Courier don't have `name` and `phone` will display as **null**
+
+:::
+
+| Parameter   | Type   | Description                  | Example      |
+| ----------- | ------ | ---------------------------- | ------------ |
+| `id`        | String | Courier ID                   | ""           |
+| `latitude`  | Int    | Address latitude (In Meter)  | 0            |
+| `longitude` | Int    | Address longitude (In Meter) | 0            |
+| `name`      | String | Courier Name                 | "Testing123" |
+| `phone`     | String | Courier Contact Number       | "163698122"  |
+| `photoURL`  | String | Courier Image                | ""           |
+| `surname`   | String | Courier Surname              | ""           |
 
 ### Inside Drive Thru (parameter)
+
+:::note
+
+- If not Drive Thru will display **null**
+
+:::
 
 | Parameter            | Type   | Description         | Example   |
 | -------------------- | ------ | ------------------- | --------- |
 | `vehicleDescription` | String | Vehicle description | ""        |
-| `vehicleNo`          | Uint   | Vehicle Number      | "TLA3202" |
-
-<!-- TODO: need check with baseem what is preferences for  -->
+| `vehicleNo`          | String | Vehicle Number      | "TLA3202" |
 
 ### Inside Items (parameter)
 
-| Parameter        | Type   | Description                                                         | Example                         |
-| ---------------- | ------ | ------------------------------------------------------------------- | ------------------------------- |
-| `preferences`    | String | we have "DYNAMIC" , "FIXED"                                         | "FIXED"                         |
-| `customerRemark` | Uint   | Customer Remark                                                     | ""                              |
-| `deliveryStatus` | Uint   |                                                                     | ""                              |
-| `description`    | Uint   | Item description                                                    | "got Nasi gt lemak"             |
-| `id`             | Uint   | Item ID                                                             | "5f69a41f212de28db36031d6"      |
-| `imageUrl`       | Uint   | Item Image                                                          | []                              |
-| `name`           | Uint   | Item Name                                                           | "Nasi lemak & Lemak"            |
-| `orderDineType`  | Uint   | Current type will be "DINEIN" , "DELIVERY" , "PICKUP", "DRIVE_THRU" | "PICKUP"                        |
-| `orderQuantity`  | Uint   | Order Quantity                                                      | 1                               |
-| `price`          | Object | Refer to the <b>Price parameter</b>                                 | ( Refer to the Price parameter) |
-| `sides`          | Uint   | User selected side                                                  | []                              |
+| Parameter     | Type   | Description                         | Example                         |
+| ------------- | ------ | ----------------------------------- | ------------------------------- |
+| `description` | String | Item description                    | "got Nasi gt lemak"             |
+| `imageUrl`    | Array  | Item Image                          | []                              |
+| `itemId`      | String | Item ID                             | "5f69a41f212de28db36031d6"      |
+| `name`        | String | Item Name                           | "Nasi lemak & Lemak"            |
+| `preferences` | Array  | Item preferences                    | []                              |
+| `price`       | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
+| `quantity`    | Uint   | Item Quantity                       | 1                               |
+| `remark`      | String | Customer Remark                     | ""                              |
+| `sides`       | Array  | Refer to the <b>Sides parameter</b> | ( Refer to the Sides parameter) |
+
+### Inside Preferences (parameter)
+
+:::note
+
+- Will display **Empty Array** when don't have preferences
+
+:::
+
+| Parameter   | Type   | Description                | Example                      |
+| ----------- | ------ | -------------------------- | ---------------------------- |
+| `name`      | String | Preferences name           | "Sweetness"                  |
+| `minChoice` | Uint   | Set minimum choice         | 1                            |
+| `maxChoice` | Uint   | Set maximum choice         | 3                            |
+| `labels`    | Array  | Refer to explanation below | (Refer to explanation below) |
+
+### Inside Sides (parameter)
+
+:::note
+
+- Will display **Empty Array** when don't have sides
+
+:::
+
+| Parameter   | Type   | Description                             | Example                                 |
+| ----------- | ------ | --------------------------------------- | --------------------------------------- |
+| `id`        | String | Side ID                                 | ""                                      |
+| `name`      | String | Side Name                               | "test"                                  |
+| `sideItems` | Array  | Refer to the <b>SideItems parameter</b> | Refer to the <b>SideItems parameter</b> |
+
+### Inside SideItems (parameter)
+
+| Parameter | Type   | Description                         | Example                             |
+| --------- | ------ | ----------------------------------- | ----------------------------------- |
+| `id`      | String | Side ID                             | "5f7b4195021ba83f52a02551"          |
+| `name`    | String | Side Name                           | "Hainan Chicken Rice"               |
+| `price`   | Object | Refer to the <b>Price parameter</b> | Refer to the <b>Price parameter</b> |
 
 ### Inside Payment (parameter)
+
+:::note
+
+Current type in <b>Payment</b> will be :-
+
+"PAID" , "NOTPAID" , "PENDING" , "REFUNDED"
+
+:::
 
 | Parameter             | Type   | Description                         | Example                         |
 | --------------------- | ------ | ----------------------------------- | ------------------------------- |
@@ -187,13 +257,12 @@ Only `serviceFee` and `serviceTax` have <b>percentage</b>
 
 ### Inside Table (parameter)
 
-| Parameter     | Type   | Description    | Example                             |
-| ------------- | ------ | -------------- | ----------------------------------- |
-| `id`          | String | Table ID       | "5e86af7ef9e6794801df3302"          |
-| `isAvailable` | Bool   | Vehicle Number | true                                |
-| `isDefault`   | Bool   | Vehicle Number | true                                |
-| `name`        | String | Table Name     | "Default Table"                     |
-| `type`        | String | Table type     | "DELIVERY/DINEIN/DRIVE_THRU/PICKUP" |
+| Parameter     | Type   | Description    | Example                    |
+| ------------- | ------ | -------------- | -------------------------- |
+| `id`          | String | Table ID       | "5e86af7ef9e6794801df3302" |
+| `isAvailable` | Bool   | Vehicle Number | true                       |
+| `isDefault`   | Bool   | Vehicle Number | true                       |
+| `name`        | String | Table Name     | "Default Table"            |
 
 > Example Response
 
@@ -202,62 +271,30 @@ Only `serviceFee` and `serviceTax` have <b>percentage</b>
   "item": {
     "createdAt": "2020-10-01T08:44:16.863Z",
     "customer": {
-      "CountryCode": "60",
-      "Email": "bassem@revenuemosnter.my",
-      "Name": "Bassem AlSabbagh",
-      "PhoneNumber": "1123621544",
-      "id": "5f63082ae9c755d6ba3122ac"
+      "countryCode": "60",
+      "email": "bassem@revenuemosnter.my",
+      "id": "5f63082ae9c755d6ba3122ac",
+      "name": "Bassem AlSabbagh",
+      "phoneNumber": "1123621544"
     },
-    "delivery": {
-      "address": {
-        "addressLine1": "",
-        "addressLine2": "",
-        "city": "",
-        "country": "",
-        "lat": 0,
-        "lng": 0,
-        "name": "",
-        "postCode": "",
-        "remark": "",
-        "state": "",
-        "unit": ""
-      },
-      "courier": {
-        "ID": "",
-        "Latitude": 0,
-        "Longitude": 0,
-        "Name": "",
-        "Phone": "",
-        "PhotoURL": "",
-        "Surname": ""
-      },
-      "distanceInMeter": 0,
-      "id": "",
-      "method": "",
-      "vendorId": ""
-    },
+    "delivery": null,
     "deliveryAt": "2020-10-01T08:35:22.525Z",
-    "driveThru": {
-      "vehicleDescription": "",
-      "vehicleNo": "TLA3202"
-    },
+    "driveThru": null,
     "items": [
       {
-        "preferences": [],
-        "customerRemark": "",
-        "deliveryStatus": "",
         "description": "got Nasi gt lemak",
-        "id": "5f69a41f212de28db36031d6",
         "imageUrl": [
           "https://smart-cafe-sandbox.oss-ap-southeast-3.aliyuncs.com/images/4118165203679668885/193557da-8d2e-4bd4-8df5-13663cb99eff"
         ],
+        "itemId": "5f69a41f212de28db36031d6",
         "name": "Nasi lemak & Lemak",
-        "orderDineType": "PICKUP",
-        "orderQuantity": 1,
+        "preferences": [],
         "price": {
           "amount": 10,
           "currencyType": "MYR"
         },
+        "quantity": 1,
+        "remark": "",
         "sides": []
       }
     ],
@@ -302,10 +339,9 @@ Only `serviceFee` and `serviceTax` have <b>percentage</b>
     "storeId": "10946114768247530",
     "table": {
       "id": "5e86af7ef9e6794801df3302",
-      "isAvailable": true,
+      "isActive": true,
       "isDefault": true,
-      "name": "Default Table",
-      "type": "DELIVERY/DINEIN/DRIVE_THRU/PICKUP"
+      "name": "Default Table"
     },
     "type": "PICKUP",
     "updatedAt": "2020-10-01T08:44:16.863Z"

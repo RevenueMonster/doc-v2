@@ -60,16 +60,16 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `cursor`  | String | Optional, if pagination exists. | "0"                          |
 | `count`   | Uint   | Current page record             | 2                            |
 
-| Parameter    | Type     | Description                         | Example                      |
-| ------------ | -------- | ----------------------------------- | ---------------------------- |
-| `categoryId` | String   | Category ID                         | "5f68485ccb3285b9d3955696"   |
-| `storeId`    | String   | ID of the Store that Create from RM | "1556079400120532579"        |
-| `itemIds`    | Array    | Category Items                      | ["5f68485ccb3285b9d3955699"] |
-| `name`       | String   | Item Name                           | "Drinks"                     |
-| `status`     | String   | Status of Item                      | "ACTIVE"                     |
-| `position`   | Uint     | Current position among Category     | 0                            |
-| `createdAt`  | DateTime | Creation date time                  | "2020-09-21T06:29:48.839Z"   |
-| `updatedAt`  | DateTime | Last update date time               | "2020-09-21T06:29:48.839Z"   |
+| Parameter    | Type     | Description                                        | Example                      |
+| ------------ | -------- | -------------------------------------------------- | ---------------------------- |
+| `categoryId` | String   | Category ID                                        | "5f68485ccb3285b9d3955696"   |
+| `storeId`    | String   | ID of the Store that Create from RM                | "1556079400120532579"        |
+| `itemIds`    | Array    | Category Items                                     | ["5f68485ccb3285b9d3955699"] |
+| `name`       | String   | Item Name                                          | "Drinks"                     |
+| `status`     | String   | Status of Category **"ACTIVE"** and **"INACTIVE"** | "ACTIVE"                     |
+| `position`   | Uint     | Current position among Category                    | 0                            |
+| `createdAt`  | DateTime | Creation date time                                 | "2020-09-21T06:29:48.839Z"   |
+| `updatedAt`  | DateTime | Last update date time                              | "2020-09-21T06:29:48.839Z"   |
 
 > Example Response
 

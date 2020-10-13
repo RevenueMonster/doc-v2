@@ -14,7 +14,7 @@ Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
 :::note
 
-- Using `storeId` to update category
+- Using `categoryId` to update the category **name** , **status** and **positionChange**
 
 :::
 
@@ -27,12 +27,12 @@ Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 | `function` | String | Function that provide by alacarte | "update.category"            |
 | `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
 
-| Parameter        | Type   | Description                         | Example                    |
-| ---------------- | ------ | ----------------------------------- | -------------------------- |
-| `categoryId`     | String | ID of the Category                  | "5f68485ccb3285b9d3955696" |
-| `name`           | String | Category name                       | "Drinks"                   |
-| `status`         | String | Status of Category                  | "ACTIVE"                   |
-| `positionChange` | Uint   | Change current position at Category | 1                          |
+| Parameter        | Type   | Description                                                | Example                    |
+| ---------------- | ------ | ---------------------------------------------------------- | -------------------------- |
+| `categoryId`     | String | ID of the Category                                         | "5f68485ccb3285b9d3955696" |
+| `name`           | String | Category name                                              | "Drinks"                   |
+| `status`         | String | Status of Category **"ACTIVE"** and **"INACTIVE"**         | "ACTIVE"                   |
+| `positionChange` | Int    | Move **UP** or **DOWN** the position using **-1** or **1** | 1                          |
 
 > Example Request
 
@@ -69,7 +69,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `categoryId` | String   | Category ID                         | "5f68485ccb3285b9d3955696"       |
 | `storeId`    | String   | ID of the Store that Create from RM | "10946114768247530"              |
 | `itemIds`    | Array    | Category Items                      | null                             |
-| `name`       | String   | Item Name                           | "Test"                           |
+| `name`       | String   | Item Name                           | "Drinks"                         |
 | `status`     | String   | Status of Item                      | "ACTIVE"                         |
 | `position`   | Uint     | Current position among Category     | 1                                |
 | `createdAt`  | DateTime | Creation date time                  | "2020-09-22T04:25:23.684330293Z" |
@@ -83,7 +83,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
     "categoryId": "5f68485ccb3285b9d3955696",
     "storeId": "10946114768247530",
     "itemIds": null,
-    "name": "Test",
+    "name": "Drinks",
     "status": "ACTIVE",
     "position": 1,
     "createdAt": "2020-09-22T04:25:23.684330293Z",
