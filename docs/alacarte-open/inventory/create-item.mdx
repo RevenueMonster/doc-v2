@@ -171,25 +171,49 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 
 ### Response Parameters
 
-| Parameter        | Type     | Description                               | Example                                                  |
-| ---------------- | -------- | ----------------------------------------- | -------------------------------------------------------- |
-| `itemId`         | String   | Item ID                                   | "5f698149585d7cc1ae35a391"                               |
-| `categoryId`     | String   | Category ID                               | ""                                                       |
-| `categoryName`   | String   | Name of Category                          | ""                                                       |
-| `position`       | Uint     | Current position among item               | 2                                                        |
-| `name`           | String   | Item name                                 | "Test123"                                                |
-| `description`    | String   | Description of the item                   | "Describe"                                               |
-| `imageUrl`       | Array    | Item image                                | []                                                       |
-| `price`          | Object   | Refer to the <b>Price parameter</b>       | ( Refer to the Price parameter)                          |
-| `isAvailable`    | Bool     | Item available                            | true                                                     |
-| `quantity`       | Uint     | Item quantity                             | 350                                                      |
-| `sideCategories` | Array    | Refer to explanation below                | (Refer to explanation below)                             |
-| `preferences`    | Array    | Refer to explanation below                | (Refer to explanation below)                             |
-| `schedules`      | Array    | Schedules <b>startAt</b> and <b>endAt</b> | ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"] |
-| `createdAt`      | DateTime | Creation date time                        | "2020-09-22T04:44:57.950398414Z"                         |
-| `updatedAt`      | DateTime | Last update date time                     | "2020-09-22T04:44:57.950398414Z"                         |
+| Parameter      | Type     | Description                               | Example                                                  |
+| -------------- | -------- | ----------------------------------------- | -------------------------------------------------------- |
+| `categoryId`   | String   | Category ID                               | ""                                                       |
+| `categoryName` | String   | Name of Category                          | ""                                                       |
+| `createdAt`    | DateTime | Creation date time                        | "2020-09-22T04:44:57.950398414Z"                         |
+| `description`  | String   | Description of the item                   | "Describe"                                               |
+| `imageUrl`     | Array    | Item image                                | []                                                       |
+| `isAvailable`  | Bool     | Item available                            | true                                                     |
+| `itemId`       | String   | Item ID                                   | "5f866a202bdcc5950fcf3c8b"                               |
+| `name`         | String   | Item name                                 | "Test123"                                                |
+| `position`     | Uint     | Current position among item               | 2                                                        |
+| `preferences`  | Array    | Refer to explanation below                | (Refer to explanation below)                             |
+| `price`        | Object   | Refer to the <b>Price parameter</b>       | ( Refer to the Price parameter)                          |
+| `quantity`     | Uint     | Item quantity                             | 350                                                      |
+| `schedules`    | Array    | Schedules <b>startAt</b> and <b>endAt</b> | ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"] |
+| `sides`        | Array    | Refer to explanation below                | (Refer to explanation below)                             |
+| `updatedAt`    | DateTime | Last update date time                     | "2020-09-22T04:44:57.950398414Z"                         |
 
-### Inside Side Categories (parameter)
+### Inside Preferences (parameter)
+
+| Parameter   | Type   | Description                | Example                      |
+| ----------- | ------ | -------------------------- | ---------------------------- |
+| `id`        | String | Preferences ID             | "5f698149585d7cc1ae35a38d"   |
+| `name`      | String | Preferences name           | "Sweetness"                  |
+| `minChoice` | Uint   | Set minimum choice         | 1                            |
+| `maxChoice` | Uint   | Set maximum choice         | 3                            |
+| `labels`    | Array  | Refer to explanation below | (Refer to explanation below) |
+
+### Inside Labels (parameter)
+
+| Parameter | Type   | Description | Example                    |
+| --------- | ------ | ----------- | -------------------------- |
+| `id`      | String | Label ID    | "5f698149585d7cc1ae35a38e" |
+| `name`    | String | Label name  | "Basic"                    |
+
+### Inside Price (parameter)
+
+| Parameter      | Type   | Description                                      | Example |
+| -------------- | ------ | ------------------------------------------------ | ------- |
+| `amount`       | Uint   | Amount in cent (min RM 0.10 <b>10 = RM 0.10</b>) | 100     |
+| `currencyType` | String | Current only support Ringgit Malaysia            | "MYR"   |
+
+### Inside Sides (parameter)
 
 | Parameter     | Type   | Description                | Example                      |
 | ------------- | ------ | -------------------------- | ---------------------------- |
@@ -210,118 +234,99 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `price`           | Object | Refer to the <b>Price parameter</b> | ( Refer to the Price parameter) |
 | `isAvailable`     | Bool   | Side Item is available              | true                            |
 
-### Inside Price (parameter)
-
-| Parameter      | Type   | Description                                      | Example |
-| -------------- | ------ | ------------------------------------------------ | ------- |
-| `amount`       | Uint   | Amount in cent (min RM 0.10 <b>10 = RM 0.10</b>) | 100     |
-| `currencyType` | String | Current only support Ringgit Malaysia            | "MYR"   |
-
-### Inside Preferences (parameter)
-
-| Parameter   | Type   | Description                | Example                      |
-| ----------- | ------ | -------------------------- | ---------------------------- |
-| `id`        | String | Preferences ID             | "5f698149585d7cc1ae35a38d"   |
-| `name`      | String | Preferences name           | "Sweetness"                  |
-| `minChoice` | Uint   | Set minimum choice         | 1                            |
-| `maxChoice` | Uint   | Set maximum choice         | 3                            |
-| `labels`    | Array  | Refer to explanation below | (Refer to explanation below) |
-
-### Inside Labels (parameter)
-
-| Parameter | Type   | Description | Example                    |
-| --------- | ------ | ----------- | -------------------------- |
-| `id`      | String | Label ID    | "5f698149585d7cc1ae35a38e" |
-| `name`    | String | Label name  | "Basic"                    |
-
 > Example Response
 
 ```json
 {
   "item": {
-    "itemId": "5f698149585d7cc1ae35a391",
     "categoryId": "",
     "categoryName": "",
-    "position": 2,
-    "name": "Test123",
+    "createdAt": "2020-10-14T03:01:52.103365832Z",
     "description": "Describe",
     "imageUrl": [],
-    "price": { "amount": 100, "currencyType": "MYR" },
     "isAvailable": true,
-    "quantity": 350,
-    "sideCategories": [
-      {
-        "id": "5f698149585d7cc1ae35a395",
-        "name": "Side Category 1",
-        "isAvailable": true,
-        "minChoice": 1,
-        "maxChoice": 2,
-        "sideItems": [
-          {
-            "referenceItemId": "5eaa7b72e0e9cd7b01a3a2b2",
-            "id": "5f698149585d7cc1ae35a392",
-            "name": "Coke",
-            "price": { "amount": 10, "currencyType": "MYR" },
-            "isAvailable": true
-          },
-          {
-            "id": "5f698149585d7cc1ae35a394",
-            "name": "New Drink",
-            "price": { "amount": 312, "currencyType": "MYR" },
-            "isAvailable": true
-          }
-        ]
-      },
-      {
-        "id": "5f698149585d7cc1ae35a398",
-        "name": "Side Category 2",
-        "isAvailable": true,
-        "minChoice": 1,
-        "maxChoice": 1,
-        "sideItems": [
-          {
-            "id": "5f698149585d7cc1ae35a396",
-            "name": "Salad 2",
-            "price": { "amount": 200, "currencyType": "MYR" },
-            "isAvailable": true
-          },
-          {
-            "id": "5f698149585d7cc1ae35a397",
-            "name": "Salad 1",
-            "price": { "amount": 100, "currencyType": "MYR" },
-            "isAvailable": true
-          }
-        ]
-      }
-    ],
+    "itemId": "5f866a202bdcc5950fcf3c8b",
+    "name": "Test123",
+    "position": 2,
     "preferences": [
       {
-        "id": "5f698149585d7cc1ae35a38d",
-        "name": "Sweetness",
-        "minChoice": 1,
-        "maxChoice": 3,
+        "id": "",
         "labels": [
           {
-            "id": "5f698149585d7cc1ae35a38e",
+            "id": "5f866a202bdcc5950fcf3c88",
             "name": "Basic"
           },
           {
-            "id": "5f698149585d7cc1ae35a38f",
+            "id": "5f866a202bdcc5950fcf3c89",
             "name": "Sweeet"
           },
           {
-            "id": "5f698149585d7cc1ae35a390",
+            "id": "5f866a202bdcc5950fcf3c8a",
             "name": "Very Sweet"
           }
-        ]
+        ],
+        "maxChoice": 3,
+        "minChoice": 1,
+        "name": "Sweetness"
       }
     ],
+    "price": {
+      "amount": 100,
+      "currencyType": "MYR"
+    },
+    "quantity": 350,
     "schedules": [
       ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"],
       ["2020-09-22T15:00:00.000Z", "2020-09-22T15:45:00.000Z"]
     ],
-    "createdAt": "2020-09-22T04:44:57.950398414Z",
-    "updatedAt": "2020-09-22T04:44:57.950398414Z"
+    "sides": [
+      {
+        "id": "",
+        "isAvailable": true,
+        "maxChoice": 2,
+        "minChoice": 1,
+        "name": "Side Category 1",
+        "sideItems": [
+          {
+            "id": "5f866a202bdcc5950fcf3c8c",
+            "isAvailable": true,
+            "name": "New Drink",
+            "price": {
+              "amount": 312,
+              "currencyType": "MYR"
+            }
+          }
+        ]
+      },
+      {
+        "id": "",
+        "isAvailable": true,
+        "maxChoice": 1,
+        "minChoice": 1,
+        "name": "Side Category 2",
+        "sideItems": [
+          {
+            "id": "5f866a202bdcc5950fcf3c8e",
+            "isAvailable": true,
+            "name": "Salad 2",
+            "price": {
+              "amount": 200,
+              "currencyType": "MYR"
+            }
+          },
+          {
+            "id": "5f866a202bdcc5950fcf3c8f",
+            "isAvailable": true,
+            "name": "Salad 1",
+            "price": {
+              "amount": 100,
+              "currencyType": "MYR"
+            }
+          }
+        ]
+      }
+    ],
+    "updatedAt": "2020-10-14T03:01:52.103365832Z"
   }
 }
 ```

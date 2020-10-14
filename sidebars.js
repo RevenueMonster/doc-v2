@@ -53,6 +53,7 @@ module.exports = {
     ],
 
     "à la carte": [
+      "alacarte-open/introduction",
       {
         type: "category",
         label: "Orders",
@@ -87,6 +88,7 @@ module.exports = {
           "alacarte-open/inventory/update-item-quantity-by-id",
         ],
       },
+      "alacarte-open/set-notification",
     ],
 
     "POS Integration": ["pos-integration"],
