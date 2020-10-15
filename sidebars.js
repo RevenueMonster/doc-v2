@@ -52,6 +52,45 @@ module.exports = {
       "payment/daily-settlement-report",
     ],
 
+    "à la carte": [
+      "alacarte-open/introduction",
+      {
+        type: "category",
+        label: "Orders",
+        items: [
+          "alacarte-open/orders/get-orders-by-store-id",
+          "alacarte-open/orders/get-order-by-id",
+          "alacarte-open/orders/update-order-status",
+          "alacarte-open/orders/refund-order",
+        ],
+      },
+      {
+        type: "category",
+        label: "Store",
+        items: [
+          "alacarte-open/store/get-store-by-id",
+          "alacarte-open/store/update-store-by-id-delivery",
+          "alacarte-open/store/update-store-by-id-types",
+          "alacarte-open/store/update-store-by-id-availability",
+        ],
+      },
+      {
+        type: "category",
+        label: "Inventory",
+        items: [
+          "alacarte-open/inventory/create-category-by-store-id",
+          "alacarte-open/inventory/get-categories-by-store-id",
+          "alacarte-open/inventory/update-category-by-id",
+          "alacarte-open/inventory/create-item",
+          "alacarte-open/inventory/get-items-by-category-id",
+          "alacarte-open/inventory/get-all-items-by-store-id",
+          "alacarte-open/inventory/update-item-by-id",
+          "alacarte-open/inventory/update-item-quantity-by-id",
+        ],
+      },
+      "alacarte-open/set-notification",
+    ],
+
     "POS Integration": ["pos-integration"],
 
     "Supported Payment Methods": [
