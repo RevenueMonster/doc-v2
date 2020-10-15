@@ -7,15 +7,14 @@ sidebar_label: Reverse
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
-URL : `https://sb-open.revenuemonster.my/v3/payment/reverse`<br/>
+URL : `https://open.revenuemonster.my/v3/payment/reverse`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/reverse`
 
 :::note
-If a transaction is timed out, the merchant should perform a reverse order before creating a new transaction. This is to prevent a double charge. 
+If a transaction is timed out, the merchant should perform a reverse order before creating a new transaction. This is to prevent a double charge.
 :::
 
 ### Request Parameters
-
 
 | Parameter | Type   | Required | Description                       | Example              |
 | --------- | ------ | -------- | --------------------------------- | -------------------- |
@@ -45,22 +44,22 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 <br />
 <strong>Transaction object (item):</strong>
 
-| Parameter       | Type     | Description                                      | Example                                    |
-| --------------- | -------- | ------------------------------------------------ | ------------------------------------------ |
-| `store`         | Object   | Store object                                     | (Refer to explanation below)               |
-| `referenceId`   | String   | Transaction ID (from WeChat server)              | ""                                         |
-| `transactionId` | String   | Transaction ID (from RM server)                  | "152161448229438994"                       |
-| `order`         | Object   | Order object                                     | (Refer to explanation below)               |
-| `payee`         | Object   | Object of userID made payment (payment sender)   | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
-| `platform`      | String   | Currently only support "OPEN_API"                | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](../method/quick-pay)       | ALL                                        |
-| `type`          | String   | Currently only support "QUICKPAY"                | "QUICKPAY"                                 |
-| `status`        | String   | Status returned from WeChat server               | "SUCCESS"                                  |
-| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"          | "MALAYSIA"                                 |
-| `error`         | String   | (Refer `Appendix: Error Codes`)                  | {}                                         |
-| `createdAt`     | DateTime | Creation date time of transaction                | "2018-03-21T06:41:22Z"                     |
-| `updatedAt`     | DateTime | Last update date time of transaction             | "2018-03-21T06:41:22Z"                     |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`) | "MYR"                                      |
+| Parameter       | Type     | Description                                          | Example                                    |
+| --------------- | -------- | ---------------------------------------------------- | ------------------------------------------ |
+| `store`         | Object   | Store object                                         | (Refer to explanation below)               |
+| `referenceId`   | String   | Transaction ID (from WeChat server)                  | ""                                         |
+| `transactionId` | String   | Transaction ID (from RM server)                      | "152161448229438994"                       |
+| `order`         | Object   | Order object                                         | (Refer to explanation below)               |
+| `payee`         | Object   | Object of userID made payment (payment sender)       | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
+| `platform`      | String   | Currently only support "OPEN_API"                    | "OPEN_API"                                 |
+| `method`        | String   | [RM currently supported method](../method/quick-pay) | ALL                                        |
+| `type`          | String   | Currently only support "QUICKPAY"                    | "QUICKPAY"                                 |
+| `status`        | String   | Status returned from WeChat server                   | "SUCCESS"                                  |
+| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"              | "MALAYSIA"                                 |
+| `error`         | String   | (Refer `Appendix: Error Codes`)                      | {}                                         |
+| `createdAt`     | DateTime | Creation date time of transaction                    | "2018-03-21T06:41:22Z"                     |
+| `updatedAt`     | DateTime | Last update date time of transaction                 | "2018-03-21T06:41:22Z"                     |
+| `currencyType`  | String   | Currency notation (currently only support `MYR`)     | "MYR"                                      |
 
 <br />
 
