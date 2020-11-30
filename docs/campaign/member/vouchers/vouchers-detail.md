@@ -38,13 +38,13 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/me/vouchers?country
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `items`   | Array  | Transaction object                                                                                        | (Refer to explanation below) |
+| `items`   | Array  | Vouchers object                                                                                           | (Refer to explanation below) |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 | `meta`    | Object | Inside `meta` have `count` key example `"count": 2 `                                                      | 2                            |
 
 <br />
 
-<strong>Loyalty object (item):</strong>
+<strong>Vouchers object (item):</strong>
 
 | Parameter            | Type     | Description                                                                      | Example                                                            |
 | -------------------- | -------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------ |

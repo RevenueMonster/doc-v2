@@ -37,12 +37,12 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/me/reward/157597166
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `item`    | Object | Transaction object                                                                                        | (Refer to explanation below) |
+| `item`    | Object | Reward object                                                                                             | (Refer to explanation below) |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 
 <br />
 
-<strong>Loyalty object (item):</strong>
+<strong>Reward object (item):</strong>
 
 | Parameter         | Type     | Description                                                         | Example                                        |
 | ----------------- | -------- | ------------------------------------------------------------------- | ---------------------------------------------- |

@@ -104,6 +104,8 @@ module.exports = {
         type: "category",
         label: "Member",
         items: [
+          "campaign/member/register-loyalty-member",
+          "campaign/member/check-loyalty-member",
           "campaign/member/profile",
           {
             type: "category",
