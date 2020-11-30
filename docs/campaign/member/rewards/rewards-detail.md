@@ -1,7 +1,7 @@
 ---
 id: rewards-detail
-title: Rewards
-sidebar_label: Rewards
+title: Get Rewards
+sidebar_label: Get Rewards
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

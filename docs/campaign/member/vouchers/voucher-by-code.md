@@ -1,7 +1,7 @@
 ---
 id: voucher-by-code
-title: Voucher By Code
-sidebar_label: Voucher By Code
+title: Get Voucher By Code
+sidebar_label: Get Voucher By Code
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

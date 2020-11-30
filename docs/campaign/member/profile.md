@@ -1,7 +1,7 @@
 ---
 id: profile
-title: Profile
-sidebar_label: Profile
+title: Get Profile
+sidebar_label: Get Profile
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";

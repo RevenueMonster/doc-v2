@@ -41,7 +41,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member/check" \
 
 | Parameter | Type   | Description                                                                                               | Example   |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | --------- |
-| `item`    | Bool   |                                                                                                           | true      |
+| `item`    | Object | Inside `item` is an `"exist":true`                                                                        | true      |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS" |
 
 <br />
@@ -50,7 +50,9 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member/check" \
 
 ```json
 {
-  "item": true,
+  "item": {
+    "exist": true
+  },
   "code": "SUCCESS"
 }
 ```
