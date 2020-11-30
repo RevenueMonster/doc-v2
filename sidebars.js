@@ -102,6 +102,37 @@ module.exports = {
     "Loyalty & Voucher": [
       {
         type: "category",
+        label: "Member",
+        items: [
+          "campaign/member/profile",
+          {
+            type: "category",
+            label: "Vouchers",
+            items: [
+              "campaign/member/vouchers/vouchers-detail",
+              "campaign/member/vouchers/voucher-by-code",
+            ],
+          },
+          {
+            type: "category",
+            label: "Rewards",
+            items: [
+              "campaign/member/rewards/rewards-detail",
+              "campaign/member/rewards/reward-by-id",
+            ],
+          },
+          {
+            type: "category",
+            label: "Redeem",
+            items: [
+              "campaign/member/redeem/redeem-reward",
+              "campaign/member/redeem/redeem-voucher",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
         label: "Loyalty",
         items: [
           {
