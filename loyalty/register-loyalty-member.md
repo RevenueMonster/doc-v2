@@ -3,7 +3,7 @@
 ```
 POST /v3/loyalty/member
 
-Headers 
+Headers
 
 {
     authorization: Bearer {{token}}
@@ -41,14 +41,14 @@ Body
         "key": "EhIKBk1lbWJlchDCkZOfvLyOphYSGQoNTWVtYmVyUHJvZmlsZRCZp_uzvLyOphY",
         "name": "Oska",
         "email": "",
-        "nric": "990714055405",
-        "birthDate": "1999-07-14",
+        "nric": "950711015205",
+        "birthDate": "1995-07-11",
         "gender": "MALE",
         "state": "JOHOR",
         "address": {
-            "addressLine1": "1, Jalan Pertanian 25",
+            "addressLine1": "17, Jalan Pertanian 25",
             "addressLine2": "Taman Universiti",
-            "postcode": "81300",
+            "postcode": "81301",
             "city": "SKUDAI",
             "state": "JOHOR",
             "country": "MALAYSIA"

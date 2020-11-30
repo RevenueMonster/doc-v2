@@ -36,12 +36,12 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/me/voucher/rms@xR43
 
 | Parameter | Type   | Description                                                                                               | Example                      |
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `item`    | Object | Transaction object                                                                                        | (Refer to explanation below) |
+| `item`    | Object | Voucher object                                                                                            | (Refer to explanation below) |
 | `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
 
 <br />
 
-<strong>Loyalty object (item):</strong>
+<strong>Voucher object (item):</strong>
 
 | Parameter            | Type     | Description                                                                      | Example                                                            |
 | -------------------- | -------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
