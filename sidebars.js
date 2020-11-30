@@ -111,6 +111,7 @@ module.exports = {
             items: [
               "campaign/member/vouchers/vouchers-detail",
               "campaign/member/vouchers/voucher-by-code",
+              "campaign/member/vouchers/redeem-voucher",
             ],
           },
           {
@@ -119,14 +120,7 @@ module.exports = {
             items: [
               "campaign/member/rewards/rewards-detail",
               "campaign/member/rewards/reward-by-id",
-            ],
-          },
-          {
-            type: "category",
-            label: "Redeem",
-            items: [
-              "campaign/member/redeem/redeem-reward",
-              "campaign/member/redeem/redeem-voucher",
+              "campaign/member/rewards/redeem-reward",
             ],
           },
         ],
