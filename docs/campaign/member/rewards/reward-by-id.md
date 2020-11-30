@@ -1,7 +1,7 @@
 ---
 id: reward-by-id
-title: Reward By ID
-sidebar_label: Reward By ID
+title: Get Reward By ID
+sidebar_label: Get Reward By ID
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
