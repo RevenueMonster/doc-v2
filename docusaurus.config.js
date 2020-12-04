@@ -11,11 +11,11 @@ module.exports = {
 
   plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
   themeConfig: {
-    colorMode: {
-      defaultMode: "light",
-      disableSwitch: true,
-    },
-    // disableDarkMode: true,
+    // colorMode: {
+    //   defaultMode: "light",
+    //   disableSwitch: true,
+    // },
+    disableDarkMode: true,
     navbar: {
       logo: {
         alt: "My Site Logo",
@@ -23,7 +23,7 @@ module.exports = {
         href: "https://revenuemonster.my",
       },
       // links
-      items: [
+      links: [
         {
           to: "docs/introduction/overview",
           activeBasePath: "docs",

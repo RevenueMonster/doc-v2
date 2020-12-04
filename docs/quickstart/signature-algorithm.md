@@ -87,7 +87,7 @@ Put this **Signature of Request Data** into header under **X-Signature**, constr
 
 ```bash
 curl --request PATCH \
- --url 'https://sb-open.revenuemonster.my/store/1662168764176583360' \
+ --url 'https://sb-open.revenuemonster.my/v3/store/1662168764176583360' \
  --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjIwMTgtMDMtMTMiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsiKiJdLCJleHAiOjE1MjE2MjkyNTYsImlhdCI6MTUyMTYyMjA1NywiaXNzIjoiaHR0cHM6Ly9zYi1vYXV0aC5yZXZlbnVlbW9uc3Rlci5teSIsImp0aSI6IkVod0tFRTlCZFhSb1FXTmpaWE56Vkc5clpXNFF5cmYza3EzTDY4QnoiLCJuYmYiOjE1MjE2MjIwNTcsInN1YiI6IkVoUUtDRTFsY21Ob1lXNTBFSlhWemQzd3JhcVRPUklRQ2dSVmMyVnlFSXlKcUl6dnlNUFZjUSJ9.dJknY9MZHLNrKx1p7gZxS0_oA3uXLWplDU1r1dpwxIbmdB6yw4tQBTXKlWArDfKLlBDn6v22_gT5Px7sdCMj7e5M9eRoJoMnoPnslgYpmJJ5kjqAbKU7dUxKb1OzFLrvmtSK9r-FRLVtMFHioWYpwgSvSPBgZ6lAYkUyDzH7aKadFYtQcBuJR0hlq2CXtP0mzbHOeu2q6giONf3E5-XqS8lLRtuHPAbJ7_YFwo0Oe2zc6h05IOocmx_NvBVPfDBnuygTU063h70Q987MYeGDV_Os4N6N_I4b-GoHprEPtmntB1RJPrFrY28hvvoUfDHXHZVXT1GlrsozrkWV4EjbTw' \
  --header 'Content-Type: application/json' \
  --header 'X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN' \
@@ -258,10 +258,54 @@ Sandbox URL : `https://sb-open.revenuemonster.my/tool/signature/generate`
 ### Invalid Request Signature
 
 :::note
-If you received **INVALID_REQUEST_SIGNATURE**
+
+<!-- If you received **INVALID_REQUEST_SIGNATURE** -->
+
+You can refer the below Response if you received **INVALID_REQUEST_SIGNATURE** <br/>
+we will guide you step by step to fix the issue
 
 ```json
 {
+  "debug": {
+    "preVerifyContent": {
+      "step1": {
+        "content": "{\"layoutVersion\":\"v2\",\"method\":[\"GOBIZ_MY\"],\"notifyUrl\":\"https://dev-rm-api.ap.ngrok.io\",\"order\":{\"additionalData\":\"world\",\"amount\":10,\"currencyType\":\"MYR\",\"detail\":\"hello\",\"id\":\"721115\",\"title\":\"hello\"},\"redirectUrl\":\"https://revenuemonster.my\",\"storeId\":\"10946114768247530\",\"type\":\"WEB_PAYMENT\"}",
+        "remark": "Sort the json key alphabetically"
+      },
+      "step2": {
+        "content": "eyJsYXlvdXRWZXJzaW9uIjoidjIiLCJtZXRob2QiOlsiR09CSVpfTVkiXSwibm90aWZ5VXJsIjoiaHR0cHM6Ly9kZXYtcm0tYXBpLmFwLm5ncm9rLmlvIiwib3JkZXIiOnsiYWRkaXRpb25hbERhdGEiOiJ3b3JsZCIsImFtb3VudCI6MTAsImN1cnJlbmN5VHlwZSI6Ik1ZUiIsImRldGFpbCI6ImhlbGxvIiwiaWQiOiI3MjExMTUiLCJ0aXRsZSI6ImhlbGxvIn0sInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9yZXZlbnVlbW9uc3Rlci5teSIsInN0b3JlSWQiOiIxMDk0NjExNDc2ODI0NzUzMCIsInR5cGUiOiJXRUJfUEFZTUVOVCJ9",
+        "remark": "Encode the data using Base64 format"
+      },
+      "step3": {
+        "content": "data=eyJsYXlvdXRWZXJzaW9uIjoidjIiLCJtZXRob2QiOlsiR09CSVpfTVkiXSwibm90aWZ5VXJsIjoiaHR0cHM6Ly9kZXYtcm0tYXBpLmFwLm5ncm9rLmlvIiwib3JkZXIiOnsiYWRkaXRpb25hbERhdGEiOiJ3b3JsZCIsImFtb3VudCI6MTAsImN1cnJlbmN5VHlwZSI6Ik1ZUiIsImRldGFpbCI6ImhlbGxvIiwiaWQiOiI3MjExMTUiLCJ0aXRsZSI6ImhlbGxvIn0sInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9yZXZlbnVlbW9uc3Rlci5teSIsInN0b3JlSWQiOiIxMDk0NjExNDc2ODI0NzUzMCIsInR5cGUiOiJXRUJfUEFZTUVOVCJ9&method=post&nonceStr=XAYZRZNLGCKSTURRFKBIGYALUKLCLJOG&requestUrl=https://sb-open.revenuemonster.my/v3/payment/online&signType=sha256&timestamp=1599467903",
+        "remark": "Construct plain text parameters on this format, if the body is empty then the `data` parameter can be skip"
+      },
+      "step4": {
+        "content": "data=eyJsYXlvdXRWZXJzaW9uIjoidjIiLCJtZXRob2QiOlsiR09CSVpfTVkiXSwibm90aWZ5VXJsIjoiaHR0cHM6Ly9kZXYtcm0tYXBpLmFwLm5ncm9rLmlvIiwib3JkZXIiOnsiYWRkaXRpb25hbERhdGEiOiJ3b3JsZCIsImFtb3VudCI6MTAsImN1cnJlbmN5VHlwZSI6Ik1ZUiIsImRldGFpbCI6ImhlbGxvIiwiaWQiOiI3MjExMTUiLCJ0aXRsZSI6ImhlbGxvIn0sInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9yZXZlbnVlbW9uc3Rlci5teSIsInN0b3JlSWQiOiIxMDk0NjExNDc2ODI0NzUzMCIsInR5cGUiOiJXRUJfUEFZTUVOVCJ9&method=post&nonceStr=XAYZRZNLGCKSTURRFKBIGYALUKLCLJOG&requestUrl=https://sb-open.revenuemonster.my/v3/payment/online&signType=sha256&timestamp=1599467903",
+        "remark": "Sign this content using sha256 with rsa private key and make sure the public key have been uploaded to the portal"
+      },
+      "step5": {
+        "remark": "The signature that generated from step 4, pass on the header X-Signature with prefix the sign type, e.g: sha256 {{ signatureContent }}l"
+      }
+    },
+    "requestHeader": {
+      "X-Nonce-Str": {
+        "currentValue": "XAYZRZNLGCKSTURRFKBIGYALUKLCLJOG",
+        "isValid": true,
+        "remark": "Make sure the nonce str is should not contain space and must unique at least for 120 second, if not the server will throw duplicate request error"
+      },
+      "X-Signature": {
+        "currentValue": "sha256 XvedDW8H2gqGL5gMzTHqDy1PXX3OqRF09WuQDkeCDwuinOAsPstcPOSefUwkyHPM9WPNKKHyR5qXbKNLC7UgQyGi8Ynio03kDo0p+g3BqXaUT1tpo5D8kv42Kh2S8CW4RkX2Dkf+Yxi2XMQ8l3kzPZaRyhudaGerUZony4Npzf63p4+oTBbXE01uX/4x/WL57+zkaaVRc1KlJsLdGsBmLlPOHLana7udJffJyxXhOmyokBuJ4GoOC8JpDG9oaKCNMZ88ow9CWWB0yRPrK2KeaEDwzCm2Jh8IFKw1gS6avQAwsjychZWv5XmAXkZ8ZQrnLXJquA09QpLxPTtOeQC9SA==",
+        "isValid": false,
+        "remark": "The signature is invalid, please check preVerifyContent parameter on how to generate the signature or go to our API documentation https://doc.revenuemonster.my/docs/quickstart/signature-algorithm"
+      },
+      "X-Timestamp": {
+        "currentValue": "1599467903",
+        "isValid": false,
+        "remark": "Make sure the timestamp generated on UTC timezone and must be maximum the time difference is 120 second from the request send to the server, if not the server will throw invalid timestamp"
+      }
+    }
+  },
   "error": {
     "code": "INVALID_REQUEST_SIGNATURE",
     "message": "The request signature is invalid"
