@@ -6,7 +6,8 @@ sidebar_label: Signature Algorithm
 
 :::note
 
-Signature algorithm is used to sign your payment API request with a private key to obtain additional security.
+- Signature algorithm is used to sign your payment API request with a private key to obtain additional security.
+- **Data object** needs to be sorted, the **Nested object** also needs to be sorted.
 
 :::
 

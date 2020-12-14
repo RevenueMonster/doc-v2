@@ -7,7 +7,7 @@ sidebar_label: Notify URL
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
-Example of Notify URL Response
+Notify URL or callback URL to inform server on transaction status after payment made
 :::
 
 ### Response Parameters

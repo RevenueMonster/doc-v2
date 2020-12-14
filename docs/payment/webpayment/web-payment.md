@@ -51,20 +51,23 @@ URL : `https://open.revenuemonster.my/v3/payment/online`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 :::note
-To create a unified payment checkout page for your website and Mobile.
+
+- To create a unified payment checkout page for your website and Mobile.
+- **Data object** needs to be sorted, the **Nested object** also needs to be sorted.
+
 :::
 
 ### Request Parameters
 
-| Parameter       | Type     | Required | Description                                                                                     | Example                                                                                                               |
-| --------------- | -------- | -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `order`         | Object   | Yes      | Object of order                                                                                 | (Refer to explanation below)                                                                                          |
-| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment)                                     | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
-| `type`          | String   | Yes      | Obejct of type                                                                                  | (Refer to explanation below)                                                                                          |
-| `storeId`       | String   | Yes      | ID of the store to create QR code                                                               | "10946114768247530"                                                                                                   |
-| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                           | "https://google.com"                                                                                                  |
-| `notifyUrl`     | String   | Yes      | This is a notify URL or callback URL to inform server on transaction status after payment made. | "https://google.com"                                                                                                  |
-| `layoutVersion` | String   | Optional | Select layout for Web payment                                                                   | v1 / **v2 (Supported Credit Card)**                                                                                   |
+| Parameter       | Type     | Required | Description                                                 | Example                                                                                                               |
+| --------------- | -------- | -------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `order`         | Object   | Yes      | Object of order                                             | (Refer to explanation below)                                                                                          |
+| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment) | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
+| `type`          | String   | Yes      | Obejct of type                                              | (Refer to explanation below)                                                                                          |
+| `storeId`       | String   | Yes      | ID of the store to create QR code                           | "10946114768247530"                                                                                                   |
+| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                       | "https://google.com"                                                                                                  |
+| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](./notify-url)              | "https://google.com"                                                                                                  |
+| `layoutVersion` | String   | Optional | Select layout for Web payment                               | v1 / **v2 (Supported Credit Card)**                                                                                   |
 
 <br />
 
