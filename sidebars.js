@@ -173,6 +173,8 @@ module.exports = {
       },
     ],
 
+    "Mini Program":["alipay-mini-program"],
+
     Settings: [
       {
         type: "category",
