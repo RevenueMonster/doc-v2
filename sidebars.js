@@ -44,6 +44,7 @@ module.exports = {
           "payment/webpayment/get-online-transaction",
         ],
       },
+      "payment/alipay-mini-program",
       "payment/refund",
       "payment/reverse",
       "payment/query-status-by-order-id",
@@ -172,8 +173,6 @@ module.exports = {
         items: ["campaign/chop-stamp", "campaign/gourmet-card"],
       },
     ],
-
-    "Mini Program":["alipay-mini-program"],
 
     Settings: [
       {

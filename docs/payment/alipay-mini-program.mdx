@@ -1,7 +1,7 @@
 ---
 id: alipay-mini-program
-title: Alipay Mini Program Payment
-sidebar_label: Alipay Mini Program Payment
+title: Alipay Mini Program
+sidebar_label: Alipay Mini Program
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -16,11 +16,11 @@ Create a payment in Alipay Mini Program
 
 ### Request Parameters
 
-| Parameter    | Type   | Description                                                                                             | Example               |
-| ------------ | ------ | ------------------------------------------------------------------------------------------------------- | --------------------- |
-| `checkoutId` | String | refer to [web-payment](././payment/webpayment/web-payment#response-parameters) to get your `checkoutId` | "1607935374438928096" |
-| `method`     | String | [RM currently supported method](././method/web-payment)                                                 | "ALIPAY_CN"           |
-| `type`       | String | `MINI_PROGRAM`                                                                                          | "MINI_PROGRAM"        |
+| Parameter    | Type   | Description                                                                                   | Example               |
+| ------------ | ------ | --------------------------------------------------------------------------------------------- | --------------------- |
+| `checkoutId` | String | refer to [web-payment](./webpayment/web-payment#response-parameters) to get your `checkoutId` | "1607935374438928096" |
+| `method`     | String | [RM currently supported method](../method/web-payment)                                        | "ALIPAY_CN"           |
+| `type`       | String | `MINI_PROGRAM`                                                                                | "MINI_PROGRAM"        |
 
 ```json
 curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \
