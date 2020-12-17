@@ -54,25 +54,25 @@ eyJjdXJyZW5jeVR5cGUiOiJNWVIiLCJvdXRUcmFkZU5vIjoiMTgwNjA2MDYxMjU5NTUzNzg1MTMzOSIs
 
 ### Step 3: Construct plain text parameters
 
-| Parameter    | Type   | Required | Description                                              | Example                                                        |
-| ------------ | ------ | -------- | -------------------------------------------------------- | -------------------------------------------------------------- |
-| `data`       | String | Yes      | Base64 data body from Step 2.                            | Refer to Step 2                                                |
-| `method`     | String | Yes      | HTTP call method used                                    | "patch"                                                        |
-| `nonceStr`   | String | Yes      | Random string                                            | "VYNknZohxwicZMaWbNdBKUrnrxDtaRhN"                             |
-| `requestURL` | String | Yes      | Request URL must be exactly the same, together with URL. | https://sb-open.revenuemonster.my/v3/store/1662168764176583360 |
-| `signType`   | String | Yes      | Sign Type, prefer SHA-256                                | "sha256"                                                       |
-| `timestamp`  | String | Yes      | UNIX timestamp of request                                | "1527407052"                                                   |
+| Parameter    | Type   | Required | Description                                                        | Example                                                        |
+| ------------ | ------ | -------- | ------------------------------------------------------------------ | -------------------------------------------------------------- |
+| `data`       | String | Yes      | Base64 data body from Step 2.                                      | Refer to Step 2                                                |
+| `method`     | String | Yes      | HTTP call method used                                              | "patch"                                                        |
+| `nonceStr`   | String | Yes      | Random string                                                      | "VYNknZohxwicZMaWbNdBKUrnrxDtaRhN"                             |
+| `requestURL` | String | Yes      | API URL that you call must be exactly the same, together with URL. | https://sb-open.revenuemonster.my/v3/store/1662168764176583360 |
+| `signType`   | String | Yes      | Sign Type, prefer SHA-256                                          | "sha256"                                                       |
+| `timestamp`  | String | Yes      | UNIX timestamp of request                                          | "1527407052"                                                   |
 
 **Example**
 :::note
-data=eyJjdXJyZW5jeVR5cGUiOiJNWVIiLCJvdXRUcmFkZU5vIjoiMTgwNjA2MDYxMjU5NTUzNzg1MTMzOSIsInJlYXNvbiI6ImhlbGxvIiwicmVmdW5kIjp7ImFtb3VudCI6MTAsInR5cGUiOiJGVUxMIn0sInRvdGFsQW1vdW50IjoxMH0=&method=patch&nonceStr=VYNknZohxwicZMaWbNdBKUrnrxDtaRhN&requestUrl=https://sb-open.revenuemonster.my/v3/store/1662168764176583360&signType=sha256&timestamp=1527407052
+data=eyJjdXJyZW5jeVR5cGUiOiJNWVIiLCJvdXRUcmFkZU5vIjoiMTgwNjA2MDYxMjU5NTUzNzg1MTMzOSIsInJlYXNvbiI6ImhlbGxvIiwicmVmdW5kIjp7ImFtb3VudCI6MTAsInR5cGUiOiJGVUxMIn0sInRvdGFsQW1vdW50IjoxMH0=&#38;method=patch&#38;nonceStr=VYNknZohxwicZMaWbNdBKUrnrxDtaRhN&#38;requestUrl=https://sb-open.revenuemonster.my/v3/store/1662168764176583360&#38;signType=sha256&#38;timestamp=1527407052
 :::
 
 ### Step 4: Sign with CLIENT PRIVATE KEY
 
-| Parameter | Type   | Required | Description                                                  | Example     |
-| --------- | ------ | -------- | ------------------------------------------------------------ | ----------- |
-| `data`    | String | Yes      | Signature of request data in Step 1 using CLIENT PRIVATE KEY | Refer below |
+| Parameter | Type   | Required | Description                                              | Example     |
+| --------- | ------ | -------- | -------------------------------------------------------- | ----------- |
+| `data`    | String | Yes      | Sign the request data in Step 1 using CLIENT PRIVATE KEY | Refer below |
 
 :::note
 **Example of Signature Request Data**
