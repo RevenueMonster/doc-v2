@@ -59,15 +59,16 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 ### Request Parameters
 
-| Parameter       | Type     | Required | Description                                                 | Example                                                                                                               |
-| --------------- | -------- | -------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `order`         | Object   | Yes      | Object of order                                             | (Refer to explanation below)                                                                                          |
-| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment) | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
-| `type`          | String   | Yes      | Obejct of type                                              | (Refer to explanation below)                                                                                          |
-| `storeId`       | String   | Yes      | ID of the store to create QR code                           | "10946114768247530"                                                                                                   |
-| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                       | "https://google.com"                                                                                                  |
-| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](./notify-url)              | "https://google.com"                                                                                                  |
-| `layoutVersion` | String   | Optional | Select layout for Web payment                               | v1 / **v2 (Supported Credit Card)**                                                                                   |
+| Parameter       | Type     | Required | Description                                                 | Example                                                                      |
+| --------------- | -------- | -------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `order`         | Object   | Yes      | Object of order                                             | (Refer to explanation below)                                                 |
+| `customer`      | Object   | Yes      | Object of customer                                          | (Refer to explanation below)                                                 |
+| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment) | []                                                                           |
+| `type`          | String   | Yes      | Object of type                                              | (Refer to explanation below)                                                 |
+| `storeId`       | String   | Yes      | ID of the store to create QR code                           | "10946114768247530"                                                          |
+| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                       | "https://google.com"                                                         |
+| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](./notify-url)              | "https://google.com"                                                         |
+| `layoutVersion` | String   | Optional | Select layout for Web payment                               | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
 
 <br />
 
@@ -81,6 +82,17 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 | `amount`         | Uint   | Yes      | Amount of order in cent. Only required when "isPrefillAmount" = true. (min RM 0.10 or amount: 10) | 100                            |
 | `currencyType`   | String | Yes      | Currency notation (currently only support `MYR`)                                                  | "MYR"                          |
 | `id`             | String | Order ID | "6170506694335521334"                                                                             |
+
+<br />
+
+<strong>Customer object (customer):</strong>
+
+| Parameter     | Type   | Required | Description                            | Example    |
+| ------------- | ------ | -------- | -------------------------------------- | ---------- |
+| `userId`      | String | Yes      | if tokenization enable need **userId** | "13245876" |
+| `email`       | String | Optional | Customer Email                         | ""         |
+| `countryCode` | String | Optional | Customer Country Code                  | ""         |
+| `phoneNumber` | String | Optional | Customer Phone Number                  | ""         |
 
 <br />
 
@@ -120,12 +132,18 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
 	    \"currencyType\": \"MYR\",
 	    \"id\": \"13234353336\"
     },
+    \"customer\": {
+      \"userId\": \"13245876\",
+      \"email\": "",
+      \"countryCode\": "",
+      \"phoneNumber\": "",
+    },
     \"method\": [],
     \"type\": \"WEB_PAYMENT\",
     \"storeId\": \"977596145540933417\",
     \"redirectUrl\": \"https://google.com\",
     \"notifyUrl\": \"https://google.com\",
-    \"layoutVersion\": \"v2\"
+    \"layoutVersion\": \"v3\"
 }"
 ```
 
@@ -139,10 +157,10 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
 <br />
 <strong>item Object (item):</strong>
 
-| Parameter    | Type   | Description                                                            | Example                                                   |
-| ------------ | ------ | ---------------------------------------------------------------------- | --------------------------------------------------------- |
-| `checkoutId` | String | Code to identify web payment url                                       | "1548316308361173347"                                     |
-| `url`        | String | Example to form checkout URL. Note: to change base URL to desired URL. | "http://localhost:8081/checkout?code=1548316308361173347" |
+| Parameter    | Type   | Description                                                            | Example                                                                   |
+| ------------ | ------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `checkoutId` | String | Code to identify web payment url                                       | "1548316308361173347"                                                     |
+| `url`        | String | Example to form checkout URL. Note: to change base URL to desired URL. | "https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347" |
 
 > Example Response
 
