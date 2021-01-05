@@ -151,6 +151,32 @@ import styles from "../../src/pages/styles.module.css"
     </td>
   </tr>
   <tr>
+    <td>SHOPEEPAY_MY</td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+  </tr>
+  <tr>
+    <td>FPX_MY</td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+    <td>
+     <Card
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+  </tr>
+  <tr>
     <td>GOBIZ_MY</td>
     <td>
      <Card
