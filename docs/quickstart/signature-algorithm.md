@@ -28,16 +28,16 @@ sidebar_label: Signature Algorithm
 
 #### Example of Web/Mobile Payment
 
-| Parameter       | Type     | Required | Description                                                 | Example                                                                      |
-| --------------- | -------- | -------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `order`         | Object   | Yes      | Object of order                                             | (Refer to explanation below)                                                 |
-| `customer`      | Object   | Yes      | Object of customer                                          | (Refer to explanation below)                                                 |
-| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment) | []                                                                           |
-| `type`          | String   | Yes      | Object of type                                              | (Refer to explanation below)                                                 |
-| `storeId`       | String   | Yes      | ID of the store to create QR code                           | "10946114768247530"                                                          |
-| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                       | "https://google.com"                                                         |
-| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](./notify-url)              | "https://google.com"                                                         |
-| `layoutVersion` | String   | Optional | Select layout for Web payment                               | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
+| Parameter       | Type     | Required | Description                                                                                        | Example                                                                      |
+| --------------- | -------- | -------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `order`         | Object   | Yes      | Object of order                                                                                    | (Refer to explanation below)                                                 |
+| `customer`      | Object   | Yes      | Object of customer                                                                                 | (Refer to explanation below)                                                 |
+| `method`        | []String | Yes      | [RM currently supported method](https://doc.revenuemonster.my/docs/method/web-payment)             | []                                                                           |
+| `type`          | String   | Yes      | Object of type                                                                                     | (Refer to explanation below)                                                 |
+| `storeId`       | String   | Yes      | ID of the store to create QR code                                                                  | "10946114768247530"                                                          |
+| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                              | "https://google.com"                                                         |
+| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](https://doc.revenuemonster.my/docs/payment/webpayment/notify-url) | "https://google.com"                                                         |
+| `layoutVersion` | String   | Optional | Select layout for Web payment                                                                      | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
 
 <br />
 
