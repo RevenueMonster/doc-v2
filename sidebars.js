@@ -147,7 +147,6 @@ module.exports = {
             label: "Loyalty Members",
             items: [
               "campaign/loyalty/loyalty-members/member-authorize",
-              "campaign/loyalty/loyalty-members/get-member-token",
               "campaign/loyalty/loyalty-members/loyalty-members",
               "campaign/loyalty/loyalty-members/loyalty-member",
               "campaign/loyalty/loyalty-members/loyalty-member-history",
