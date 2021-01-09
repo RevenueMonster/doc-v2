@@ -11,19 +11,13 @@ URL : `https://open.revenuemonster.my/v3/loyalty/member/authorize`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/member/authorize`
 
 :::note
-Get Member Authorize Token
+Get Member Authorized URL
 :::
 
 ### Request Parameters
 
-:::note
-The Default Value of redirect is **false**.<br/>
-If redirect is **true** , it will redirect to loyalty app
-:::
-
 | Parameter     | Type   | Description         | Example     |
 | ------------- | ------ | ------------------- | ----------- |
-| `redirect`    | Bool   |                     | false       |
 | `countryCode` | String | Country Code        | "60"        |
 | `phoneNumber` | String | Member phone number | "187824153" |
 
@@ -43,7 +37,6 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/loyalty/mem
 
 ```json
 {
-  "redirect": false,
   "countryCode": "60",
   "phoneNumber": "187824152"
 }
@@ -51,10 +44,10 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/loyalty/mem
 
 ### Response Parameters
 
-| Parameter | Type   | Description    | Example       |
-| --------- | ------ | -------------- | ------------- |
-| `profile` | Object | Member Profile | Show as Below |
-| `token`   | String | Access Token   | Show as Below |
+| Parameter | Type   | Description              | Example       |
+| --------- | ------ | ------------------------ | ------------- |
+| `profile` | Object | Member Profile           | Show as Below |
+| `url`     | String | Loyalty App Redirect URL | Show as Below |
 
 <br />
 
@@ -89,6 +82,6 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/loyalty/mem
     "createdAt": "2018-10-19T03:39:47Z",
     "updatedAt": "2020-11-30T04:28:15Z"
   },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIyMDIxLTAxLTExVDAzOjM5OjIwWiIsImtleSI6IkVoSUtCazFsYldKbGNoRE91T0t6MjRYV2tnNFNHUW9OVFdWdFltVnlVSEp2Wm1sc1pSRGwtTVR4aVBPUGp6WSIsInR5cGUiOiJtZW1iZXIifQ.GmVRrFpeBSFF0-vhZpvnsZlEpv3j2Rsrlbn4lNCt3v0"
+  "url": "http://sb-open.revenuemonster.my/loyalty-redirect?merchantId=4118165203679668885&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIyMDIxLTAxLTExVDA4OjEwOjU5WiIsImtleSI6IkVoSUtCazFsYldKbGNoRE91T0t6MjRYV2tnNFNHUW9OVFdWdFltVnlVSEp2Wm1sc1pSRGwtTVR4aVBPUGp6WSIsInR5cGUiOiJtZW1iZXIifQ.IHmAKSJJYfKhev6Ccjve9kLfWwddzMuGQS2s7IUeCMA"
 }
 ```
