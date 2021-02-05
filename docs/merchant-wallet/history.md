@@ -1,5 +1,5 @@
 ---
-id: merchant-wallet-history 
+id: history 
 title: Check Wallet History
 sidebar_label: Check Wallet History
 ---
