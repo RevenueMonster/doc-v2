@@ -1,5 +1,5 @@
 ---
-id: merchant-wallet-balance
+id: check-balance
 title: Check Balance
 sidebar_label: Check Balance
 ---

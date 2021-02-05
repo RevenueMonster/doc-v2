@@ -1,5 +1,5 @@
 ---
-id: merchant-topup-history
+id: topup-history
 title: Topup History
 sidebar_label: Topup History
 ---

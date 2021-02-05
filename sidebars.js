@@ -151,6 +151,7 @@ module.exports = {
               "campaign/loyalty/loyalty-members/loyalty-member",
               "campaign/loyalty/loyalty-members/loyalty-member-history",
               "campaign/loyalty/loyalty-members/bulk-create-members",
+              "campaign/loyalty/loyalty-members/topup-balance"
             ],
           },
         ],
@@ -174,7 +175,12 @@ module.exports = {
         items: ["campaign/chop-stamp", "campaign/gourmet-card"],
       },
     ],
-
+    'Merchant Wallet': [
+      "merchant-wallet/check-balance",
+      "merchant-wallet/topup-wallet",
+      "merchant-wallet/history",
+      "merchant-wallet/topup-history",
+    ],
     Settings: [
       {
         type: "category",
