@@ -151,7 +151,8 @@ module.exports = {
               "campaign/loyalty/loyalty-members/loyalty-member",
               "campaign/loyalty/loyalty-members/loyalty-member-history",
               "campaign/loyalty/loyalty-members/bulk-create-members",
-              "campaign/loyalty/loyalty-members/topup-balance"
+              "campaign/loyalty/loyalty-members/topup-online",
+              "campaign/loyalty/loyalty-members/topup-offline"
             ],
           },
         ],
