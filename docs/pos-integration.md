@@ -16,13 +16,13 @@ Integrate RM Terminal with POS System or Kiosk machine (using local callback). T
 
 ### Request Parameters
 
-| Parameter       | Type   | Required | Description                                                                                                                             | Example               |
-| --------------- | ------ | :------: | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| `transactionId` | String |   Yes    | Transaction ID generated from Revenue Monster.                                                                                          | "1582107209454501456" |
-| `cameraType`    | String |   Yes    | Display terminal Camera                                                                                                                 | "FRONT"               |
-| `receiptType`   | Uint   |   Yes    | 1 : Print Merchant Copy and Customer copy <br/> <br/> 2 : Print Customer copy <br/> <br/>3 : Do not print Merchant Copy & Customer Copy | 1                     |
-| `type`          | String |   Yes    | Receipt E-wallet or Credit Card                                                                                                         | "E-WALLET"            |
-| `order`         | String |   Yes    | (Refer `order` )                                                                                                                        | {}                    |
+| Parameter     | Type   | Required | Description                                                                                                                             | Example               |
+| ------------- | ------ | :------: | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `terminalId`  | String |   Yes    | Terminal ID generated from Revenue Monster.                                                                                             | "1582107209454501456" |
+| `cameraType`  | String |   Yes    | Display terminal Camera                                                                                                                 | "FRONT"               |
+| `receiptType` | Uint   |   Yes    | 1 : Print Merchant Copy and Customer copy <br/> <br/> 2 : Print Customer copy <br/> <br/>3 : Do not print Merchant Copy & Customer Copy | 1                     |
+| `type`        | String |   Yes    | Receipt E-wallet or Credit Card                                                                                                         | "E-WALLET"            |
+| `order`       | String |   Yes    | (Refer `order` )                                                                                                                        | {}                    |
 
 <br/>
 
