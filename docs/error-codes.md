@@ -392,3 +392,18 @@ import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
 | WECHAT_PHONE_INVALID                        | Invalid WeChat phone number                                                                                                          |
 | WECHAT_TEMPLATE_MESSAGE_FAILED              | WeChat template message failed                                                                                                       |
 | TOO_MANY_REQUEST_PER_SECOND                 | Reached maximum request limit per second                                                                                             |
+| TERMINAL_BUSY                               | Existing request in process                                                                                                          |
+| TERMINAL_RESTARTED                          | Activity restarted                                                                                                                   |
+| PAYMENT_IN_PROCESS                          | Existing payment in process                                                                                                          |
+| ORDER_CANCELLED                             | Transaction cancelled                                                                                                                |
+| ORDER_CANCELLED_ACTIVITY_TIMEOUT            | Order canceled due to payment activity timeout                                                                                       |
+| PAYMENT_FAIL                                | Invalid Payment Type Request                                                                                                         |
+| NO_CARD_PAY                                 | Bank card module not enabled                                                                                                         |
+| APPLICATION_CONTEXT_ERR                     | Requesting from an activity that is not a BaseActivity is not supported                                                              |
+| TRANSACTION_NOT_FOUND                       | Transaction not found                                                                                                                |
+| SETTLEMENT_FAILURE                          | Settlement failure                                                                                                                   |
+| REFUND_FAILURE                              | Refund failure                                                                                                                       |
+| UNSUPPORTED_REFUND                          | Unsupported refund                                                                                                                   |
+| NO_TRANSACTION_DETAIL                       | No transaction details returned                                                                                                      |
+| CANCELLATION_ERROR                          | No payment is ongoing                                                                                                                |
+| CANCELLATION_UNSUPPORTED                    | Cancellation is not supported yet for card payment on terminal                                                                       |
