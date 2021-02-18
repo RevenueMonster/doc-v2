@@ -16,13 +16,13 @@ sidebar_label: Signature Algorithm
 
 :::
 
-### Step 1 : Prepare a Request Paramater
+### Step 1 : Prepare a Request Parameter
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 
 :::note
 
-- Refer to which API endpoint your are calling , below request parameter is just an **EXAMPLE**
+- Refer to which API endpoint you are calling , below request parameter is just an **EXAMPLE**
 
 :::
 
