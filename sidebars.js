@@ -92,7 +92,12 @@ module.exports = {
       "alacarte-open/set-notification",
     ],
 
-    "POS Integration": ["pos-integration"],
+    "POS Integration": [
+      "pos/payment",
+      "pos/cancellation",
+      "pos/card-refund",
+      "pos/card-settlement",
+    ],
 
     "Supported Payment Methods": [
       "method/quick-pay",
@@ -152,7 +157,7 @@ module.exports = {
               "campaign/loyalty/loyalty-members/loyalty-member-history",
               "campaign/loyalty/loyalty-members/bulk-create-members",
               "campaign/loyalty/loyalty-members/topup-online",
-              "campaign/loyalty/loyalty-members/topup-offline"
+              "campaign/loyalty/loyalty-members/topup-offline",
             ],
           },
         ],
@@ -176,7 +181,7 @@ module.exports = {
         items: ["campaign/chop-stamp", "campaign/gourmet-card"],
       },
     ],
-    'Merchant Wallet': [
+    "Merchant Wallet": [
       "merchant-wallet/check-balance",
       "merchant-wallet/topup-wallet",
       "merchant-wallet/history",
