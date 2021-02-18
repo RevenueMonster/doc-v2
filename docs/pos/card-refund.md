@@ -60,7 +60,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/event/termi
 | `createdAt`     | DateTime | Creation date time of store                                                                               | "2020-02-13T07:08:56Z"                |
 | `currencyType`  | String   | Currency notation (currently only support `MYR`)                                                          | "MYR"                                 |
 | `extraInfo`     | Object   | (Refer to extraInfo)                                                                                      | {}                                    |
-| `method`        | String   | [RM currently supported method](./method/quick-pay)                                                       | "CARD"                                |
+| `method`        | String   | [RM currently supported method](../method/quick-pay)                                                      | "CARD"                                |
 | `order`         | String   | (Refer to order)                                                                                          | {}                                    |
 | `platform`      | String   | Only "TERMINAL"                                                                                           | "TERMINAL"                            |
 | `referenceId`   | String   | Transaction ID (from server)                                                                              | "00000000000791320002737201919250001" |
