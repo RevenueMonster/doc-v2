@@ -35,7 +35,7 @@ module.exports = {
           label: "SDK",
           position: "right",
         },
-        { to: "blog", label: "Blog", position: "right" },
+        // { to: "blog", label: "Blog", position: "right" },
         {
           to: "https://github.com/RevenueMonster",
           label: "GitHub",
@@ -58,12 +58,12 @@ module.exports = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/doc-v2/edit/master/website/blog/",
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     "https://github.com/facebook/doc-v2/edit/master/website/blog/",
+        // },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
