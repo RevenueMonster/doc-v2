@@ -49,6 +49,7 @@ module.exports = {
       "payment/reverse",
       "payment/query-status-by-order-id",
       "payment/query-status-by-transaction-id",
+      "payment/get-fpx-bank-list",
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
     ],
