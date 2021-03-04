@@ -9,11 +9,11 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.54",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.54",
+    "@docusaurus/core": "^2.0.0-alpha.70",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.70",
     "@rebass/preset": "^4.0.5",
     "classnames": "^2.2.6",
-    "docusaurus-lunr-search": "^2.0.1",
+    "docusaurus-lunr-search": "^2.1.10",
     "docusurus-lunr-search": "^2.0.0",
     "emotion-theming": "^10.0.27",
     "react": "^16.8.4",
