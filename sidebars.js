@@ -9,6 +9,7 @@ module.exports = {
         items: ["quickstart/sdk", "quickstart/mobile-sdk"],
       },
       "quickstart/signature-algorithm",
+      "quickstart/verify-signature",
       {
         type: "category",
         label: "Access Token",

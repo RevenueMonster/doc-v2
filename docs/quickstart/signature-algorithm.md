@@ -97,6 +97,12 @@ sidebar_label: Signature Algorithm
 }
 ```
 
+:::important
+
+- Sort the above json key **alphabetically** and make it **compact**
+
+:::
+
 ### Step 2 : Encode the data using Base64 format
 
 :::note
@@ -105,6 +111,12 @@ ewogICAgIm9yZGVyIjogewogICAgCSJ0aXRsZSI6ICJoZWxsbyIsCiAgICAJImRldGFpbCI6ICIiLAog
 :::
 
 ### Step 3: Construct plain text parameters
+
+:::important
+
+- if the body is empty then the `data` parameter can be skip
+
+:::
 
 | Parameter    | Type   | Required | Description                                                        | Example                                             |
 | ------------ | ------ | -------- | ------------------------------------------------------------------ | --------------------------------------------------- |
@@ -122,9 +134,15 @@ data=ewogICAgIm9yZGVyIjogewogICAgCSJ0aXRsZSI6ICJoZWxsbyIsCiAgICAJImRldGFpbCI6ICI
 
 ### Step 4: Sign with CLIENT PRIVATE KEY
 
-| Parameter | Type   | Required | Description                                              |                        |
-| --------- | ------ | -------- | -------------------------------------------------------- | ---------------------- |
-| `data`    | String | Yes      | Sign the request data in Step 3 using CLIENT PRIVATE KEY | Response show as below |
+:::important
+
+- Sign this content using `sha256` with rsa **private key** and make sure the **public key** have been uploaded to **RM Merchant Portal**
+
+:::
+
+<!-- | Type   | Required | Description                                              |                        |
+| ------ | -------- | -------------------------------------------------------- | ---------------------- |
+| String | Yes      | Sign the request data in Step 3 using CLIENT PRIVATE KEY | Response show as below | -->
 
 :::note
 **Example of Signature**
