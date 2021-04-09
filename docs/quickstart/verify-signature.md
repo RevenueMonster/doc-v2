@@ -88,7 +88,3 @@ eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9z
 data=eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9zYi1wZy5yZXZlbnVlbW9uc3Rlci5teS92Mi9jaGVja291dD9jaGVja291dElkPTE2MTc5ODUzOTI3NTgwNzE1ODMifSwiY29kZSI6IlNVQ0NFU1MifQ==&#38;method=post&#38;nonceStr=VYNknZohxwicZMaWbNdBKUrnrxDtaRhN&#38;signType=sha256&#38;timestamp=1527407052&#38;requestUrl=https://sb-open.revenuemonster.my/v3/payment/online
 
 :::
-
-### Response Parameters
-
-**Signature Verified** or **Invalid Signature**
