@@ -74,21 +74,18 @@ eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9z
 
 :::
 
-| Parameter    | Type   | Required | Description                                                                                      | Example                                             |
-| ------------ | ------ | -------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `data`       | String | Yes      | Base64 data body from Step 2.                                                                    | Refer to **Step 2**                                 |
-| `method`     | String | Yes      | HTTP call method used                                                                            | "post"                                              |
-| `nonceStr`   | String | Yes      | Get from Response Header                                                                         | "VYNknZohxwicZMaWbNdBKUrnrxDtaRhN"                  |
-| `publicKey`  | String | Yes      | Get the `publicKey` from RM Merchant Portal **(Developer => Applications => Server public key)** |                                                     |
-| `requestURL` | String | Yes      | API URL that you call must be exactly the same, together with URL.                               | https://sb-open.revenuemonster.my/v3/payment/online |
-| `signType`   | String | Yes      | Sign Type, prefer SHA-256                                                                        | "sha256"                                            |
-| `timestamp`  | String | Yes      | Get from Response Header                                                                         | "1527407052"                                        |
-| `signature`  | String | Yes      | Get from Response Header                                                                         |                                                     |
+| Parameter    | Type   | Required | Description                                                        | Example                                             |
+| ------------ | ------ | -------- | ------------------------------------------------------------------ | --------------------------------------------------- |
+| `data`       | String | Yes      | Base64 data body from Step 2.                                      | Refer to **Step 2**                                 |
+| `method`     | String | Yes      | HTTP call method used                                              | "post"                                              |
+| `nonceStr`   | String | Yes      | Get from Response Header                                           | "VYNknZohxwicZMaWbNdBKUrnrxDtaRhN"                  |
+| `requestURL` | String | Yes      | API URL that you call must be exactly the same, together with URL. | https://sb-open.revenuemonster.my/v3/payment/online |
+| `signType`   | String | Yes      | Sign Type, prefer SHA-256                                          | "sha256"                                            |
+| `timestamp`  | String | Yes      | Get from Response Header                                           | "1527407052"                                        |
 
 **Example**
 :::note
-data=eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9zYi1wZy5yZXZlbnVlbW9uc3Rlci5teS92Mi9jaGVja291dD9jaGVja291dElkPTE2MTc5ODUzOTI3NTgwNzE1ODMifSwiY29kZSI6IlNVQ0NFU1MifQ==&#38;method=post&#38;nonceStr=VYNknZohxwicZMaWbNdBKUrnrxDtaRhN&#38;publicKey=-----BEGIN RSA PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1EHZ9daO9WzAGTghAF6r\njI6GMRhAYPhshPoCTfFUfqeBF+EQBse27zpx4rB5n+bGP8/pKkx8UqMA1iAEwRAR\nmwNdRkJfoiWwxOFbMwdah50knEnYhIbO8+2TC6R9V+Snju/plsUi+I+kMGfiGdRo\n2dh1Wfza3sSPxXrEt8x+qPkFgwamZ9jd2bza7RZm6/onOH5UJ88WRZqIGVsjyGbz\nbbfMAZeVv15XmZY0CndL2TSZAmLvyu6pcBYIlnipMFUzF06mhJpBkspziclcmN0L\nfLdBsXzcTbgHFluQ12T+TvFVP0yTeVwuSoAthufrF1E9hLD7I7UFCOm/LUKEvMg5\nxwIDAQAB\n-----END RSA PUBLIC KEY-----
-&#38;requestUrl=https://sb-open.revenuemonster.my/v3/payment/online&#38;signType=sha256&#38;timestamp=1527407052&#38;signature=sha256 MC1xhs9xr3ZOP7zMJBcgVvA6ofMPhjf55KTmhYgbfV8KdNLHarr0iBuivf7VPMIcB++0FnKXiYqmt7X9s0CuXgw0mYonk45rtC1/HQZAsoDpxfzko1Szj+H1qk4ImbnZX3Z0C1RQTr5w8C4+RvOPsVHUvh3Vd+P1182vXlA/3nlORTuJK2Un+W4IiNk3atj66GjwA1wFtN7XbD1xrXaIkExJCRFJrLNrhuzrpluwtHzBXDa7D4+TFPgb9S8P9+mp5RBeGaW1f4gNaa7VEdkP2mh3BxPD45AwjMxhlJ1eEVlROiOJrwpUvzF8EnuSJMLtGZksGM4D+UQiqmLotXc8KA==
+data=eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9zYi1wZy5yZXZlbnVlbW9uc3Rlci5teS92Mi9jaGVja291dD9jaGVja291dElkPTE2MTc5ODUzOTI3NTgwNzE1ODMifSwiY29kZSI6IlNVQ0NFU1MifQ==&#38;method=post&#38;nonceStr=VYNknZohxwicZMaWbNdBKUrnrxDtaRhN&#38;signType=sha256&#38;timestamp=1527407052&#38;requestUrl=https://sb-open.revenuemonster.my/v3/payment/online
 
 :::
 
