@@ -14,7 +14,6 @@
     "@rebass/preset": "^4.0.5",
     "classnames": "^2.2.6",
     "docusaurus-lunr-search": "^2.1.10",
-    "docusurus-lunr-search": "^2.0.0",
     "emotion-theming": "^10.0.27",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

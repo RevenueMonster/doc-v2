@@ -1,5 +1,5 @@
 ---
-id: rm-logo
+id: revenue-monster-logo
 title: Revenue Monster Logo
 sidebar_label: Revenue Monster logo
 ---
@@ -8,6 +8,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
 Get Revenue Monster logo
+
 :::
 
 <Flex justifyContent="center">
