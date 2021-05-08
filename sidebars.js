@@ -218,6 +218,7 @@ module.exports = {
 
     "Push Notification": ["push-notification/push-to-merchant"],
     Downloads: [
+      "downloads/rm-logo",
       "downloads/application",
       "downloads/logo",
       "downloads/testing-wallets",
