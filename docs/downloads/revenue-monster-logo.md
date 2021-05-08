@@ -1,5 +1,5 @@
 ---
-id: rm-logo
+id: revenue-monster-logo
 title: Revenue Monster Logo
 sidebar_label: Revenue Monster logo
 ---
