@@ -65,7 +65,6 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 | `method`           | String   | [RM currently supported method](../method/quick-pay)                                                                           | "TNG"                                      |
 | `transactionType`  | String   | "PAYMENT" or "REFUND"                                                                                                          | "PAYMENT"                                  |
 | `type`             | String   | "QUICK_PAY" , "QR_PAY","Web_Payment" , "Mobile_Payment" , "Mobile_Web_Payment"                                                 | "QUICK_PAY"                                |
-| `transactionId`    | String   | Transaction ID (from RM server)                                                                                                | "191231070009010323431829"                 |
 | `orderId`          | String   | Order ID (from Merchant), max: 24                                                                                              | "1577775608765190100M6010"                 |
 | `currencyType`     | String   | Currency notation (currently only support `MYR`)                                                                               | "MYR"                                      |
 | `grossAmount`      | Double   | Gross Amount QR pay                                                                                                            | "0.10"                                     |
@@ -78,8 +77,6 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 | `order`            | Object   | Order object                                                                                                                   | (Refer to explanation below)               |
 | `payee`            | Object   | Object of userID made payment (payment sender)                                                                                 | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
 | `platform`         | String   | Currently only support "OPEN_API"                                                                                              | "OPEN_API"                                 |
-| `method`           | String   | Currently only support "WECHATPAY" , "PRESTO" , "BOOST" , "TNG" , "MAYBANK" , "ALIPAY" , "GRABPAY".                            | "ALL"                                      |
-| `type`             | String   | Currently only support "QUICKPAY"                                                                                              | "QUICKPAY"                                 |
 | `status`           | String   | Status returned from WeChat server, "SUCCESS" or "IN_PROCESS" or "FAILED". "IN_PROCESS" means user scanned and making payment. | "FAILED"                                   |
 | `createdAt`        | DateTime | Creation date time of transaction                                                                                              | "2018-03-21T06:41:22Z"                     |
 | `updatedAt`        | DateTime | Last update date time of transaction                                                                                           | "2018-03-21T06:41:22Z"                     |
