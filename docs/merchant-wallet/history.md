@@ -6,7 +6,7 @@ sidebar_label: Check Wallet History
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
-**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
+**Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
 URL : `https://open.revenuemonster.my/v3/wallet/history`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/wallet/history`
 
@@ -51,13 +51,13 @@ curl --location --request GET "{{open_base_path}}/v3/wallet/history" \
 | `id`            | String | Wallet History ID                                                 | 1598969381529317751                                                   |
 | `referenceId`   | String | Wallet reference ID usually is your Merchant ID                   | 4118165203679668885                                                   |
 | `walletId`      | String | Wallet ID                                                         | 1585119930335618836                                                   |
-| `type`          |        | History type                                                      | "TOPUP", "DEDUCT"                                                     |
-| `referenceType` |        | History reference type                                            | "DELIVERY", "BILLING", "TOPUP_MANUAL", "TOPUP_ONLINE", "TOPUP_BANKIN" |
+| `type`          | String | History type                                                      | "TOPUP", "DEDUCT"                                                     |
+| `referenceType` | String | History reference type                                            | "DELIVERY", "BILLING", "TOPUP_MANUAL", "TOPUP_ONLINE", "TOPUP_BANKIN" |
 | `reference`     | String | Reference about the reference type usually it's usage information | Online Transaction Topup -1598969316445167528                         |
 | `credit`        | uint64 | How much credit added or deducted                                 | 10                                                                    |
 | `currentCredit` | uint64 | Credit balance after added or deducted                            | 1952                                                                  |
 | `sequenceId`    | uint64 | A sequential number                                               | 26                                                                    |
-| `transactionAt` | String | When history transaction                                          | 2020-09-01T14:09:41Z                                                  |
+| `transactionAt` | DateTime | When history transaction                                          | 2020-09-01T14:09:41Z                                                  |
 
 > Example Response
 

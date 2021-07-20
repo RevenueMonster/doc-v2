@@ -25,9 +25,9 @@ No request parameter is required for this endpoint.
 | Parameter     | Type   | Description                                                                                                                                                        | Example                |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
 | `id`          | Uint   | ID is to differentiate which subscription: <br/> **1000** : Loyalty & Voucher <br/> **1001** : Payment <br/> **1002** : Market Place <br/> **1003** : Social Media | 1001                   |
-| `gracePeroid` | Uint   | merchant will terminate after **3 months**                                                                                                                         | 90                     |
-| `expiryAt`    | String | Expiry date time of merchant                                                                                                                                       | "2018-04-28T06:36:08Z" |
-| `terminateAt` | String | Terminate date time of merchant                                                                                                                                    | "2018-07-27T23:59:59Z" |
+| `gracePeriod` | Uint   | merchant will terminate after **3 months**                                                                                                                         | 90                     |
+| `expiryAt`    | DateTime | Expiry date time of merchant                                                                                                                                       | "2018-04-28T06:36:08Z" |
+| `terminateAt` | DateTime | Terminate date time of merchant                                                                                                                                    | "2018-07-27T23:59:59Z" |
 | `status`      | String | "ACTIVE" , "REVIEWING" , "SUSPEND" , "PENDING" , "SUSPEND"                                                                                                         | "ACTIVE"               |
 
 > Example Response

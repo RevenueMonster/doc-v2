@@ -48,7 +48,7 @@ No request parameter is required for this endpoint.
 | `city`               | String   | City of merchant                        | "Selangor"                                                     |
 | `state`              | String   | State of merchant                       | "Selangor"                                                     |
 | `country`            | String   | Country of merchant                     | "Malaysia"                                                     |
-| `invoiceAddres`      | Object   | Object of Invoice Address               | (Refer below)                                                  |
+| `invoiceAddress`      | Object   | Object of Invoice Address               | (Refer below)                                                  |
 | `isActive`           | Boolean  | Merchant active or deactivated status   | true                                                           |
 | `status`             | String   | Current status of merchant              | “REVIEWING”                                                    |
 | `isMasterMerchant`   | Bool     | Master Merchant flag                    | true                                                           |
