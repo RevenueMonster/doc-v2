@@ -226,5 +226,6 @@ module.exports = {
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
+    "eKYC": ["ekyc/mykad-recognition", "ekyc/face-verification"],
   },
 };
