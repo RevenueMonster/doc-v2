@@ -29,48 +29,60 @@ Get Loyalty Member Point History By `Member ID`
 > Example Response
 
 ```json
+
+
 {
-  "items": [
-    {
-      "key": "EhIKBk1lbWJlchD2kJLw04qQ6CgSGQoNTWVtYmVyUHJvZmlsZRDFjJ-q6rzOxi8SGgoOTG95YWx0eUhpc3RvcnkQs7zyjL79rLIh",
-      "type": "POINT_EXPIRED",
-      "description": "99 loyalty points expired",
-      "point": -99,
-      "PointBalance": 0,
-      "createdAt": "2018-09-19T16:00:00Z",
-      "updatedAt": "0004-04-04T04:04:04Z"
-    },
-    {
-      "key": "EhIKBk1lbWJlchD2kJLw04qQ6CgSGQoNTWVtYmVyUHJvZmlsZRDFjJ-q6rzOxi8SGgoOTG95YWx0eUhpc3RvcnkQ5dH4usjY7coe",
-      "type": "VOUCHER_REDEEM",
-      "description": "Redeemed voucher",
-      "point": 0,
-      "PointBalance": 99,
-      "createdAt": "2018-09-19T10:01:02Z",
-      "updatedAt": "0001-01-01T00:00:00Z"
-    },
-    {
-      "key": "EhIKBk1lbWJlchD2kJLw04qQ6CgSGQoNTWVtYmVyUHJvZmlsZRDFjJ-q6rzOxi8SGgoOTG95YWx0eUhpc3RvcnkQmtaHztvlwqUW",
-      "type": "VOUCHER_REDEEM",
-      "description": "Discount for Apple Product voucher redeemed",
-      "point": -1,
-      "PointBalance": 99,
-      "createdAt": "2018-09-19T10:00:37Z",
-      "updatedAt": "2018-09-19T10:00:37Z"
-    },
-    {
-      "key": "EhIKBk1lbWJlchD2kJLw04qQ6CgSGQoNTWVtYmVyUHJvZmlsZRDFjJ-q6rzOxi8SGgoOTG95YWx0eUhpc3RvcnkQzYCj3ofay5YO",
-      "type": "QR_CODE_REDEEM",
-      "description": "Earned 100 points",
-      "point": 100,
-      "PointBalance": 100,
-      "createdAt": "2018-09-19T10:00:21Z",
-      "updatedAt": "2018-09-19T10:00:21Z"
-    }
-  ],
-  "code": "SUCCESS",
-  "meta": {
-    "count": 4
-  }
+   "items": [
+      {
+         "key": "EhIKBk1lbWJlchCpzIGbrcmr_BUSGQoNTWVtYmVyUHJvZmlsZRDclJuNr8mr_BUSGgoOTG95YWx0eUhpc3RvcnkQlYaaufPqrPwV",
+         "merchantKey": "EhQKCE1lcmNoYW50EJXVzd3wraqTOQ",
+         "type": "VOUCHER_REDEEM",
+         "description": "voucher combo voucher redeemed",
+         "point": -4,
+         "credit": 0,
+         "creditBalance": 1,
+         "createdAt": "2020-03-03T05:14:16Z",
+         "updatedAt": "2020-03-03T05:14:16Z"
+      },
+      {
+         "key": "EhIKBk1lbWJlchCpzIGbrcmr_BUSGQoNTWVtYmVyUHJvZmlsZRDclJuNr8mr_BUSGgoOTG95YWx0eUhpc3RvcnkQ2avRwsDhrPwV",
+         "merchantKey": "EhQKCE1lcmNoYW50EJXVzd3wraqTOQ",
+         "type": "VOUCHER_REDEEM",
+         "description": "Prudential RM 5 Cash Vouchers ( BoostPulse ) voucher redeemed",
+         "point": -1,
+         "credit": 0,
+         "creditBalance": 1,
+         "createdAt": "2020-03-03T05:08:53Z",
+         "updatedAt": "2020-03-03T05:08:53Z"
+      },
+      {
+         "key": "EhIKBk1lbWJlchCpzIGbrcmr_BUSGQoNTWVtYmVyUHJvZmlsZRDclJuNr8mr_BUSGgoOTG95YWx0eUhpc3RvcnkQ_4ekscn6q_wV",
+         "merchantKey": "EhQKCE1lcmNoYW50EJXVzd3wraqTOQ",
+         "type": "CREDIT_TOP_UP",
+         "description": "Top up 0.01 credits",
+         "point": 0,
+         "credit": 1,
+         "creditBalance": 1,
+         "createdAt": "2020-03-03T04:09:56Z",
+         "updatedAt": "2020-03-03T04:09:56Z"
+      },
+      {
+         "key": "EhIKBk1lbWJlchCpzIGbrcmr_BUSGQoNTWVtYmVyUHJvZmlsZRDclJuNr8mr_BUSGgoOTG95YWx0eUhpc3RvcnkQ976syJHbq_wV",
+         "merchantKey": "EhQKCE1lcmNoYW50EJXVzd3wraqTOQ",
+         "type": "QR_CODE_REDEEM",
+         "description": "Earned 500 points",
+         "point": 500,
+         "credit": 0,
+         "creditBalance": 0,
+         "createdAt": "2020-03-03T03:51:56Z",
+         "updatedAt": "2020-03-03T03:51:56Z"
+      }
+   ],
+   "code": "SUCCESS",
+   "meta": {
+      "count": 4
+   }
 }
+
+
 ```

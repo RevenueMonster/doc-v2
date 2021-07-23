@@ -116,7 +116,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
     "key": "EhIKBk1lbWJlchDCkZOfvLyOphYSGQoNTWVtYmVyUHJvZmlsZRCZp_uzvLyOphY",
     "name": "Oska",
     "email": "",
-    "nric": "950711015205",
+    "nric": "950711011234",
     "birthDate": "1995-07-11",
     "gender": "MALE",
     "state": "JOHOR",
