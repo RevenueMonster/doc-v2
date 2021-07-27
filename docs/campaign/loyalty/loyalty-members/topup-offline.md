@@ -21,6 +21,9 @@ Specify loyalty member id to topup using quickpay
 | `authCode` | String | Yes      | Auth code of QR code/barcode being scanned. Length: 18 | "134850717797247290"         |
 | `order`    | Object | Yes      | Object of order                                        | (Refer to explanation below) |
 | `storeId`  | String | Yes      | ID of the store                                        | "6170506694335521334"        |
+| `memberId` | String | Yes      | Member id                                              | "1626838502220135674"        |
+
+
 
 <br />
 
@@ -51,6 +54,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member/:memberId/to
 {
     "authCode": "283838110784383199",
     "storeId": "10946114768247530",
+    "memberId": "1626838502220135674",
     "order": {
         "id": "123asd1e1zz2ed",
         "amount": 100,
