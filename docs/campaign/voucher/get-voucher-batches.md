@@ -39,14 +39,17 @@ No request parameter is required for this endpoint.
 | `type`            | String           | Define type of vouchers: **DISCOUNT**, **GIFT**, “CASH"                                                                    | “GIFT"                                                                   |
 | `amount`          | Uint             | Required if type = **CASH**, notation in cents, eg. RM 1.00 = 100                                                          | 10000                                                                    |
 | `discountRate`    | Uint             | Required if type = **DISCOUNT**, notation without decimals, eg. 1% = 100                                                   | 0                                                                        |
+|`minimumSpendAmount`| Uint            | If voucher requires a minimum spend.                                                 | 0                                                                        |
 | `imageUrl`        | String           | Image URL of current voucher, optional                                                                                     | Image Url link (refer to below code)                                     |  |
 | `quantity`        | Uint             | Total quantity of voucher(s) in this batch                                                                                 | 1                                                                        |
 | `balanceQuantity` | Uint             | Total quantity of voucher(s) remaining in this batch                                                                       | 0                                                                        |
 | `usedQuantity`    | Uint             | Total quantity of voucher(s) used/assigned/redeemed in this batch                                                          | 1                                                                        |
+| `status`          | String           | Voucher's status                                                          | "COMPLETED"                                                                        |
 | `expiry`          | Object of Expiry | Expiry date time of current voucher                                                                                        | (Refer below)                                                            |
 | `origin`          | String           | **SYSTEM** (voucher code generated from RM server), **SELF** (voucher code uploaded from merchant csv file)                | “SYSTEM”                                                                 |
 | `isShipping`      | Boolean          | **True** if items/goods to be delivered physically to customers                                                            | false                                                                    |
 | `reason`          | String           | Will show if voucher batch is fail during creation. Optional.                                                              | ”"                                                                       |
+| `staticCode`      | String           | Voucher's code | "ABC123"                                                                       |
 | `isDeviceRedeem`  | Boolean          | **TRUE** means only can be redeemed through merchant app. **FALSE** means customer can do redemption from own loyalty app. | false                                                                    |
 | `createdAt`       | DateTime         | Date time of voucher being created (UTC)                                                                                   | "2018-06-21T11:08:00Z"                                                   |
 | `updatedAt`       | DateTime         | Date time of voucher being updated (UTC)                                                                                   | "2018-09-28T17:19:44.686549977Z"                                         |
@@ -104,15 +107,16 @@ No request parameter is required for this endpoint.
       "updatedAt": "2018-09-19T03:41:54Z"
     },
     {
-      "id": "2304781924451151306",
-      "key": "EhQKCE1lcmNoYW50EJXVzd3wraqTORIYCgxWb3VjaGVyQmF0Y2gQytubna_ejv4f",
-      "label": "Discount for Apple Product",
-      "type": "GIFT",
-      "discountRate": 0,
-      "imageUrl": "https://storage.googleapis.com/rm-sandbox-merchant/4118165203679668885/gallery/9561650c763a67150e3323e2ce79aa2c.jpeg",
-      "quantity": 10,
-      "balanceQuantity": 0,
-      "usedQuantity": 17,
+      "id": "1626310995848872959",
+      "key": "EhQKCE1lcmNoYW50EJXVzd3wraqTORIYCgxWb3VjaGVyQmF0Y2gQ_4eJj7-n9MgW",
+      "label": "ALA10OFF",
+      "type": "DISCOUNT",
+      "discountRate": 1000,
+      "minimumSpendAmount": 100,
+      "imageUrl": "https://storage.googleapis.com/rm-sandbox-merchant/4118165203679668885/gallery/f03508e50866abd615fc65c63857858f.jpeg",
+      "quantity": 50,
+      "balanceQuantity": 48,
+      "usedQuantity": 2,
       "status": "COMPLETED",
       "expiry": {
         "type": "DYNAMIC",
@@ -121,11 +125,16 @@ No request parameter is required for this endpoint.
       },
       "origin": "SYSTEM",
       "isShipping": false,
-      "reason": "",
+      "isStatic": true,
+      "staticCode": "ALA10OFF",
       "isDeviceRedeem": true,
-      "createdAt": "2018-09-18T03:43:39Z",
-      "updatedAt": "2018-09-18T03:43:39Z"
-    }
+      "source": "",
+      "sourceType": "",
+      "sourcePrefix": "",
+      "isMarketPlace": false,
+      "createdAt": "2021-07-15T01:03:15Z",
+      "updatedAt": "2021-07-15T01:53:38Z"
+   }
   ],
   "code": "SUCCESS",
   "meta": {
