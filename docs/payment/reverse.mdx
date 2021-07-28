@@ -46,43 +46,24 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 
 | Parameter       | Type     | Description                                          | Example                                    |
 | --------------- | -------- | ---------------------------------------------------- | ------------------------------------------ |
-| `store`         | Object   | Store object                                         | (Refer to explanation below)               |
 | `referenceId`   | String   | Transaction ID (from WeChat server)                  | ""                                         |
 | `transactionId` | String   | Transaction ID (from RM server)                      | "152161448229438994"                       |
 | `order`         | Object   | Order object                                         | (Refer to explanation below)               |
+| `terminalId`    | String   | ID of terminal for payment                           | "19382734937293"                           |
+| `currencyType`  | String   | Currency notation                                    | "MYR"                                      |
+| `balanceAmount` | Uint     | Sales Amount                                         | 123                                        |
 | `payee`         | Object   | Object of userID made payment (payment sender)       | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
 | `platform`      | String   | Currently only support "OPEN_API"                    | "OPEN_API"                                 |
 | `method`        | String   | [RM currently supported method](../method/quick-pay) | ALL                                        |
 | `type`          | String   | Currently only support "QUICKPAY"                    | "QUICKPAY"                                 |
 | `status`        | String   | Status returned from WeChat server                   | "SUCCESS"                                  |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"              | "MALAYSIA"                                 |
-| `error`         | String   | (Refer `Appendix: Error Codes`)                      | {}                                         |
+| `transactionAt` | DateTime | Transaction date time (from wallet server)           | "2018-08-02T09:34:53Z"                     |
 | `createdAt`     | DateTime | Creation date time of transaction                    | "2018-03-21T06:41:22Z"                     |
 | `updatedAt`     | DateTime | Last update date time of transaction                 | "2018-03-21T06:41:22Z"                     |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`)     | "MYR"                                      |
 
 <br />
 
-<strong>Store object (store):</strong>
-
-| Parameter      | Type              | Description                                     | Example                                             |
-| -------------- | ----------------- | ----------------------------------------------- | --------------------------------------------------- |
-| `id`           | String            | Store ID                                        | "6170506694335521334"                               |
-| `name`         | String            | Store Name                                      | "REVENUE MONSTER"                                   |
-| `addressLine1` | String            | Store Address 1                                 | "B-5-30, 5th Floor, Block Bougainvillea,"           |
-| `addressLine2` | String            | Store Address 2                                 | "PJU 6A, Lebuhraya SPRINT, 10 Boulevard,"           |
-| `postCode`     | String            | Postcode of store                               | "47400"                                             |
-| `city`         | String            | City of store                                   | "Petaling Jaya"                                     |
-| `state`        | String            | State of store                                  | "Selangor"                                          |
-| `country`      | String            | Country of store                                | "Malaysia"                                          |
-| `countryCode`  | String            | Country code of store contact number            | "60"                                                |
-| `phoneNumber`  | String            | Phone number of store                           | "377334080"                                         |
-| `geoLocation`  | Object of [Float] | Geo Location (latitude and longtitude) of store | {"latitude": 3.1349857, "longtitude": 101.6136659 } |
-| `status`       | String            | Current status of store                         | "ACTIVE"                                            |
-| `createdAt`    | DateTime          | Creation date time of store                     | "2018-02-12T08:53:13Z"                              |
-| `updatedAt`    | DateTime          | Last update date time of store                  | "2018-02-12T08:53:13Z"                              |
-
-<br />
 
 <strong>Order object (order):</strong>
 
@@ -90,8 +71,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rev
 | ---------------- | ------ | --------------------------------- | ------------------------------ |
 | `id`             | String | Order ID (from Merchant), max: 24 | "134850717797247290"           |
 | `title`          | String | Order title, max: 32              | "Sales"                        |
-| `details`        | String | Order details, max: 600           | "1 x iPhone X; 2 x SAMSUNG S8" |
-| `additionalData` | String | For merchant's remark, max 128    | ""                             |
+| `detail `        | String | Order details, max: 600           | "1 x iPhone X; 2 x SAMSUNG S8" |
 | `amount`         | Uint   | Amount of order in cent           | 100                            |
 
 > Example Response
