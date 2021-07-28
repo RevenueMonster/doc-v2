@@ -47,7 +47,7 @@ No request parameter is required for this endpoint.
 | `country`      | String             | Country of store                                            | "Malaysia"                                |
 | `countryCode`  | String             | Country code of store contact number                        | "60"                                      |
 | `phoneNumber`  | String             | Phone number of store                                       | "377334080"                               |
-| `geoLocation`  | Object of [String] | Geo Location (latitude and longtitude) of store             | {"Lat": 3.1349857, "Lng": 101.6136659 }   |
+| `geoLocation`  | Object of [Float]  | Geo Location (latitude and longitude) of store              | {"Lat": 3.1349857, "Lng": 101.6136659 }   |
 | `status`       | String             | Current status of store                                     | "ACTIVE"                                  |
 | `isDefault`    | String             | Default store of merchant (first store created upon signup) | true                                      |
 | `createdAt`    | DateTime           | Creation date time of store                                 | "2018-02-12T08:53:13Z"                    |
