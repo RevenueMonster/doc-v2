@@ -57,6 +57,8 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/loyalty/cho
 | `expiredAt`     | DateTime | Expired date time     | "2020-05-16T07:59:18Z" |
 | `createdAt`     | DateTime | Creation date time    | "2020-03-17T07:59:18Z" |
 | `updateAt`      | DateTime | Last update date time | "2020-03-05T09:40:21Z" |
+| `card`          | Object   | Refer to explanation below | (Refer to explanation below) |
+
 
 <br/>
 

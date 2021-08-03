@@ -51,7 +51,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/spending-reward/cal
 | Parameter     | Type | Description                       | Example |
 | ------------- | ---- | --------------------------------- | ------- |
 | `orderAmount` | int  | Amount Sales                      | 300     |
-| `Point`       | int  | Loyalty point given to customers. | 300     |
+| `point`       | int  | Loyalty point given to customers. | 300     |
 
 Currency notation (currently only support MYR)
 

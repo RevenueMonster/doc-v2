@@ -67,7 +67,7 @@ No request parameter is required for this endpoint.
 | `country`      | String   | Country of store                                | "Malaysia"                                                   |
 | `countryCode`  | String   | Country code of store contact number            | "60"                                                         |
 | `phoneNumber`  | String   | Phone number of store                           | "377334080"                                                  |
-| `geoLocation`  | Object   | Geo Location (latitude and longtitude) of store | {"latitude": 3.1349857, "latitude": 101.6136659 }            |
+| `geoLocation`  | Object   | Geo Location (latitude and longitude) of store  | {"latitude": 3.1349857, "longitude": 101.6136659 }           |
 | `status`       | String   | Current status of store                         | "ACTIVE"                                                     |
 | `createdAt`    | DateTime | Creation date time of store                     | "2020-09-14T03:01:20Z"                                       |
 | `updatedAt`    | DateTime | Last update date time of store                  | "2020-09-14T03:01:20Z"                                       |
@@ -79,7 +79,7 @@ No request parameter is required for this endpoint.
 | --------- | ------ | ------------------------ | ------------------------------ |
 | `id`      | String | Order ID (from Merchant) | "134850717797247290"           |
 | `title`   | String | Order title              | "Sales"                        |
-| `details` | String | Order details            | "1 x iPhone X; 2 x SAMSUNG S8" |
+| `detail`  | String | Order details            | "1 x iPhone X; 2 x SAMSUNG S8" |
 | `amount`  | Uint   | Amount of order          | 1865                           |
 
 <br/>

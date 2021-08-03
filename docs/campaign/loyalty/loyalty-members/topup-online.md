@@ -33,7 +33,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member/:memberId/to
 ```json
 {
     "topUpAmount": 10,
-    "redirectURL": "https://revenuemonster.my"
+    "redirectUrl": "https://revenuemonster.my"
 }
 ```
 

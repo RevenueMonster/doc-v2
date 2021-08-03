@@ -27,7 +27,7 @@ To create a store under one merchant.
 | `country`      | String            | Yes      | Country of store                                | "Malaysia"                                         |
 | `countryCode`  | String            | Yes      | Country code of store contact number            | "60"                                               |
 | `phoneNumber`  | String            | Yes      | Phone number of store                           | "377334080"                                        |
-| `geoLocation`  | Object of [Float] | No       | Geo Location (latitude and longtitude) of store | {"latitude": 3.1349857, "longitude": 101.6136659 } |
+| `geoLocation`  | Object of [Float] | No       | Geo Location (latitude and longitude) of store  | {"latitude": 3.1349857, "longitude": 101.6136659 } |
 
 > Example Request
 
@@ -73,7 +73,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/store" \
 | `country`      | String            | Country of store                                            | "Malaysia"                                          |
 | `countryCode`  | String            | Country code of store contact number                        | "60"                                                |
 | `phoneNumber`  | String            | Phone number of store                                       | "377334080"                                         |
-| `geoLocation`  | Object of [Float] | Geo Location (latitude and longtitude) of store             | {"latitude": 3.1349857, "longtitude": 101.6136659 } |
+| `geoLocation`  | Object of [Float] | Geo Location (latitude and longitude) of store              | {"latitude": 3.1349857, "longitude": 101.6136659 } |
 | `status`       | String            | Current status of store                                     | "ACTIVE"                                            |
 | `isDefault`    | String            | Default store of merchant (first store created upon signup) | true                                                |
 | `createdAt`    | DateTime          | Creation date time of store                                 | "2018-02-12T08:53:13Z"                              |

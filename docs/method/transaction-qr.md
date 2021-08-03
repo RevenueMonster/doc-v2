@@ -29,7 +29,7 @@ import styles from "../../src/pages/styles.module.css"
     </td>
   </tr>
    <tr>
-    <td>BOOST</td>
+    <td>BOOST_MY</td>
   <td>
     <Card
         className={styles.supportCard}> Yes

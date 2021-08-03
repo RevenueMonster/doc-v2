@@ -6,7 +6,7 @@ sidebar_label: Topup History
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
-**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
+**Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
 URL : `https://open.revenuemonster.my/v3/wallet/transaction`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/wallet/transaction`
 
@@ -35,7 +35,7 @@ curl --location --request GET "{{open_base_path}}/v3/wallet/transaction" \
 | --------- | ------ | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | `items`   | Object | Transaction History object                                                                                | (Refer to explanation below) |
 | `cursor`  | String | Cursor for next page                                                                                      |
-| `code`    | String | Successfully call this endpoint. If fail, will return error code object (Refer `Appendix 1: Error Codes`) | "SUCCESS"                    |
+
 
 <br />
 
@@ -52,7 +52,7 @@ curl --location --request GET "{{open_base_path}}/v3/wallet/transaction" \
 | `method`      | String | Payment Method                        | "ONLINE", "MANUAL", "BANKIN" |
 | `status`      | String | Transaction Status                    | "IN_PROCESS", "SUCCESS"      |
 | `credit`      | String | Credit                                | 10                           |
-| `createdAt`   | String | Transaction time                      | online payment gateway topup |
+| `createdAt`   | DateTime | Transaction time                      | online payment gateway topup |
 
 > Example Response
 

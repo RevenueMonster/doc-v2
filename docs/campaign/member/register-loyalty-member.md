@@ -16,6 +16,21 @@ Using Query String to **Get User Profile** by input the **country code** and **p
 
 ### Request Parameters
 
+| Parameter       | Type   | Required | Description                                    | Example                      |
+| --------------- | ------ | -------- | ---------------------------------------------- | ---------------------------- |
+| `name`          | String | Yes      | Member name                                    | "Oska"                       |
+| `countryCode`   | String | Yes      | Country code of member contact number          | "60"                         |
+| `phoneNumber`   | String | Yes      | Phone number of member                         | "1878241234"                 |
+| `email`         | String | Yes      | Email address of member                        | "developer.oskang@gmail.com" |
+| `nric`          | String | Yes      | IC Number                                      | "950711011234"               |
+| `birthDate`     | String | Yes      | Member Birth Date                              | "1995-07-11T00:00:00Z"       |
+| `gender`        | String | Yes      | Gender                                         | "MALE"                       |
+| `point`         | Uint   | Yes      | Loyalty Point                                  | 0                            |
+| `address`       | Object | Yes      | Refer to explanation below                     | (Refer to explanation below) |
+
+<br />
+
+
 > Example Request
 
 ```json
@@ -25,18 +40,12 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
 --header "X-Signature: sha256 bFGc2JOEFqdI91DE5VXYBUllr+9DHcrrylRFU3i1r72aPmJreljn0dU+nwPSwTH/dTQUiZ9C2aQSF8AuT959EW4WEyEZ6VWgt9gCyZaU/bcOQ/ZIhKc06+uwzivVhAzpbUtG5tm5/sBp4ig6Sk7L6SE0Ecu6Tm0FhYl0qdgZvrTh4EEpLs3kHIuYL9QXKJILfKlu4gTX1Exrt7nNyEr8ndeUMaKYrj3FckMbRtmCwc829SsVp6FAgvoDPnguUJ+VjLF1e9NXhar2JwYjuqMkwsmUWRDbittqCgCCfaPF8anarlLsoXbdYEa7bp9BYp2U/Dw3Xd2MlamEZSR8H+Dosw==" \
 --header "X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN" \
 --header "X-Timestamp: 1528450585" \
-
-```
-
-> Example Body Request
-
-```json
-{
+--data "{
   "name": "Oska",
   "countryCode": "60",
-  "phoneNumber": "1878241152",
+  "phoneNumber": "1878241234",
   "email": "developer.oskang@gmail.com",
-  "nric": "950711015205",
+  "nric": "950711011234",
   "birthDate": "1995-07-11T00:00:00Z",
   "gender": "MALE",
   "point": 0,
@@ -48,8 +57,10 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
     "state": "JOHOR",
     "country": "MALAYSIA"
   }
-}
+}"
+
 ```
+
 
 ### Response Parameters
 
@@ -68,7 +79,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
 | `key`                 | String   | Profile Key (Internal Usage) | "EhIKBk1lbWJlchDOuOKz24XWkg4SGQoNTWVtYmVyUHJvZmlsZRDl-MTxiPOPjzY" |
 | `name`                | String   | Profile name                 | "Oska"                                                            |
 | `email`               | String   | Profile email                | "developer.oskang@gmail.com"                                      |
-| `nric`                | String   | IC Number                    | "950711015205"                                                    |
+| `nric`                | String   | IC Number                    | "950711011234"                                                    |
 | `birthDate`           | String   | User Birth Date (YYYY:MM:DD) | "1995-07-11"                                                      |
 | `gender`              | String   | Gender                       | "MALE"                                                            |
 | `address`             | Object   | Refer to explanation below   | (Refer to explanation below)                                      |
@@ -83,6 +94,8 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
 | `updatedAt`           | DateTime | Last update date time        | "2020-06-29T10:14:33Z"                                            |
 
 <br />
+
+
 <strong>Address object:</strong>
 
 | Parameter      | Type   | Description | Example |
@@ -103,7 +116,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/member" \
     "key": "EhIKBk1lbWJlchDCkZOfvLyOphYSGQoNTWVtYmVyUHJvZmlsZRCZp_uzvLyOphY",
     "name": "Oska",
     "email": "",
-    "nric": "950711015205",
+    "nric": "950711011234",
     "birthDate": "1995-07-11",
     "gender": "MALE",
     "state": "JOHOR",

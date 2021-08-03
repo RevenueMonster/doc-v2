@@ -54,16 +54,16 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/me/reward/157597166
 | `isShipping`      | Bool     | Credit Balance                                                      | false                                          |
 | `quantity`        | Uint     | Reward Quantity                                                     | 49998                                          |
 | `balanceQuantity` | Uint     | Reward Balance Quantity                                             | 49991                                          |
-| `usedQunatity`    | Uint     | Reward Used Quantity                                                | 2                                              |
+| `usedQuantity`    | Uint     | Reward Used Quantity                                                | 2                                              |
 | `redeemQuantity`  | String   | Reward Redeem Quantity                                              | 7                                              |
 | `isEnabled`       | Bool     | Enable Reward                                                       | true                                           |
-| `limitPerUser`    | DateTime | Set Limit per User use                                              | 1                                              |
+| `limitPerUser`    | Uint     | Set Limit per User use                                              | 1                                              |
 | `status`          | String   | Reward status have ("COMPLETED", "INPROGRESS", "FAILED", "EXPIRED") | "COMPLETED"                                    |
 | `isCombo`         | Bool     | Reward is Combo                                                     | false                                          |
 | `type`            | String   | Reward type have **Combo** or **Batch**                             | ""                                             |
 | `createdAt`       | DateTime | Create date time                                                    | "2020-11-18T06:43:19Z"                         |
 | `updatedAt`       | DateTime | Last update date time                                               | "2020-11-25T05:58:56Z"                         |
-| `expiredAt`       | Object   | Expired date time                                                   | "2018-10-19T03:39:47Z"                         |
+| `expiredAt`       | DateTime | Expired date time                                                   | "2018-10-19T03:39:47Z"                         |
 
 <br />
 <strong>Payload object:</strong>
