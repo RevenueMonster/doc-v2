@@ -6,7 +6,7 @@ sidebar_label: Calculate Spending Reward
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
-**Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
+**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 URL : `https://open.revenuemonster.my/v3/loyalty/spending-reward/calculate`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/loyalty/spending-reward/calculate`
 
@@ -19,7 +19,7 @@ Use amount sales to Calculate Spending Reward points
 | Parameter      | Type   | Description          | Example |
 | -------------- | ------ | -------------------- | ------- |
 | `currencyType` | String | Currently `MYR` only | MYR     |
-| `orderAmount`  | int    | Amount Sales         | 300     |
+| `amount`       | int    | Amount Sales         | 300     |
 
 > Example Request
 
@@ -32,7 +32,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/spending-reward/cal
   --header "X-Timestamp: 1528450585" \
   --data "{
     \"currencyType\": \"MYR\",
-    \"orderAmount\": 300
+    \"amount\": 300
 
 }"
 ```
@@ -50,8 +50,7 @@ curl --location --request GET "{{open_base_path}}/v3/loyalty/spending-reward/cal
 
 | Parameter     | Type | Description                       | Example |
 | ------------- | ---- | --------------------------------- | ------- |
-| `orderAmount` | int  | Amount Sales                      | 300     |
-| `point`       | int  | Loyalty point given to customers. | 300     |
+| `point`       | Int  | Loyalty point given to customers. | 3       |
 
 Currency notation (currently only support MYR)
 
@@ -60,8 +59,7 @@ Currency notation (currently only support MYR)
 ```json
 {
   "item": {
-    "orderAmount": 300,
-    "point": 300
+    "point": 3
   },
   "code": "SUCCESS"
 }
