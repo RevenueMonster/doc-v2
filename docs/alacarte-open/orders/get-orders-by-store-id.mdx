@@ -56,6 +56,8 @@ Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 | Parameter         | Type     | Required | Description                                                                               | Example                                     |
 | ----------------- | -------- | -------- | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
 | `storeId`         | String   | Yes      | ID of the Store that Create from RM                                                       | "2808912573238362402"                       |
+| `orderId`         | String   | Optional | Filter by part of Order ID                                                                | "610a61722c0efd453116420c"                  |
+| `shortOrderId`    | String   | Optional | Filter by part of short order ID                                                          | "jm9espv4"                                  |
 | `cursor`          | String   | Optional | Filter by cursor                                                                          | ""                                          |
 | `paymentStatus`   | Array    | Optional | Filter by Payment Status                                                                  | ["COMPLETED"]                               |
 | `startOrderAt`    | DateTime | Optional | Filter by Start Order At                                                                  | "2020-09-22T02:00:00.000Z"                  |
@@ -78,11 +80,12 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN' \
 --header 'X-Timestamp: 1528450585' \
 --data-raw '{
-    "service": alacarte",
+    "service": "alacarte",
     "version": "v1",
     "function": "get.store.orders",
     "request": {
         "storeId": "2808912573238362402",
+        "shortOrderId":"spv4",
         "cursor": "",
         "paymentStatus": ["COMPLETED"],
         "startOrderAt": "2020-09-22T02:00:00.000Z",
