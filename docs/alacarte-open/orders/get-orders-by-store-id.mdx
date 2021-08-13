@@ -57,7 +57,7 @@ Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 | ----------------- | -------- | -------- | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
 | `storeId`         | String   | Yes      | ID of the Store that Create from RM                                                       | "2808912573238362402"                       |
 | `orderId`         | String   | Optional | Filter by part of Order ID                                                                | "610a61722c0efd453116420c"                  |
-| `hashId`          | String   | Optional | Filter by part of short order ID                                                          | "jm9espv4"                                  |
+| `shortOrderId`    | String   | Optional | Filter by part of short order ID                                                          | "jm9espv4"                                  |
 | `cursor`          | String   | Optional | Filter by cursor                                                                          | ""                                          |
 | `paymentStatus`   | Array    | Optional | Filter by Payment Status                                                                  | ["COMPLETED"]                               |
 | `startOrderAt`    | DateTime | Optional | Filter by Start Order At                                                                  | "2020-09-22T02:00:00.000Z"                  |
@@ -85,7 +85,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
     "function": "get.store.orders",
     "request": {
         "storeId": "2808912573238362402",
-        "hashId":"spv4",
+        "shortOrderId":"spv4",
         "cursor": "",
         "paymentStatus": ["COMPLETED"],
         "startOrderAt": "2020-09-22T02:00:00.000Z",
