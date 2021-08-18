@@ -21,6 +21,15 @@ module.exports = {
       },
     ],
 
+    "Merchant Onboarding": [
+      "merchant-onboarding/create-merchant",
+      "merchant-onboarding/get-merchants",
+      "merchant-onboarding/get-merchant",
+      "merchant-onboarding/update-merchant",
+      "merchant-onboarding/review-merchant",
+      "merchant-onboarding/upload-merchant-file",
+    ],
+
     Payment: [
       "payment/overview",
       "payment/quick-pay",
@@ -226,6 +235,6 @@ module.exports = {
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
-    "eKYC": ["ekyc/mykad-recognition", "ekyc/face-verification"],
+    eKYC: ["ekyc/mykad-recognition", "ekyc/face-verification"],
   },
 };
