@@ -39,7 +39,7 @@ No request parameter is required for this endpoint.
 | `companyLogoUrl`     | String   | Public URL to show merchant's logo      | "https://storage.googleapis.com/rm-dev-asset/img/merchant.png" |
 | `registrationNumber` | String   | Registration number of merchant         | “12344”                                                        |
 | `businessCategory`   | String   | Business category of merchant           | "SOFTWARE AND IT"                                              |
-| `establishedAt`      | String   | Established date time of merchant       | "2018-03-26T04:50:57Z"                                         |
+| `establishedAt`      | DateTime | Established date time of merchant       | "2018-03-26T04:50:57Z"                                         |
 | `countryCode`        | String   | Country code of merchant contact number | "60"                                                           |
 | `phoneNumber`        | String   | Phone number of merchant                | "377334080"                                                    |
 | `addressLine1`       | String   | Address 1 of merchant                   | "20, JALAN JASA 38, TAMAN MUTIARA RINI"                        |
@@ -48,7 +48,7 @@ No request parameter is required for this endpoint.
 | `city`               | String   | City of merchant                        | "Selangor"                                                     |
 | `state`              | String   | State of merchant                       | "Selangor"                                                     |
 | `country`            | String   | Country of merchant                     | "Malaysia"                                                     |
-| `invoiceAddress`      | Object   | Object of Invoice Address               | (Refer below)                                                  |
+| `invoiceAddress`     | Object   | Object of Invoice Address               | (Refer below)                                                  |
 | `isActive`           | Boolean  | Merchant active or deactivated status   | true                                                           |
 | `status`             | String   | Current status of merchant              | “REVIEWING”                                                    |
 | `isMasterMerchant`   | Bool     | Master Merchant flag                    | true                                                           |

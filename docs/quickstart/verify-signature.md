@@ -12,7 +12,7 @@ sidebar_label: Verify Signature
 
 :::important
 
-- <span style={{ color: "white", fontWeight: "bold" }}>Data object</span> needs to be sorted, the <span style={{ color: "white", fontWeight: "bold" }}>Nested object</span> also needs to be sorted.
+- <span style={{ color: "black", fontWeight: "bold" }}>Data object</span> needs to be sorted, the <span style={{ color: "black", fontWeight: "bold" }}>Nested object</span> also needs to be sorted.
 
 :::
 
