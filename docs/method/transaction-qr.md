@@ -21,7 +21,15 @@ import styles from "../../src/pages/styles.module.css"
     <th>Supported</th>
   </tr>
   <tr>
-    <td>WECHATPAY</td>
+    <td>WECHATPAY_CN</td>
+    <td>
+    <Card
+        className={styles.supportCard}> Yes
+        </Card>
+    </td>
+  </tr>
+    <tr>
+    <td>WECHATPAY_MY</td>
     <td>
     <Card
         className={styles.supportCard}> Yes
@@ -45,7 +53,7 @@ import styles from "../../src/pages/styles.module.css"
     </td>
   </tr>
   <tr>
-    <td>ALIPAY</td>
+    <td>ALIPAY_CN</td>
    <td>
     <Card
         className={styles.supportCard}> Yes
