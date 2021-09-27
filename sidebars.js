@@ -236,5 +236,6 @@ module.exports = {
     Appendix: ["product-terms", "error-codes"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: ["ekyc/mykad-recognition", "ekyc/face-verification"],
+    "Short Message Service ": ["sms/send-sms"],
   },
 };
