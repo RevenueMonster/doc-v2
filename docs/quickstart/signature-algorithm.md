@@ -101,6 +101,11 @@ sidebar_label: Signature Algorithm
 
 - Sort the above json key **alphabetically** and make it **compact**
 
+- Replace following special character on the json body:<br/>
+  **&lt;** to **\u003c**<br/>
+  **&gt;** to **\u003e**<br/>
+  **&amp;** to **\u0026**<br/>
+
 :::
 
 ### Step 2 : Encode the data using Base64 format
