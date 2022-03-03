@@ -235,7 +235,14 @@ module.exports = {
     // FAQ: ["introduction/overview"],
     Appendix: ["product-terms", "error-codes"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
-    eKYC: ["ekyc/mykad-recognition", "ekyc/face-verification"],
+    eKYC: [
+      "ekyc/mykad-recognition",
+      "ekyc/face-verification",
+      "ekyc/mykad-recognition-new",
+      "ekyc/get-mykad-result",
+      "ekyc/liveness-check-with-face-verification",
+      "ekyc/get-ekyc-result",
+    ],
     "Short Message Service ": ["sms/send-sms"],
   },
 };
