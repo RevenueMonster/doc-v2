@@ -237,10 +237,9 @@ module.exports = {
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: [
       "ekyc/mykad-recognition",
-      "ekyc/face-verification",
-      "ekyc/mykad-recognition-new",
-      "ekyc/get-mykad-result",
       "ekyc/liveness-check-with-face-verification",
+      "ekyc/face-verification",
+      "ekyc/get-mykad-result",
       "ekyc/get-ekyc-result",
     ],
     "Short Message Service ": ["sms/send-sms"],

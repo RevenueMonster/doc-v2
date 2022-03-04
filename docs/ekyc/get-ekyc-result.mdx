@@ -3,9 +3,31 @@ id: get-ekyc-result
 title: GET EKYC Result
 sidebar_label: GET EKYC Result
 ---
+import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
 Prerequisite : Acquire requestID from mykad recognition response
+
+- RM eKYC Sequence Diagram
+
+<Flex justifyContent="center">
+  <Button
+    width="100%"
+    sx={{
+      ":hover": {
+        backgroundColor: "blue",
+      },
+      backgroundColor: "#528ef7",
+      borderRadius: 15,
+    }}
+    onClick={() => {
+      window.location.href =
+        "https://drive.google.com/drive/folders/1cNrEk5i2s_WnI9i8_WxQlwBw5ivqxY-g?usp=sharing";
+    }}
+  >
+    Click Here
+  </Button>
+</Flex>
 :::
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
