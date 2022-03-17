@@ -25,6 +25,7 @@ module.exports = {
       "merchant-onboarding/create-merchant",
       "merchant-onboarding/get-merchants",
       "merchant-onboarding/get-merchant",
+      "merchant-onboarding/get-merchant-applications",
       "merchant-onboarding/update-merchant",
       "merchant-onboarding/review-merchant",
       "merchant-onboarding/upload-merchant-file",
