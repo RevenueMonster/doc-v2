@@ -234,7 +234,7 @@ module.exports = {
       "downloads/testing-wallets",
     ],
     // FAQ: ["introduction/overview"],
-    Appendix: ["product-terms", "error-codes"],
+    Appendix: ["product-terms", "error-codes", "bank-code"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: [
       "ekyc/mykad-recognition",
