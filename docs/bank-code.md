@@ -5,7 +5,6 @@ sidebar_label: Bank Code
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex, Table } from "rebass";
-import styles from "../../src/pages/styles.module.css"
 
 :::note
 **Following list is bank code supported by Revenue Monster.**<br/>
@@ -31,4 +30,3 @@ import styles from "../../src/pages/styles.module.css"
 | RHB_NOW                 | RHBNow                     |
 | STANDARD_CHARTERED_BANK | FPX_SCB                    |
 | UNITED_OVERSEA_BANK     | FPX_UOB                    |
-
