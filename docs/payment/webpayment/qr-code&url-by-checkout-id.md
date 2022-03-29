@@ -39,11 +39,34 @@ To create a unified payment checkout page for your website.
 
 ### Request Parameters
 
-| Parameter    | Type   | Description                                                                        | Example               |
-| ------------ | ------ | ---------------------------------------------------------------------------------- | --------------------- |
-| `checkoutId` | String | refer to [web-payment](./web-payment#response-parameters) to get your `checkoutId` | "1547775958720585401" |
-| `method`     | String | [RM currently supported method](../.././method/web-payment)                        | "WECHATPAY_MY"        |
-| `type`       | String | `URL` or `QRCODE`                                                                  | "URL"                 |
+| Parameter    | Type         | Description                                                                        | Example               |
+| ------------ | ------------ | ---------------------------------------------------------------------------------- | --------------------- |
+| `checkoutId` | String       | refer to [web-payment](./web-payment#response-parameters) to get your `checkoutId` | "1547775958720585401" |
+| `method`     | String       | [RM currently supported method](../.././method/web-payment)                        | "WECHATPAY_MY"        |
+| `type`       | String       | `URL` or `QRCODE`                                                                  | "URL"                 |
+| `gobiz`      | Gobiz Object | Specific setting for method GOBIZ_MY                                               | {}                    |
+| `card`       | Card Object  | Card information for method GOBIZ_MY only                                          | {}                    |
+
+<br/>
+<strong>Gobiz Object (data):</strong>
+
+| Parameter  | Type   | Description                               | Example                                             |
+| ---------- | ------ | ----------------------------------------- | --------------------------------------------------- |
+| `type`     | String | Type of gobiz payment                     | "DIRECT_DEBIT" / "UNIVERSAL_PAYMENT"                |
+| `bankCode` | String | Required only when type is "DIRECT_DEBIT" | [RM currently supported bank code](../../bank-code) |
+
+<br/>
+<strong>Card Object (data):</strong>
+
+| Parameter     | Type    | Description                                                        | Example          |
+| ------------- | ------- | ------------------------------------------------------------------ | ---------------- |
+| `isToken`     | boolean | To determine is it using customer token                            | false            |
+| `no`          | String  | Customer token or Card Number                                      | 4100000000000100 |
+| `cvc`         | String  | Card verification code                                             | 123              |
+| `name`        | String  | Card Name (Optional when customer token is used)                   | CitiBank         |
+| `month`       | uint32  | Card expiry month 1-12 only (Optional when customer token is used) | 8                |
+| `year`        | uint32  | Card expiry year (Optional when customer token is used)            | 2021             |
+| `countryCode` | String  | Country code (Optional when customer token is used)                | MY               |
 
 ```json
 curl --location --request POST '{{open_base_path}}/v3/payment/online/checkout' \

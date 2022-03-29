@@ -25,9 +25,19 @@ module.exports = {
       "merchant-onboarding/create-merchant",
       "merchant-onboarding/get-merchants",
       "merchant-onboarding/get-merchant",
+      "merchant-onboarding/get-merchant-applications",
       "merchant-onboarding/update-merchant",
       "merchant-onboarding/review-merchant",
       "merchant-onboarding/upload-merchant-file",
+      {
+        type: "category",
+        label: "Application Clients",
+        items: [
+          "merchant-onboarding/application-clients/get-application-clients",
+          "merchant-onboarding/application-clients/create-application-client",
+          "merchant-onboarding/application-clients/update-application-client",
+        ],
+      },
     ],
 
     Payment: [
@@ -62,6 +72,7 @@ module.exports = {
       "payment/get-fpx-bank-list",
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
+      "payment/get-customer-tokens",
     ],
 
     "à la carte": [
@@ -171,6 +182,14 @@ module.exports = {
               "campaign/loyalty/loyalty-members/topup-offline",
             ],
           },
+          {
+            type: "category",
+            label: "Loyalty Balance",
+            items: [
+              "campaign/loyalty/loyalty-balance/get-loyalty-balances",
+              "campaign/loyalty/loyalty-balance/spend-loyalty-balance",
+            ],
+          },
         ],
       },
       {
@@ -233,7 +252,7 @@ module.exports = {
       "downloads/testing-wallets",
     ],
     // FAQ: ["introduction/overview"],
-    Appendix: ["product-terms", "error-codes"],
+    Appendix: ["product-terms", "error-codes", "bank-code"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: [
       "ekyc/mykad-recognition",

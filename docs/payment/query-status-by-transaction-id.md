@@ -1,7 +1,7 @@
 ---
 id: query-status-by-transaction-id
 title: Query Status by Transaction ID
-sidebar_label: Query Status by Transaction ID
+sidebar_label: Query Status by TransactionID
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
@@ -55,23 +55,23 @@ No request parameter is required for this endpoint.
 <br/>
 <strong>Store object (store):</strong>
 
-| Parameter      | Type     | Description                                     | Example                                                      |
-| -------------- | -------- | ----------------------------------------------- | ------------------------------------------------------------ |
-| `id`           | String   | Store ID                                        | "2808912573238362402"                                        |
-| `name`         | String   | Store Name                                      | "REVENUE MONSTER"                                            |
-| `imageUrl`     | String   | Yes                                             | "https://storage.googleapis.com/rm-prod-asset/img/store.png" |
-| `addressLine1` | String   | Store Address 1                                 | "B-5-30, 5th Floor, Block Bougainvillea,"                    |
-| `addressLine2` | String   | Store Address 2                                 | "PJU 6A, Lebuhraya SPRINT, 10 Boulevard,"                    |
-| `postCode`     | String   | Postcode of store                               | "47400"                                                      |
-| `city`         | String   | City of store                                   | "Petaling Jaya"                                              |
-| `state`        | String   | State of store                                  | "Selangor"                                                   |
-| `country`      | String   | Country of store                                | "Malaysia"                                                   |
-| `countryCode`  | String   | Country code of store contact number            | "60"                                                         |
-| `phoneNumber`  | String   | Phone number of store                           | "377334080"                                                  |
-| `geoLocation`  | Object   | Geo Location (latitude and longitude) of store  | {"latitude": 3.1349857, "longitude": 101.6136659 }            |
-| `status`       | String   | Current status of store                         | "ACTIVE"                                                     |
-| `createdAt`    | DateTime | Creation date time of store                     | "2020-09-14T03:01:20Z"                                       |
-| `updatedAt`    | DateTime | Last update date time of store                  | "2020-09-14T03:01:20Z"                                       |
+| Parameter      | Type     | Description                                    | Example                                                      |
+| -------------- | -------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| `id`           | String   | Store ID                                       | "2808912573238362402"                                        |
+| `name`         | String   | Store Name                                     | "REVENUE MONSTER"                                            |
+| `imageUrl`     | String   | Yes                                            | "https://storage.googleapis.com/rm-prod-asset/img/store.png" |
+| `addressLine1` | String   | Store Address 1                                | "B-5-30, 5th Floor, Block Bougainvillea,"                    |
+| `addressLine2` | String   | Store Address 2                                | "PJU 6A, Lebuhraya SPRINT, 10 Boulevard,"                    |
+| `postCode`     | String   | Postcode of store                              | "47400"                                                      |
+| `city`         | String   | City of store                                  | "Petaling Jaya"                                              |
+| `state`        | String   | State of store                                 | "Selangor"                                                   |
+| `country`      | String   | Country of store                               | "Malaysia"                                                   |
+| `countryCode`  | String   | Country code of store contact number           | "60"                                                         |
+| `phoneNumber`  | String   | Phone number of store                          | "377334080"                                                  |
+| `geoLocation`  | Object   | Geo Location (latitude and longitude) of store | {"latitude": 3.1349857, "longitude": 101.6136659 }           |
+| `status`       | String   | Current status of store                        | "ACTIVE"                                                     |
+| `createdAt`    | DateTime | Creation date time of store                    | "2020-09-14T03:01:20Z"                                       |
+| `updatedAt`    | DateTime | Last update date time of store                 | "2020-09-14T03:01:20Z"                                       |
 
 <br/>
 <strong>Order object (order):</strong>
