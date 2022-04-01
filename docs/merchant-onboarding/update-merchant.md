@@ -76,8 +76,8 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/partner/me
 | `state`                   | String            | State of merchant                       | "Selangor"                              |
 | `country`                 | String            | Country of merchant                     | "Malaysia"                              |
 | `isSameBusinessAddress`   | Boolean           |                                         | false                                   |
-| `invoiceAddress`          | String (nullable) |                                         | null                                    |
-| `inspectList`             | String (nullable) |                                         | null                                    |
+| `invoiceAddress`          | Object (nullable) |                                         | Refer Below                             |
+| `inspectList`             | Array (nullable)  |                                         | Refer Below                             |
 | `status`                  | String            | Current status of merchant              | “REVIEWING”                             |
 | `document`                | Object            |                                         | Refer Below                             |
 | `documentFile`            | Object            |                                         | Refer Below                             |
@@ -94,49 +94,135 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/partner/me
 
 <br/>
 
+<strong>invoiceAddress (parameter) :</strong>
+
+| Parameter      | Type   | Description     | Example |
+| -------------- | ------ | --------------- | ------- |
+| `addressLine1` | String | AddressLine1    | ""      |
+| `addressLine2` | String | AddressLine2    | ""      |
+| `postCode`     | String | Customer Remark | ""      |
+| `city`         | String | City            | ""      |
+| `state`        | String | Address State   | ""      |
+| `country`      | String | Country         | ""      |
+
+<br/>
+
+<strong>inspectList (parameter) :</strong>
+
+| Parameter       | Type   | Example |
+| --------------- | ------ | ------- |
+| `FullName`      | String | ""      |
+| `Email`         | String | ""      |
+| `Position`      | String | ""      |
+| `CountryCode`   | String | ""      |
+| `PhoneNumber`   | String | ""      |
+| `Gender`        | String | ""      |
+| `Birthday`      | String | ""      |
+| `Nationality`   | String | ""      |
+| `IDType`        | String | ""      |
+| `IDNo`          | String | ""      |
+| `BeginDateTime` | String | ""      |
+| `EndDateTime`   | String | ""      |
+
+<br/>
+<strong>document (parameter) :</strong>
+
+| Parameter                   | Type   | Example |
+| --------------------------- | ------ | ------- |
+| ctosFileUrl                 | String | ""      |
+| ownerICFileUrl              | String | ""      |
+| directorICFileUrl           | String | ""      |
+| shareHolderICFileUrl        | String | ""      |
+| businessRegistrationFileUrl | String | ""      |
+| bankStatementFileUrl        | String | ""      |
+| moaFileUrl                  | String | ""      |
+| form24FileUrl               | String | ""      |
+| form49FileUrl               | String | ""      |
+| section14FileUrl            | String | ""      |
+| form44FileUrl               | String | ""      |
+| businessSitePhotoFileUrl    | String | ""      |
+
+<br/>
+<strong>documentFile (parameter) :</strong>
+
+| Parameter                   | Type   | Example |
+| --------------------------- | ------ | ------- |
+| CTOSFileURL                 | String | ""      |
+| OwnerICFileURL              | String | ""      |
+| DirectorICFileURL           | String | ""      |
+| ShareHolderICFileURL        | String | ""      |
+| BusinessRegistrationFileURL | String | ""      |
+| BankStatementFileURL        | String | ""      |
+| MOAFileURL                  | String | ""      |
+| Form24FileURL               | String | ""      |
+| Form49FileURL               | String | ""      |
+| Section14FileURL            | String | ""      |
+| Form44FileURL               | String | ""      |
+| BusinessSitePhotoFileURL    | String | ""      |
+
 > Example Response
 
 ```json
 {
   "item": {
-    "id": "1629258558902992793",
-    "merchantId": "1629258448138509563",
+    "id": "1622609881925201839",
+    "merchantId": "1622608181378590507",
     "isDefault": true,
-    "companyName": "Ed Testing",
-    "companyType": "",
-    "registrationNumber": "",
-    "businessCategory": "",
-    "businessScope": "",
+    "companyName": "Revenue Monster",
+    "companyType": "PRIVATE LIMITED COMPANY (SDN BHD)",
+    "registrationNumber": "XAS1233123",
+    "businessCategory": "COMPUTER AND ELECTRONICS",
+    "businessScope": "some business scope",
     "sourceOfFunds": "",
     "customerOrigin": "",
-    "establishedAt": "0001-01-01T00:00:00Z",
+    "establishedAt": "2006-01-02T15:04:05Z",
     "countryCode": "60",
-    "phoneNumber": "164699197",
-    "addressLine1": "",
-    "addressLine2": "",
-    "postcode": "",
-    "city": "",
-    "state": "",
-    "country": "",
+    "phoneNumber": "187824152",
+    "addressLine1": "1, Jalan Pertanian 25",
+    "addressLine2": "Taman Universiti",
+    "postcode": "81300",
+    "city": "SKUDAI",
+    "state": "JOHOR",
+    "country": "MALAYSIA",
     "isSameBusinessAddress": false,
-    "invoiceAddress": null,
-    "inspectList": null,
-    "status": "REVIEWING",
+    "invoiceAddress": {
+      "addressLine1": "1, Jalan Pertanian 25",
+      "addressLine2": "Taman Universiti",
+      "postcode": "81300",
+      "city": "SKUDAI",
+      "state": "JOHOR",
+      "country": "MALAYSIA"
+    },
+    "inspectList": [
+      {
+        "fullName": "NG SZE CHEN",
+        "email": "",
+        "position": "",
+        "countryCode": "",
+        "phoneNumber": "",
+        "gender": "MALE",
+        "birthday": "1999-07-14T15:59:59Z",
+        "nationality": "MALAYSIAN",
+        "idType": "IC",
+        "idNo": "2131290134",
+        "beginAt": "",
+        "endAt": ""
+      }
+    ],
+    "status": "UNVERIFIED",
     "document": {
-      "ctosFileUrl": "",
-      "ownerICFileUrl": "",
-      "directorICFileUrl": "",
-      "shareHolderICFileUrl": "",
-      "businessRegistrationFileUrl": "",
-      "bankStatementFileUrl": "",
-      "moaFileUrl": "",
-      "form24FileUrl": "",
-      "form49FileUrl": "",
-      "section14FileUrl": "",
-      "form44FileUrl": "",
-      "businessSitePhotoFileUrl": "",
-      "essmDocumentFileUrl": "",
-      "letterOfConsentFileUrl": ""
+      "ctosFileUrl": "https://somefilenedpoint.com",
+      "ownerICFileUrl": "https://somefilenedpoint.com",
+      "directorICFileUrl": "https://somefilenedpoint.com",
+      "shareHolderICFileUrl": "https://somefilenedpoint.com",
+      "businessRegistrationFileUrl": "https://somefilenedpoint.com",
+      "bankStatementFileUrl": "https://somefilenedpoint.com",
+      "moaFileUrl": "https://somefilenedpoint.com",
+      "form24FileUrl": "https://somefilenedpoint.com",
+      "form49FileUrl": "https://somefilenedpoint.com",
+      "section14FileUrl": "https://somefilenedpoint.com",
+      "form44FileUrl": "https://somefilenedpoint.com",
+      "businessSitePhotoFileUrl": "https://somefilenedpoint.com"
     },
     "documentFile": {
       "CTOSFileURL": null,
@@ -152,16 +238,16 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/partner/me
       "Form44FileURL": null,
       "BusinessSitePhotoFileURL": null
     },
-    "bankAccountNo": "",
-    "bankAccountType": "",
-    "bankAccountHolderName": "",
-    "bankName": "",
-    "bankCode": "",
+    "bankAccountNo": "32312323",
+    "bankAccountType": "CORPORATE",
+    "bankAccountHolderName": "Revenue Monster",
+    "bankName": "HONG LEONG BANK",
+    "bankCode": "HLBB",
     "averageTicketSize": 0,
     "averageTurnoverPerMonth": 0,
     "paymentSubscription": "",
-    "createdAt": "2021-08-18T14:28:12Z",
-    "updatedAt": "2021-08-18T14:28:12Z"
+    "createdAt": "2021-06-02T14:37:25+08:00",
+    "updatedAt": "2021-06-02T14:37:25+08:00"
   },
   "code": "SUCCESS"
 }
