@@ -82,10 +82,10 @@ Notify URL or callback URL to inform server on transaction status after payment 
 <br/>
 <strong>Geolocation Object (geoLocation):</strong>
 
-| Parameter   | Type | Required | Example |
-| ----------- | ---- | -------- | ------- |
-| `latitude`  | Uint | Yes      | 0       |
-| `longitude` | Uint | Yes      | 0       |
+| Parameter   | Type  | Required | Example |
+| ----------- | ----- | -------- | ------- |
+| `latitude`  | Float | Yes      | 0       |
+| `longitude` | Float | Yes      | 0       |
 
 > Example Response
 

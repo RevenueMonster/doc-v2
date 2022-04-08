@@ -138,8 +138,8 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `addressLine2` | String | AddressLine2                 | ""      |
 | `city`         | String | City                         | ""      |
 | `country`      | String | Country                      | ""      |
-| `latitude`     | Int    | Address latitude (In Meter)  | 0       |
-| `longitude`    | Int    | Address longitude (In Meter) | 0       |
+| `latitude`     | Float  | Address latitude (In Meter)  | 0       |
+| `longitude`    | Float  | Address longitude (In Meter) | 0       |
 | `name`         | String | Customer Name                | ""      |
 | `postCode`     | String | Customer Remark              | ""      |
 | `remark`       | String | Customer Remark              | ""      |
@@ -157,8 +157,8 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | Parameter   | Type   | Description                  | Example      |
 | ----------- | ------ | ---------------------------- | ------------ |
 | `id`        | String | Courier ID                   | ""           |
-| `latitude`  | Int    | Address latitude (In Meter)  | 0            |
-| `longitude` | Int    | Address longitude (In Meter) | 0            |
+| `latitude`  | Float  | Address latitude (In Meter)  | 0            |
+| `longitude` | Float  | Address longitude (In Meter) | 0            |
 | `name`      | String | Courier Name                 | "Testing123" |
 | `phone`     | String | Courier Contact Number       | "163698122"  |
 | `photoURL`  | String | Courier Image                | ""           |

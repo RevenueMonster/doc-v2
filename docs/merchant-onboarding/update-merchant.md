@@ -16,14 +16,88 @@ Update Merchant By ID
 
 ### Request Parameters
 
-| Parameter     | Type   | Example               |
-| ------------- | ------ | --------------------- |
-| `companyName` | String | "Edwin Testing"       |
-| `countryCode` | String | "60"                  |
-| `email`       | String | "rmtesting@gmail.com" |
-| `firstName`   | String | "Edwin"               |
-| `lastName`    | String | "Testing"             |
-| `phoneNumber` | String | "164699177"           |
+| Parameter                   | Type              | Example     |
+| --------------------------- | ----------------- | ----------- |
+| `brandName`                 | String            | ""          |
+| `websiteURL`                | String            | ""          |
+| `registrationNumber`        | String            | ""          |
+| `establishedDateTime`       | DateTime          | ""          |
+| `addressLine1`              | String            | ""          |
+| `addressLine2`              | String            | ""          |
+| `postCode`                  | String            | ""          |
+| `city`                      | String            | ""          |
+| `state`                     | String            | ""          |
+| `countryCode`               | String            | ""          |
+| `phoneNumber`               | String            | ""          |
+| `companyName`               | String            | ""          |
+| `companyType`               | String            | ""          |
+| `businessCategory`          | String            | ""          |
+| `averageTicketSize`         | String            | ""          |
+| `averageTurnoverPerMonth`   | String            | ""          |
+| `businessScope`             | String            | ""          |
+| `invoiceAddress`            | Object (nullable) | Refer Below |
+| `document`                  | Object            | Refer Below |
+| `inspectList`               | Array (nullable)  | Refer Below |
+| `bankAccountType`           | String            | ""          |
+| `bankAccountHolderName`     | String            | ""          |
+| `bankAccountNo`             | String            | ""          |
+| `bankCode`                  | String            | ""          |
+| `latitude`                  | Float             | ""          |
+| `longitude`                 | Float             | ""          |
+| `paymentSubscription`       | String            | ""          |
+| `terminalOfflineEWallet`    | String            | ""          |
+| `terminalOfflineCreditCard` | String            | ""          |
+| `onlineCreditCard`          | String            | ""          |
+
+<br/>
+
+<strong>invoiceAddress (parameter) :</strong>
+
+| Parameter      | Type   | Description     | Example |
+| -------------- | ------ | --------------- | ------- |
+| `addressLine1` | String | AddressLine1    | ""      |
+| `addressLine2` | String | AddressLine2    | ""      |
+| `postCode`     | String | Customer Remark | ""      |
+| `city`         | String | City            | ""      |
+| `state`        | String | Address State   | ""      |
+| `country`      | String | Country         | ""      |
+
+<br/>
+
+<strong>inspectList (parameter) :</strong>
+
+| Parameter       | Type   | Example |
+| --------------- | ------ | ------- |
+| `fullName`      | String | ""      |
+| `email`         | String | ""      |
+| `position`      | String | ""      |
+| `countryCode`   | String | ""      |
+| `phoneNumber`   | String | ""      |
+| `gender`        | String | ""      |
+| `birthday`      | String | ""      |
+| `nationality`   | String | ""      |
+| `iDType`        | String | ""      |
+| `iDNo`          | String | ""      |
+| `beginDateTime` | String | ""      |
+| `endDateTime`   | String | ""      |
+
+<br/>
+<strong>document (parameter) :</strong>
+
+| Parameter                     | Type   | Example |
+| ----------------------------- | ------ | ------- |
+| `ctosFileUrl`                 | String | ""      |
+| `ownerICFileUrl`              | String | ""      |
+| `directorICFileUrl`           | String | ""      |
+| `shareHolderICFileUrl`        | String | ""      |
+| `businessRegistrationFileUrl` | String | ""      |
+| `bankStatementFileUrl `       | String | ""      |
+| `moaFileUrl`                  | String | ""      |
+| `form24FileUrl`               | String | ""      |
+| `form49FileUrl`               | String | ""      |
+| `section14FileUrl `           | String | ""      |
+| `form44FileUrl`               | String | ""      |
+| `businessSitePhotoFileUrl`    | String | ""      |
 
 > Example Request
 
@@ -35,12 +109,66 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/partner/me
   --header "X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN" \
   --header "X-Timestamp: 1527407052" \
   --data-raw '{
-    "companyName":"Ed Testing",
-    "countryCode":"60",
-    "email":"testing@gmail.com",
-    "firstName":"Edwin",
-    "lastName":"Testing",
-    "phoneNumber":"164699197"
+    "brandName": "Revenue Monster",
+    "websiteUrl": "https://revenuemonster.my",
+    "registrationNumber": "XAS1233123",
+    "establishedAt": "2006-01-02T15:04:05Z",
+    "addressLine1": "1, Jalan Pertanian 25",
+    "addressLine2": "Taman Universiti",
+    "postCode": "81300",
+    "city": "SKUDAI",
+    "state": "JOHOR",
+    "country": "MALAYSIA",
+    "countryCode": "60",
+    "phoneNumber": "187824152",
+    "companyName": "Revenue Monster",
+    "companyType": "PRIVATE LIMITED COMPANY (SDN BHD)",
+    "businessCategory": "COMPUTER AND ELECTRONICS",
+    "averageTicketSize": 1000000,
+    "averageTurnoverPerMonth": 1000000,
+    "businessScope": "some business scope",
+    "invoiceAddress": {
+        "addressLine1": "1, Jalan Pertanian 25",
+        "addressLine2": "Taman Universiti",
+        "postCode": "81300",
+        "city": "SKUDAI",
+        "state": "JOHOR",
+        "country": "MALAYSIA"
+    },
+    "document": {
+        "ctosFileUrl": "https://somefilenedpoint.com",
+        "ownerICFileUrl": "https://somefilenedpoint.com",
+        "directorICFileUrl": "https://somefilenedpoint.com",
+        "shareHolderICFileUrl": "https://somefilenedpoint.com",
+        "businessRegistrationFileUrl": "https://somefilenedpoint.com",
+        "bankStatementFileUrl": "https://somefilenedpoint.com",
+        "moaFileUrl": "https://somefilenedpoint.com",
+        "form24FileUrl": "https://somefilenedpoint.com",
+        "form49FileUrl": "https://somefilenedpoint.com",
+        "section14FileUrl": "https://somefilenedpoint.com",
+        "form44FileUrl": "https://somefilenedpoint.com",
+        "businessSitePhotoFileUrl": "https://somefilenedpoint.com"
+    },
+    "inspectList": [
+        {
+            "fullName": "NG SZE CHEN",
+            "gender": "MALE",
+            "birthday": "1999-07-14T15:59:59Z",
+            "nationality": "MALAYSIAN",
+            "idType": "IC",
+            "idNo": "2131290134"
+        }
+    ],
+    "bankAccountType": "CORPORATE",
+    "bankAccountHolderName": "Revenue Monster",
+    "bankAccountNo": "32312323",
+    "bankCode": "HLBB",
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "paymentSubscription": "BOTH",
+    "terminalOfflineEWallet": false,
+    "terminalOfflineCreditCard": false,
+    "onlineCreditCard": false
 }'
 ```
 
@@ -111,54 +239,54 @@ curl --location --request PATCH "https://sb-open.revenuemonster.my/v3/partner/me
 
 | Parameter       | Type   | Example |
 | --------------- | ------ | ------- |
-| `FullName`      | String | ""      |
-| `Email`         | String | ""      |
-| `Position`      | String | ""      |
-| `CountryCode`   | String | ""      |
-| `PhoneNumber`   | String | ""      |
-| `Gender`        | String | ""      |
-| `Birthday`      | String | ""      |
-| `Nationality`   | String | ""      |
-| `IDType`        | String | ""      |
-| `IDNo`          | String | ""      |
-| `BeginDateTime` | String | ""      |
-| `EndDateTime`   | String | ""      |
+| `fullName`      | String | ""      |
+| `email`         | String | ""      |
+| `position`      | String | ""      |
+| `countryCode`   | String | ""      |
+| `phoneNumber`   | String | ""      |
+| `gender`        | String | ""      |
+| `birthday`      | String | ""      |
+| `nationality`   | String | ""      |
+| `iDType`        | String | ""      |
+| `iDNo`          | String | ""      |
+| `beginDateTime` | String | ""      |
+| `endDateTime`   | String | ""      |
 
 <br/>
 <strong>document (parameter) :</strong>
 
-| Parameter                   | Type   | Example |
-| --------------------------- | ------ | ------- |
-| ctosFileUrl                 | String | ""      |
-| ownerICFileUrl              | String | ""      |
-| directorICFileUrl           | String | ""      |
-| shareHolderICFileUrl        | String | ""      |
-| businessRegistrationFileUrl | String | ""      |
-| bankStatementFileUrl        | String | ""      |
-| moaFileUrl                  | String | ""      |
-| form24FileUrl               | String | ""      |
-| form49FileUrl               | String | ""      |
-| section14FileUrl            | String | ""      |
-| form44FileUrl               | String | ""      |
-| businessSitePhotoFileUrl    | String | ""      |
+| Parameter                     | Type   | Example |
+| ----------------------------- | ------ | ------- |
+| `ctosFileUrl`                 | String | ""      |
+| `ownerICFileUrl`              | String | ""      |
+| `directorICFileUrl`           | String | ""      |
+| `shareHolderICFileUrl`        | String | ""      |
+| `businessRegistrationFileUrl` | String | ""      |
+| `bankStatementFileUrl `       | String | ""      |
+| `moaFileUrl`                  | String | ""      |
+| `form24FileUrl`               | String | ""      |
+| `form49FileUrl`               | String | ""      |
+| `section14FileUrl `           | String | ""      |
+| `form44FileUrl`               | String | ""      |
+| `businessSitePhotoFileUrl`    | String | ""      |
 
 <br/>
 <strong>documentFile (parameter) :</strong>
 
-| Parameter                   | Type   | Example |
-| --------------------------- | ------ | ------- |
-| CTOSFileURL                 | String | ""      |
-| OwnerICFileURL              | String | ""      |
-| DirectorICFileURL           | String | ""      |
-| ShareHolderICFileURL        | String | ""      |
-| BusinessRegistrationFileURL | String | ""      |
-| BankStatementFileURL        | String | ""      |
-| MOAFileURL                  | String | ""      |
-| Form24FileURL               | String | ""      |
-| Form49FileURL               | String | ""      |
-| Section14FileURL            | String | ""      |
-| Form44FileURL               | String | ""      |
-| BusinessSitePhotoFileURL    | String | ""      |
+| Parameter                     | Type   | Example |
+| ----------------------------- | ------ | ------- |
+| `CTOSFileURL`                 | String | ""      |
+| `OwnerICFileURL`              | String | ""      |
+| `DirectorICFileURL `          | String | ""      |
+| `ShareHolderICFileURL`        | String | ""      |
+| `BusinessRegistrationFileURL` | String | ""      |
+| `BankStatementFileURL`        | String | ""      |
+| `MOAFileURL`                  | String | ""      |
+| `Form24FileURL`               | String | ""      |
+| `Form49FileURL`               | String | ""      |
+| `Section14FileURL`            | String | ""      |
+| `Form44FileURL`               | String | ""      |
+| `BusinessSitePhotoFileURL`    | String | ""      |
 
 > Example Response
 
