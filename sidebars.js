@@ -72,7 +72,14 @@ module.exports = {
       "payment/get-fpx-bank-list",
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
-      "payment/get-customer-tokens",
+      {
+        type: "category",
+        label: "Customer Card Token",
+        items: [
+          "payment/customertoken/get-customer-token",
+          "payment/customertoken/delete-customer-token"
+        ],
+      },
     ],
 
     "à la carte": [

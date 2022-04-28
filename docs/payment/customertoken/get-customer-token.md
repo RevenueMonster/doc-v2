@@ -1,5 +1,5 @@
 ---
-id: get-customer-tokens
+id: get-customer-token
 title: Get Customer Tokens
 sidebar_label: Get Customer Tokens
 ---
