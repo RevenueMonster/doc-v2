@@ -25,6 +25,7 @@ Create Application Client
 | `privacyPolicyUrl` | String       |         | "https://google.com"   |
 | `redirectUri`      | Array String |         | ["https://google.com"] |
 | `publicKey`        | String       |         | "....."                |
+| `isActive`         | Boolean      |         | true                   |
 
 <br />
 
@@ -50,6 +51,7 @@ curl --location --request GET "https://sb-open.revenuemonster.my/v3/partner/merc
   "logoUrl": "https://google.com",
   "privacyPolicyUrl": "https://google.com",
   "redirectUri": ["https://google.com"],
+  "isActive": true,
   "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQBsJf/68nKn3WFcmbA4uK45\nYTQJ2M9XRf82COhN6OQpTLs4PEQSFCix9/05DdOfqe4PR64JS+nlA3q54YXLq++b\nuG8aerNM39Ie0VssTq+Wu3antoq9qvSQL0ADSfLPtWxRKirY8ysrFWN8yU2p7ofp\n/byYvo5DZ9i6aclctottecc/1NWaXWFSLzbsceSGjP3O+17+gMXCnwroT87XdGXJ\nY/D11Cly8sD3Ll9OKIT1aDlKkkR9FWcFct0wDYEedutBAMOFjYAW3jvcUbdi7CKy\neX42N7t7dIb1tw+WTFSpx5+tHKqRwLUq5S9eTx4e8+UxJ9LUTyr14O+TkTSL8Fpx\nAgMBAAE=\n-----END PUBLIC KEY-----"
 }
 ```

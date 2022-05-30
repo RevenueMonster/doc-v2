@@ -34,23 +34,24 @@ Use `Store ID` to check a particular store details.
 <br/>
 <strong>Array of store object (item):</strong>
 
-| Parameter      | Type               | Description                                     | Example                                                      |
-| -------------- | ------------------ | ----------------------------------------------- | ------------------------------------------------------------ |
-| `id`           | String             | Store ID                                        | "6170506694335521334"                                        |
-| `name`         | String             | Store Name                                      | "REVENUE MONSTER"                                            |
-| `imageUrl`     | String             | Image of your Store                             | "https://storage.googleapis.com/rm-prod-asset/img/store.png" |
-| `addressLine1` | String             | Store Address 1                                 | "B-5-30, 5th Floor, Block Bougainvillea,"                    |
-| `addressLine2` | String             | Store Address 2                                 | "PJU 6A, Lebuhraya SPRINT, 10 Boulevard,"                    |
-| `postCode`     | String             | Postcode of store                               | "55100"                                                      |
-| `city`         | String             | City of store                                   | "Petaling Jaya"                                              |
-| `state`        | String             | State of store                                  | "Selangor"                                                   |
-| `country`      | String             | Country of store                                | "Malaysia"                                                   |
-| `countryCode`  | String             | Country code of store contact number            | "60"                                                         |
-| `phoneNumber`  | String             | Phone number of store                           | "377334080"                                                  |
-| `geoLocation`  | Object of [Float]  | Geo Location (latitude and longitude) of store  | {"Lat": 3.1349857, "Lng": 101.6136659 }                      |
-| `status`       | String             | Current status of store                         | "ACTIVE"                                                     |
-| `createdAt`    | DateTime           | Creation date time of store                     | "2018-02-12T08:53:13Z"                                       |
-| `updatedAt`    | DateTime           | Last update date time of store                  | "2018-02-12T08:53:13Z"                                       |
+| Parameter              | Type              | Description                                    | Example                                                      |
+| ---------------------- | ----------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| `id`                   | String            | Store ID                                       | "6170506694335521334"                                        |
+| `merchantSettlementId` | String            | Linkage with payment settlement account        |                                                              |
+| `name`                 | String            | Store Name                                     | "REVENUE MONSTER"                                            |
+| `imageUrl`             | String            | Image of your Store                            | "https://storage.googleapis.com/rm-prod-asset/img/store.png" |
+| `addressLine1`         | String            | Store Address 1                                | "B-5-30, 5th Floor, Block Bougainvillea,"                    |
+| `addressLine2`         | String            | Store Address 2                                | "PJU 6A, Lebuhraya SPRINT, 10 Boulevard,"                    |
+| `postCode`             | String            | Postcode of store                              | "55100"                                                      |
+| `city`                 | String            | City of store                                  | "Petaling Jaya"                                              |
+| `state`                | String            | State of store                                 | "Selangor"                                                   |
+| `country`              | String            | Country of store                               | "Malaysia"                                                   |
+| `countryCode`          | String            | Country code of store contact number           | "60"                                                         |
+| `phoneNumber`          | String            | Phone number of store                          | "377334080"                                                  |
+| `geoLocation`          | Object of [Float] | Geo Location (latitude and longitude) of store | {"Lat": 3.1349857, "Lng": 101.6136659 }                      |
+| `status`               | String            | Current status of store                        | "ACTIVE"                                                     |
+| `createdAt`            | DateTime          | Creation date time of store                    | "2018-02-12T08:53:13Z"                                       |
+| `updatedAt`            | DateTime          | Last update date time of store                 | "2018-02-12T08:53:13Z"                                       |
 
 > Example Response
 
