@@ -39,6 +39,14 @@ module.exports = {
       },
     ],
 
+    Accounts: [
+      "account/create-account",
+      "account/get-accounts",
+      "account/get-account",
+      "account/update-account",
+      "account/submit-account-review",
+    ],
+
     Payment: [
       "payment/overview",
       "payment/quick-pay",
@@ -76,7 +84,7 @@ module.exports = {
         label: "Customer Card Token",
         items: [
           "payment/customertoken/get-customer-token",
-          "payment/customertoken/delete-customer-token"
+          "payment/customertoken/delete-customer-token",
         ],
       },
     ],
