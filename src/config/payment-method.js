@@ -156,6 +156,9 @@ const payments = [
     {
         method: 'SenHengPay',
         region: 'Malaysia',
+        systemMethod: 'SENHENGPAY',
+        web: true,
+        mobileWeb: true,
     },
     {
         method: 'GrabPayLater',
