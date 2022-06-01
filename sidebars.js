@@ -25,7 +25,6 @@ module.exports = {
       "merchant-onboarding/create-merchant",
       "merchant-onboarding/get-merchants",
       "merchant-onboarding/get-merchant",
-      "merchant-onboarding/get-merchant-applications",
       "merchant-onboarding/update-merchant",
       "merchant-onboarding/review-merchant",
       "merchant-onboarding/upload-merchant-file",
@@ -77,7 +76,7 @@ module.exports = {
         label: "Customer Card Token",
         items: [
           "payment/customertoken/get-customer-token",
-          "payment/customertoken/delete-customer-token"
+          "payment/customertoken/delete-customer-token",
         ],
       },
     ],
@@ -126,12 +125,6 @@ module.exports = {
       "pos/cancellation",
       "pos/card-refund",
       "pos/card-settlement",
-    ],
-
-    "Supported Payment Methods": [
-      "method/quick-pay",
-      "method/transaction-qr",
-      "method/web-payment",
     ],
 
     "Loyalty & Voucher": [
@@ -227,6 +220,17 @@ module.exports = {
     Settings: [
       {
         type: "category",
+        label: "Account",
+        items: [
+          "settings/account-detail/create-account",
+          "settings/account-detail/get-accounts",
+          "settings/account-detail/get-account",
+          "settings/account-detail/update-account",
+          "settings/account-detail/submit-account-review",
+        ]
+      },
+      {
+        type: "category",
         label: "Store",
         items: [
           "settings/store-detail/store-details",
@@ -259,7 +263,7 @@ module.exports = {
       "downloads/testing-wallets",
     ],
     // FAQ: ["introduction/overview"],
-    Appendix: ["product-terms", "error-codes", "bank-code"],
+    Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: [
       "ekyc/mykad-recognition",
