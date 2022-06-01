@@ -42,7 +42,7 @@ To create a unified payment checkout page for your website.
 | Parameter    | Type         | Description                                                                        | Example               |
 | ------------ | ------------ | ---------------------------------------------------------------------------------- | --------------------- |
 | `checkoutId` | String       | refer to [web-payment](./web-payment#response-parameters) to get your `checkoutId` | "1547775958720585401" |
-| `method`     | String       | [RM currently supported method](../.././method/web-payment)                        | "WECHATPAY_MY"        |
+| `method`     | String       | [RM currently supported method](../.././payment-method.mdx)                        | "WECHATPAY_MY"        |
 | `type`       | String       | `URL` or `QRCODE`                                                                  | "URL"                 |
 | `gobiz`      | Gobiz Object | Specific setting for method GOBIZ_MY                                               | {}                    |
 | `card`       | Card Object  | Card information for method GOBIZ_MY only                                          | {}                    |

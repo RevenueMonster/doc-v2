@@ -44,7 +44,7 @@ No request parameter is required for this endpoint.
 | `voucher`       | Object   | Voucher                                                                                                                 | null                                  |
 | `transactionAt` | DateTime | Date time of transaction                                                                                                | "2018-03-21T06:41:22Z"                |
 | `platform`      | String   | Currently only support "OPEN_API"                                                                                       | "OPEN_API"                            |
-| `method`        | String   | [RM currently supported method](../method/quick-pay)                                                                    | "TNG"                                 |
+| `method`        | String   | [RM currently supported method](../payment-method.mdx)                                                                  | "TNG"                                 |
 | `type`          | String   | Currently only support "QUICKPAY" , "WEB_PAYMENT"                                                                       | "WEB_PAYMENT"                         |
 | `status`        | String   | Status returned from server, "SUCCESS" or "IN_PROCESS" or "FAILED". "IN_PROCESS" means user scanned and making payment. | "SUCCESS"                             |
 | `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                 | "MALAYSIA"                            |

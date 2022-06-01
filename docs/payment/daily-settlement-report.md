@@ -16,13 +16,13 @@ To get Daily Payment report
 
 ### Request Parameters
 
-| Parameter         | Type     | Required | Description                                          | Example      |
-| ----------------- | ------   | -------- | ---------------------------------------------------- | ------------ |
-| `transactionType` | String   | Yes      | "PAYMENT" or "REFUND"                                | "PAYMENT"    |
-| `date`            | String   | Yes      | Date of the report                                   | "2019-12-31" |
-| `method`          | []String | Yes      | [RM currently supported method](../method/quick-pay) | []           |
-| `region`          | []String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"              | []           |
-| `cursor`          | String   | Yes      | Optional, if pagination exists                       | ""           |
+| Parameter         | Type     | Required | Description                                            | Example      |
+| ----------------- | -------- | -------- | ------------------------------------------------------ | ------------ |
+| `transactionType` | String   | Yes      | "PAYMENT" or "REFUND"                                  | "PAYMENT"    |
+| `date`            | String   | Yes      | Date of the report                                     | "2019-12-31" |
+| `method`          | []String | Yes      | [RM currently supported method](../payment-method.mdx) | []           |
+| `region`          | []String | Yes      | Region of wallet, "MALAYSIA" or "CHINA"                | []           |
+| `cursor`          | String   | Yes      | Optional, if pagination exists                         | ""           |
 
 > Example Request
 
@@ -54,24 +54,24 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/payment/rec
 
 <strong>Transaction object (item):</strong>
 
-| Parameter          | Type     | Description                                                                                                                    | Example                                    |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| `transactionAt`    | DateTime | Transaction date time of transaction                                                                                           | "2019-12-31T07:00:10Z"                     |
-| `merchantId`       | String   | (Can view From RM Portal)                                                                                                      | "4118165203679668885"                      |
-| `merchantName`     | String   | (Can view From RM Portal)                                                                                                      | "Revenue Monster Sdn Bhd"                  |
-| `storeId`          | String   | Store ID                                                                                                                       | "4949529109748431621"                      |
-| `storeName`        | String   | Store Name                                                                                                                     | "Kim's Food Corner"                        |
-| `region`           | String   | Region of wallet, "MALAYSIA" or "CHINA"                                                                                        | "MALAYSIA"                                 |
-| `method`           | String   | [RM currently supported method](../method/quick-pay)                                                                           | "TNG"                                      |
-| `transactionType`  | String   | "PAYMENT" or "REFUND"                                                                                                          | "PAYMENT"                                  |
-| `type`             | String   | "QUICK_PAY" , "QR_PAY","Web_Payment" , "Mobile_Payment" , "Mobile_Web_Payment"                                                 | "QUICK_PAY"                                |
-| `transactionId`    | String   | Transaction ID (from RM server)                                                                                                | "152161448229438994"                       |
-| `orderId`          | String   | Order ID (from Merchant), max: 24                                                                                              | "1577775608765190100M6010"                 |
-| `currencyType`     | String   | Currency notation (currently only support `MYR`)                                                                               | "MYR"                                      |
-| `grossAmount`      | Double   | Gross Amount QR pay                                                                                                            | "0.10"                                     |
-| `mdr`              | Double   | MDR (from RM server)                                                                                                           | "0.70"                                     |
-| `serviceFee`       | Double   | Service Fee (from RM server)                                                                                                   | "-0.00"                                    |
-| `settlementAmount` | Double   | Settlement Amount                                                                                                              | "0.10"                                     |
+| Parameter          | Type     | Description                                                                    | Example                    |
+| ------------------ | -------- | ------------------------------------------------------------------------------ | -------------------------- |
+| `transactionAt`    | DateTime | Transaction date time of transaction                                           | "2019-12-31T07:00:10Z"     |
+| `merchantId`       | String   | (Can view From RM Portal)                                                      | "4118165203679668885"      |
+| `merchantName`     | String   | (Can view From RM Portal)                                                      | "Revenue Monster Sdn Bhd"  |
+| `storeId`          | String   | Store ID                                                                       | "4949529109748431621"      |
+| `storeName`        | String   | Store Name                                                                     | "Kim's Food Corner"        |
+| `region`           | String   | Region of wallet, "MALAYSIA" or "CHINA"                                        | "MALAYSIA"                 |
+| `method`           | String   | [RM currently supported method](../payment-method.mdx)                         | "TNG"                      |
+| `transactionType`  | String   | "PAYMENT" or "REFUND"                                                          | "PAYMENT"                  |
+| `type`             | String   | "QUICK_PAY" , "QR_PAY","Web_Payment" , "Mobile_Payment" , "Mobile_Web_Payment" | "QUICK_PAY"                |
+| `transactionId`    | String   | Transaction ID (from RM server)                                                | "152161448229438994"       |
+| `orderId`          | String   | Order ID (from Merchant), max: 24                                              | "1577775608765190100M6010" |
+| `currencyType`     | String   | Currency notation (currently only support `MYR`)                               | "MYR"                      |
+| `grossAmount`      | Double   | Gross Amount QR pay                                                            | "0.10"                     |
+| `mdr`              | Double   | MDR (from RM server)                                                           | "0.70"                     |
+| `serviceFee`       | Double   | Service Fee (from RM server)                                                   | "-0.00"                    |
+| `settlementAmount` | Double   | Settlement Amount                                                              | "0.10"                     |
 
 <br/>
 

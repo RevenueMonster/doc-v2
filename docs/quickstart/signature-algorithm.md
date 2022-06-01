@@ -32,7 +32,7 @@ sidebar_label: Signature Algorithm
 | --------------- | -------- | -------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | `order`         | Object   | Yes      | Object of order                                                                                    | (Refer to explanation below)                                                 |
 | `customer`      | Object   | Yes      | Object of customer                                                                                 | (Refer to explanation below)                                                 |
-| `method`        | []String | Yes      | [RM currently supported method](https://doc.revenuemonster.my/docs/method/web-payment)             | []                                                                           |
+| `method`        | []String | Yes      | [RM currently supported method](https://doc.revenuemonster.my/docs/payment-method.mdx)             | []                                                                           |
 | `type`          | String   | Yes      | Object of type                                                                                     | (Refer to explanation below)                                                 |
 | `storeId`       | String   | Yes      | ID of the store to create QR code                                                                  | "10946114768247530"                                                          |
 | `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                              | "https://google.com"                                                         |
@@ -145,9 +145,9 @@ data=ewogICAgIm9yZGVyIjogewogICAgCSJ0aXRsZSI6ICJoZWxsbyIsCiAgICAJImRldGFpbCI6ICI
 
 :::
 
-<!-- | Type   | Required | Description                                              |                        |
-| ------ | -------- | -------------------------------------------------------- | ---------------------- |
-| String | Yes      | Sign the request data in Step 3 using CLIENT PRIVATE KEY | Response show as below | -->
+| <!--   | Type | Required                                                 | Description            |     |
+| ------ | ---- | -------------------------------------------------------- | ---------------------- |
+| String | Yes  | Sign the request data in Step 3 using CLIENT PRIVATE KEY | Response show as below | --> |
 
 :::note
 **Example of Signature**

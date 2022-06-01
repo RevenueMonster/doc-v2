@@ -39,14 +39,6 @@ module.exports = {
       },
     ],
 
-    Accounts: [
-      "account/create-account",
-      "account/get-accounts",
-      "account/get-account",
-      "account/update-account",
-      "account/submit-account-review",
-    ],
-
     Payment: [
       "payment/overview",
       "payment/quick-pay",
@@ -133,12 +125,6 @@ module.exports = {
       "pos/cancellation",
       "pos/card-refund",
       "pos/card-settlement",
-    ],
-
-    "Supported Payment Methods": [
-      "method/quick-pay",
-      "method/transaction-qr",
-      "method/web-payment",
     ],
 
     "Loyalty & Voucher": [
@@ -234,6 +220,17 @@ module.exports = {
     Settings: [
       {
         type: "category",
+        label: "Account",
+        items: [
+          "settings/account-detail/create-account",
+          "settings/account-detail/get-accounts",
+          "settings/account-detail/get-account",
+          "settings/account-detail/update-account",
+          "settings/account-detail/submit-account-review",
+        ]
+      },
+      {
+        type: "category",
         label: "Store",
         items: [
           "settings/store-detail/store-details",
@@ -266,7 +263,7 @@ module.exports = {
       "downloads/testing-wallets",
     ],
     // FAQ: ["introduction/overview"],
-    Appendix: ["product-terms", "error-codes", "bank-code"],
+    Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
     "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart"],
     eKYC: [
       "ekyc/mykad-recognition",
