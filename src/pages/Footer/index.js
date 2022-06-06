@@ -62,7 +62,7 @@ function Footer() {
             </a>
           </div>
           <div className={styles.copyright}>
-            Copyright © ${new Date().getFullYear()} Revenue Monster SDN BHD
+            Copyright © {new Date().getFullYear()} Revenue Monster SDN BHD
             <br />
             (Company NO.1236838-T). All rights reserved
           </div>
