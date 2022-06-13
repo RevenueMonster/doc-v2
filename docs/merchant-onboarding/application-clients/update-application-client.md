@@ -66,7 +66,7 @@ curl --location --request PUT "https://sb-open.revenuemonster.my/v3/partner/merc
 | Parameter             | Type           | Description                       | Example                                                                             |
 | --------------------- | -------------- | --------------------------------- | ----------------------------------------------------------------------------------- |
 | `clientId`            | String         |                                   | "1647502414730379278"                                                               |
-| `cleintSecret`        | String         |                                   | "dtbDsFgbLDzGhMleKjTFZXGxrDKFnMqe"                                                  |
+| `clientSecret`        | String         |                                   | "dtbDsFgbLDzGhMleKjTFZXGxrDKFnMqe"                                                  |
 | `client`              | Object         |                                   | {publicKey: "**refer below example**"}                                              |
 | `server`              | Object         |                                   | {publicKey: "**refer below example**" , privateKey :"**refer below example**"}      |
 | `name`                | String         |                                   | "required name"                                                                     |
@@ -87,7 +87,7 @@ curl --location --request PUT "https://sb-open.revenuemonster.my/v3/partner/merc
 {
   "item": {
     "clientId": "1647502414730379278",
-    "cleintSecret": "dtbDsFgbLDzGhMleKjTFZXGxrDKFnMqe",
+    "clientSecret": "dtbDsFgbLDzGhMleKjTFZXGxrDKFnMqe",
     "client": {
       "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQBsJf/68nKn3WFcmbA4uK45\nYTQJ2M9XRf82COhN6OQpTLs4PEQSFCix9/05DdOfqe4PR64JS+nlA3q54YXLq++b\nuG8aerNM39Ie0VssTq+Wu3antoq9qvSQL0ADSfLPtWxRKirY8ysrFWN8yU2p7ofp\n/byYvo5DZ9i6aclctottecc/1NWaXWFSLzbsceSGjP3O+17+gMXCnwroT87XdGXJ\nY/D11Cly8sD3Ll9OKIT1aDlKkkR9FWcFct0wDYEedutBAMOFjYAW3jvcUbdi7CKy\neX42N7t7dIb1tw+WTFSpx5+tHKqRwLUq5S9eTx4e8+UxJ9LUTyr14O+TkTSL8Fpx\nAgMBAAE=\n-----END PUBLIC KEY-----"
     },
