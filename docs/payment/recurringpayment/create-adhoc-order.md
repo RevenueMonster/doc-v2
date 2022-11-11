@@ -33,24 +33,24 @@ Create Recurring Adhoc Order
 
 <strong>Transaction object (item):</strong>
 
-| Parameter       | Type     | Description                                            | Example                                    |
-| --------------- | -------- | ------------------------------------------------------ | ------------------------------------------ |
-| `store`         | Object   | Store object                                           | (Refer to explanation below)               |
-| `referenceId`   | String   | Reference ID (from WeChat server)                      | ""                                         |
-| `transactionId` | String   | Transaction ID (from RM server)                        | "152161448229438994"                       |
-| `order`         | Object   | Order object                                           | (Refer to explanation below)               |
-| `payee`         | Object   | Object of userID made payment (payment sender)         | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
-| `currencyType`  | String   | Currency notation (currently only support `MYR`)       | "MYR"                                      |
-| `balanceAmount` | Uint     | Amount of order                                        | 100                                        |
-| `platform`      | String   | Currently only support "OPEN_API"                      | "OPEN_API"                                 |
-| `method`        | String   | [RM currently supported method](../payment-method.mdx) | ALL                                        |
-| `type`          | String   | Currently only support "QUICKPAY"                      | "QUICKPAY"                                 |
-| `status`        | String   | Status returned from WeChat server                     | "SUCCESS"                                  |
-| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                | "MALAYSIA"                                 |
-| `error`         | String   | (Refer `Appendix: Error Codes`)                        | {}                                         |
-| `transactionAt` | DateTime | Payment date time                                      | "2018-03-21T06:41:22Z"                     |
-| `createdAt`     | DateTime | Creation date time of transaction                      | "2018-03-21T06:41:22Z"                     |
-| `updatedAt`     | DateTime | Last update date time of transaction                   | "2018-03-21T06:41:22Z"                     |
+| Parameter       | Type     | Description                                               | Example                                    |
+| --------------- | -------- | --------------------------------------------------------- | ------------------------------------------ |
+| `store`         | Object   | Store object                                              | (Refer to explanation below)               |
+| `referenceId`   | String   | Reference ID (from WeChat server)                         | ""                                         |
+| `transactionId` | String   | Transaction ID (from RM server)                           | "152161448229438994"                       |
+| `order`         | Object   | Order object                                              | (Refer to explanation below)               |
+| `payee`         | Object   | Object of userID made payment (payment sender)            | {"userId": "o74f0wjjzv9eKRu1fccrZswVFnOQ"} |
+| `currencyType`  | String   | Currency notation (currently only support `MYR`)          | "MYR"                                      |
+| `balanceAmount` | Uint     | Amount of order                                           | 100                                        |
+| `platform`      | String   | Currently only support "OPEN_API"                         | "OPEN_API"                                 |
+| `method`        | String   | [RM currently supported method](../../payment-method.mdx) | ALL                                        |
+| `type`          | String   | Currently only support "QUICKPAY"                         | "QUICKPAY"                                 |
+| `status`        | String   | Status returned from WeChat server                        | "SUCCESS"                                  |
+| `region`        | String   | Region of wallet, "MALAYSIA" or "CHINA"                   | "MALAYSIA"                                 |
+| `error`         | String   | (Refer `Appendix: Error Codes`)                           | {}                                         |
+| `transactionAt` | DateTime | Payment date time                                         | "2018-03-21T06:41:22Z"                     |
+| `createdAt`     | DateTime | Creation date time of transaction                         | "2018-03-21T06:41:22Z"                     |
+| `updatedAt`     | DateTime | Last update date time of transaction                      | "2018-03-21T06:41:22Z"                     |
 
 <br />
 <strong>Store object (store):</strong>
