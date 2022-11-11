@@ -161,12 +161,6 @@ const payments = [
         mobileWeb: true,
     },
     {
-        method: 'GrabPayLater',
-        region: 'Malaysia',
-        systemMethod: 'GRABPAYLATER',
-        web: true,
-    },
-    {
         method: 'Split',
         region: 'Malaysia',
         systemMethod: 'SPLIT',
@@ -191,6 +185,13 @@ const payments = [
         systemMethod: 'NETSPAY',
         web: true,
         retailQR: true,
+    },
+    {
+        method: 'Setel',
+        region: 'Malaysia',
+        systemMethod: 'SETEL',
+        quickPay: true,
+        web: true,
     },
 ];
 

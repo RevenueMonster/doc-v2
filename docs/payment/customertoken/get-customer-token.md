@@ -11,7 +11,7 @@ URL : `https://open.revenuemonster.my/v3/payment/tokens/{customerId}`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customerId}`
 
 :::note
-Get Customer Tokens
+Get Customer Tokens ( Customer ID based on your side pass in to Web Payment )
 :::
 
 ### Request Parameters

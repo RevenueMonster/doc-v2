@@ -62,6 +62,18 @@ module.exports = {
           // "payment/webpayment/get-web-payment-qr-code",
           "payment/webpayment/qr-code&url-by-checkout-id",
           "payment/webpayment/get-online-transaction",
+          "payment/customertoken/get-customer-token",
+          "payment/customertoken/delete-customer-token",
+        ],
+      },
+      {
+        type: "category",
+        label: "Recurring Payments",
+        items: [
+          "payment/recurringpayment/create-recurring-customer",
+          "payment/recurringpayment/toggle-customer-status",
+          "payment/recurringpayment/get-customer-orders",
+          "payment/recurringpayment/create-adhoc-order",
         ],
       },
       "payment/alipay-mini-program",
@@ -72,14 +84,6 @@ module.exports = {
       "payment/get-fpx-bank-list",
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
-      {
-        type: "category",
-        label: "Customer Card Token",
-        items: [
-          "payment/customertoken/get-customer-token",
-          "payment/customertoken/delete-customer-token",
-        ],
-      },
     ],
 
     "à la carte": [
