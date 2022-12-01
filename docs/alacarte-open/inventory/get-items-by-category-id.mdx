@@ -59,7 +59,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `items`   | Object | (Refer to explanation below)    | (Refer to explanation below) |
 
 | Parameter      | Type     | Description                               | Example                                                  |
-| -------------- | -------- | ----------------------------------------- | -------------------------------------------------------- |
+| -------------- | -------- | ----------------------------------------- | -------------------------------------------------------- | --- |
 | `categoryId`   | String   | Category ID                               | ""                                                       |
 | `categoryName` | String   | Name of Category                          | ""                                                       |
 | `createdAt`    | DateTime | Creation date time                        | "2020-09-22T04:44:57.950398414Z"                         |
@@ -74,6 +74,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 | `quantity`     | Uint     | Item quantity                             | 350                                                      |
 | `schedules`    | Array    | Schedules <b>startAt</b> and <b>endAt</b> | ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"] |
 | `sides`        | Array    | Refer to explanation below                | (Refer to explanation below)                             |
+| `sku`          | String   | Item SKU                                  | "fkj31i"                                                 |     |
 | `updatedAt`    | DateTime | Last update date time                     | "2020-09-22T04:44:57.950398414Z"                         |
 
 ### Inside Sides (parameter)
@@ -192,6 +193,7 @@ curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
       "quantity": 0,
       "schedules": null,
       "sides": [],
+      "sku": "fkj31i",
       "updatedAt": "2020-09-29T04:33:52.303Z"
     }
   ]
