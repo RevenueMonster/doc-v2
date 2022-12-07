@@ -21,7 +21,7 @@ Update Merchant By ID
 | `brandName`                 | String            | ""          |
 | `websiteURL`                | String            | ""          |
 | `registrationNumber`        | String            | ""          |
-| `establishedDateTime`       | DateTime          | ""          |
+| `establishedAt`             | DateTime          | ""          |
 | `addressLine1`              | String            | ""          |
 | `addressLine2`              | String            | ""          |
 | `postCode`                  | String            | ""          |
