@@ -1,14 +1,14 @@
 ---
 id: get-customer-orders
 title: Get Customer Orders
-sidebar_label: Get Recurring Customer Orders
+sidebar_label: Get Customer Orders
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>GET</span><br/>
-URL :`https://open.revenuemonster.my/v3/recurring-payment/{customer_id}/orders`<br/>
-Sandbox URL :`https://sb-open.revenuemonster.my/v3/recurring-payment/{customer_id}/orders`
+URL :`https://open.revenuemonster.my/v3/customer/{customer_id}/orders`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/customer/{customer_id}/orders`
 
 :::note
 Get customer orders

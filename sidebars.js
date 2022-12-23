@@ -68,12 +68,25 @@ module.exports = {
       },
       {
         type: "category",
-        label: "Recurring Payments",
+        label: "Customer Binding",
         items: [
-          "payment/recurringpayment/create-recurring-customer",
-          "payment/recurringpayment/toggle-customer-status",
-          "payment/recurringpayment/get-customer-orders",
-          "payment/recurringpayment/create-adhoc-order",
+          {
+            type: "category",
+            label: "Recurring Payments",
+            items: [
+              "payment/customer/recurringpayment/create-recurring-customer"
+            ]
+          },
+          {
+            type: "category",
+            label: "Tokenized Payments",
+            items: [
+              "payment/customer/tokenizedpayment/create-tokenized-customer",
+            ]
+          },
+          "payment/customer/toggle-customer-status",
+          "payment/customer/get-customer-orders",
+          "payment/customer/create-customer-order",
         ],
       },
       "payment/alipay-mini-program",
