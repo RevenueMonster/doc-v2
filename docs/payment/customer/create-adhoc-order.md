@@ -1,17 +1,17 @@
 ---
-id: create-adhoc-order
-title: Create Recurring Adhoc Order
-sidebar_label: Create Adhoc Order
+id: create-customer-order
+title: Create Customer Order
+sidebar_label: Create Customer Order
 ---
 
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "green", fontWeight: "bold" }}>POST</span><br/>
-URL :`https://open.revenuemonster.my/v3/recurring-payment/{customer_id}/order`<br/>
-Sandbox URL :`https://sb-open.revenuemonster.my/v3/recurring-payment/{customer_id}/order`
+URL :`https://open.revenuemonster.my/v3/customer/{customer_id}/order`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/customer/{customer_id}/order`
 
 :::note
-Create Recurring Adhoc Order
+Create Customer Order
 :::
 
 ### Request Parameters
