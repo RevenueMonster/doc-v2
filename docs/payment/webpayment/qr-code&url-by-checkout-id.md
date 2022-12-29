@@ -61,6 +61,7 @@ To create a unified payment checkout page for your website.
 | Parameter     | Type    | Description                                                        | Example          |
 | ------------- | ------- | ------------------------------------------------------------------ | ---------------- |
 | `isToken`     | boolean | To determine is it using customer token                            | false            |
+| `isSave`      | boolean | To determine token will be save for next usage                     | true             |
 | `no`          | String  | Customer token or Card Number                                      | 4100000000000100 |
 | `cvc`         | String  | Card verification code                                             | 123              |
 | `name`        | String  | Card Name (Optional when customer token is used)                   | CitiBank         |

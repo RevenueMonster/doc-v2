@@ -182,6 +182,7 @@ module.exports = {
             label: "Loyalty Point",
             items: [
               "campaign/loyalty/loyalty-point/give-loyalty-point",
+              "campaign/loyalty/loyalty-point/deduct-loyalty-point",
               "campaign/loyalty/loyalty-point/spending-loyalty-point",
               "campaign/loyalty/loyalty-point/cancel-spending-loyalty-point",
               "campaign/loyalty/loyalty-point/calculate-spending-reward",
