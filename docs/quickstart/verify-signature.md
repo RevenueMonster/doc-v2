@@ -71,6 +71,7 @@ eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9z
 :::important
 
 - if the body is empty then the `data` parameter can be skip
+- if it's verifying our callback then the `requestUrl` can be skip
 
 :::
 
@@ -79,7 +80,7 @@ eyJpdGVtIjp7ImNoZWNrb3V0SWQiOiIxNjE3OTg1MzkyNzU4MDcxNTgzIiwidXJsIjoiaHR0cHM6Ly9z
 | `data`       | String | Yes      | Base64 data body from Step 2.                                      | Refer to **Step 2**                                 |
 | `method`     | String | Yes      | HTTP call method used                                              | "post"                                              |
 | `nonceStr`   | String | Yes      | Get from Response Header                                           | "VYNknZohxwicZMaWbNdBKUrnrxDtaRhN"                  |
-| `requestURL` | String | Yes      | API URL that you call must be exactly the same, together with URL. | https://sb-open.revenuemonster.my/v3/payment/online |
+| `requestUrl` | String | Yes      | API URL that you call must be exactly the same, together with URL. | https://sb-open.revenuemonster.my/v3/payment/online |
 | `signType`   | String | Yes      | Sign Type, prefer SHA-256                                          | "sha256"                                            |
 | `timestamp`  | String | Yes      | Get from Response Header                                           | "1527407052"                                        |
 
