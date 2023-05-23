@@ -40,6 +40,13 @@ module.exports = {
       },
     ],
 
+    "Payment2": [
+      "payment-journey/quick-pay",
+      "payment-journey/query-transaction",
+      "payment-journey/cancel-transaction",
+      "payment-journey/terminal-integration",
+      "payment-journey/online-payment"
+    ],
     Payment: [
       "payment/overview",
       "payment/quick-pay",
