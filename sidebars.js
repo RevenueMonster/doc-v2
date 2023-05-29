@@ -40,7 +40,7 @@ module.exports = {
       },
     ],
 
-    "Payment2": [
+    "(WIP) Payment": [
       "payment-journey/quick-pay",
       "payment-journey/query-transaction",
       "payment-journey/cancel-transaction",
