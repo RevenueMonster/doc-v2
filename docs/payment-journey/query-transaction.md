@@ -341,6 +341,10 @@ If you're using QRCODE mode when doing payment, you will receive this object in 
 
 ### Transaction Method & Region
 
+:::caution
+For online payment checkout you will need to append region name to system method. Example malaysia will be 'MY' and full method name will be 'ALIPAYPLUS_MY'
+:::
+
 | Method       | Region      | Description                                                                                                                                |
 | ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `WECHATPAY`  | `MALAYSIA`  | Quick Pay: ❌<br />Web Payment: ✅<br />Web Mobile/Mobile Payment: ✅<br />Checkout By URL: ❌<br />Checkout By QRCode: ✅<br />Retail QRPay: ❌ |
