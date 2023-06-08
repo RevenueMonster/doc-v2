@@ -264,7 +264,6 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/membership/verify`
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
 
-
 ### Quick Pay
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
