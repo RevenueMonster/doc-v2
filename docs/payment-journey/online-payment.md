@@ -152,6 +152,10 @@ Reference: [Query Transaction](./query-transaction.md)
 
 ## Query Payment Checkout
 
+:::caution 
+Please note that payment checkout isn't the payment transaction info, while payment checkout will only return the checkout information like status, amount, redirectUrl but for more information about the success payment checkout transaction you can query transcation using [Query By Transaction ID](./query-transaction.md#query-by-transaction-id) with the response of this API `transactionId`.
+:::
+
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
 URL : `https://open.revenuemonster.my/v3/payment/online?checkoutId={checkoutId}`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online?checkoutId={checkoutId}`
@@ -265,16 +269,6 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 | `error.message` | String |                 | Error message                  |
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
-```json title="Example Respose"
-{
-  "item": {
-    "type": "URL",
-    "url": "https://m-sd.tngdigital.com.my/s/cashier/index.html?bizNo=20200223111212800110171545500353322&timestamp=1582439186517&merchantId=217120000000025910811&sign=ckm3a9WHOldNT7fBu7xABQepFPIw6S6A%252FUnsyR6md2W%252FKPekkn1PZw%252BfQeA2Sh8lOjLSHvcm5pjBAONdm%252FvmHaZx7KMqbcuqUTk1YRkrp8jqO7ZvlxW4q0kDR4g71GPnPX4wHHr%252FO967M9T9rT3vYTPmVl4sr18nOtjdTjZgv1zeVVzA2GRV7T8Y4V%252BvY7PX31mWrl4zVnIjlwA3s3OFX%252BKmR1WXvx2QjQaycW38TpLM8xqOSRL4UUW9Md6pG4fWA4zt3uR9fClTiPdJc680x2pXXUp0lATSS9kot37R7MzOUxDLGH9ay8HqVlU3qSb09zNNkw97YquAoeG65fDG8g%253D%253D"
-  },
-  "code": "SUCCESS"
-}
-```
-
 ### Mode: QRCode
 
 <details open>
@@ -326,20 +320,467 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 | `error.message`           | String |                 | Error message                  |
 | `error.debug`             | String |                 | Debug message ( sandbox only ) |
 
-```json title="Example Response"
+### Mode: Mini Program
+
+**Request Parameters**
+
+| Parameter    | Type   | Validation                                                            | Required | Description          |
+| ------------ | ------ | --------------------------------------------------------------------- | -------- | -------------------- |
+| `checkoutId` | String |                                                                       | Yes      | Checkout ID          |
+| `type`       | String | ENUM("MINI_PROGRAM")                                                  | Yes      | Checkout type qrcode |
+| `method`     | String | [Appendix: Method](./query-transaction.md#transaction-method--region) | Yes      | Checkout method      |
+
+```json title="Example Request"
 {
-  "item": {
-    "qrcode": {
-      "base64Image": "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",
-      "data": "HJ3ap410R9XlcaBGDJdNFTFwd8rlYJMyiVNJcsQrMG1ouLB641dVvlXFyQXOPCxF"
-    },
-    "type": "QRCODE"
-  },
-  "code": "SUCCESS"
+  "checkoutId": "1582438693268947023",
+  "type": "MINI_PROGRAM",
+  "method": "ALIPAY_CN"
 }
 ```
 
-### Mode: GoBiz Card
+**Response Paramters**
+
+| Parameter       | Type   | Validation           | Description                                  |
+| --------------- | ------ | -------------------- | -------------------------------------------- |
+| `item.type`     | String | ENUM("MINI_PROGRAM") | Checkout session type                        |
+| `item.data`     | String |                      | Base64 encoded data for pass to mini program |
+| `code`          | String | ENUM("SUCCESS")      | Determine request have success               |
+| `error.code`    | String |                      | Error code                                   |
+| `error.message` | String |                      | Error message                                |
+| `error.debug`   | String |                      | Debug message ( sandbox only )               |
 
 
-### Mode: FPX Checkout
+**Alipay Mini Program**
+
+:::note
+Use base64 decode data paramter, and pass into mini program api.
+:::
+
+```js
+my.tradePay({
+  orderStr: << decoded base64 from url parameter >>,
+  success: (res) => {
+    console.log("success", res)
+  },
+  fail:(res) =>{
+    console.log("error", res)
+  },
+});
+```
+
+
+### Mode: FPX
+
+<details>
+  <summary>
+    <b>FPX Bank Codes via API</b>
+  </summary>
+  <b>Method</b> : <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br />
+  <b>URL</b> : https://open.revenuemonster.my/v3/payment/fpx-bank<br />
+  <b>Sandbox URL</b> : https://sb-open.revenuemonster.my/v3/payment/fpx-bank<br /><br />
+
+  ```json
+  {
+    "item": {
+        "AFFIN_BANK": {
+            "code": "AFFIN_BANK",
+            "isOnline": true,
+            "name": "Affin Bank"
+        },
+        "ALLIANCE_BANK": {
+            "code": "ALLIANCE_BANK",
+            "isOnline": true,
+            "name": "Alliance Bank"
+        },
+        "AMBANK": {
+            "code": "AMBANK",
+            "isOnline": true,
+            "name": "AmBank"
+        },
+        "BANK_ISLAM": {
+            "code": "BANK_ISLAM",
+            "isOnline": true,
+            "name": "Bank Islam"
+        },
+        "BANK_MUAMALAT": {
+            "code": "BANK_MUAMALAT",
+            "isOnline": true,
+            "name": "Bank Muamalat"
+        },
+        "BANK_RAKYAT": {
+            "code": "BANK_RAKYAT",
+            "isOnline": false,
+            "name": "Bank Rakyat"
+        },
+        "BSN": {
+            "code": "BSN",
+            "isOnline": true,
+            "name": "Bank Simpanan Nasional"
+        },
+        "CIMB_CLICKS": {
+            "code": "CIMB_CLICKS",
+            "isOnline": true,
+            "name": "CIMB Bank"
+        },
+        "HLB_CONNECT": {
+            "code": "HLB_CONNECT",
+            "isOnline": true,
+            "name": "Hong Leong Bank"
+        },
+        "HSBC": {
+            "code": "HSBC",
+            "isOnline": true,
+            "name": "HSBC"
+        },
+        "KUWAIT_FINANCE_HOUSE": {
+            "code": "KUWAIT_FINANCE_HOUSE",
+            "isOnline": false,
+            "name": "Kuwait Finance House"
+        },
+        "MAYBANK2U": {
+            "code": "MAYBANK2U",
+            "isOnline": true,
+            "name": "Maybank"
+        },
+        "OCBC": {
+            "code": "OCBC",
+            "isOnline": true,
+            "name": "OCBC"
+        },
+        "PUBLIC_BANK": {
+            "code": "PUBLIC_BANK",
+            "isOnline": true,
+            "name": "Public Bank"
+        },
+        "RHB_NOW": {
+            "code": "RHB_NOW",
+            "isOnline": true,
+            "name": "RHB Bank"
+        },
+        "STANDARD_CHARTERED_BANK": {
+            "code": "STANDARD_CHARTERED_BANK",
+            "isOnline": true,
+            "name": "Standard Chartered Bank"
+        },
+        "UNITED_OVERSEA_BANK": {
+            "code": "UNITED_OVERSEA_BANK",
+            "isOnline": true,
+            "name": "United Oversea Bank"
+        }
+    },
+    "code": "SUCCESS"
+  }
+  ```
+</details>
+
+<details>
+  <summary>
+    <b>FPX Bank Codes</b>
+  </summary>
+
+  | RM BankCode             | FPX / Third Party BankCode |
+  | ----------------------- | -------------------------- |
+  | AFFIN_BANK              | FPX_ABB                    |
+  | ALLIANCE_BANK           | FPX_ABMB                   |
+  | AMBANK                  | AMOnline                   |
+  | BANK_ISLAM              | BIMB                       |
+  | BANK_MUAMALAT           | bankmuamalat               |
+  | BANK_RAKYAT             | bankrakyat                 |
+  | BSN                     | FPX_BSN                    |
+  | CIMB_CLICKS             | CIMBCLICKS                 |
+  | HSBC                    | FPX_HSBC                   |
+  | HLB_CONNECT             | HLBConnect                 |
+  | KUWAIT_FINANCE_HOUSE    | FPX_KFH                    |
+  | MAYBANK2U               | MB2U                       |
+  | OCBC                    | FPX_OCBC                   |
+  | PUBLIC_BANK             | PBB                        |
+  | RHB_NOW                 | RHBNow                     |
+  | STANDARD_CHARTERED_BANK | FPX_SCB                    |
+  | UNITED_OVERSEA_BANK     | FPX_UOB                    |
+</details>
+
+**Request Parameters**
+
+| Parameter      | Type   | Validation     | Required | Description          |
+| -------------- | ------ | -------------- | -------- | -------------------- |
+| `checkoutId`   | String |                | Yes      | Checkout ID          |
+| `type`         | String | ENUM("URL")    | Yes      | Checkout type qrcode |
+| `method`       | String | ENUM("FPX_MY") | Yes      | Checkout method      |
+| `fpx.bankCode` | String |                | Yes      | FPX Bank code        |
+
+```json title="Example Request"
+{
+	"checkoutId": "1687166508263303064",
+	"method": "FPX_MY",
+	"type": "URL",
+	"fpx": {
+		"bankCode": "TEST0021"
+	}
+}
+```
+
+**Response Paramters**
+
+| Parameter       | Type   | Validation      | Description                    |
+| --------------- | ------ | --------------- | ------------------------------ |
+| `item.type`     | String | ENUM("QRCODE")  | Checkout session type          |
+| `item.url`      | String |                 | FPX Payment URL                |
+| `code`          | String | ENUM("SUCCESS") | Determine request have success |
+| `error.code`    | String |                 | Error code                     |
+| `error.message` | String |                 | Error message                  |
+| `error.debug`   | String |                 | Debug message ( sandbox only ) |
+
+### Mode: GoBiz
+
+**Request Parameters**
+
+| Parameter    | Type   | Validation                | Required | Description          |
+| ------------ | ------ | ------------------------- | -------- | -------------------- |
+| `checkoutId` | String |                           | Yes      | Checkout ID          |
+| `type`       | String | ENUM("URL")               | Yes      | Checkout type qrcode |
+| `method`     | String | ENUM("GOBIZ_MY")          | Yes      | Checkout method      |
+| `gobiz.type` | String | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type   |
+
+```json title="Example Request"
+{
+	"checkoutId": "1687168234460362061",
+	"method": "GOBIZ_MY",
+	"type": "URL",
+	"gobiz": {
+		"type": "UNIVERSAL_PAYMENT"
+	}
+}
+```
+
+**Response Paramters**
+
+| Parameter       | Type   | Validation      | Description                    |
+| --------------- | ------ | --------------- | ------------------------------ |
+| `item.type`     | String | ENUM("URL")     | Checkout session type          |
+| `item.url`      | String |                 | GoBiz Payment URL              |
+| `code`          | String | ENUM("SUCCESS") | Determine request have success |
+| `error.code`    | String |                 | Error code                     |
+| `error.message` | String |                 | Error message                  |
+| `error.debug`   | String |                 | Debug message ( sandbox only ) |
+
+### Mode: GoBiz w/ Card
+
+**Request Parameters**
+
+| Parameter          | Type    | Validation                | Required | Description                                            |
+| ------------------ | ------- | ------------------------- | -------- | ------------------------------------------------------ |
+| `checkoutId`       | String  |                           | Yes      | Checkout ID                                            |
+| `type`             | String  | ENUM("URL")               | Yes      | Checkout type qrcode                                   |
+| `method`           | String  | ENUM("GOBIZ_MY")          | Yes      | Checkout method                                        |
+| `gobiz.type`       | String  | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type                                     |
+| `card.isToken`     | bool    |                           | Yes      | Token mode                                             |
+| `card.isSave`      | bool    |                           | Yes      | Save the token after made transaction else will delete |
+| `card.no`          | String  |                           | Yes      | Customer card number                                   |
+| `card.cvc`         | String  |                           | Yes      | Customer CVC                                           |
+| `card.month`       | Integer |                           | Yes      | Card expiry month                                      |
+| `card.year`        | Integer |                           | Yes      | Card expiry year                                       |
+| `card.countryCode` | String  | ENUM("MY")                | Yes      | Card country code                                      |
+
+```json title="Example Request"
+{
+	"checkoutId": "1687168114614662971",
+	"method": "GOBIZ_MY",
+	"type": "URL",
+    "gobiz": {
+        "type": "UNIVERSAL_PAYMENT"
+    },
+    "card": {
+        "isToken": false,
+        "isSave": true,
+        "name": "Test Card",
+        "no": "5453010000095323",
+        "cvc": "123",
+        "month": 12,
+        "year": 2024,
+        "countryCode": "MY"
+    }
+}
+```
+
+**Response Paramters**
+
+| Parameter       | Type   | Validation      | Description                    |
+| --------------- | ------ | --------------- | ------------------------------ |
+| `item.type`     | String | ENUM("URL")     | Checkout session type          |
+| `item.url`      | String |                 | GoBiz Payment URL              |
+| `code`          | String | ENUM("SUCCESS") | Determine request have success |
+| `error.code`    | String |                 | Error code                     |
+| `error.message` | String |                 | Error message                  |
+| `error.debug`   | String |                 | Debug message ( sandbox only ) |
+
+### Mode: GoBiz w/ Token
+
+**Request Parameters**
+
+| Parameter      | Type   | Validation             | Required | Description                                            |
+| -------------- | ------ | ---------------------- | -------- | ------------------------------------------------------ |
+| `checkoutId`   | String |                        | Yes      | Checkout ID                                            |
+| `type`         | String | ENUM("URL")            | Yes      | Checkout type qrcode                                   |
+| `method`       | String | ENUM("GOBIZ_MY")       | Yes      | Checkout method                                        |
+| `gobiz.type`   | String | ENUM("DIRECT_PAYMENT") | Yes      | GoBiz Payment Type                                     |
+| `card.isToken` | bool   |                        | Yes      | Token mode                                             |
+| `card.isSave`  | bool   |                        | Yes      | Save the token after made transaction else will delete |
+| `card.no`      | String |                        | Yes      | Customer token                                         |
+
+```json title="Example Request"
+{
+	"checkoutId": "1687168234460362061",
+	"method": "GOBIZ_MY",
+	"type": "URL",
+	"gobiz": {
+		"type": "DIRECT_PAYMENT"
+	},
+	"card": {
+		"isToken": true,
+		"isSave": true,
+		"no": "tk10f26d83de548aee420872dae999992475",
+	}
+}
+```
+
+**Response Paramters**
+
+| Parameter          | Type   | Validation                                                      | Description                    |
+| ------------------ | ------ | --------------------------------------------------------------- | ------------------------------ |
+| `item.type`        | String | ENUM("URL")                                                     | Checkout session type          |
+| `item.transaction` | JSON   | [Transaction Object](./query-transaction.md#transaction-object) | Transaction response           |
+| `code`             | String | ENUM("SUCCESS")                                                 | Determine request have success |
+| `error.code`       | String |                                                                 | Error code                     |
+| `error.message`    | String |                                                                 | Error message                  |
+| `error.debug`      | String |                                                                 | Debug message ( sandbox only ) |
+
+
+## Extra: Card-on-File Tokenization ( CoFT )
+
+Card-on-File Tokenization ( CoFT ) will be applied when your customer doing card payment, they will return the customer token to allow your customer can proceed payment without key in again full card information to provide better security so you will able to get customer token or remove the token via API and also payment with [Direct Payment Checkout API](#mode-gobiz-w-token).
+
+:::note
+We suggest you to calling the get customer token api after the transaction is success or after the webhook, else the token might not exists even you're completed the payments.
+:::
+
+### Get Customer Tokens
+
+**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
+URL : `https://open.revenuemonster.my/v3/payment/tokens/{customer_id}`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customer_id}`
+
+**Request Parameters**
+
+| Parameter     | Type   | Validation | Required | Description                                                   |
+| ------------- | ------ | ---------- | -------- | ------------------------------------------------------------- |
+| `customer_id` | String |            | Yes      | Customer ID you have used when create online payment checkout |
+
+**Response Paramters**
+
+| Parameter                | Type    | Validation                 | Description                             |
+| ------------------------ | ------- | -------------------------- | --------------------------------------- |
+| `item.*.id`              | String  |                            | Token ID                                |
+| `item.*.label`           | String  |                            | Token label                             |
+| `item.*.provider`        | String  | ENUM("GOBIZ")              | Token provider                          |
+| `item.*.token`           | String  |                            | Use this token when proceed payment     |
+| `item.*.country`         | String  | ENUM("MY")                 | Token country                           |
+| `item.*.createdAt`       | String  | RFC3339                    | Payment checkout created date time      |
+| `item.*.updatedAt`       | String  | RFC3339                    | Payment checkout last updated date time |
+| `item.*.card.name`       | String  |                            | Card name when input card information   |
+| `item.*.card.method`     | String  | ENUM("MASTERCARD", "VISA") | Card type                               |
+| `item.*.card.lastFourNo` | String  |                            | Last four digit of the card             |
+| `item.*.card.expMonth`   | Integer |                            | Card expiry month                       |
+| `item.*.card.expYear`    | Integer |                            | Card expriy year                        |
+| `code`                   | String  | ENUM("SUCCESS")            | Determine request have success          |
+| `error.code`             | String  |                            | Error code                              |
+| `error.message`          | String  |                            | Error message                           |
+| `error.debug`            | String  |                            | Debug message ( sandbox only )          |
+
+```json title="Example Response" 
+{
+    "item": [
+        {
+            "id": "1687168221458912338",
+            "label": "Card label 1",
+            "provider": "GOBIZ",
+            "token": "tk106f43ea029a09676d9abb52ff8ff1e1d5",
+            "country": "MY",
+            "createdAt": "2023-06-19T09:50:21Z",
+            "updatedAt": "2023-06-19T09:50:21Z",
+            "card": {
+                "name": "Test Card",
+                "method": "MASTERCARD",
+                "lastFourNo": "5323",
+                "expMonth": 12,
+                "expYear": 2024,
+            }
+        }
+    ],
+    "code": "SUCCESS"
+}
+```
+
+
+### Delete Customer Token
+
+**Method :** <span style={{ color: "orange", fontWeight: "bold" }}>DELETE</span><br/>
+URL : `https://open.revenuemonster.my/v3/payment/tokens/{customer_id}`<br/>
+Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customer_id}`
+
+**Request Parameters**
+
+| Parameter     | Type   | Validation | Required | Description                                                   |
+| ------------- | ------ | ---------- | -------- | ------------------------------------------------------------- |
+| `customer_id` | String |            | Yes      | Customer ID you have used when create online payment checkout |
+| `token`       | String |            | Yes      | Token                                                         |
+
+```json title="Example Request"
+{
+  "token": "tk10f26d83de548aee420872dae999992475"
+}
+```
+
+**Response Paramters**
+
+| Parameter                | Type    | Validation                 | Description                             |
+| ------------------------ | ------- | -------------------------- | --------------------------------------- |
+| `item.*.id`              | String  |                            | Token ID                                |
+| `item.*.label`           | String  |                            | Token label                             |
+| `item.*.provider`        | String  | ENUM("GOBIZ")              | Token provider                          |
+| `item.*.token`           | String  |                            | Use this token when proceed payment     |
+| `item.*.country`         | String  | ENUM("MY")                 | Token country                           |
+| `item.*.createdAt`       | String  | RFC3339                    | Payment checkout created date time      |
+| `item.*.updatedAt`       | String  | RFC3339                    | Payment checkout last updated date time |
+| `item.*.card.name`       | String  |                            | Card name when input card information   |
+| `item.*.card.method`     | String  | ENUM("MASTERCARD", "VISA") | Card type                               |
+| `item.*.card.lastFourNo` | String  |                            | Last four digit of the card             |
+| `item.*.card.expMonth`   | Integer |                            | Card expiry month                       |
+| `item.*.card.expYear`    | Integer |                            | Card expriy year                        |
+| `code`                   | String  | ENUM("SUCCESS")            | Determine request have success          |
+| `error.code`             | String  |                            | Error code                              |
+| `error.message`          | String  |                            | Error message                           |
+| `error.debug`            | String  |                            | Debug message ( sandbox only )          |
+
+```json title="Example Response" 
+{
+    "item": [
+        {
+            "id": "1687168221458912338",
+            "label": "Card label 1",
+            "provider": "GOBIZ",
+            "token": "tk106f43ea029a09676d9abb52ff8ff1e1d5",
+            "country": "MY",
+            "createdAt": "2023-06-19T09:50:21Z",
+            "updatedAt": "2023-06-19T09:50:21Z",
+            "card": {
+                "name": "Test Card",
+                "method": "MASTERCARD",
+                "lastFourNo": "5323",
+                "expMonth": 12,
+                "expYear": 2024,
+            }
+        }
+    ],
+    "code": "SUCCESS"
+}
+```

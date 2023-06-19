@@ -18,6 +18,10 @@ This integration can be applicable on any system as long as you're using our ter
 
 ## Event: Quick Pay
 
+:::tip Information
+If your hardware device have it's own scanner to scan the payment qrcode, you will not needed to use our terminal to accept payment while you can proceed the [OpenAPI QuickPay](./quick-pay.md) instead to have better experience and performance.
+:::
+
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 URL : `https://open.revenuemonster.my/v3/payment/terminal/quickpay`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/terminal/quickpay`
