@@ -40,14 +40,16 @@ module.exports = {
       },
     ],
 
-    "(WIP) Payment": [
-      "payment-journey/quick-pay",
-      "payment-journey/query-transaction",
-      "payment-journey/cancel-transaction",
-      "payment-journey/terminal-integration",
-      "payment-journey/online-payment"
+    "Payment": [
+      "v2/payment/quick-pay",
+      "v2/payment/query-transaction",
+      "v2/payment/cancel-transaction",
+      "v2/payment/terminal-integration",
+      "v2/payment/online-payment",
+      "v2/payment/tokenization-payment",
+      "v2/payment/reconciliation",
     ],
-    Payment: [
+    "(Deprecated) Payment": [
       "payment/overview",
       "payment/quick-pay",
       {
@@ -106,6 +108,13 @@ module.exports = {
       "payment/daily-settlement-report",
     ],
 
+    "(Deprecated) POS Integration": [
+      "pos/payment",
+      "pos/cancellation",
+      "pos/card-refund",
+      "pos/card-settlement",
+    ],
+
     "à la carte": [
       "alacarte-open/introduction",
       {
@@ -143,13 +152,6 @@ module.exports = {
         ],
       },
       "alacarte-open/set-notification",
-    ],
-
-    "POS Integration": [
-      "pos/payment",
-      "pos/cancellation",
-      "pos/card-refund",
-      "pos/card-settlement",
     ],
 
     "Loyalty & Voucher": [
@@ -237,12 +239,12 @@ module.exports = {
         items: ["campaign/chop-stamp", "campaign/gourmet-card"],
       },
     ],
-    "Merchant Wallet": [
-      "merchant-wallet/check-balance",
-      "merchant-wallet/topup-wallet",
-      "merchant-wallet/history",
-      "merchant-wallet/topup-history",
-    ],
+    // "Merchant Wallet": [
+    //   "merchant-wallet/check-balance",
+    //   "merchant-wallet/topup-wallet",
+    //   "merchant-wallet/history",
+    //   "merchant-wallet/topup-history",
+    // ],
     Settings: [
       {
         type: "category",
