@@ -162,9 +162,9 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online?checkoutId={c
 
 **Request Parameters**
 
-| Parameter    | Type   | Validation | Description          |
-| ------------ | ------ | ---------- | -------------------- |
-| `checkoutId` | String | Yes        | Payment checkout  id |
+| Parameter    | Type       | Validation | Description          |
+| ------------ | ---------- | ---------- | -------------------- |
+| `checkoutId` | QueryParam | Yes        | Payment checkout  id |
 
 **Response Paramters**
 
@@ -191,43 +191,6 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online?checkoutId={c
 | `item.status`               | String | ENUM("SUCCESS", "FAILED", "CANCELLED", "EXPIRED")                     | Payment checkout status                                                                             |
 | `item.createdAt`            | String | RFC3339                                                               | Payment checkout created date time                                                                  |
 | `item.updatedAt`            | String | RFC3339                                                               | Payment checkout last updated date time                                                             |
-
-```json title="Example"
-{
-  "item": {
-    "id": "1564042398456416062",
-    "order": {
-      "id": "8831341134233334438",
-      "title": "Lorem Ipsum",
-      "detail": "hello",
-      "additionalData": "world",
-      "currencyType": "MYR",
-      "amount": 10
-    },
-    "type": "WEB_PAYMENT",
-    "transactionId": "190725081318300433898289",
-    "platform": "OPEN_API",
-    "method": [
-      "WECHATPAY_MY",
-      "WECHATPAY_CN",
-      "PRESTO_MY",
-      "BOOST_MY",
-      "GRABPAY_MY",
-      "ALIPAY_CN",
-      "TNG_MY",
-      "MAYBANK_MY"
-    ],
-    "redirectUrl": "https://revenuemonster.my",
-    "notifyUrl": "https://dev-rm-api.ap.ngrok.io",
-    "startAt": "2019-07-25T08:13:18Z",
-    "endAt": "2019-07-25T08:23:18Z",
-    "status": "EXPIRED",
-    "createdAt": "2019-07-25T08:13:18Z",
-    "updatedAt": "2019-07-25T08:13:18Z"
-  },
-  "code": "SUCCESS"
-}
-```
 
 ## Direct Payment Checkout
 
@@ -567,19 +530,19 @@ my.tradePay({
 
 **Request Parameters**
 
-| Parameter          | Type    | Validation                | Required | Description                                            |
-| ------------------ | ------- | ------------------------- | -------- | ------------------------------------------------------ |
-| `checkoutId`       | String  |                           | Yes      | Checkout ID                                            |
-| `type`             | String  | ENUM("URL")               | Yes      | Checkout type qrcode                                   |
-| `method`           | String  | ENUM("GOBIZ_MY")          | Yes      | Checkout method                                        |
-| `gobiz.type`       | String  | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type                                     |
-| `card.isToken`     | bool    |                           | Yes      | Token mode                                             |
-| `card.isSave`      | bool    |                           | Yes      | Save the token after made transaction else will delete |
-| `card.no`          | String  |                           | Yes      | Customer card number                                   |
-| `card.cvc`         | String  |                           | Yes      | Customer CVC                                           |
-| `card.month`       | Integer |                           | Yes      | Card expiry month                                      |
-| `card.year`        | Integer |                           | Yes      | Card expiry year                                       |
-| `card.countryCode` | String  | ENUM("MY")                | Yes      | Card country code                                      |
+| Parameter          | Type   | Validation                | Required | Description                                            |
+| ------------------ | ------ | ------------------------- | -------- | ------------------------------------------------------ |
+| `checkoutId`       | String |                           | Yes      | Checkout ID                                            |
+| `type`             | String | ENUM("URL")               | Yes      | Checkout type qrcode                                   |
+| `method`           | String | ENUM("GOBIZ_MY")          | Yes      | Checkout method                                        |
+| `gobiz.type`       | String | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type                                     |
+| `card.isToken`     | bool   |                           | Yes      | Token mode                                             |
+| `card.isSave`      | bool   |                           | Yes      | Save the token after made transaction else will delete |
+| `card.no`          | String |                           | Yes      | Customer card number                                   |
+| `card.cvc`         | String |                           | Yes      | Customer CVC                                           |
+| `card.month`       | Uint64 |                           | Yes      | Card expiry month                                      |
+| `card.year`        | Uint64 |                           | Yes      | Card expiry year                                       |
+| `card.countryCode` | String | ENUM("MY")                | Yes      | Card country code                                      |
 
 ```json title="Example Request"
 {
@@ -671,55 +634,30 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customer_id}
 
 **Request Parameters**
 
-| Parameter     | Type   | Validation | Required | Description                                                   |
-| ------------- | ------ | ---------- | -------- | ------------------------------------------------------------- |
-| `customer_id` | String |            | Yes      | Customer ID you have used when create online payment checkout |
+| Parameter     | Type  | Validation | Required | Description                                                   |
+| ------------- | ----- | ---------- | -------- | ------------------------------------------------------------- |
+| `customer_id` | Param |            | Yes      | Customer ID you have used when create online payment checkout |
 
 **Response Paramters**
 
-| Parameter                | Type    | Validation                 | Description                             |
-| ------------------------ | ------- | -------------------------- | --------------------------------------- |
-| `item.*.id`              | String  |                            | Token ID                                |
-| `item.*.label`           | String  |                            | Token label                             |
-| `item.*.provider`        | String  | ENUM("GOBIZ")              | Token provider                          |
-| `item.*.token`           | String  |                            | Use this token when proceed payment     |
-| `item.*.country`         | String  | ENUM("MY")                 | Token country                           |
-| `item.*.createdAt`       | String  | RFC3339                    | Payment checkout created date time      |
-| `item.*.updatedAt`       | String  | RFC3339                    | Payment checkout last updated date time |
-| `item.*.card.name`       | String  |                            | Card name when input card information   |
-| `item.*.card.method`     | String  | ENUM("MASTERCARD", "VISA") | Card type                               |
-| `item.*.card.lastFourNo` | String  |                            | Last four digit of the card             |
-| `item.*.card.expMonth`   | Integer |                            | Card expiry month                       |
-| `item.*.card.expYear`    | Integer |                            | Card expriy year                        |
-| `code`                   | String  | ENUM("SUCCESS")            | Determine request have success          |
-| `error.code`             | String  |                            | Error code                              |
-| `error.message`          | String  |                            | Error message                           |
-| `error.debug`            | String  |                            | Debug message ( sandbox only )          |
-
-```json title="Example Response" 
-{
-    "item": [
-        {
-            "id": "1687168221458912338",
-            "label": "Card label 1",
-            "provider": "GOBIZ",
-            "token": "tk106f43ea029a09676d9abb52ff8ff1e1d5",
-            "country": "MY",
-            "createdAt": "2023-06-19T09:50:21Z",
-            "updatedAt": "2023-06-19T09:50:21Z",
-            "card": {
-                "name": "Test Card",
-                "method": "MASTERCARD",
-                "lastFourNo": "5323",
-                "expMonth": 12,
-                "expYear": 2024,
-            }
-        }
-    ],
-    "code": "SUCCESS"
-}
-```
-
+| Parameter                | Type   | Validation                 | Description                             |
+| ------------------------ | ------ | -------------------------- | --------------------------------------- |
+| `item.*.id`              | String |                            | Token ID                                |
+| `item.*.label`           | String |                            | Token label                             |
+| `item.*.provider`        | String | ENUM("GOBIZ")              | Token provider                          |
+| `item.*.token`           | String |                            | Use this token when proceed payment     |
+| `item.*.country`         | String | ENUM("MY")                 | Token country                           |
+| `item.*.createdAt`       | String | RFC3339                    | Payment checkout created date time      |
+| `item.*.updatedAt`       | String | RFC3339                    | Payment checkout last updated date time |
+| `item.*.card.name`       | String |                            | Card name when input card information   |
+| `item.*.card.method`     | String | ENUM("MASTERCARD", "VISA") | Card type                               |
+| `item.*.card.lastFourNo` | String |                            | Last four digit of the card             |
+| `item.*.card.expMonth`   | Uint64 |                            | Card expiry month                       |
+| `item.*.card.expYear`    | Uint64 |                            | Card expriy year                        |
+| `code`                   | String | ENUM("SUCCESS")            | Determine request have success          |
+| `error.code`             | String |                            | Error code                              |
+| `error.message`          | String |                            | Error message                           |
+| `error.debug`            | String |                            | Debug message ( sandbox only )          |
 
 ### Delete Customer Token
 
@@ -731,7 +669,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customer_id}
 
 | Parameter     | Type   | Validation | Required | Description                                                   |
 | ------------- | ------ | ---------- | -------- | ------------------------------------------------------------- |
-| `customer_id` | String |            | Yes      | Customer ID you have used when create online payment checkout |
+| `customer_id` | Param  |            | Yes      | Customer ID you have used when create online payment checkout |
 | `token`       | String |            | Yes      | Token                                                         |
 
 ```json title="Example Request"
@@ -742,45 +680,21 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/tokens/{customer_id}
 
 **Response Paramters**
 
-| Parameter                | Type    | Validation                 | Description                             |
-| ------------------------ | ------- | -------------------------- | --------------------------------------- |
-| `item.*.id`              | String  |                            | Token ID                                |
-| `item.*.label`           | String  |                            | Token label                             |
-| `item.*.provider`        | String  | ENUM("GOBIZ")              | Token provider                          |
-| `item.*.token`           | String  |                            | Use this token when proceed payment     |
-| `item.*.country`         | String  | ENUM("MY")                 | Token country                           |
-| `item.*.createdAt`       | String  | RFC3339                    | Payment checkout created date time      |
-| `item.*.updatedAt`       | String  | RFC3339                    | Payment checkout last updated date time |
-| `item.*.card.name`       | String  |                            | Card name when input card information   |
-| `item.*.card.method`     | String  | ENUM("MASTERCARD", "VISA") | Card type                               |
-| `item.*.card.lastFourNo` | String  |                            | Last four digit of the card             |
-| `item.*.card.expMonth`   | Integer |                            | Card expiry month                       |
-| `item.*.card.expYear`    | Integer |                            | Card expriy year                        |
-| `code`                   | String  | ENUM("SUCCESS")            | Determine request have success          |
-| `error.code`             | String  |                            | Error code                              |
-| `error.message`          | String  |                            | Error message                           |
-| `error.debug`            | String  |                            | Debug message ( sandbox only )          |
-
-```json title="Example Response" 
-{
-    "item": [
-        {
-            "id": "1687168221458912338",
-            "label": "Card label 1",
-            "provider": "GOBIZ",
-            "token": "tk106f43ea029a09676d9abb52ff8ff1e1d5",
-            "country": "MY",
-            "createdAt": "2023-06-19T09:50:21Z",
-            "updatedAt": "2023-06-19T09:50:21Z",
-            "card": {
-                "name": "Test Card",
-                "method": "MASTERCARD",
-                "lastFourNo": "5323",
-                "expMonth": 12,
-                "expYear": 2024,
-            }
-        }
-    ],
-    "code": "SUCCESS"
-}
-```
+| Parameter                | Type   | Validation                 | Description                             |
+| ------------------------ | ------ | -------------------------- | --------------------------------------- |
+| `item.*.id`              | String |                            | Token ID                                |
+| `item.*.label`           | String |                            | Token label                             |
+| `item.*.provider`        | String | ENUM("GOBIZ")              | Token provider                          |
+| `item.*.token`           | String |                            | Use this token when proceed payment     |
+| `item.*.country`         | String | ENUM("MY")                 | Token country                           |
+| `item.*.createdAt`       | String | RFC3339                    | Payment checkout created date time      |
+| `item.*.updatedAt`       | String | RFC3339                    | Payment checkout last updated date time |
+| `item.*.card.name`       | String |                            | Card name when input card information   |
+| `item.*.card.method`     | String | ENUM("MASTERCARD", "VISA") | Card type                               |
+| `item.*.card.lastFourNo` | String |                            | Last four digit of the card             |
+| `item.*.card.expMonth`   | Uint64 |                            | Card expiry month                       |
+| `item.*.card.expYear`    | Uint64 |                            | Card expriy year                        |
+| `code`                   | String | ENUM("SUCCESS")            | Determine request have success          |
+| `error.code`             | String |                            | Error code                              |
+| `error.message`          | String |                            | Error message                           |
+| `error.debug`            | String |                            | Debug message ( sandbox only )          |
