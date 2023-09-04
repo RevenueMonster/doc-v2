@@ -53,6 +53,12 @@ module.exports = {
       "payment/daily-settlement-report",
     ],
 
+    "Visa Offers Platform": [
+      "visa-vop/enroll-user",
+      "visa-vop/unenroll-user",
+      "visa-vop/webhook",
+    ],
+
     "POS Integration": ["pos-integration"],
 
     "Supported Payment Methods": [
