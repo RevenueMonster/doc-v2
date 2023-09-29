@@ -67,6 +67,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 | `layoutVersion`        | String   | ENUM("v1", "v2", "v3")                | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
 | `type`                 | String   | ENUM("WEB_PAYMENT", "MOBILE_PAYMENT") | Yes         | Checkout session type                                                        |
 | `method`               | []String |                                       | No          | Payment methods                                                              |
+| `paymentOrders`        | []String | ENUM("WALLET", "ONLINE_BANKING", "CARD", "PAY_LATER") | No | Sequence of the payment tabs, please specify all payment tabs to show all
 | `order.id`             | String   | Length(24)                            | Yes         | Order ID                                                                     |
 | `order.title`          | String   | Length(32)                            | Yes         | Order Title                                                                  |
 | `order.currencyType`   | String   | ENUM("MYR")                           | Yes         | Order Currency Type ( currently supported MYR only)                          |
