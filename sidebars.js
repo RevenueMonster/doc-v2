@@ -49,71 +49,72 @@ module.exports = {
       "v2/payment/tokenization-payment",
       "v2/payment/reconciliation",
     ],
-    "(Deprecated) Payment": [
-      "payment/overview",
-      "payment/quick-pay",
-      {
-        type: "category",
-        label: "Transaction QR",
-        items: [
-          "payment/transactionQR/transaction-qr",
-          "payment/transactionQR/get-transaction-qr-code-url",
-          "payment/transactionQR/get-transaction-qr-code-url-by-code",
-          "payment/transactionQR/get-transaction-by-code",
-        ],
-      },
-      {
-        type: "category",
-        label: "Web/Mobile Payment",
-        items: [
-          "payment/webpayment/web-payment",
-          "payment/webpayment/notify-url",
-          // "payment/webpayment/get-web-payment-qr-code",
-          "payment/webpayment/qr-code&url-by-checkout-id",
-          "payment/webpayment/get-online-transaction",
-          "payment/customertoken/get-customer-token",
-          "payment/customertoken/delete-customer-token",
-        ],
-      },
-      {
-        type: "category",
-        label: "Customer Binding",
-        items: [
-          {
-            type: "category",
-            label: "Recurring Payments",
-            items: [
-              "payment/customer/recurringpayment/create-recurring-customer"
-            ]
-          },
-          {
-            type: "category",
-            label: "Tokenized Payments",
-            items: [
-              "payment/customer/tokenizedpayment/create-tokenized-customer",
-            ]
-          },
-          "payment/customer/toggle-customer-status",
-          "payment/customer/get-customer-orders",
-          "payment/customer/create-customer-order",
-        ],
-      },
-      "payment/alipay-mini-program",
-      "payment/refund",
-      "payment/reverse",
-      "payment/query-status-by-order-id",
-      "payment/query-status-by-transaction-id",
-      "payment/get-fpx-bank-list",
-      "payment/get-all-transaction",
-      "payment/daily-settlement-report",
-    ],
 
-    "(Deprecated) POS Integration": [
-      "pos/payment",
-      "pos/cancellation",
-      "pos/card-refund",
-      "pos/card-settlement",
-    ],
+    // "(Deprecated) Payment": [
+    //   "payment/overview",
+    //   "payment/quick-pay",
+    //   {
+    //     type: "category",
+    //     label: "Transaction QR",
+    //     items: [
+    //       "payment/transactionQR/transaction-qr",
+    //       "payment/transactionQR/get-transaction-qr-code-url",
+    //       "payment/transactionQR/get-transaction-qr-code-url-by-code",
+    //       "payment/transactionQR/get-transaction-by-code",
+    //     ],
+    //   },
+    //   {
+    //     type: "category",
+    //     label: "Web/Mobile Payment",
+    //     items: [
+    //       "payment/webpayment/web-payment",
+    //       "payment/webpayment/notify-url",
+    //       // "payment/webpayment/get-web-payment-qr-code",
+    //       "payment/webpayment/qr-code&url-by-checkout-id",
+    //       "payment/webpayment/get-online-transaction",
+    //       "payment/customertoken/get-customer-token",
+    //       "payment/customertoken/delete-customer-token",
+    //     ],
+    //   },
+    //   {
+    //     type: "category",
+    //     label: "Customer Binding",
+    //     items: [
+    //       {
+    //         type: "category",
+    //         label: "Recurring Payments",
+    //         items: [
+    //           "payment/customer/recurringpayment/create-recurring-customer"
+    //         ]
+    //       },
+    //       {
+    //         type: "category",
+    //         label: "Tokenized Payments",
+    //         items: [
+    //           "payment/customer/tokenizedpayment/create-tokenized-customer",
+    //         ]
+    //       },
+    //       "payment/customer/toggle-customer-status",
+    //       "payment/customer/get-customer-orders",
+    //       "payment/customer/create-customer-order",
+    //     ],
+    //   },
+    //   "payment/alipay-mini-program",
+    //   "payment/refund",
+    //   "payment/reverse",
+    //   "payment/query-status-by-order-id",
+    //   "payment/query-status-by-transaction-id",
+    //   "payment/get-fpx-bank-list",
+    //   "payment/get-all-transaction",
+    //   "payment/daily-settlement-report",
+    // ],
+
+    // "(Deprecated) POS Integration": [
+    //   "pos/payment",
+    //   "pos/cancellation",
+    //   "pos/card-refund",
+    //   "pos/card-settlement",
+    // ],
 
     "Visa Offers Platform": [
       "visa-vop/enroll-user",
