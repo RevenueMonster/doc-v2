@@ -59,16 +59,16 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 ### Request Parameters
 
-| Parameter       | Type     | Required | Description                                                 | Example                                                                      |
-| --------------- | -------- | -------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `order`         | Object   | Yes      | Object of order                                             | (Refer to explanation below)                                                 |
-| `customer`      | Object   | Yes      | Object of customer                                          | (Refer to explanation below)                                                 |
-| `method`        | []String | Yes      | [RM currently supported method](../.././payment-method.mdx) | []                                                                           |
-| `type`          | String   | Yes      | Object of type                                              | (Refer to explanation below)                                                 |
-| `storeId`       | String   | Yes      | ID of the store to create QR code                           | "10946114768247530"                                                          |
-| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                       | "https://google.com"                                                         |
-| `notifyUrl`     | String   | Yes      | Example of [Notify URL Response](./notify-url)              | "https://google.com"                                                         |
-| `layoutVersion` | String   | Optional | Select layout for Web payment                               | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
+| Parameter       | Type     | Required | Description                                                                                     | Example                                                                                                               |
+| --------------- | -------- | -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `order`         | Object   | Yes      | Object of order                                                                                 | (Refer to explanation below)                                                                                          |
+| `method`        | []String | Yes      | [RM currently supported method](../.././method/web-payment)                                     | ["WECHATPAY_MY","WECHATPAY_CN" <br/>,"PRESTO_MY","BOOST_MY","TNG_MY" , "ALIPAY_CN","GRABPAY_MY","RAZER_MY", GOBIZ_MY] |
+| `type`          | String   | Yes      | Obejct of type                                                                                  | (Refer to explanation below)                                                                                          |
+| `storeId`       | String   | Yes      | ID of the store to create QR code                                                               | "10946114768247530"                                                                                                   |
+| `paymentOrders` | []String | Optional | Sequence of the payment method tabs                                                             | ["WALLET","ONLINE_BANKING","CARD", <br/>"PAY_LATER"]                                                                  |
+| `redirectUrl`   | String   | Yes      | URL to redirect after payment is made                                                           | "https://google.com"                                                                                                  |
+| `notifyUrl`     | String   | Yes      | This is a notify URL or callback URL to inform server on transaction status after payment made. | "https://google.com"                                                                                                  |
+| `layoutVersion` | String   | Optional | Select layout for Web payment                                                                   | V1 / **V2 (Supported Credit Card)**                                                                                   |
 
 <br />
 

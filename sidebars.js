@@ -107,14 +107,17 @@ module.exports = {
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
     ],
-
     "(Deprecated) POS Integration": [
       "pos/payment",
       "pos/cancellation",
       "pos/card-refund",
       "pos/card-settlement",
     ],
-
+    "Visa Offers Platform": [
+      "visa-vop/enroll-user",
+      "visa-vop/unenroll-user",
+      "visa-vop/webhook",
+    ],
     "à la carte": [
       "alacarte-open/introduction",
       {
