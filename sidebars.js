@@ -107,17 +107,24 @@ module.exports = {
       "payment/get-all-transaction",
       "payment/daily-settlement-report",
     ],
+
     "(Deprecated) POS Integration": [
       "pos/payment",
       "pos/cancellation",
       "pos/card-refund",
       "pos/card-settlement",
     ],
+
     "Visa Offers Platform": [
       "visa-vop/enroll-user",
       "visa-vop/unenroll-user",
       "visa-vop/webhook",
     ],
+
+    "Plugin": [
+      "v2/plugin/introduction"
+    ],
+
     "à la carte": [
       "alacarte-open/introduction",
       {
@@ -295,7 +302,7 @@ module.exports = {
     ],
     // FAQ: ["introduction/overview"],
     Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
-    "Plug-in": ["plug-in/wooCommerce", "plug-in/opencart", "plug-in/easystore"],
+    "Ecom Plugin": ["ecom-plugin/wooCommerce", "ecom-plugin/opencart", "ecom-plugin/easystore"],
     eKYC: [
       "ekyc/mykad-recognition",
       "ekyc/liveness-check-with-face-verification",

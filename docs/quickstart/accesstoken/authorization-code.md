@@ -7,7 +7,7 @@ sidebar_label: Authorization Code
 import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 :::note
-<span style={{ color: "red", fontWeight: "bold" }}>This page is for plug-in developer only</span><br/><br/>
+<span style={{ color: "red", fontWeight: "bold" }}>This page is for plugin developer only</span><br/><br/>
 :::
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
