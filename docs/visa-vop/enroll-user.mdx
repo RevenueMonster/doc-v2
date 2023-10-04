@@ -47,15 +47,14 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/vop/enroll-
 
 ### Response Parameters
 
-| Parameter     | Type   | Description                  | Example                       |
-| ------------- | ------ | ---------------------------- | ----------------------------- |
-| `item`        | Object | Transaction object           | (Refer to explanation below)  |
-| `id`          | String | RM VOP User ID               | "1693584018184977309"         |
-| `name`        | String | Name of the card             | "Alliance Bank Visa Infinite" |
-| `panLastFour` | String | Last four number of the card | "7665"                        |
-| `createdAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `updatedAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `code`        | String | Status of the enrollment     | "SUCCESS"                     |
+| Parameter          | Type   | Description                  | Example                       |
+| ------------------ | ------ | ---------------------------- | ----------------------------- |
+| `item.id`          | String | RM VOP User ID               | "1693584018184977309"         |
+| `item.name`        | String | Name of the card             | "Alliance Bank Visa Infinite" |
+| `item.panLastFour` | String | Last four number of the card | "7665"                        |
+| `item.createdAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
+| `item.updatedAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
+| `code`             | String | Status of the enrollment     | "SUCCESS"                     |
 
 <br />
 
