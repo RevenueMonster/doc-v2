@@ -18,12 +18,12 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/vop/enroll-user`
 
 ### Request Parameters
 
-| Parameter     | Type   | Required | Description                                 | Example                       |
-| ------------- | ------ | -------- | ------------------------------------------- | ----------------------------- |
-| `userId`      | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"             |
-| `cardPan`     | String | Yes      | Card number of the user                     | "4665381058507657"            |
-| `name`        | String | Yes      | Name of the card                            | "Alliance Bank Visa Infinite" |
-| `redirectUrl` | String | Yes      | Redirection Url                             | "https://google.com"          |
+| Parameter   | Type   | Required | Description                                 | Example                       |
+| ----------- | ------ | -------- | ------------------------------------------- | ----------------------------- |
+| `userId`    | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"             |
+| `cardPan`   | String | Yes      | Card number of the user                     | "4665381058507657"            |
+| `name`      | String | Yes      | Name of the card                            | "Alliance Bank Visa Infinite" |
+| `notifyUrl` | String | Yes      | Notify Url                                  | "https://google.com"          |
 
 <br />
 
@@ -41,7 +41,7 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/vop/enroll-
     "userId": "KCac44i8NmtnUBo",
     "cardPan": "4665381058507657",
     "name": "Alliance Bank Visa Infinite",
-    "redirectUrl": "https://google.com"
+    "notifyUrl": "https://google.com"
 }"
 ```
 
