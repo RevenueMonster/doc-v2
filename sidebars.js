@@ -123,7 +123,8 @@ module.exports = {
     ],
 
     "Plugin": [
-      "v2/plugin/introduction"
+      "v2/plugin/introduction",
+      "v2/plugin/integration"
     ],
 
     "à la carte": [
@@ -293,17 +294,6 @@ module.exports = {
         items: ["settings/user-profile"],
       },
     ],
-
-    "Push Notification": ["push-notification/push-to-merchant"],
-    Downloads: [
-      "downloads/revenue-monster-logo",
-      "downloads/application",
-      "downloads/logo",
-      "downloads/testing-wallets",
-    ],
-    // FAQ: ["introduction/overview"],
-    Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
-    "Ecom Plugin": ["ecom-plugin/wooCommerce", "ecom-plugin/opencart", "ecom-plugin/easystore"],
     eKYC: [
       "ekyc/mykad-recognition",
       "ekyc/liveness-check-with-face-verification",
@@ -312,5 +302,14 @@ module.exports = {
       "ekyc/get-ekyc-result",
     ],
     "Short Message Service ": ["sms/send-sms"],
+    "Push Notification": ["push-notification/push-to-merchant"],
+    Downloads: [
+      "downloads/revenue-monster-logo",
+      "downloads/application",
+      "downloads/logo",
+      "downloads/testing-wallets",
+    ],
+    "e-Commerce Plugin": ["ecom-plugin/wooCommerce", "ecom-plugin/opencart", "ecom-plugin/easystore"],
+    Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
   },
 };
