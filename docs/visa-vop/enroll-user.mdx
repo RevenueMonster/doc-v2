@@ -18,12 +18,12 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/vop/enroll-user`
 
 ### Request Parameters
 
-| Parameter     | Type   | Required | Description                                 | Example                       |
-| ------------- | ------ | -------- | ------------------------------------------- | ----------------------------- |
-| `userId`      | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"             |
-| `cardPan`     | String | Yes      | Card number of the user                     | "4665381058507657"            |
-| `name`        | String | Yes      | Name of the card                            | "Alliance Bank Visa Infinite" |
-| `redirectUrl` | String | Yes      | Redirection Url                             | "https://google.com"          |
+| Parameter   | Type   | Required | Description                                 | Example                       |
+| ----------- | ------ | -------- | ------------------------------------------- | ----------------------------- |
+| `userId`    | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"             |
+| `cardPan`   | String | Yes      | Card number of the user                     | "4665381058507657"            |
+| `name`      | String | Yes      | Name of the card                            | "Alliance Bank Visa Infinite" |
+| `notifyUrl` | String | Yes      | Notify Url                                  | "https://google.com"          |
 
 <br />
 
@@ -40,21 +40,21 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/vop/enroll-
   --data "{
     "userId": "KCac44i8NmtnUBo",
     "cardPan": "4665381058507657",
-    "name": "Alliance Bank Visa Infinite"
+    "name": "Alliance Bank Visa Infinite",
+    "notifyUrl": "https://google.com"
 }"
 ```
 
 ### Response Parameters
 
-| Parameter     | Type   | Description                  | Example                       |
-| ------------- | ------ | ---------------------------- | ----------------------------- |
-| `item`        | Object | Transaction object           | (Refer to explanation below)  |
-| `id`          | String | RM VOP User ID               | "1693584018184977309"         |
-| `name`        | String | Name of the card             | "Alliance Bank Visa Infinite" |
-| `panLastFour` | String | Last four number of the card | "7665"                        |
-| `createdAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `updatedAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `code`        | String | Status of the enrollment     | "SUCCESS"                     |
+| Parameter          | Type   | Description                  | Example                       |
+| ------------------ | ------ | ---------------------------- | ----------------------------- |
+| `item.id`          | String | RM VOP User ID               | "1693584018184977309"         |
+| `item.name`        | String | Name of the card             | "Alliance Bank Visa Infinite" |
+| `item.panLastFour` | String | Last four number of the card | "7665"                        |
+| `item.createdAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
+| `item.updatedAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
+| `code`             | String | Status of the enrollment     | "SUCCESS"                     |
 
 <br />
 
