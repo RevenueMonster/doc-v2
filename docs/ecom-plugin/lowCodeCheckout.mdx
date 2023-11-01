@@ -1,0 +1,66 @@
+---
+id: lowCodeCheckout
+title: Low Code Checkout
+sidebar_label: Low Code Checkout
+---
+
+:::note
+This integrate a checkout button to your e-commerce website with minimal code.
+:::
+
+### Step 1 : Setup your Low Code Checkout details
+
+1. Go to [RM Merchant Portal](https://merchant.revenuemonster.my/), and login with your merchant account.<br />
+2. Go to Developer \> Applications \> Choose Your Application \> Low Code Checkout<br />
+<b>Low Code Checkout URL</b> : Your e-commerce website URL<br />
+<b>Redirect URL</b> : The URL to redirect when the payment for the order is completed by the user (either successful or failed)<br />
+<b>Notify URL</b> : The URL where we can notify you regarding the order status
+
+<img src="/img/low-code-checkout/application-settings.png" height="auto" />
+
+### Step 2 : Add the Checkout Button
+1. Add the stylsheet and script tag to your head
+
+```html
+<head>
+    <!--- ... -->
+
+    <link rel="stylesheet" href="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css"/>
+    <script type="module" src="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
+</head>
+```
+
+2. Add the button with the checkout details to the body
+
+```html
+<body>
+    <!--- ... -->
+    
+   <rm-pay-button
+        clientId="1698131134927762904"
+        orderId="1234567890" 
+        storeId="10946114768247530" 
+        customerId="123123123"  
+        currency="MYR"
+        amount="1390"
+        title="CHAGEE"
+        detail="Da Hong Pao (Cold)"
+    >
+        Checkout
+    </rm-pay-button>
+</body>
+```
+
+| Parameter        | Type   | Required | Description                            | Example                              |
+| ---------------- | ------ | -------- | -------------------------------------- | ------------------------------------ |
+| `clientId`       | Uint   | Yes      | Client ID of your application          | 1698131134927762904                  |
+| `orderId`        | Uint   | No       | Order ID, unique for each order        | 1234567890                           |
+| `storeId`        | Uint   | Yes      | Store ID for the order                 | 10946114768247530                    |
+| `currency`       | String | Yes      | Currency	                            | "MYR"                                |
+| `amount`         | Uint   | Yes      | Amount in cents                        | 1390 => <i>RM13.90</i>               |
+| `title`          | String | Yes      | Order title                            | "CHAGEE"                             |
+| `detail`         | String | No       | Order detail                           | "Da Hong Pao (Cold)"                 |
+| `additionalData` | String | No       | Order additional data                  | <i>Any data relevant to the order</i>|
+| `customerId`     | Uint   | No       | Customer ID, required for tokenization | 1234567890                           |
+| `customerName`   | String | No       | Customer name                          | "John"                               |
+| `customerEmail`  | String | No       | Customer email                         | "john@example.com"                   |
