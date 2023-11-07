@@ -119,6 +119,8 @@ module.exports = {
     "Visa Offers Platform": [
       "visa-vop/enroll-user",
       "visa-vop/unenroll-user",
+      "visa-vop/enroll-card",
+      "visa-vop/unenroll-card",
       "visa-vop/webhook",
     ],
 
