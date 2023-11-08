@@ -40,7 +40,7 @@ module.exports = {
       },
     ],
 
-    "Payment": [
+    Payment: [
       "v2/payment/quick-pay",
       "v2/payment/query-transaction",
       "v2/payment/cancel-transaction",
@@ -124,10 +124,7 @@ module.exports = {
       "visa-vop/webhook",
     ],
 
-    "Plugin": [
-      "v2/plugin/introduction",
-      "v2/plugin/integration"
-    ],
+    Plugin: ["v2/plugin/introduction", "v2/plugin/integration"],
 
     "à la carte": [
       "alacarte-open/introduction",
@@ -269,7 +266,7 @@ module.exports = {
           "settings/account-detail/get-account",
           "settings/account-detail/update-account",
           "settings/account-detail/submit-account-review",
-        ]
+        ],
       },
       {
         type: "category",
@@ -311,7 +308,12 @@ module.exports = {
       "downloads/logo",
       "downloads/testing-wallets",
     ],
-    "e-Commerce Plugin": ["ecom-plugin/wooCommerce", "ecom-plugin/opencart", "ecom-plugin/easystore"],
+    "e-Commerce Plugin": [
+      "ecom-plugin/wooCommerce",
+      "ecom-plugin/opencart",
+      "ecom-plugin/easystore",
+      "ecom-plugin/lowCodeCheckout",
+    ],
     Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
   },
 };
