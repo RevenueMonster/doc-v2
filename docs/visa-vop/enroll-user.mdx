@@ -18,12 +18,12 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/vop/enroll-user`
 
 ### Request Parameters
 
-| Parameter   | Type   | Required | Description                                 | Example                       |
-| ----------- | ------ | -------- | ------------------------------------------- | ----------------------------- |
-| `userId`    | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"             |
-| `cardPan`   | String | Yes      | Card number of the user                     | "4665381058507657"            |
-| `name`      | String | Yes      | Name of the card                            | "Alliance Bank Visa Infinite" |
-| `notifyUrl` | String | Yes      | Notify Url                                  | "https://google.com"          |
+| Parameter   | Type   | Required | Description                                 | Example                |
+| ----------- | ------ | -------- | ------------------------------------------- | ---------------------- |
+| `userId`    | String | Yes      | Provide a random generated 15 length string | "KCac44i8NmtnUBo"      |
+| `cardPan`   | String | Yes      | Card number of the user                     | "4364484100392449"     |
+| `name`      | String | Yes      | Name of the card                            | "Ambank Visa Infinite" |
+| `notifyUrl` | String | Yes      | Notify Url                                  | "https://google.com"   |
 
 <br />
 
@@ -39,22 +39,27 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/vop/enroll-
   --header "X-Timestamp: 1528450585" \
   --data "{
     "userId": "KCac44i8NmtnUBo",
-    "cardPan": "4665381058507657",
-    "name": "Alliance Bank Visa Infinite",
-    "notifyUrl": "https://google.com"
+    "cardPan": "4364484100392449",
+    "name": "Ambank Visa Infinite",
+    "notifyUrl": "https://google.com/"
 }"
 ```
 
 ### Response Parameters
 
-| Parameter          | Type   | Description                  | Example                       |
-| ------------------ | ------ | ---------------------------- | ----------------------------- |
-| `item.id`          | String | RM VOP User ID               | "1693584018184977309"         |
-| `item.name`        | String | Name of the card             | "Alliance Bank Visa Infinite" |
-| `item.panLastFour` | String | Last four number of the card | "7665"                        |
-| `item.createdAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `item.updatedAt`   | String | User Enrolled Time           | "2023-09-01T16:00:15Z"        |
-| `code`             | String | Status of the enrollment     | "SUCCESS"                     |
+| Parameter               | Type   | Description                  | Example                |
+| ----------------------- | ------ | ---------------------------- | ---------------------- |
+| `item.card.id`          | String | RM VOP Card ID               | "1699331101967521138"  |
+| `item.card.userId`      | String | RM VOP User ID               | "1699331101742889953"  |
+| `item.card.name`        | String | Name of the card             | "Ambank Visa Infinite" |
+| `item.card.panLastFour` | String | Last four number of the card | "2449"                 |
+| `item.card.type`        | String | Type of card                 | "CREDIT"               |
+| `item.card.createdAt`   | String | User Enrolled Time           | "2023-11-07T04:25:00Z" |
+| `item.card.updatedAt`   | String | User Enrolled Time           | "2023-11-07T04:25:00Z" |
+| `item.user.id`          | String | RM VOP User ID               | "1699331101742889953"  |
+| `item.user.createdAt`   | String | User Enrolled Time           | "2023-11-07T04:25:00Z" |
+| `item.user.updatedAt`   | String | User Enrolled Time           | "2023-11-07T04:25:00Z" |
+| `code`                  | String | Status of the enrollment     | "SUCCESS"              |
 
 <br />
 
@@ -63,12 +68,20 @@ curl --location --request POST "https://sb-open.revenuemonster.my/v3/vop/enroll-
 ```json
 {
   "item": {
-    "id": "/VOPUser,1693584018184977309",
-    "name": "Alliance Bank Visa Infinite",
-    "panLastFour": "7665",
-    "type": "CREDIT",
-    "createdAt": "2023-09-01T16:00:15Z",
-    "updatedAt": "2023-09-01T16:00:15Z"
+    "card": {
+      "id": "1699331101967521138",
+      "userId": "1699331101742889953",
+      "name": "Ambank Visa Infinite",
+      "panLastFour": "2449",
+      "type": "CREDIT",
+      "createdAt": "2023-11-07T04:25:00Z",
+      "updatedAt": "2023-11-07T04:25:00Z"
+    },
+    "user": {
+      "id": "1699331101742889953",
+      "createdAt": "2023-11-07T04:25:00Z",
+      "updatedAt": "2023-11-07T04:25:00Z"
+    }
   },
   "code": "SUCCESS"
 }
