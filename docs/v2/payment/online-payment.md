@@ -10,7 +10,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 Online payment allow business to accept online payments through our web applications. With Revenue Monster's Online Payment, customer can enter payment details or select e-wallet options to complete the payment process from their smartphones and website.
 
-- Demo Web Payment (Version 3): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
+- Demo Web Payment (Version 4): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
 
 :::info
 Online payment is an online payment method and it's subscription will based on online subscription rate.
@@ -45,7 +45,6 @@ Online payment is an online payment method and it's subscription will based on o
 
 <img src="/img/gif/mobile-web-payment.gif" width="300" height="600" />
 
-
 ## Hosted Payment Checkout
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
@@ -53,9 +52,10 @@ URL : `https://open.revenuemonster.my/v3/payment/online`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 :::note
+
 - To create a unified payment checkout page for your website and mobile.
 - **Data object** needs to be sorted, the **Nested object** also needs to be sorted.
-:::
+  :::
 
 **Request Parameters**
 
@@ -64,7 +64,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 | `storeId`              | String   |                                       | Yes         | Store ID                                                                     |
 | `redirectUrl`          | String   | URL                                   | Yes         | Example of [Redirect URL Response](#redirect-url)                            |
 | `notifyUrl`            | String   | URL                                   | Yes         | Example of [Notify URL Response](#notify-url)                                |
-| `layoutVersion`        | String   | ENUM("v1", "v2", "v3")                | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
+| `layoutVersion`        | String   | ENUM("v1", "v2", "v3", "v4")          | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
 | `type`                 | String   | ENUM("WEB_PAYMENT", "MOBILE_PAYMENT") | Yes         | Checkout session type                                                        |
 | `method`               | []String |                                       | No          | Payment methods                                                              |
 | `order.id`             | String   | Length(24)                            | Yes         | Order ID                                                                     |
@@ -95,7 +95,6 @@ After you have the **checkout session url** from the checkout api, you can appen
 
 **Example**:
 https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347&method=TNG_MY
-
 
 ### Redirect Response
 
@@ -152,7 +151,7 @@ Reference: [Query Transaction](./query-transaction.md)
 
 ## Query Payment Checkout
 
-:::caution 
+:::caution
 Please note that payment checkout isn't the payment transaction info, while payment checkout will only return the checkout information like status, amount, redirectUrl but for more information about the success payment checkout transaction you can query transcation using [Query By Transaction ID](./query-transaction.md#query-by-transaction-id) with the response of this API `transactionId`.
 :::
 
@@ -162,9 +161,9 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online?checkoutId={c
 
 **Request Parameters**
 
-| Parameter    | Type       | Validation | Description          |
-| ------------ | ---------- | ---------- | -------------------- |
-| `checkoutId` | QueryParam | Yes        | Payment checkout  id |
+| Parameter    | Type       | Validation | Description         |
+| ------------ | ---------- | ---------- | ------------------- |
+| `checkoutId` | QueryParam | Yes        | Payment checkout id |
 
 **Response Paramters**
 
@@ -199,9 +198,10 @@ URL : `https://open.revenuemonster.my/v3/payment/online/checkout`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 
 :::note
-- With it you can create an unified payment checkout and build your own checkout page 
+
+- With it you can create an unified payment checkout and build your own checkout page
 - There's two mode qrcode & url, most of the times URL is preferred over QRCode
-:::
+  :::
 
 ### Mode: URL
 
@@ -312,7 +312,6 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 | `error.message` | String |                      | Error message                                |
 | `error.debug`   | String |                      | Debug message ( sandbox only )               |
 
-
 **Alipay Mini Program**
 
 :::note
@@ -331,7 +330,6 @@ my.tradePay({
 });
 ```
 
-
 ### Mode: FPX
 
 <details>
@@ -342,98 +340,99 @@ my.tradePay({
   <b>URL</b> : https://open.revenuemonster.my/v3/payment/fpx-bank<br />
   <b>Sandbox URL</b> : https://sb-open.revenuemonster.my/v3/payment/fpx-bank<br /><br />
 
-  ```json
-  {
-    "item": {
-        "AFFIN_BANK": {
-            "code": "AFFIN_BANK",
-            "isOnline": true,
-            "name": "Affin Bank"
-        },
-        "ALLIANCE_BANK": {
-            "code": "ALLIANCE_BANK",
-            "isOnline": true,
-            "name": "Alliance Bank"
-        },
-        "AMBANK": {
-            "code": "AMBANK",
-            "isOnline": true,
-            "name": "AmBank"
-        },
-        "BANK_ISLAM": {
-            "code": "BANK_ISLAM",
-            "isOnline": true,
-            "name": "Bank Islam"
-        },
-        "BANK_MUAMALAT": {
-            "code": "BANK_MUAMALAT",
-            "isOnline": true,
-            "name": "Bank Muamalat"
-        },
-        "BANK_RAKYAT": {
-            "code": "BANK_RAKYAT",
-            "isOnline": false,
-            "name": "Bank Rakyat"
-        },
-        "BSN": {
-            "code": "BSN",
-            "isOnline": true,
-            "name": "Bank Simpanan Nasional"
-        },
-        "CIMB_CLICKS": {
-            "code": "CIMB_CLICKS",
-            "isOnline": true,
-            "name": "CIMB Bank"
-        },
-        "HLB_CONNECT": {
-            "code": "HLB_CONNECT",
-            "isOnline": true,
-            "name": "Hong Leong Bank"
-        },
-        "HSBC": {
-            "code": "HSBC",
-            "isOnline": true,
-            "name": "HSBC"
-        },
-        "KUWAIT_FINANCE_HOUSE": {
-            "code": "KUWAIT_FINANCE_HOUSE",
-            "isOnline": false,
-            "name": "Kuwait Finance House"
-        },
-        "MAYBANK2U": {
-            "code": "MAYBANK2U",
-            "isOnline": true,
-            "name": "Maybank"
-        },
-        "OCBC": {
-            "code": "OCBC",
-            "isOnline": true,
-            "name": "OCBC"
-        },
-        "PUBLIC_BANK": {
-            "code": "PUBLIC_BANK",
-            "isOnline": true,
-            "name": "Public Bank"
-        },
-        "RHB_NOW": {
-            "code": "RHB_NOW",
-            "isOnline": true,
-            "name": "RHB Bank"
-        },
-        "STANDARD_CHARTERED_BANK": {
-            "code": "STANDARD_CHARTERED_BANK",
-            "isOnline": true,
-            "name": "Standard Chartered Bank"
-        },
-        "UNITED_OVERSEA_BANK": {
-            "code": "UNITED_OVERSEA_BANK",
-            "isOnline": true,
-            "name": "United Oversea Bank"
-        }
+```json
+{
+  "item": {
+    "AFFIN_BANK": {
+      "code": "AFFIN_BANK",
+      "isOnline": true,
+      "name": "Affin Bank"
     },
-    "code": "SUCCESS"
-  }
-  ```
+    "ALLIANCE_BANK": {
+      "code": "ALLIANCE_BANK",
+      "isOnline": true,
+      "name": "Alliance Bank"
+    },
+    "AMBANK": {
+      "code": "AMBANK",
+      "isOnline": true,
+      "name": "AmBank"
+    },
+    "BANK_ISLAM": {
+      "code": "BANK_ISLAM",
+      "isOnline": true,
+      "name": "Bank Islam"
+    },
+    "BANK_MUAMALAT": {
+      "code": "BANK_MUAMALAT",
+      "isOnline": true,
+      "name": "Bank Muamalat"
+    },
+    "BANK_RAKYAT": {
+      "code": "BANK_RAKYAT",
+      "isOnline": false,
+      "name": "Bank Rakyat"
+    },
+    "BSN": {
+      "code": "BSN",
+      "isOnline": true,
+      "name": "Bank Simpanan Nasional"
+    },
+    "CIMB_CLICKS": {
+      "code": "CIMB_CLICKS",
+      "isOnline": true,
+      "name": "CIMB Bank"
+    },
+    "HLB_CONNECT": {
+      "code": "HLB_CONNECT",
+      "isOnline": true,
+      "name": "Hong Leong Bank"
+    },
+    "HSBC": {
+      "code": "HSBC",
+      "isOnline": true,
+      "name": "HSBC"
+    },
+    "KUWAIT_FINANCE_HOUSE": {
+      "code": "KUWAIT_FINANCE_HOUSE",
+      "isOnline": false,
+      "name": "Kuwait Finance House"
+    },
+    "MAYBANK2U": {
+      "code": "MAYBANK2U",
+      "isOnline": true,
+      "name": "Maybank"
+    },
+    "OCBC": {
+      "code": "OCBC",
+      "isOnline": true,
+      "name": "OCBC"
+    },
+    "PUBLIC_BANK": {
+      "code": "PUBLIC_BANK",
+      "isOnline": true,
+      "name": "Public Bank"
+    },
+    "RHB_NOW": {
+      "code": "RHB_NOW",
+      "isOnline": true,
+      "name": "RHB Bank"
+    },
+    "STANDARD_CHARTERED_BANK": {
+      "code": "STANDARD_CHARTERED_BANK",
+      "isOnline": true,
+      "name": "Standard Chartered Bank"
+    },
+    "UNITED_OVERSEA_BANK": {
+      "code": "UNITED_OVERSEA_BANK",
+      "isOnline": true,
+      "name": "United Oversea Bank"
+    }
+  },
+  "code": "SUCCESS"
+}
+```
+
 </details>
 
 <details>
@@ -441,25 +440,26 @@ my.tradePay({
     <b>FPX Bank Codes</b>
   </summary>
 
-  | RM BankCode             | FPX / Third Party BankCode |
-  | ----------------------- | -------------------------- |
-  | AFFIN_BANK              | FPX_ABB                    |
-  | ALLIANCE_BANK           | FPX_ABMB                   |
-  | AMBANK                  | AMOnline                   |
-  | BANK_ISLAM              | BIMB                       |
-  | BANK_MUAMALAT           | bankmuamalat               |
-  | BANK_RAKYAT             | bankrakyat                 |
-  | BSN                     | FPX_BSN                    |
-  | CIMB_CLICKS             | CIMBCLICKS                 |
-  | HSBC                    | FPX_HSBC                   |
-  | HLB_CONNECT             | HLBConnect                 |
-  | KUWAIT_FINANCE_HOUSE    | FPX_KFH                    |
-  | MAYBANK2U               | MB2U                       |
-  | OCBC                    | FPX_OCBC                   |
-  | PUBLIC_BANK             | PBB                        |
-  | RHB_NOW                 | RHBNow                     |
-  | STANDARD_CHARTERED_BANK | FPX_SCB                    |
-  | UNITED_OVERSEA_BANK     | FPX_UOB                    |
+| RM BankCode             | FPX / Third Party BankCode |
+| ----------------------- | -------------------------- |
+| AFFIN_BANK              | FPX_ABB                    |
+| ALLIANCE_BANK           | FPX_ABMB                   |
+| AMBANK                  | AMOnline                   |
+| BANK_ISLAM              | BIMB                       |
+| BANK_MUAMALAT           | bankmuamalat               |
+| BANK_RAKYAT             | bankrakyat                 |
+| BSN                     | FPX_BSN                    |
+| CIMB_CLICKS             | CIMBCLICKS                 |
+| HSBC                    | FPX_HSBC                   |
+| HLB_CONNECT             | HLBConnect                 |
+| KUWAIT_FINANCE_HOUSE    | FPX_KFH                    |
+| MAYBANK2U               | MB2U                       |
+| OCBC                    | FPX_OCBC                   |
+| PUBLIC_BANK             | PBB                        |
+| RHB_NOW                 | RHBNow                     |
+| STANDARD_CHARTERED_BANK | FPX_SCB                    |
+| UNITED_OVERSEA_BANK     | FPX_UOB                    |
+
 </details>
 
 **Request Parameters**
@@ -473,12 +473,12 @@ my.tradePay({
 
 ```json title="Example Request"
 {
-	"checkoutId": "1687166508263303064",
-	"method": "FPX_MY",
-	"type": "URL",
-	"fpx": {
-		"bankCode": "TEST0021"
-	}
+  "checkoutId": "1687166508263303064",
+  "method": "FPX_MY",
+  "type": "URL",
+  "fpx": {
+    "bankCode": "TEST0021"
+  }
 }
 ```
 
@@ -506,12 +506,12 @@ my.tradePay({
 
 ```json title="Example Request"
 {
-	"checkoutId": "1687168234460362061",
-	"method": "GOBIZ_MY",
-	"type": "URL",
-	"gobiz": {
-		"type": "UNIVERSAL_PAYMENT"
-	}
+  "checkoutId": "1687168234460362061",
+  "method": "GOBIZ_MY",
+  "type": "URL",
+  "gobiz": {
+    "type": "UNIVERSAL_PAYMENT"
+  }
 }
 ```
 
@@ -546,22 +546,22 @@ my.tradePay({
 
 ```json title="Example Request"
 {
-	"checkoutId": "1687168114614662971",
-	"method": "GOBIZ_MY",
-	"type": "URL",
-    "gobiz": {
-        "type": "UNIVERSAL_PAYMENT"
-    },
-    "card": {
-        "isToken": false,
-        "isSave": true,
-        "name": "Test Card",
-        "no": "5453010000095323",
-        "cvc": "123",
-        "month": 12,
-        "year": 2024,
-        "countryCode": "MY"
-    }
+  "checkoutId": "1687168114614662971",
+  "method": "GOBIZ_MY",
+  "type": "URL",
+  "gobiz": {
+    "type": "UNIVERSAL_PAYMENT"
+  },
+  "card": {
+    "isToken": false,
+    "isSave": true,
+    "name": "Test Card",
+    "no": "5453010000095323",
+    "cvc": "123",
+    "month": 12,
+    "year": 2024,
+    "countryCode": "MY"
+  }
 }
 ```
 
@@ -592,17 +592,17 @@ my.tradePay({
 
 ```json title="Example Request"
 {
-	"checkoutId": "1687168234460362061",
-	"method": "GOBIZ_MY",
-	"type": "URL",
-	"gobiz": {
-		"type": "DIRECT_PAYMENT"
-	},
-	"card": {
-		"isToken": true,
-		"isSave": true,
-		"no": "tk10f26d83de548aee420872dae999992475",
-	}
+  "checkoutId": "1687168234460362061",
+  "method": "GOBIZ_MY",
+  "type": "URL",
+  "gobiz": {
+    "type": "DIRECT_PAYMENT"
+  },
+  "card": {
+    "isToken": true,
+    "isSave": true,
+    "no": "tk10f26d83de548aee420872dae999992475"
+  }
 }
 ```
 
@@ -616,7 +616,6 @@ my.tradePay({
 | `error.code`       | String |                                                                 | Error code                     |
 | `error.message`    | String |                                                                 | Error message                  |
 | `error.debug`      | String |                                                                 | Debug message ( sandbox only ) |
-
 
 ## Extra: Card-on-File Tokenization ( CoFT )
 
