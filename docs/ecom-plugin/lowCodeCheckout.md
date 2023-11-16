@@ -5,12 +5,23 @@ sidebar_label: (Official) Low-Code Checkout
 ---
 
 <head>
-    <link rel="stylesheet" href="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css" />
-    <script type="module" src="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
+    <link rel="stylesheet" href="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css" />
+    <script type="module" src="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
 </head> 
 
 export const PayButton = ({ variant, size }) => (
-    <rm-pay-button variant={variant} size={size}>
+    <rm-pay-button
+        variant={variant} 
+        size={size}
+        clientId="1700119175882466350"
+        orderId={"DEMO-"+Date.now()}
+        storeId="10946114768247530" 
+        customerId="docdemo"  
+        currency="MYR"
+        amount="1390"
+        title="Test Demo"
+        detail="some product demo detail"
+    >
         Checkout
     </rm-pay-button>
 )
