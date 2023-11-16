@@ -36,9 +36,11 @@ This integrate a checkout button to your e-commerce website with minimal code.
    
 2. Go to Developer \> Applications \> Choose Your Application \> Low Code Checkout
 
-3. Low Code Checkout URL
+3. Low Code Checkout Host
 
-Your e-commerce website URL, it's a must have to let us identify come from your ecommerce website instead other and provide better security always check while there's an order.
+Your e-commerce website Host, it's a must have to let us identify come from your ecommerce website instead other and provide better security always check while there's an order.
+
+Example: `https://somedomain.com/webpage/order`, you will need to set `somedomain.com` only will allow to proceed the checkout payment.
 
 3. Redirect URL
 
