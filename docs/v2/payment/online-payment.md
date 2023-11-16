@@ -10,7 +10,7 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 Online payment allow business to accept online payments through our web applications. With Revenue Monster's Online Payment, customer can enter payment details or select e-wallet options to complete the payment process from their smartphones and website.
 
-- Demo Web Payment (Version 3): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
+- Demo Web Payment (Version 4): [Click Here](https://sb-api.revenuemonster.my/demo/payment/online)
 
 :::info
 Online payment is an online payment method and it's subscription will based on online subscription rate.
@@ -64,7 +64,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 | `storeId`              | String   |                                       | Yes         | Store ID                                                                     |
 | `redirectUrl`          | String   | URL                                   | Yes         | Example of [Redirect URL Response](#redirect-url)                            |
 | `notifyUrl`            | String   | URL                                   | Yes         | Example of [Notify URL Response](#notify-url)                                |
-| `layoutVersion`        | String   | ENUM("v1", "v2", "v3")                | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
+| `layoutVersion`        | String   | ENUM("v1", "v2", "v3", "v4")                | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
 | `type`                 | String   | ENUM("WEB_PAYMENT", "MOBILE_PAYMENT") | Yes         | Checkout session type                                                        |
 | `method`               | []String |                                       | No          | Payment methods                                                              |
 | `order.id`             | String   | Length(24)                            | Yes         | Order ID                                                                     |
