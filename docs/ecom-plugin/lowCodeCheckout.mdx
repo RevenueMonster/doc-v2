@@ -25,8 +25,8 @@ This integrate a checkout button to your e-commerce website with minimal code.
 <head>
     <!--- ... -->
 
-    <link rel="stylesheet" href="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css"/>
-    <script type="module" src="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
+    <link rel="stylesheet" href="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css"/>
+    <script type="module" src="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
 </head>
 ```
 
@@ -43,8 +43,8 @@ This integrate a checkout button to your e-commerce website with minimal code.
         customerId="123123123"  
         currency="MYR"
         amount="1390"
-        title="CHAGEE"
-        detail="Da Hong Pao (Cold)"
+        title="Product X"
+        detail="Detail of the order"
     >
         Checkout
     </rm-pay-button>
@@ -57,9 +57,9 @@ This integrate a checkout button to your e-commerce website with minimal code.
 | `orderId`        | Uint   | No       | Order ID, unique for each order        | 1234567890                           |
 | `storeId`        | Uint   | Yes      | Store ID for the order                 | 10946114768247530                    |
 | `currency`       | String | Yes      | Currency	                            | "MYR"                                |
-| `amount`         | Uint   | Yes      | Amount in cents                        | 1390 => <i>RM13.90</i>               |
-| `title`          | String | Yes      | Order title                            | "CHAGEE"                             |
-| `detail`         | String | No       | Order detail                           | "Da Hong Pao (Cold)"                 |
+| `amount`         | Uint   | Yes      | Amount in cents                        | 1390 (<i>RM13.90</i>)                 |
+| `title`          | String | Yes      | Order title                            | "Product X"                          |
+| `detail`         | String | No       | Order detail                           | "Detail of the order"                |
 | `additionalData` | String | No       | Order additional data                  | <i>Any data relevant to the order</i>|
 | `customerId`     | Uint   | No       | Customer ID, required for tokenization | 1234567890                           |
 | `customerName`   | String | No       | Customer name                          | "John"                               |
