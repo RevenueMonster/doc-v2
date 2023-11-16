@@ -59,24 +59,24 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 **Request Parameters**
 
-| Parameter              | Type     | Validation                            | Required    | Description                                                                  |
-| ---------------------- | -------- | ------------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| `storeId`              | String   |                                       | Yes         | Store ID                                                                     |
-| `redirectUrl`          | String   | URL                                   | Yes         | Example of [Redirect URL Response](#redirect-url)                            |
-| `notifyUrl`            | String   | URL                                   | Yes         | Example of [Notify URL Response](#notify-url)                                |
-| `layoutVersion`        | String   | ENUM("v1", "v2", "v3", "v4")                | Yes         | v1 / **v2 (Supported Credit Card)** / **v3 (Supported Credit Card and FPX)** |
-| `type`                 | String   | ENUM("WEB_PAYMENT", "MOBILE_PAYMENT") | Yes         | Checkout session type                                                        |
-| `method`               | []String |                                       | No          | Payment methods                                                              |
-| `order.id`             | String   | Length(24)                            | Yes         | Order ID                                                                     |
-| `order.title`          | String   | Length(32)                            | Yes         | Order Title                                                                  |
-| `order.currencyType`   | String   | ENUM("MYR")                           | Yes         | Order Currency Type ( currently supported MYR only)                          |
-| `order.amount`         | Uint64   |                                       | Yes         | Order Amount                                                                 |
-| `order.detail`         | String   | Length(600)                           | No          | Order Detail                                                                 |
-| `order.additionalData` | String   | Length(128)                           | No          | Order Additional Data                                                        |
-| `customer.userId`      | String   |                                       | Conditional | **Required** when the tokenization is enabled                                |
-| `customer.email`       | String   |                                       | No          |                                                                              |
-| `customer.countryCode` | String   |                                       | No          |                                                                              |
-| `customer.phoneNumber` | String   |                                       | No          |                                                                              |
+| Parameter              | Type     | Validation                            | Required    | Description                                         |
+| ---------------------- | -------- | ------------------------------------- | ----------- | --------------------------------------------------- |
+| `storeId`              | String   |                                       | Yes         | Store ID                                            |
+| `redirectUrl`          | String   | URL                                   | Yes         | Example of [Redirect URL Response](#redirect-url)   |
+| `notifyUrl`            | String   | URL                                   | Yes         | Example of [Notify URL Response](#notify-url)       |
+| `layoutVersion`        | String   | ENUM("v1", "v2", "v3", "v4")          | Yes         |                                                     |
+| `type`                 | String   | ENUM("WEB_PAYMENT", "MOBILE_PAYMENT") | Yes         | Checkout session type                               |
+| `method`               | []String |                                       | No          | Payment methods                                     |
+| `order.id`             | String   | Length(24)                            | Yes         | Order ID                                            |
+| `order.title`          | String   | Length(32)                            | Yes         | Order Title                                         |
+| `order.currencyType`   | String   | ENUM("MYR")                           | Yes         | Order Currency Type ( currently supported MYR only) |
+| `order.amount`         | Uint64   |                                       | Yes         | Order Amount                                        |
+| `order.detail`         | String   | Length(600)                           | No          | Order Detail                                        |
+| `order.additionalData` | String   | Length(128)                           | No          | Order Additional Data                               |
+| `customer.userId`      | String   |                                       | Conditional | **Required** when the tokenization is enabled       |
+| `customer.email`       | String   |                                       | No          |                                                     |
+| `customer.countryCode` | String   |                                       | No          |                                                     |
+| `customer.phoneNumber` | String   |                                       | No          |                                                     |
 
 **Response Parameters**
 

@@ -309,10 +309,10 @@ module.exports = {
       "downloads/testing-wallets",
     ],
     "e-Commerce Plugin": [
+      "ecom-plugin/lowCodeCheckout",
       "ecom-plugin/wooCommerce",
       "ecom-plugin/opencart",
-      "ecom-plugin/easystore",
-      "ecom-plugin/lowCodeCheckout",
+      "ecom-plugin/easystore"
     ],
     Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
   },
