@@ -312,7 +312,12 @@ module.exports = {
       "ecom-plugin/lowCodeCheckout",
       "ecom-plugin/wooCommerce",
       "ecom-plugin/opencart",
-      "ecom-plugin/easystore"
+      "ecom-plugin/easystore",
+      {
+        type: 'link',
+        label: "SiteGiant",
+        href: "https://support.sitegiant.com/knowledge-base/how-to-set-up-revenue-monster-payment-gateway/",
+      },
     ],
     Appendix: ["payment-method", "product-terms", "error-codes", "bank-code"],
   },
