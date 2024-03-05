@@ -37,6 +37,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/order/{i
 | `error.code`    | String |                                           | Error code                     |
 | `error.message` | String |                                           | Error message                  |
 | `error.debug`   | String |                                           | Debug message ( sandbox only ) |
+
 ## Query By Transaction ID
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
@@ -62,14 +63,14 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/{id}`
 ## Get All Transactions
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>GET</span><br/>
-URL : `https://open.revenuemonster.my/v3/payment/transaction/{id}`<br/>
-Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/transaction/{id}`
+URL :`https://open.revenuemonster.my/v3/payment/transactions`<br/>
+Sandbox URL :`https://sb-open.revenuemonster.my/v3/payment/transactions`<br/>
+URL with limit : `https://sb-open.revenuemonster.my/v3/payment/transactions?limit=1`
 
 **Request Parameters**
 
 | Parameter | Type       | Validation | Required | Description              |
 | --------- | ---------- | ---------- | -------- | ------------------------ |
-| `id`      | Param      |            | Yes      | Transaction ID           |
 | `limit`   | QueryParam |            | No       | Transaction search limit |
 
 **Response Parameters**
