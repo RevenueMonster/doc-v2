@@ -190,6 +190,6 @@ curl --location --request POST "{{open_base_path}}/v3/payment/online" \
   Example:
   <br />
   <b>
-    https://sb-pg.revenuemonster.my/checkout?checkoutId=1548316308361173347&method=TNG_MY
+    https://sb-pg.revenuemonster.my/v4/checkout?checkoutId=1548316308361173347&method=TNG_MY
   </b>
 </details>
