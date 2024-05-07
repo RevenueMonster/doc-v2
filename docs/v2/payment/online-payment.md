@@ -493,16 +493,16 @@ my.tradePay({
 | `error.message` | String |                 | Error message                  |
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
-### Mode: GoBiz
+### Mode: GoBiz / Paydee
 
 **Request Parameters**
 
-| Parameter    | Type   | Validation                | Required | Description          |
-| ------------ | ------ | ------------------------- | -------- | -------------------- |
-| `checkoutId` | String |                           | Yes      | Checkout ID          |
-| `type`       | String | ENUM("URL")               | Yes      | Checkout type qrcode |
-| `method`     | String | ENUM("GOBIZ_MY")          | Yes      | Checkout method      |
-| `gobiz.type` | String | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type   |
+| Parameter    | Type   | Validation                    | Required | Description          |
+| ------------ | ------ | ----------------------------- | -------- | -------------------- |
+| `checkoutId` | String |                               | Yes      | Checkout ID          |
+| `type`       | String | ENUM("URL")                   | Yes      | Checkout type qrcode |
+| `method`     | String | ENUM("GOBIZ_MY", "PAYDEE_MY") | Yes      | Checkout method      |
+| `gobiz.type` | String | ENUM("UNIVERSAL_PAYMENT")     | Yes      | GoBiz Payment Type   |
 
 ```json title="Example Request"
 {
@@ -526,97 +526,36 @@ my.tradePay({
 | `error.message` | String |                 | Error message                  |
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
-### Mode: GoBiz w/ Card
+
+### Mode: DuitNow QR
 
 **Request Parameters**
 
-| Parameter          | Type   | Validation                | Required | Description                                            |
-| ------------------ | ------ | ------------------------- | -------- | ------------------------------------------------------ |
-| `checkoutId`       | String |                           | Yes      | Checkout ID                                            |
-| `type`             | String | ENUM("URL")               | Yes      | Checkout type qrcode                                   |
-| `method`           | String | ENUM("GOBIZ_MY")          | Yes      | Checkout method                                        |
-| `gobiz.type`       | String | ENUM("UNIVERSAL_PAYMENT") | Yes      | GoBiz Payment Type                                     |
-| `card.isToken`     | bool   |                           | Yes      | Token mode                                             |
-| `card.isSave`      | bool   |                           | Yes      | Save the token after made transaction else will delete |
-| `card.no`          | String |                           | Yes      | Customer card number                                   |
-| `card.cvc`         | String |                           | Yes      | Customer CVC                                           |
-| `card.month`       | Uint64 |                           | Yes      | Card expiry month                                      |
-| `card.year`        | Uint64 |                           | Yes      | Card expiry year                                       |
-| `card.countryCode` | String | ENUM("MY")                | Yes      | Card country code                                      |
-
-```json title="Example Request"
-{
-	"checkoutId": "1687168114614662971",
-	"method": "GOBIZ_MY",
-	"type": "URL",
-    "gobiz": {
-        "type": "UNIVERSAL_PAYMENT"
-    },
-    "card": {
-        "isToken": false,
-        "isSave": true,
-        "name": "Test Card",
-        "no": "5453010000095323",
-        "cvc": "123",
-        "month": 12,
-        "year": 2024,
-        "countryCode": "MY"
-    }
-}
-```
-
-**Response Paramters**
-
-| Parameter       | Type   | Validation      | Description                    |
-| --------------- | ------ | --------------- | ------------------------------ |
-| `item.type`     | String | ENUM("URL")     | Checkout session type          |
-| `item.url`      | String |                 | GoBiz Payment URL              |
-| `code`          | String | ENUM("SUCCESS") | Determine request have success |
-| `error.code`    | String |                 | Error code                     |
-| `error.message` | String |                 | Error message                  |
-| `error.debug`   | String |                 | Debug message ( sandbox only ) |
-
-### Mode: GoBiz w/ Token
-
-**Request Parameters**
-
-| Parameter      | Type   | Validation             | Required | Description                                            |
-| -------------- | ------ | ---------------------- | -------- | ------------------------------------------------------ |
-| `checkoutId`   | String |                        | Yes      | Checkout ID                                            |
-| `type`         | String | ENUM("URL")            | Yes      | Checkout type qrcode                                   |
-| `method`       | String | ENUM("GOBIZ_MY")       | Yes      | Checkout method                                        |
-| `gobiz.type`   | String | ENUM("DIRECT_PAYMENT") | Yes      | GoBiz Payment Type                                     |
-| `card.isToken` | bool   |                        | Yes      | Token mode                                             |
-| `card.isSave`  | bool   |                        | Yes      | Save the token after made transaction else will delete |
-| `card.no`      | String |                        | Yes      | Customer token                                         |
+| Parameter    | Type   | Validation             | Required | Description          |
+| ------------ | ------ | ---------------------- | -------- | -------------------- |
+| `checkoutId` | String |                        | Yes      | Checkout ID          |
+| `type`       | String | ENUM("DUITNOW_QRCODE") | Yes      | Checkout type qrcode |
+| `method`     | String | ENUM("MAYBANK_MY")     | Yes      | Checkout method      |
 
 ```json title="Example Request"
 {
 	"checkoutId": "1687168234460362061",
-	"method": "GOBIZ_MY",
-	"type": "URL",
-	"gobiz": {
-		"type": "DIRECT_PAYMENT"
-	},
-	"card": {
-		"isToken": true,
-		"isSave": true,
-		"no": "tk10f26d83de548aee420872dae999992475",
-	}
+	"method": "MAYBANK_MY",
+	"type": "DUITNOW_QRCODE"
 }
 ```
 
 **Response Paramters**
 
-| Parameter          | Type   | Validation                                                      | Description                    |
-| ------------------ | ------ | --------------------------------------------------------------- | ------------------------------ |
-| `item.type`        | String | ENUM("URL")                                                     | Checkout session type          |
-| `item.transaction` | JSON   | [Transaction Object](./query-transaction.md#transaction-object) | Transaction response           |
-| `code`             | String | ENUM("SUCCESS")                                                 | Determine request have success |
-| `error.code`       | String |                                                                 | Error code                     |
-| `error.message`    | String |                                                                 | Error message                  |
-| `error.debug`      | String |                                                                 | Debug message ( sandbox only ) |
-
+| Parameter                 | Type   | Validation      | Description                    |
+| ------------------------- | ------ | --------------- | ------------------------------ |
+| `item.type`               | String | ENUM("QRCODE")  | Checkout session type          |
+| `item.qrcode.base64Image` | String |                 |                                |
+| `item.qrcode.data`        | String |                 |                                |
+| `code`                    | String | ENUM("SUCCESS") | Determine request have success |
+| `error.code`              | String |                 | Error code                     |
+| `error.message`           | String |                 | Error message                  |
+| `error.debug`             | String |                 | Debug message ( sandbox only ) |  |
 
 ## Extra: Card-on-File Tokenization ( CoFT )
 
