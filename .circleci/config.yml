@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  kubernetes: circleci/kubernetes@1.3.1
+
 jobs:
   build:
     docker:
@@ -13,21 +17,13 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - kubernetes/install-kubectl:
+        kubectl-version: v1.14.8
 
       - run:
           name: Set Environment
           command: |
             echo 'export DOCKER_IMAGE=asia.gcr.io/rm-srv-sb/rm-api/sandbox/gateway/rm-doc-v2' >> $BASH_ENV
-
-      - run:
-          name: Install Kubectl
-          command: |
-            sudo apt-get update && sudo apt-get install -y apt-transport-https
-            curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-            sudo touch /etc/apt/sources.list.d/kubernetes.list
-            echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-            sudo apt-get --allow-releaseinfo-change update
-            sudo apt-get install -y kubectl
 
       - run:
           name: Docker Login and Set Kubectl Credential
