@@ -531,37 +531,6 @@ my.tradePay({
 | `error.message` | String |                 | Error message                  |
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
-
-<!-- ### Mode: DuitNow QR
-
-**Request Parameters**
-
-| Parameter    | Type   | Validation             | Required | Description          |
-| ------------ | ------ | ---------------------- | -------- | -------------------- |
-| `checkoutId` | String |                        | Yes      | Checkout ID          |
-| `type`       | String | ENUM("DUITNOW_QRCODE") | Yes      | Checkout type qrcode |
-| `method`     | String | ENUM("MAYBANK_MY")     | Yes      | Checkout method      |
-
-```json title="Example Request"
-{
-	"checkoutId": "1687168234460362061",
-	"method": "MAYBANK_MY",
-	"type": "DUITNOW_QRCODE"
-}
-```
-
-**Response Paramters**
-
-| Parameter                 | Type   | Validation      | Description                    |
-| ------------------------- | ------ | --------------- | ------------------------------ |
-| `item.type`               | String | ENUM("QRCODE")  | Checkout session type          |
-| `item.qrcode.base64Image` | String |                 |                                |
-| `item.qrcode.data`        | String |                 |                                |
-| `code`                    | String | ENUM("SUCCESS") | Determine request have success |
-| `error.code`              | String |                 | Error code                     |
-| `error.message`           | String |                 | Error message                  |
-| `error.debug`             | String |                 | Debug message ( sandbox only ) |  | --> |
-
 ## Extra: Card-on-File Tokenization ( CoFT )
 
 Card-on-File Tokenization ( CoFT ) will be applied when your customer doing card payment, they will return the customer token to allow your customer can proceed payment without key in again full card information to provide better security so you will able to get customer token or remove the token via API and also payment with [Direct Payment Checkout API](#mode-gobiz-w-token).
