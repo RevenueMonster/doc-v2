@@ -199,8 +199,13 @@ URL : `https://open.revenuemonster.my/v3/payment/online/checkout`<br/>
 Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online/checkout`
 
 :::note
-- With it you can create an unified payment checkout and build your own checkout page 
+- With this you can create payment checkout with your own ui design page
 - There's two mode qrcode & url, most of the times URL is preferred over QRCode
+- For assets information you may take from [Github](https://github.com/RevenueMonster/Payment-Icon).
+:::
+
+:::caution 
+Please note that direct payment checkout is required you to perform API call to let us know that your payment checkout is still active. So the API call for [Query Payment Checkout](#query-payment-checkout) is required else the payment status will not keep updated until our system perform a pre-timeout check. Suggested API interval check will be 3 to 5 seconds or even longer based on your use cases.
 :::
 
 ### Mode: URL
@@ -527,7 +532,7 @@ my.tradePay({
 | `error.debug`   | String |                 | Debug message ( sandbox only ) |
 
 
-### Mode: DuitNow QR
+<!-- ### Mode: DuitNow QR
 
 **Request Parameters**
 
@@ -555,7 +560,7 @@ my.tradePay({
 | `code`                    | String | ENUM("SUCCESS") | Determine request have success |
 | `error.code`              | String |                 | Error code                     |
 | `error.message`           | String |                 | Error message                  |
-| `error.debug`             | String |                 | Debug message ( sandbox only ) |  |
+| `error.debug`             | String |                 | Debug message ( sandbox only ) |  | --> |
 
 ## Extra: Card-on-File Tokenization ( CoFT )
 
