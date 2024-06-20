@@ -319,8 +319,7 @@ Please note that direct payment checkout is required you to perform API call to 
 | `error.message`           | String |                 | Error message                  |
 | `error.debug`             | String |                 | Debug message ( sandbox only ) |
 
-
-### Mode: Mini Program
+### Mode: Alipay Mini Program
 
 **Request Parameters**
 
@@ -350,7 +349,7 @@ Please note that direct payment checkout is required you to perform API call to 
 | `error.debug`   | String |                      | Debug message ( sandbox only )               |
 
 
-**Alipay Mini Program**
+**Alipay Mini Program Frontend**
 
 :::note
 Use base64 decode data paramter, and pass into mini program api.
@@ -368,6 +367,64 @@ my.tradePay({
 });
 ```
 
+### Mode: WechatPay Mini Program
+
+:::note
+Before start integration, you will need contact us via support@revenuemonster.my and inform us to bind your "Mini Program App ID / 小程序 App ID" to your account once binded then we will inform you and can proceed with the developmen.
+:::
+
+**Request Parameters**
+
+| Parameter    | Type   | Validation                                                            | Required | Description          |
+| ------------ | ------ | --------------------------------------------------------------------- | -------- | -------------------- |
+| `checkoutId` | String |                                                                       | Yes      | Checkout ID          |
+| `type`       | String | ENUM("MINI_PROGRAM")                                                  | Yes      | Checkout type qrcode |
+| `method`     | String | [Appendix: Method](./query-transaction.md#transaction-method--region) | Yes      | Checkout method      |
+| `userId`     | String |                                                                       | Yes      | Wechat User Open ID  |
+
+```json title="Example Request"
+{
+  "checkoutId": "1582438693268947023",
+  "type": "MINI_PROGRAM",
+  "method": "WECHATPAY_CN",
+  "userId": "oFGqK6w1kZyjDTtNAcOXBDHAa8CY"
+}
+```
+
+**Response Paramters**
+
+| Parameter       | Type   | Validation           | Description                                  |
+| --------------- | ------ | -------------------- | -------------------------------------------- |
+| `item.type`     | String | ENUM("MINI_PROGRAM") | Checkout session type                        |
+| `item.data`     | String |                      | Base64 encoded data for pass to mini program |
+| `code`          | String | ENUM("SUCCESS")      | Determine request have success               |
+| `error.code`    | String |                      | Error code                                   |
+| `error.message` | String |                      | Error message                                |
+| `error.debug`   | String |                      | Debug message ( sandbox only )               |
+
+
+**WechatPay Mini Program Frontend**
+
+:::note
+Use base64 decode data paramter, and pass into mini program api.
+:::
+
+```js
+var base64decoded = "<< decoded base64 from url parameter >>";
+var payload = JSON.parse(base64decoded);
+wx.requestPayment({
+  ...payload,
+  'success':function(res){
+    console.log("success", res)
+  },
+  'fail':function(res){
+    console.log("fail", res)
+  },
+  'complete':function(res){
+    console.log("complete", res)
+  }
+});
+```
 
 ### Mode: FPX
 
