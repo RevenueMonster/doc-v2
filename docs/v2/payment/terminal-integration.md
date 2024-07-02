@@ -262,6 +262,46 @@ This is applicable to the Merchant App on terminals with versions greater than 2
 Demo: [applink-demo](https://github.com/RevenueMonster/applink-demo)
 :::
 
+### Example for receiver
+
+#### AndroidManifest
+
+```xml
+<activity android:name=".ReceiverActivity" android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="text/plain" />
+    </intent-filter>
+</activity>
+```
+
+#### ReceiverActivity
+
+```kotlin
+class ReceiverActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //....
+
+        try {
+            val keySet: Set<String> = intent?.extras!!.keySet()
+            keySet.forEach {
+                Log.v("Receiver", "key = $it || value = ${intent.extras!![it]}")
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        val result = intent?.getStringExtra("result")
+        val transactionType = intent?.getIntExtra("transactionType")
+        //Do your code here
+
+    }
+}
+```
+
+
 ## Deeplink: Quick Pay
 
 ```kotlin
@@ -361,17 +401,6 @@ val i = Intent("REVENUE_MONSTER_PAYMENT").apply {
 startActivity(i)
 ```
 
-## Deeplink: Card Settlement
-
-```kotlin
-val i = Intent("REVENUE_MONSTER_PAYMENT").apply {
-    putExtra("packageName", packageName)
-    putExtra("receiverName", <<YOUR_ACTIVITY>>::class.java.name)
-    putExtra("transactionType", 5)
-}
-startActivity(i)
-```
-
 **Response Parameters**
 
 ```kotlin
@@ -392,6 +421,17 @@ val jsonString = intent?.getStringExtra("result")
 | `wallet[*].refunded.count`  | Uint64 |            | Wallet refunded count     |
 | `wallet[*].refunded.amount` | Uint64 |            | Wallet refunded amount    |
 | `range[*]`                  | String | RFC3339    | Range of settlement dates |
+
+## Deeplink: Card Settlement
+
+```kotlin
+val i = Intent("REVENUE_MONSTER_PAYMENT").apply {
+    putExtra("packageName", packageName)
+    putExtra("receiverName", <<YOUR_ACTIVITY>>::class.java.name)
+    putExtra("transactionType", 5)
+}
+startActivity(i)
+```
 
 **Response Parameters**
 
