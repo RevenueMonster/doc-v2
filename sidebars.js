@@ -45,6 +45,7 @@ module.exports = {
       "v2/payment/query-transaction",
       "v2/payment/cancel-transaction",
       "v2/payment/terminal-integration",
+      "v2/payment/deeplink-integration",
       "v2/payment/online-payment",
       "v2/payment/tokenization-payment",
       "v2/payment/reconciliation",
