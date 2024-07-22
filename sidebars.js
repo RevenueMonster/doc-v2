@@ -129,6 +129,7 @@ module.exports = {
 
     "à la carte": [
       "alacarte-open/introduction",
+      "alacarte-open/signature-algorithm",
       {
         type: "category",
         label: "Orders",
@@ -163,7 +164,7 @@ module.exports = {
           "alacarte-open/inventory/update-item-quantity-by-id",
         ],
       },
-      "alacarte-open/set-notification",
+      "alacarte-open/set-order-notification",
     ],
 
     "Loyalty & Voucher": [
@@ -315,7 +316,7 @@ module.exports = {
       "ecom-plugin/opencart",
       "ecom-plugin/easystore",
       {
-        type: 'link',
+        type: "link",
         label: "SiteGiant",
         href: "https://support.sitegiant.com/knowledge-base/how-to-set-up-revenue-monster-payment-gateway/",
       },
