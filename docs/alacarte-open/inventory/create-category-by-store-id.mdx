@@ -8,9 +8,9 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 
-URL: `https://api.alacarte.my/open/v1/store/{id}/category`<br/>
+URL: `https://open.revenuemonster.my/v3/service`<br/>
 
-Sandbox URL: `https://sb-api.alacarte.my/open/v1/store/{id}/category`
+Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
 :::note
 
@@ -20,21 +20,37 @@ Sandbox URL: `https://sb-api.alacarte.my/open/v1/store/{id}/category`
 
 ### Request Parameters
 
-| Parameter | Type   | Description                                        | Example  |
-| --------- | ------ | -------------------------------------------------- | -------- |
-| `name`    | String | Category name                                      | "Drinks" |
-| `status`  | String | Status of Category **"ACTIVE"** and **"INACTIVE"** | "ACTIVE" |
+| Parameter  | Type   | Description                       | Example                      |
+| ---------- | ------ | --------------------------------- | ---------------------------- |
+| `service`  | String | alacarte service                  | "alacarte"                   |
+| `version`  | String | Currently only support 'v1"       | "v1"                         |
+| `function` | String | Function that provide by alacarte | "create.category"            |
+| `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
+
+| Parameter | Type   | Description                                        | Example               |
+| --------- | ------ | -------------------------------------------------- | --------------------- |
+| `storeId` | String | ID of the Store that Create from RM                | "1556079400120532579" |
+| `name`    | String | Category name                                      | "Drinks"              |
+| `status`  | String | Status of Category **"ACTIVE"** and **"INACTIVE"** | "ACTIVE"              |
 
 > Example Request
 
-```json
-curl --location --request POST 'https://sb-api.alacarte.my/open/v1' \
+```bash
+curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjIwMTgtMDMtMTMiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsiYXBpX2NsaWVudEBFaGNLQzA5QmRYUm9RMnhwWlc1MEVKTE42dFdBMG82MEx3Il0sImV4cCI6MTYwMzI1NDU2OSwiaWF0IjoxNjAwNjYyNTY5LCJpc3MiOiJodHRwczovL3NiLW9hdXRoLnJldmVudWVtb25zdGVyLm15IiwianRpIjoiRWh3S0VFOUJkWFJvUVdOalpYTnpWRzlyWlc0UTZNenR5b1RFckpzVyIsIm5iZiI6MTYwMDY2MjU2OSwic3ViIjoiRWhRS0NFMWxjbU5vWVc1MEVKWFZ6ZDN3cmFxVE9SSVFDZ1JWYzJWeUVJeUpxSXp2eU1QVmNRIn0.H3G6UDX7sR9EXtTMNs4Q2OHdhUGIhhCfdlAeOpywH4rDuVOcWXXwzF4Imbx8E7I10vFAJpwYZrEkCWCdCCw-WV11y9VT5kP6k75CeS-ZPMOLcKnC5iFT7vEi07r6ovwty9erlcZeXrtrmEIn3rnLva-dxSg3vZ2MyymoNDk-kV7ltXnkoWW4jtXRls6siLhxeY__8kXn2qa0ojVX4Nm6HmzN_vgi-RKSmToMgsdzTF94Y61QVBWhZfolD2-JpHx4qNlklcUdv8HOJ1QHHWpyoJytaJmvr3GJ5G399LbcTLwxB1p2qPg7z4hpoGNu4AP-ybRJVC3P9q9OscQYDNX-dA' \
---header 'X-Signature: Uz+yFMMN6vWupkxnyImwxnrnwaVnWtkYTH6uxx6kZ/Mdf1YwLB2VDlCjeOunqhnsoor6iosKoLACALRMgh3kHBD1e5uVzKXifCjYCac8SiUWYET6exc+nbNt0VwDO8OCPSAwAbJe00XprCMXUsivw76nAIvlzRn6+Hz0eul6Bj4LkffZjtyeYv3ryczsuO1Tx2bmzFIjV/D/vuLIc4PRteqbTxPjHidAa6lsY6JbBB0xuOLhNTAm3NKB4gKv4A4aYy1uS6jLAI5DGSc96BxfqfPxH1tjKn/A7xB173HjGXhZKDe6BhFXZbURXKZyDo8VYXCZpTRLvJczQGF+sSjktw==' \
+--header 'X-Signature: sha256 Sty3LNcKA8+WlMHtAgIY+y1xbwnzKsN0UdyKaW+yYIgcTkBAtF7G5Lx251qQITURJ4wiXPDODxhs1nFVmBBing==' \
+--header 'X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN' \
+--header 'X-Timestamp: 1528450585' \
 --data-raw '{
-  "name": "Drinks",
-  "status": "ACTIVE"
+  "service": "alacarte",
+  "version": "v1",
+  "function": "create.category",
+  "request": {
+    "storeId": "1556079400120532579",
+    "name": "Drinks",
+    "status": "ACTIVE"
+  }
 }'
 ```
 

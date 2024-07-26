@@ -8,14 +8,24 @@ import { Box, Heading, Text, Card, Image, Button, Flex } from "rebass";
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 
-URL: `https://api.alacarte.my/open/v1/item`<br/>
+URL: `https://open.revenuemonster.my/v3/service`<br/>
 
-Sandbox URL: `https://sb-api.alacarte.my/open/v1/item`
+Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
 ### Request Parameters
 
+| Parameter  | Type   | Description                       | Example                      |
+| ---------- | ------ | --------------------------------- | ---------------------------- |
+| `service`  | String | alacarte service                  | "alacarte"                   |
+| `version`  | String | Currently only support 'v1"       | "v1"                         |
+| `function` | String | Function that provide by alacarte | "create.item"                |
+| `request`  | Object | Refer to explanation below        | (Refer to explanation below) |
+
+### Inside request (parameter)
+
 | Parameter     | Type   | Description                               | Example                                                  |
 | ------------- | ------ | ----------------------------------------- | -------------------------------------------------------- |
+| `storeId`     | String | ID of the Store that Create from RM       | "1556079400120532579"                                    |
 | `name`        | String | Item name                                 | "test123"                                                |
 | `description` | String | Item description                          | "Describe"                                               |
 | `imageUrl`    | Array  | Input your image                          | []                                                       |
@@ -25,9 +35,8 @@ Sandbox URL: `https://sb-api.alacarte.my/open/v1/item`
 | `sides`       | Array  | Refer to explanation below                | (Refer to explanation below)                             |
 | `preferences` | Array  | Refer to explanation below                | (Refer to explanation below)                             |
 | `schedules`   | Array  | Schedules <b>startAt</b> and <b>endAt</b> | ["2020-09-22T02:00:00.000Z", "2020-09-22T14:00:00.000Z"] |
-| `categoryId`  | String | ID of the Category                        | "5ec1bf480e7df1ca6f3f6350"                               |
+| `categoryIds` | Array  | ID of the Category                        | ["5ec1bf480e7df1ca6f3f6350"]                             |
 | `sku`         | String | Item SKU                                  | "fkj31i"                                                 |
-| `taxCode`     | String | Item taxCode                              | "SR8" or "SR6" or "ZRE" or "ZRL"                         |
 
 ### Inside Price (parameter)
 
@@ -80,12 +89,19 @@ You still can change the `name` and `price`
 
 > Example Request
 
-```json
-curl --location --request POST 'https://sb-api.alacarte.my/open/v1/item' \
+```bash
+curl --location --request POST 'https://sb-open.revenuemonster.my/v3/service' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjIwMTgtMDMtMTMiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsiYXBpX2NsaWVudEBFaGNLQzA5QmRYUm9RMnhwWlc1MEVKTE42dFdBMG82MEx3Il0sImV4cCI6MTYwMzI1NDU2OSwiaWF0IjoxNjAwNjYyNTY5LCJpc3MiOiJodHRwczovL3NiLW9hdXRoLnJldmVudWVtb25zdGVyLm15IiwianRpIjoiRWh3S0VFOUJkWFJvUVdOalpYTnpWRzlyWlc0UTZNenR5b1RFckpzVyIsIm5iZiI6MTYwMDY2MjU2OSwic3ViIjoiRWhRS0NFMWxjbU5vWVc1MEVKWFZ6ZDN3cmFxVE9SSVFDZ1JWYzJWeUVJeUpxSXp2eU1QVmNRIn0.H3G6UDX7sR9EXtTMNs4Q2OHdhUGIhhCfdlAeOpywH4rDuVOcWXXwzF4Imbx8E7I10vFAJpwYZrEkCWCdCCw-WV11y9VT5kP6k75CeS-ZPMOLcKnC5iFT7vEi07r6ovwty9erlcZeXrtrmEIn3rnLva-dxSg3vZ2MyymoNDk-kV7ltXnkoWW4jtXRls6siLhxeY__8kXn2qa0ojVX4Nm6HmzN_vgi-RKSmToMgsdzTF94Y61QVBWhZfolD2-JpHx4qNlklcUdv8HOJ1QHHWpyoJytaJmvr3GJ5G399LbcTLwxB1p2qPg7z4hpoGNu4AP-ybRJVC3P9q9OscQYDNX-dA' \
 --header 'X-Signature: sha256 Sty3LNcKA8+WlMHtAgIY+y1xbwnzKsN0UdyKaW+yYIgcTkBAtF7G5Lx251qQITURJ4wiXPDODxhs1nFVmBBing==' \
+--header 'X-Nonce-Str: VYNknZohxwicZMaWbNdBKUrnrxDtaRhN' \
+--header 'X-Timestamp: 1528450585' \
 --data-raw '{
+  "service": "alacarte",
+  "version": "v1",
+  "function": "create.item",
+  "request": {
+    "storeId": "1556079400120532579",
     "name": "Test123",
     "description": "Describe",
     "imageUrl": [],
@@ -148,7 +164,8 @@ curl --location --request POST 'https://sb-api.alacarte.my/open/v1/item' \
       ["2020-09-22T15:00:00.000Z", "2020-09-22T15:45:00.000Z"]
     ],
     "sku": "fkj31i",
-    "categoryId": "5ec1bf480e7df1ca6f3f6350"
+    "categoryIds": ["5ec1bf480e7df1ca6f3f6350"]
+  }
 }'
 ```
 

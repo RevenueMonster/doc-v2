@@ -87,13 +87,13 @@ A new revolutionary online business operations solution that easily transforms t
   </Box>
 </Flex>
 
-## Let's start to call the API
+## Let's start call the API
 
 **Method :** <span style={{ color: "orange", fontWeight: "bold" }}>POST</span><br/>
 
-URL: `https://api.alacarte.my/open/v1`<br/>
+URL: `https://open.revenuemonster.my/v3/service`<br/>
 
-Sandbox URL: `https://sb-api.alacarte.my/open/v1`
+Sandbox URL: `https://sb-open.revenuemonster.my/v3/service`
 
 ### Header Request
 
@@ -101,7 +101,9 @@ Sandbox URL: `https://sb-api.alacarte.my/open/v1`
 | --------------- | -------------------------------- | --------------------------------------------------------------------- |
 | `Content-Type`  | application/json                 | Content Type                                                          |
 | `Authorization` | Bearer {Token}                   | Refer to [Access Token](../quickstart/accesstoken/client-credentials) |
-| `X-Signature`   | sha256 {Signature}               | Refer to [Signature Algorithm](./signature-algorithm)     |
+| `X-Signature`   | sha256 {Signature}               | Refer to [Signature Algorithm](../quickstart/signature-algorithm)     |
+| `X-Nonce-Str`   | VYNknZohxwicZMaWbNdBKUrnrxDtaRhN | Nonce String                                                          |
+| `X-TimeStamp`   | 1528450585                       | TimeStamp                                                             |
 
 ### Body Request
 
@@ -112,19 +114,6 @@ Choose which API you like to call
 :::
 
 <Flex flexWrap="wrap" mx={-2}>
-  <Box p={2} width={[1, 1 / 4]}>
-    <Box
-      className={styles.box}
-      onClick={() => {
-        window.open(
-          "https://doc.revenuemonster.my/docs/alacarte-open/signature-algorithm",
-          "_blank"
-        );
-      }}
-    >
-      <Text className={styles.text}>Signature Algorithm</Text>
-    </Box>
-  </Box>
   <Box p={2} width={[1, 1 / 4]}>
     <Box
       className={styles.box}
@@ -169,12 +158,12 @@ Choose which API you like to call
       className={styles.box}
       onClick={() => {
         window.open(
-          "https://doc.revenuemonster.my/docs/alacarte-open/set-order-notification",
+          "https://doc.revenuemonster.my/docs/alacarte-open/set-notification",
           "_blank"
         );
       }}
     >
-      <Text className={styles.text}>Set Order Notification</Text>
+      <Text className={styles.text}>Set Notification</Text>
     </Box>
   </Box>
 </Flex>
