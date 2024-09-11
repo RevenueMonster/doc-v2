@@ -57,7 +57,7 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 
 - To create a unified payment checkout page for your website and mobile.
 - **Data object** needs to be sorted, the **Nested object** also needs to be sorted.
-  :::
+:::
 
 **Request Parameters**
 
