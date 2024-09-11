@@ -37,7 +37,7 @@ Online payment is an online payment method and it's subscription will based on o
   </Button>
 </Flex>
 
-</br>
+<br />
 
 **Example of Web Payment**
 
