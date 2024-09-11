@@ -91,12 +91,16 @@ Sandbox URL : `https://sb-open.revenuemonster.my/v3/payment/online`
 | `error.message`   | String |                 | Error message                  |
 | `error.debug`     | String |                 | Debug message ( sandbox only ) |
 
+---
+
 ### Advance: Individual Payment Checkout
 
 After you have the **checkout session url** from the checkout api.
 
 **Example**:
 https://sb-pg.revenuemonster.my/v4/checkout?checkoutId=1548316308361173347
+
+---
 
 ### Redirect Response
 
@@ -155,6 +159,8 @@ Reference: [Query Transaction](./query-transaction.md)
 | `data.order.amount`         | Uint64                     |                                                                       | Yes      | Order Amount                                               |
 | `data.order.detail`         | String                     | Length(600)                                                           | No       | Order Detail                                               |
 | `data.order.additionalData` | String                     | Length(128)                                                           | No       | Order Additional Data                                      |
+
+---
 
 ## Query Payment Checkout
 
