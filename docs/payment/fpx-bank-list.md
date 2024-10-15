@@ -24,93 +24,103 @@ No request parameter is required for this endpoint.
 
 ```json
 {
-    "item": {
-        "AFFIN_BANK": {
-            "code": "AFFIN_BANK",
-            "isOnline": true,
-            "name": "Affin Bank"
-        },
-        "ALLIANCE_BANK": {
-            "code": "ALLIANCE_BANK",
-            "isOnline": true,
-            "name": "Alliance Bank"
-        },
-        "AMBANK": {
-            "code": "AMBANK",
-            "isOnline": true,
-            "name": "AmBank"
-        },
-        "BANK_ISLAM": {
-            "code": "BANK_ISLAM",
-            "isOnline": true,
-            "name": "Bank Islam"
-        },
-        "BANK_MUAMALAT": {
-            "code": "BANK_MUAMALAT",
-            "isOnline": true,
-            "name": "Bank Muamalat"
-        },
-        "BANK_RAKYAT": {
-            "code": "BANK_RAKYAT",
-            "isOnline": false,
-            "name": "Bank Rakyat"
-        },
-        "BSN": {
-            "code": "BSN",
-            "isOnline": true,
-            "name": "Bank Simpanan Nasional"
-        },
-        "CIMB_CLICKS": {
-            "code": "CIMB_CLICKS",
-            "isOnline": true,
-            "name": "CIMB Bank"
-        },
-        "HLB_CONNECT": {
-            "code": "HLB_CONNECT",
-            "isOnline": true,
-            "name": "Hong Leong Bank"
-        },
-        "HSBC": {
-            "code": "HSBC",
-            "isOnline": true,
-            "name": "HSBC"
-        },
-        "KUWAIT_FINANCE_HOUSE": {
-            "code": "KUWAIT_FINANCE_HOUSE",
-            "isOnline": false,
-            "name": "Kuwait Finance House"
-        },
-        "MAYBANK2U": {
-            "code": "MAYBANK2U",
-            "isOnline": true,
-            "name": "Maybank"
-        },
-        "OCBC": {
-            "code": "OCBC",
-            "isOnline": true,
-            "name": "OCBC"
-        },
-        "PUBLIC_BANK": {
-            "code": "PUBLIC_BANK",
-            "isOnline": true,
-            "name": "Public Bank"
-        },
-        "RHB_NOW": {
-            "code": "RHB_NOW",
-            "isOnline": true,
-            "name": "RHB Bank"
-        },
-        "STANDARD_CHARTERED_BANK": {
-            "code": "STANDARD_CHARTERED_BANK",
-            "isOnline": true,
-            "name": "Standard Chartered Bank"
-        },
-        "UNITED_OVERSEA_BANK": {
-            "code": "UNITED_OVERSEA_BANK",
-            "isOnline": true,
-            "name": "United Oversea Bank"
-        }
+  "item": {
+    "ABB0233:B2C": {
+      "code": "ABB0233:B2C",
+      "isOnline": true,
+      "name": "Affin Bank"
     },
-    "code": "SUCCESS"
+    "ABMB0212:B2C": {
+      "code": "ABMB0212:B2C",
+      "isOnline": true,
+      "name": "Alliance Bank (Personal)"
+    },
+    "AGRO01:B2C": {
+      "code": "AGRO01:B2C",
+      "isOnline": true,
+      "name": "AGRONet"
+    },
+    "AMBB0209:B2C": {
+      "code": "AMBB0209:B2C",
+      "isOnline": true,
+      "name": "AmBank"
+    },
+    "BCBB0235:B2C": {
+      "code": "BCBB0235:B2C",
+      "isOnline": true,
+      "name": "CIMB Bank"
+    },
+    "BIMB0340:B2C": {
+      "code": "BIMB0340:B2C",
+      "isOnline": true,
+      "name": "Bank Islam"
+    },
+    "BKRM0602:B2C": {
+      "code": "BKRM0602:B2C",
+      "isOnline": true,
+      "name": "Bank Rakyat"
+    },
+    "BMMB0341:B2C": {
+      "code": "BMMB0341:B2C",
+      "isOnline": true,
+      "name": "Bank Muamalat"
+    },
+    "BSN0601:B2C": {
+      "code": "BSN0601:B2C",
+      "isOnline": true,
+      "name": "Bank Simpanan Nasional"
+    },
+    "HLB0224:B2C": {
+      "code": "HLB0224:B2C",
+      "isOnline": true,
+      "name": "Hong Leong Bank"
+    },
+    "HSBC0223:B2C": {
+      "code": "HSBC0223:B2C",
+      "isOnline": true,
+      "name": "HSBC"
+    },
+    "KFH0346:B2C": {
+      "code": "KFH0346:B2C",
+      "isOnline": true,
+      "name": "Kuwait Finance House"
+    },
+    "MB2U0227:B2C": {
+      "code": "MB2U0227:B2C",
+      "isOnline": true,
+      "name": "Maybank2U"
+    },
+    "MBB0228:B2C": {
+      "code": "MBB0228:B2C",
+      "isOnline": true,
+      "name": "Maybank2E"
+    },
+    "OCBC0229:B2C": {
+      "code": "OCBC0229:B2C",
+      "isOnline": true,
+      "name": "OCBC"
+    },
+    "PBB0233:B2C": {
+      "code": "PBB0233:B2C",
+      "isOnline": true,
+      "name": "Public Bank"
+    },
+    "RHB0218:B2C": {
+      "code": "RHB0218:B2C",
+      "isOnline": true,
+      "name": "RHB Bank"
+    },
+    "SCB0216:B2C": {
+      "code": "SCB0216:B2C",
+      "isOnline": true,
+      "name": "Standard Chartered Bank"
+    },
+    "UOB0226:B2C": {
+      "code": "UOB0226:B2C",
+      "isOnline": true,
+      "name": "United Oversea Bank"
+    }
+  },
+  "code": "SUCCESS"
 }
 ```
