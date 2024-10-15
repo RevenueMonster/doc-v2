@@ -5,7 +5,7 @@ const payments = [
         systemMethod: 'WECHATPAY',
         quickPay: true,
         web: true,
-        mobileWeb: true,
+        mobileWeb: false,
         transactionQR: true,
     },
     {
@@ -14,7 +14,7 @@ const payments = [
         systemMethod: 'WECHATPAY',
         quickPay: true,
         web: true,
-        mobileWeb: true,
+        mobileWeb: false,
         transactionQR: true,
     },
     {
