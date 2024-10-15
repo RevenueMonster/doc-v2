@@ -452,90 +452,100 @@ wx.requestPayment({
   <b>Sandbox URL</b> : https://sb-open.revenuemonster.my/v3/payment/fpx-bank<br /><br />
 
   ```json
-  {
+{
   "item": {
-    "AFFIN_BANK": {
-      "code": "AFFIN_BANK",
+    "ABB0233:B2C": {
+      "code": "ABB0233:B2C",
       "isOnline": true,
       "name": "Affin Bank"
     },
-    "ALLIANCE_BANK": {
-      "code": "ALLIANCE_BANK",
+    "ABMB0212:B2C": {
+      "code": "ABMB0212:B2C",
       "isOnline": true,
-      "name": "Alliance Bank"
+      "name": "Alliance Bank (Personal)"
     },
-    "AMBANK": {
-      "code": "AMBANK",
+    "AGRO01:B2C": {
+      "code": "AGRO01:B2C",
+      "isOnline": true,
+      "name": "AGRONet"
+    },
+    "AMBB0209:B2C": {
+      "code": "AMBB0209:B2C",
       "isOnline": true,
       "name": "AmBank"
     },
-    "BANK_ISLAM": {
-      "code": "BANK_ISLAM",
-      "isOnline": true,
-      "name": "Bank Islam"
-    },
-    "BANK_MUAMALAT": {
-      "code": "BANK_MUAMALAT",
-      "isOnline": true,
-      "name": "Bank Muamalat"
-    },
-    "BANK_RAKYAT": {
-      "code": "BANK_RAKYAT",
-      "isOnline": false,
-      "name": "Bank Rakyat"
-    },
-    "BSN": {
-      "code": "BSN",
-      "isOnline": true,
-      "name": "Bank Simpanan Nasional"
-    },
-    "CIMB_CLICKS": {
-      "code": "CIMB_CLICKS",
+    "BCBB0235:B2C": {
+      "code": "BCBB0235:B2C",
       "isOnline": true,
       "name": "CIMB Bank"
     },
-    "HLB_CONNECT": {
-      "code": "HLB_CONNECT",
+    "BIMB0340:B2C": {
+      "code": "BIMB0340:B2C",
+      "isOnline": true,
+      "name": "Bank Islam"
+    },
+    "BKRM0602:B2C": {
+      "code": "BKRM0602:B2C",
+      "isOnline": true,
+      "name": "Bank Rakyat"
+    },
+    "BMMB0341:B2C": {
+      "code": "BMMB0341:B2C",
+      "isOnline": true,
+      "name": "Bank Muamalat"
+    },
+    "BSN0601:B2C": {
+      "code": "BSN0601:B2C",
+      "isOnline": true,
+      "name": "Bank Simpanan Nasional"
+    },
+    "HLB0224:B2C": {
+      "code": "HLB0224:B2C",
       "isOnline": true,
       "name": "Hong Leong Bank"
     },
-    "HSBC": {
-      "code": "HSBC",
+    "HSBC0223:B2C": {
+      "code": "HSBC0223:B2C",
       "isOnline": true,
       "name": "HSBC"
     },
-    "KUWAIT_FINANCE_HOUSE": {
-      "code": "KUWAIT_FINANCE_HOUSE",
-      "isOnline": false,
+    "KFH0346:B2C": {
+      "code": "KFH0346:B2C",
+      "isOnline": true,
       "name": "Kuwait Finance House"
     },
-    "MAYBANK2U": {
-      "code": "MAYBANK2U",
+    "MB2U0227:B2C": {
+      "code": "MB2U0227:B2C",
       "isOnline": true,
-      "name": "Maybank"
+      "name": "Maybank2U"
     },
-    "OCBC": {
-      "code": "OCBC",
+    "MBB0228:B2C": {
+      "code": "MBB0228:B2C",
+      "isOnline": true,
+      "name": "Maybank2E"
+    },
+    "OCBC0229:B2C": {
+      "code": "OCBC0229:B2C",
       "isOnline": true,
       "name": "OCBC"
     },
-    "PUBLIC_BANK": {
-      "code": "PUBLIC_BANK",
+    "PBB0233:B2C": {
+      "code": "PBB0233:B2C",
       "isOnline": true,
       "name": "Public Bank"
     },
-    "RHB_NOW": {
-      "code": "RHB_NOW",
+    "RHB0218:B2C": {
+      "code": "RHB0218:B2C",
       "isOnline": true,
       "name": "RHB Bank"
     },
-    "STANDARD_CHARTERED_BANK": {
-      "code": "STANDARD_CHARTERED_BANK",
+    "SCB0216:B2C": {
+      "code": "SCB0216:B2C",
       "isOnline": true,
       "name": "Standard Chartered Bank"
     },
-    "UNITED_OVERSEA_BANK": {
-      "code": "UNITED_OVERSEA_BANK",
+    "UOB0226:B2C": {
+      "code": "UOB0226:B2C",
       "isOnline": true,
       "name": "United Oversea Bank"
     }
@@ -551,25 +561,28 @@ wx.requestPayment({
     <b>FPX Bank Codes</b>
   </summary>
 
-| RM BankCode             | FPX / Third Party BankCode |
-  |-------------------------|----------------------------|
-| AFFIN_BANK              | FPX_ABB                    |
-| ALLIANCE_BANK           | FPX_ABMB                   |
-| AMBANK                  | AMOnline                   |
-| BANK_ISLAM              | BIMB                       |
-| BANK_MUAMALAT           | bankmuamalat               |
-| BANK_RAKYAT             | bankrakyat                 |
-| BSN                     | FPX_BSN                    |
-| CIMB_CLICKS             | CIMBCLICKS                 |
-| HSBC                    | FPX_HSBC                   |
-| HLB_CONNECT             | HLBConnect                 |
-| KUWAIT_FINANCE_HOUSE    | FPX_KFH                    |
-| MAYBANK2U               | MB2U                       |
-| OCBC                    | FPX_OCBC                   |
-| PUBLIC_BANK             | PBB                        |
-| RHB_NOW                 | RHBNow                     |
-| STANDARD_CHARTERED_BANK | FPX_SCB                    |
-| UNITED_OVERSEA_BANK     | FPX_UOB                    |
+
+| Code             | Name                        |
+|------------------|-----------------------------|
+| ABB0233:B2C      | Affin Bank                  |
+| ABMB0212:B2C     | Alliance Bank (Personal)    |
+| AGRO01:B2C       | AGRONet                     |
+| AMBB0209:B2C     | AmBank                      |
+| BCBB0235:B2C     | CIMB Bank                   |
+| BIMB0340:B2C     | Bank Islam                  |
+| BKRM0602:B2C     | Bank Rakyat                 |
+| BMMB0341:B2C     | Bank Muamalat               |
+| BSN0601:B2C      | Bank Simpanan Nasional      |
+| HLB0224:B2C      | Hong Leong Bank             |
+| HSBC0223:B2C     | HSBC                        |
+| KFH0346:B2C      | Kuwait Finance House        |
+| MB2U0227:B2C     | Maybank2U                   |
+| MBB0228:B2C      | Maybank2E                   |
+| OCBC0229:B2C     | OCBC                        |
+| PBB0233:B2C      | Public Bank                 |
+| RHB0218:B2C      | RHB Bank                    |
+| SCB0216:B2C      | Standard Chartered Bank     |
+| UOB0226:B2C      | United Oversea Bank         |
 
 </details>
 
