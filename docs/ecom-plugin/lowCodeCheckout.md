@@ -38,9 +38,9 @@ This integrate a checkout button to your e-commerce website with minimal code.
 
 3. Low Code Checkout Host
 
-Your e-commerce website Host, it's a must have to let us identify come from your ecommerce website instead other and provide better security always check while there's an order.
+To enhance the security of your e-commerce website, it is essential to allow us to identify requests originating from your site rather than from others. This will enable us to provide improved security measures during the order process.
 
-Example: `https://somedomain.com/webpage/order`, you will need to set `somedomain.com` only will allow to proceed the checkout payment.
+For instance, if your website URL is `https://somedomain.com/webpage/order`, you should configure it so that only `somedomain.com` is authorized to proceed with the checkout payment.
 
 3. Redirect URL
 
@@ -48,8 +48,9 @@ The URL to redirect when the payment for the order is completed by the user (eit
 
 4. Notify URL ( Optional )
 
-The URL where we can notify you regarding the order status and [example of notify url parameters](../v2/payment/online-payment#notify-response). This is optional for low code checkout use case, unless you have your own server and have extra business logic is needed after payment is completed.
+Client can also specify the URL to which users should be redirected after completing their payment for the order, regardless of whether the transaction was successful or failed. Additionally, refer to the example of redirect URL parameters to ensure you can manage page rendering based on the status, ID, and reason provided.
 
+[Example of notify url parameters](../v2/payment/online-payment#notify-response)
 
 <img src="/img/low-code-checkout/application-settings.png" height="auto" />
 
@@ -63,6 +64,17 @@ The URL where we can notify you regarding the order status and [example of notif
 
     <link rel="stylesheet" href="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css"/>
     <script type="module" src="https://rm-component.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
+</head>
+```
+
+Alternatively, if you are developing for sandbox environment, please amend the link to below
+
+```html
+<head>
+    <!--- ... -->
+
+    <link rel="stylesheet" href="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.css"/>
+    <script type="module" src="https://rm-component-sandbox.oss-ap-southeast-3.aliyuncs.com/checkout-button/index.js"></script>
 </head>
 ```
 
